@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8a9aff419755485abc62b566f32aac78" Name="Diagram1">
+        <EntityTypeShape EntityType="gramLaDatModel.adjektiv" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="gramLaDatModel.adverb" Width="1.5" PointX="3" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="gramLaDatModel.interjektion" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="gramLaDatModel.konjunktion" Width="1.5" PointX="3" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="gramLaDatModel.ordklasser" Width="1.5" PointX="0.75" PointY="24.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="gramLaDatModel.preposition" Width="1.5" PointX="3" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="gramLaDatModel.pronomen" Width="1.5" PointX="3" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="gramLaDatModel.räkneord" Width="1.5" PointX="3" PointY="23.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="gramLaDatModel.substantiv" Width="1.5" PointX="3" PointY="36" IsExpanded="true" />
+        <EntityTypeShape EntityType="gramLaDatModel.toppresultat" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="gramLaDatModel.verb" Width="1.5" PointX="3" PointY="42.25" IsExpanded="true" />
+        <AssociationConnector Association="gramLaDatModel.FK_adjektiv_fkordklass" ManuallyRouted="false" />
+        <AssociationConnector Association="gramLaDatModel.FK_adverb_fkordklass" ManuallyRouted="false" />
+        <AssociationConnector Association="gramLaDatModel.FK_interjektion_fkordklass" ManuallyRouted="false" />
+        <AssociationConnector Association="gramLaDatModel.FK_konjunktion_fkordklass" ManuallyRouted="false" />
+        <AssociationConnector Association="gramLaDatModel.FK_preposition_fkordklass" ManuallyRouted="false" />
+        <AssociationConnector Association="gramLaDatModel.FK_pronomen_fkordklass" ManuallyRouted="false" />
+        <AssociationConnector Association="gramLaDatModel.FK_räkneord_fkordklass" ManuallyRouted="false" />
+        <AssociationConnector Association="gramLaDatModel.FK_substantiv_fkordklass" ManuallyRouted="false" />
+        <AssociationConnector Association="gramLaDatModel.FK_verb_fkordklass" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
