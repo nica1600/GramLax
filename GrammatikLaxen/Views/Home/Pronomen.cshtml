@@ -70,25 +70,20 @@
 <h2>Indefinita pronomen</h2>
 <table class="table-bordered">
     <tr>
-        <th>Nummer</th>
-        <th>Subjekt</th>
-        <th>Objekt</th>
-        <th>Utrum</th>
-        <th>Neutrum</th>
-        <th>Plural</th>
+        <th>Exempel subjekt</th>
+        <th>Exempel objekt</th>
+        <th>Exempel utrum</th>
+        <th>Exempel neutrum</th>
+        <th>Exempel plural</th>
     </tr>
     @foreach (var pronomen in Model)
     {
-        if (pronomen.indefinita == true)
-        {
-            <tr>
-                <td>@pronomen.Id</td>
-                <td>@pronomen.indefinita_subjekt</td>
-                <td>@pronomen.indefinita_objekt</td>
-                <td>@pronomen.indefinita_utrum</td>
-                <td>@pronomen.indefinita_neutrum</td>
-                <td>@pronomen.indefinita_plural</td>
-            </tr>
-        }
+        <tr>
+            <td>@pronomen.indefinita_subjekt</td>
+            <td>@pronomen.indefinita_objekt</td>
+            <td>@pronomen.indefinita_utrum</td>
+            <td>@pronomen.indefinita_neutrum</td>
+            <td>@pronomen.indefinita_plural</td>
+        </tr>
     }
 </table>
