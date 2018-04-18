@@ -1,0 +1,52 @@
+﻿@model List<GrammatikLaxen.Models.db.substantiv>
+@{
+    ViewBag.Title = "Substantiv";
+}
+
+<h2>Substantiv</h2>
+<table class="table-bordered">
+    <tr>
+        <th>Nummer</th>
+        <th>Nominativ</th>
+        <th>Genitiv</th>
+        <th>Konkret/abstrakt</th>
+        <th>Genus</th>
+        <th>Obestämd form singular</th>
+        <th>Bestämd form singular</th>
+        <th>Obestämd form plural</th>
+        <th>Bestämd form plural</th>
+        <th>Bestämd fristående artikel singular</th>
+        <th>Bestämd fristående artikel plural</th>
+        <th>Primär ordklass</th>
+        <th>Sekundär ordklass</th>
+    </tr>
+
+    @foreach (var substantiv in Model)
+    {
+        <tr>
+            <th>@substantiv.Id</th>
+            <td>@substantiv.ord</td>
+            <td>...s</td>
+            <td>@substantiv.betydelse</td>
+            <td>@substantiv.genus</td>
+            <td>@substantiv.obestämd_form_singular</td>
+            <td>@substantiv.bestämd_form_singular</td>
+            <td>@substantiv.obestämd_form_plural</td>
+            <td>@substantiv.bestämd_form_plural</td>
+            <td>@substantiv.bestämd_fristående_artikel_singular</td>
+            <td>@substantiv.bestämd_fristående_artikel_plural</td>
+            <td>@substantiv.ordklass</td>
+            <td>
+                @if (substantiv.även == substantiv.ordklass)
+                {
+
+                }
+                else
+                {
+                    @substantiv.även
+                }
+            </td>
+        </tr>
+    }
+
+</table>
