@@ -10,5 +10,6 @@ namespace GrammatikLaxen.Data
     {
         List<ordklasser> GetAllOrdklasserList();
         List<substantiv> GetAllSubstantivList();
+        List<pronomen> GetAllPronomenList();
     }
 }

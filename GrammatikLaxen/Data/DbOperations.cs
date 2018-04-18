@@ -23,5 +23,12 @@ namespace GrammatikLaxen.Data
             var substantivList = db.substantiv;
             return substantivList.ToList();
         }
+
+        // Hämta alla pronomen från databasen
+        public List<pronomen> GetAllPronomenList()
+        {
+            var pronomenList = db.pronomen;
+            return pronomenList.ToList();
+        }
     }
 }
