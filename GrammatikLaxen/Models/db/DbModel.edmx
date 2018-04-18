@@ -1,0 +1,1009 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="gramLaDatModel2.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="adjektiv">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ord" Type="nvarchar" MaxLength="50" />
+          <Property Name="ordklass" Type="nchar" MaxLength="10" />
+          <Property Name="ren" Type="bit" />
+          <Property Name="även" Type="nvarchar" MaxLength="50" />
+          <Property Name="obestämd_form_utrum" Type="nvarchar" MaxLength="50" />
+          <Property Name="obestämd_form_neutrum" Type="nvarchar" MaxLength="50" />
+          <Property Name="bestämd_form_ej_maskulinum" Type="nvarchar" MaxLength="50" />
+          <Property Name="singular" Type="nvarchar" MaxLength="50" />
+          <Property Name="plural" Type="nvarchar" MaxLength="50" />
+          <Property Name="positiv" Type="nvarchar" MaxLength="50" />
+          <Property Name="komparativ" Type="nvarchar" MaxLength="50" />
+          <Property Name="superlativ_predikativt" Type="nvarchar" MaxLength="50" />
+          <Property Name="superlativ_attributivt_ej_maskulinum" Type="nvarchar" MaxLength="50" />
+          <Property Name="fkordklass" Type="int" />
+        </EntityType>
+        <EntityType Name="adverb">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ord" Type="nvarchar" MaxLength="50" />
+          <Property Name="ordklass" Type="nchar" MaxLength="10" />
+          <Property Name="ordklass_2" Type="nchar" MaxLength="10" />
+          <Property Name="ren" Type="bit" />
+          <Property Name="typ" Type="nvarchar" MaxLength="50" />
+          <Property Name="typ_2" Type="nvarchar" MaxLength="50" />
+          <Property Name="typ_3" Type="nvarchar" MaxLength="50" />
+          <Property Name="typ_4" Type="nvarchar" MaxLength="50" />
+          <Property Name="typ_5" Type="nvarchar" MaxLength="50" />
+          <Property Name="typ_6" Type="nvarchar" MaxLength="50" />
+          <Property Name="typ_7" Type="nvarchar" MaxLength="50" />
+          <Property Name="typ_8" Type="nvarchar" MaxLength="50" />
+          <Property Name="typ_9" Type="nvarchar" MaxLength="50" />
+          <Property Name="tidsadverb" Type="bit" />
+          <Property Name="rumsadverb" Type="bit" />
+          <Property Name="sättsadverb" Type="bit" />
+          <Property Name="gradadverb" Type="bit" />
+          <Property Name="orsaksadverb" Type="bit" />
+          <Property Name="relativa_adverb" Type="bit" />
+          <Property Name="satsadverb" Type="bit" />
+          <Property Name="fkordklass" Type="int" />
+        </EntityType>
+        <EntityType Name="interjektion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ord" Type="nvarchar" MaxLength="50" />
+          <Property Name="ordklass" Type="nvarchar" MaxLength="50" />
+          <Property Name="ren" Type="bit" />
+          <Property Name="även" Type="nvarchar" MaxLength="50" />
+          <Property Name="fkordklass" Type="int" />
+        </EntityType>
+        <EntityType Name="konjunktion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ord" Type="nvarchar" MaxLength="50" />
+          <Property Name="ordklass" Type="nvarchar" MaxLength="50" />
+          <Property Name="ren" Type="bit" />
+          <Property Name="även" Type="nvarchar" MaxLength="50" />
+          <Property Name="underordnad" Type="bit" />
+          <Property Name="subjunktion" Type="nvarchar" MaxLength="50" />
+          <Property Name="fkordklass" Type="int" />
+        </EntityType>
+        <EntityType Name="ordklasser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ordklass" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="preposition">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ord" Type="nvarchar" MaxLength="50" />
+          <Property Name="ordklass" Type="nvarchar" MaxLength="50" />
+          <Property Name="ren" Type="bit" />
+          <Property Name="även" Type="nvarchar" MaxLength="50" />
+          <Property Name="fkordklass" Type="int" />
+        </EntityType>
+        <EntityType Name="pronomen">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ord" Type="nchar" MaxLength="10" />
+          <Property Name="ordklass" Type="nchar" MaxLength="10" />
+          <Property Name="ren" Type="bit" />
+          <Property Name="även" Type="nvarchar" MaxLength="50" />
+          <Property Name="personliga_subjekt" Type="nchar" MaxLength="10" />
+          <Property Name="personliga_objekt" Type="nchar" MaxLength="10" />
+          <Property Name="possessiva_utrum" Type="nchar" MaxLength="10" />
+          <Property Name="possessiva_neutrum" Type="nchar" MaxLength="10" />
+          <Property Name="possessiva_plural" Type="nchar" MaxLength="10" />
+          <Property Name="reflexiva" Type="nchar" MaxLength="10" />
+          <Property Name="reflexiva_possessiva" Type="bit" />
+          <Property Name="reflexiva_possessiva_utrum" Type="nchar" MaxLength="10" />
+          <Property Name="reflexiva_possessiva_neutrum" Type="nchar" MaxLength="10" />
+          <Property Name="reflexiva_possessiva_plural" Type="nchar" MaxLength="10" />
+          <Property Name="relativa_grundform" Type="nchar" MaxLength="10" />
+          <Property Name="relativa_genitiv" Type="nchar" MaxLength="10" />
+          <Property Name="interrogativa" Type="nchar" MaxLength="10" />
+          <Property Name="interrogativa_2" Type="nchar" MaxLength="10" />
+          <Property Name="demonstrativa" Type="bit" />
+          <Property Name="demonstrativa_nära" Type="nchar" MaxLength="10" />
+          <Property Name="demonstrativa_långt_bort" Type="nchar" MaxLength="10" />
+          <Property Name="demonstrativa_2" Type="bit" />
+          <Property Name="demonstrativa_lika" Type="nchar" MaxLength="10" />
+          <Property Name="determinativa" Type="bit" />
+          <Property Name="determinativa_fria" Type="nvarchar" MaxLength="50" />
+          <Property Name="determinativa_tillsammans_med_substantiv" Type="nvarchar" MaxLength="50" />
+          <Property Name="indefinita" Type="bit" />
+          <Property Name="indefinita_subjekt" Type="nchar" MaxLength="10" />
+          <Property Name="indefinita_objekt" Type="nchar" MaxLength="10" />
+          <Property Name="indefinita_utrum" Type="nchar" MaxLength="10" />
+          <Property Name="indefinita_neutrum" Type="nchar" MaxLength="10" />
+          <Property Name="indefinita_plural" Type="nchar" MaxLength="10" />
+          <Property Name="fkordklass" Type="int" />
+        </EntityType>
+        <EntityType Name="räkneord">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ord" Type="nvarchar" MaxLength="50" />
+          <Property Name="ordklass" Type="nvarchar" MaxLength="50" />
+          <Property Name="ren" Type="bit" />
+          <Property Name="även" Type="nvarchar" MaxLength="50" />
+          <Property Name="grundtal" Type="nvarchar" MaxLength="50" />
+          <Property Name="grundtal_2" Type="nvarchar" MaxLength="50" />
+          <Property Name="ordningstal_ej_maskulinum" Type="nvarchar" MaxLength="50" />
+          <Property Name="fkordklass" Type="int" />
+        </EntityType>
+        <EntityType Name="substantiv">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ord" Type="nvarchar" MaxLength="50" />
+          <Property Name="ordklass" Type="nvarchar" MaxLength="50" />
+          <Property Name="ren" Type="bit" />
+          <Property Name="även" Type="nvarchar" MaxLength="50" />
+          <Property Name="betydelse" Type="nchar" MaxLength="10" />
+          <Property Name="konkret" Type="bit" />
+          <Property Name="abstrakt" Type="bit" />
+          <Property Name="genus" Type="nchar" MaxLength="10" />
+          <Property Name="nominativ" Type="nvarchar" MaxLength="50" />
+          <Property Name="artikel" Type="nchar" MaxLength="10" />
+          <Property Name="obestämd_form_singular" Type="nvarchar" MaxLength="50" />
+          <Property Name="obestämd_form_singular_genitiv" Type="nvarchar" MaxLength="50" />
+          <Property Name="bestämd_form_singular" Type="nvarchar" MaxLength="50" />
+          <Property Name="bestämd_form_singular_genitiv" Type="nvarchar" MaxLength="50" />
+          <Property Name="obestämd_form_plural" Type="nvarchar" MaxLength="50" />
+          <Property Name="obestämd_form_plural_genitiv" Type="nvarchar" MaxLength="50" />
+          <Property Name="bestämd_form_plural" Type="nvarchar" MaxLength="50" />
+          <Property Name="bestämd_form_plural_genitiv" Type="nvarchar" MaxLength="50" />
+          <Property Name="bestämd_fristående_artikel_singular" Type="nchar" MaxLength="10" />
+          <Property Name="bestämd_fristående_artikel_plural" Type="nchar" MaxLength="10" />
+          <Property Name="fkordklass" Type="int" />
+        </EntityType>
+        <EntityType Name="toppresultat">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="resultat" Type="int" />
+          <Property Name="initialer" Type="nchar" MaxLength="10" />
+          <Property Name="datum" Type="date" />
+        </EntityType>
+        <EntityType Name="verb">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ord" Type="nvarchar" MaxLength="50" />
+          <Property Name="ordklass" Type="nchar" MaxLength="10" />
+          <Property Name="ren" Type="bit" />
+          <Property Name="även" Type="nvarchar" MaxLength="50" />
+          <Property Name="typ" Type="nchar" MaxLength="10" />
+          <Property Name="bindeverb" Type="bit" />
+          <Property Name="hjälpverb" Type="bit" />
+          <Property Name="huvudverb" Type="bit" />
+          <Property Name="attribut_infinitiv" Type="nchar" MaxLength="10" />
+          <Property Name="infinitiv" Type="nvarchar" MaxLength="50" />
+          <Property Name="attribut_preteritum" Type="nchar" MaxLength="10" />
+          <Property Name="preteritum" Type="nvarchar" MaxLength="50" />
+          <Property Name="attribut_supinum" Type="nchar" MaxLength="10" />
+          <Property Name="supinum" Type="nvarchar" MaxLength="50" />
+          <Property Name="presens" Type="nvarchar" MaxLength="50" />
+          <Property Name="perfekt" Type="nvarchar" MaxLength="50" />
+          <Property Name="pluskvamperfekt" Type="nvarchar" MaxLength="50" />
+          <Property Name="futurum" Type="nvarchar" MaxLength="50" />
+          <Property Name="imperativ" Type="nvarchar" MaxLength="50" />
+          <Property Name="particip" Type="bit" />
+          <Property Name="presens_particip" Type="nvarchar" MaxLength="50" />
+          <Property Name="presens_particip_2" Type="nvarchar" MaxLength="50" />
+          <Property Name="perfekt_particip" Type="nvarchar" MaxLength="50" />
+          <Property Name="fkordklass" Type="int" />
+        </EntityType>
+        <Association Name="FK_adjektiv_fkordklass">
+          <End Role="ordklasser" Type="Self.ordklasser" Multiplicity="0..1" />
+          <End Role="adjektiv" Type="Self.adjektiv" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ordklasser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="adjektiv">
+              <PropertyRef Name="fkordklass" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_adverb_fkordklass">
+          <End Role="ordklasser" Type="Self.ordklasser" Multiplicity="0..1" />
+          <End Role="adverb" Type="Self.adverb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ordklasser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="adverb">
+              <PropertyRef Name="fkordklass" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_interjektion_fkordklass">
+          <End Role="ordklasser" Type="Self.ordklasser" Multiplicity="0..1" />
+          <End Role="interjektion" Type="Self.interjektion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ordklasser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="interjektion">
+              <PropertyRef Name="fkordklass" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_konjunktion_fkordklass">
+          <End Role="ordklasser" Type="Self.ordklasser" Multiplicity="0..1" />
+          <End Role="konjunktion" Type="Self.konjunktion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ordklasser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="konjunktion">
+              <PropertyRef Name="fkordklass" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_preposition_fkordklass">
+          <End Role="ordklasser" Type="Self.ordklasser" Multiplicity="0..1" />
+          <End Role="preposition" Type="Self.preposition" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ordklasser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="preposition">
+              <PropertyRef Name="fkordklass" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_pronomen_fkordklass">
+          <End Role="ordklasser" Type="Self.ordklasser" Multiplicity="0..1" />
+          <End Role="pronomen" Type="Self.pronomen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ordklasser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="pronomen">
+              <PropertyRef Name="fkordklass" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_räkneord_fkordklass">
+          <End Role="ordklasser" Type="Self.ordklasser" Multiplicity="0..1" />
+          <End Role="räkneord" Type="Self.räkneord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ordklasser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="räkneord">
+              <PropertyRef Name="fkordklass" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_substantiv_fkordklass">
+          <End Role="ordklasser" Type="Self.ordklasser" Multiplicity="0..1" />
+          <End Role="substantiv" Type="Self.substantiv" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ordklasser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="substantiv">
+              <PropertyRef Name="fkordklass" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_verb_fkordklass">
+          <End Role="ordklasser" Type="Self.ordklasser" Multiplicity="0..1" />
+          <End Role="verb" Type="Self.verb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ordklasser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="verb">
+              <PropertyRef Name="fkordklass" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="gramLaDatModel2StoreContainer">
+          <EntitySet Name="adjektiv" EntityType="Self.adjektiv" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="adverb" EntityType="Self.adverb" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="interjektion" EntityType="Self.interjektion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="konjunktion" EntityType="Self.konjunktion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ordklasser" EntityType="Self.ordklasser" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="preposition" EntityType="Self.preposition" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="pronomen" EntityType="Self.pronomen" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="räkneord" EntityType="Self.räkneord" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="substantiv" EntityType="Self.substantiv" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="toppresultat" EntityType="Self.toppresultat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="verb" EntityType="Self.verb" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_adjektiv_fkordklass" Association="Self.FK_adjektiv_fkordklass">
+            <End Role="ordklasser" EntitySet="ordklasser" />
+            <End Role="adjektiv" EntitySet="adjektiv" />
+          </AssociationSet>
+          <AssociationSet Name="FK_adverb_fkordklass" Association="Self.FK_adverb_fkordklass">
+            <End Role="ordklasser" EntitySet="ordklasser" />
+            <End Role="adverb" EntitySet="adverb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_interjektion_fkordklass" Association="Self.FK_interjektion_fkordklass">
+            <End Role="ordklasser" EntitySet="ordklasser" />
+            <End Role="interjektion" EntitySet="interjektion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_konjunktion_fkordklass" Association="Self.FK_konjunktion_fkordklass">
+            <End Role="ordklasser" EntitySet="ordklasser" />
+            <End Role="konjunktion" EntitySet="konjunktion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_preposition_fkordklass" Association="Self.FK_preposition_fkordklass">
+            <End Role="ordklasser" EntitySet="ordklasser" />
+            <End Role="preposition" EntitySet="preposition" />
+          </AssociationSet>
+          <AssociationSet Name="FK_pronomen_fkordklass" Association="Self.FK_pronomen_fkordklass">
+            <End Role="ordklasser" EntitySet="ordklasser" />
+            <End Role="pronomen" EntitySet="pronomen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_räkneord_fkordklass" Association="Self.FK_räkneord_fkordklass">
+            <End Role="ordklasser" EntitySet="ordklasser" />
+            <End Role="räkneord" EntitySet="räkneord" />
+          </AssociationSet>
+          <AssociationSet Name="FK_substantiv_fkordklass" Association="Self.FK_substantiv_fkordklass">
+            <End Role="ordklasser" EntitySet="ordklasser" />
+            <End Role="substantiv" EntitySet="substantiv" />
+          </AssociationSet>
+          <AssociationSet Name="FK_verb_fkordklass" Association="Self.FK_verb_fkordklass">
+            <End Role="ordklasser" EntitySet="ordklasser" />
+            <End Role="verb" EntitySet="verb" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="gramLaDatModel2" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="adjektiv">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ord" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ordklass" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="ren" Type="Boolean" />
+          <Property Name="även" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="obestämd_form_utrum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="obestämd_form_neutrum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="bestämd_form_ej_maskulinum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="singular" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="plural" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="positiv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="komparativ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="superlativ_predikativt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="superlativ_attributivt_ej_maskulinum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fkordklass" Type="Int32" />
+          <NavigationProperty Name="ordklasser" Relationship="Self.FK_adjektiv_fkordklass" FromRole="adjektiv" ToRole="ordklasser" />
+        </EntityType>
+        <EntityType Name="adverb">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ord" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ordklass" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="ordklass_2" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="ren" Type="Boolean" />
+          <Property Name="typ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="typ_2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="typ_3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="typ_4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="typ_5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="typ_6" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="typ_7" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="typ_8" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="typ_9" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tidsadverb" Type="Boolean" />
+          <Property Name="rumsadverb" Type="Boolean" />
+          <Property Name="sättsadverb" Type="Boolean" />
+          <Property Name="gradadverb" Type="Boolean" />
+          <Property Name="orsaksadverb" Type="Boolean" />
+          <Property Name="relativa_adverb" Type="Boolean" />
+          <Property Name="satsadverb" Type="Boolean" />
+          <Property Name="fkordklass" Type="Int32" />
+          <NavigationProperty Name="ordklasser" Relationship="Self.FK_adverb_fkordklass" FromRole="adverb" ToRole="ordklasser" />
+        </EntityType>
+        <EntityType Name="interjektion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ord" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ordklass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ren" Type="Boolean" />
+          <Property Name="även" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fkordklass" Type="Int32" />
+          <NavigationProperty Name="ordklasser" Relationship="Self.FK_interjektion_fkordklass" FromRole="interjektion" ToRole="ordklasser" />
+        </EntityType>
+        <EntityType Name="konjunktion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ord" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ordklass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ren" Type="Boolean" />
+          <Property Name="även" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="underordnad" Type="Boolean" />
+          <Property Name="subjunktion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fkordklass" Type="Int32" />
+          <NavigationProperty Name="ordklasser" Relationship="Self.FK_konjunktion_fkordklass" FromRole="konjunktion" ToRole="ordklasser" />
+        </EntityType>
+        <EntityType Name="ordklasser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ordklass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="adjektiv" Relationship="Self.FK_adjektiv_fkordklass" FromRole="ordklasser" ToRole="adjektiv" />
+          <NavigationProperty Name="adverb" Relationship="Self.FK_adverb_fkordklass" FromRole="ordklasser" ToRole="adverb" />
+          <NavigationProperty Name="interjektion" Relationship="Self.FK_interjektion_fkordklass" FromRole="ordklasser" ToRole="interjektion" />
+          <NavigationProperty Name="konjunktion" Relationship="Self.FK_konjunktion_fkordklass" FromRole="ordklasser" ToRole="konjunktion" />
+          <NavigationProperty Name="preposition" Relationship="Self.FK_preposition_fkordklass" FromRole="ordklasser" ToRole="preposition" />
+          <NavigationProperty Name="pronomen" Relationship="Self.FK_pronomen_fkordklass" FromRole="ordklasser" ToRole="pronomen" />
+          <NavigationProperty Name="räkneord" Relationship="Self.FK_räkneord_fkordklass" FromRole="ordklasser" ToRole="räkneord" />
+          <NavigationProperty Name="substantiv" Relationship="Self.FK_substantiv_fkordklass" FromRole="ordklasser" ToRole="substantiv" />
+          <NavigationProperty Name="verb" Relationship="Self.FK_verb_fkordklass" FromRole="ordklasser" ToRole="verb" />
+        </EntityType>
+        <EntityType Name="preposition">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ord" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ordklass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ren" Type="Boolean" />
+          <Property Name="även" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fkordklass" Type="Int32" />
+          <NavigationProperty Name="ordklasser" Relationship="Self.FK_preposition_fkordklass" FromRole="preposition" ToRole="ordklasser" />
+        </EntityType>
+        <EntityType Name="pronomen">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ord" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="ordklass" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="ren" Type="Boolean" />
+          <Property Name="även" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="personliga_subjekt" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="personliga_objekt" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="possessiva_utrum" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="possessiva_neutrum" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="possessiva_plural" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="reflexiva" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="reflexiva_possessiva" Type="Boolean" />
+          <Property Name="reflexiva_possessiva_utrum" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="reflexiva_possessiva_neutrum" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="reflexiva_possessiva_plural" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="relativa_grundform" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="relativa_genitiv" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="interrogativa" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="interrogativa_2" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="demonstrativa" Type="Boolean" />
+          <Property Name="demonstrativa_nära" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="demonstrativa_långt_bort" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="demonstrativa_2" Type="Boolean" />
+          <Property Name="demonstrativa_lika" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="determinativa" Type="Boolean" />
+          <Property Name="determinativa_fria" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="determinativa_tillsammans_med_substantiv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="indefinita" Type="Boolean" />
+          <Property Name="indefinita_subjekt" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="indefinita_objekt" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="indefinita_utrum" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="indefinita_neutrum" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="indefinita_plural" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="fkordklass" Type="Int32" />
+          <NavigationProperty Name="ordklasser" Relationship="Self.FK_pronomen_fkordklass" FromRole="pronomen" ToRole="ordklasser" />
+        </EntityType>
+        <EntityType Name="räkneord">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ord" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ordklass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ren" Type="Boolean" />
+          <Property Name="även" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="grundtal" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="grundtal_2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ordningstal_ej_maskulinum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fkordklass" Type="Int32" />
+          <NavigationProperty Name="ordklasser" Relationship="Self.FK_räkneord_fkordklass" FromRole="räkneord" ToRole="ordklasser" />
+        </EntityType>
+        <EntityType Name="substantiv">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ord" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ordklass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ren" Type="Boolean" />
+          <Property Name="även" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="betydelse" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="konkret" Type="Boolean" />
+          <Property Name="abstrakt" Type="Boolean" />
+          <Property Name="genus" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="nominativ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="artikel" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="obestämd_form_singular" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="obestämd_form_singular_genitiv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="bestämd_form_singular" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="bestämd_form_singular_genitiv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="obestämd_form_plural" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="obestämd_form_plural_genitiv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="bestämd_form_plural" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="bestämd_form_plural_genitiv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="bestämd_fristående_artikel_singular" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="bestämd_fristående_artikel_plural" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="fkordklass" Type="Int32" />
+          <NavigationProperty Name="ordklasser" Relationship="Self.FK_substantiv_fkordklass" FromRole="substantiv" ToRole="ordklasser" />
+        </EntityType>
+        <EntityType Name="toppresultat">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="resultat" Type="Int32" />
+          <Property Name="initialer" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="datum" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="verb">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ord" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ordklass" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="ren" Type="Boolean" />
+          <Property Name="även" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="typ" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="bindeverb" Type="Boolean" />
+          <Property Name="hjälpverb" Type="Boolean" />
+          <Property Name="huvudverb" Type="Boolean" />
+          <Property Name="attribut_infinitiv" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="infinitiv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="attribut_preteritum" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="preteritum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="attribut_supinum" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="supinum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="presens" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="perfekt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pluskvamperfekt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="futurum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="imperativ" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="particip" Type="Boolean" />
+          <Property Name="presens_particip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="presens_particip_2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="perfekt_particip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fkordklass" Type="Int32" />
+          <NavigationProperty Name="ordklasser" Relationship="Self.FK_verb_fkordklass" FromRole="verb" ToRole="ordklasser" />
+        </EntityType>
+        <Association Name="FK_adjektiv_fkordklass">
+          <End Role="ordklasser" Type="Self.ordklasser" Multiplicity="0..1" />
+          <End Role="adjektiv" Type="Self.adjektiv" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ordklasser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="adjektiv">
+              <PropertyRef Name="fkordklass" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_adverb_fkordklass">
+          <End Role="ordklasser" Type="Self.ordklasser" Multiplicity="0..1" />
+          <End Role="adverb" Type="Self.adverb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ordklasser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="adverb">
+              <PropertyRef Name="fkordklass" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_interjektion_fkordklass">
+          <End Role="ordklasser" Type="Self.ordklasser" Multiplicity="0..1" />
+          <End Role="interjektion" Type="Self.interjektion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ordklasser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="interjektion">
+              <PropertyRef Name="fkordklass" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_konjunktion_fkordklass">
+          <End Role="ordklasser" Type="Self.ordklasser" Multiplicity="0..1" />
+          <End Role="konjunktion" Type="Self.konjunktion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ordklasser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="konjunktion">
+              <PropertyRef Name="fkordklass" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_preposition_fkordklass">
+          <End Role="ordklasser" Type="Self.ordklasser" Multiplicity="0..1" />
+          <End Role="preposition" Type="Self.preposition" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ordklasser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="preposition">
+              <PropertyRef Name="fkordklass" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_pronomen_fkordklass">
+          <End Role="ordklasser" Type="Self.ordklasser" Multiplicity="0..1" />
+          <End Role="pronomen" Type="Self.pronomen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ordklasser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="pronomen">
+              <PropertyRef Name="fkordklass" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_räkneord_fkordklass">
+          <End Role="ordklasser" Type="Self.ordklasser" Multiplicity="0..1" />
+          <End Role="räkneord" Type="Self.räkneord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ordklasser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="räkneord">
+              <PropertyRef Name="fkordklass" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_substantiv_fkordklass">
+          <End Role="ordklasser" Type="Self.ordklasser" Multiplicity="0..1" />
+          <End Role="substantiv" Type="Self.substantiv" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ordklasser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="substantiv">
+              <PropertyRef Name="fkordklass" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_verb_fkordklass">
+          <End Role="ordklasser" Type="Self.ordklasser" Multiplicity="0..1" />
+          <End Role="verb" Type="Self.verb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ordklasser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="verb">
+              <PropertyRef Name="fkordklass" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="gramLaDatEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="adjektiv" EntityType="Self.adjektiv" />
+          <EntitySet Name="adverb" EntityType="Self.adverb" />
+          <EntitySet Name="interjektion" EntityType="Self.interjektion" />
+          <EntitySet Name="konjunktion" EntityType="Self.konjunktion" />
+          <EntitySet Name="ordklasser" EntityType="Self.ordklasser" />
+          <EntitySet Name="preposition" EntityType="Self.preposition" />
+          <EntitySet Name="pronomen" EntityType="Self.pronomen" />
+          <EntitySet Name="räkneord" EntityType="Self.räkneord" />
+          <EntitySet Name="substantiv" EntityType="Self.substantiv" />
+          <EntitySet Name="toppresultat" EntityType="Self.toppresultat" />
+          <EntitySet Name="verb" EntityType="Self.verb" />
+          <AssociationSet Name="FK_adjektiv_fkordklass" Association="Self.FK_adjektiv_fkordklass">
+            <End Role="ordklasser" EntitySet="ordklasser" />
+            <End Role="adjektiv" EntitySet="adjektiv" />
+          </AssociationSet>
+          <AssociationSet Name="FK_adverb_fkordklass" Association="Self.FK_adverb_fkordklass">
+            <End Role="ordklasser" EntitySet="ordklasser" />
+            <End Role="adverb" EntitySet="adverb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_interjektion_fkordklass" Association="Self.FK_interjektion_fkordklass">
+            <End Role="ordklasser" EntitySet="ordklasser" />
+            <End Role="interjektion" EntitySet="interjektion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_konjunktion_fkordklass" Association="Self.FK_konjunktion_fkordklass">
+            <End Role="ordklasser" EntitySet="ordklasser" />
+            <End Role="konjunktion" EntitySet="konjunktion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_preposition_fkordklass" Association="Self.FK_preposition_fkordklass">
+            <End Role="ordklasser" EntitySet="ordklasser" />
+            <End Role="preposition" EntitySet="preposition" />
+          </AssociationSet>
+          <AssociationSet Name="FK_pronomen_fkordklass" Association="Self.FK_pronomen_fkordklass">
+            <End Role="ordklasser" EntitySet="ordklasser" />
+            <End Role="pronomen" EntitySet="pronomen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_räkneord_fkordklass" Association="Self.FK_räkneord_fkordklass">
+            <End Role="ordklasser" EntitySet="ordklasser" />
+            <End Role="räkneord" EntitySet="räkneord" />
+          </AssociationSet>
+          <AssociationSet Name="FK_substantiv_fkordklass" Association="Self.FK_substantiv_fkordklass">
+            <End Role="ordklasser" EntitySet="ordklasser" />
+            <End Role="substantiv" EntitySet="substantiv" />
+          </AssociationSet>
+          <AssociationSet Name="FK_verb_fkordklass" Association="Self.FK_verb_fkordklass">
+            <End Role="ordklasser" EntitySet="ordklasser" />
+            <End Role="verb" EntitySet="verb" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="gramLaDatModel2StoreContainer" CdmEntityContainer="gramLaDatEntities2">
+          <EntitySetMapping Name="adjektiv">
+            <EntityTypeMapping TypeName="gramLaDatModel2.adjektiv">
+              <MappingFragment StoreEntitySet="adjektiv">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ord" ColumnName="ord" />
+                <ScalarProperty Name="ordklass" ColumnName="ordklass" />
+                <ScalarProperty Name="ren" ColumnName="ren" />
+                <ScalarProperty Name="även" ColumnName="även" />
+                <ScalarProperty Name="obestämd_form_utrum" ColumnName="obestämd_form_utrum" />
+                <ScalarProperty Name="obestämd_form_neutrum" ColumnName="obestämd_form_neutrum" />
+                <ScalarProperty Name="bestämd_form_ej_maskulinum" ColumnName="bestämd_form_ej_maskulinum" />
+                <ScalarProperty Name="singular" ColumnName="singular" />
+                <ScalarProperty Name="plural" ColumnName="plural" />
+                <ScalarProperty Name="positiv" ColumnName="positiv" />
+                <ScalarProperty Name="komparativ" ColumnName="komparativ" />
+                <ScalarProperty Name="superlativ_predikativt" ColumnName="superlativ_predikativt" />
+                <ScalarProperty Name="superlativ_attributivt_ej_maskulinum" ColumnName="superlativ_attributivt_ej_maskulinum" />
+                <ScalarProperty Name="fkordklass" ColumnName="fkordklass" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="adverb">
+            <EntityTypeMapping TypeName="gramLaDatModel2.adverb">
+              <MappingFragment StoreEntitySet="adverb">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ord" ColumnName="ord" />
+                <ScalarProperty Name="ordklass" ColumnName="ordklass" />
+                <ScalarProperty Name="ordklass_2" ColumnName="ordklass_2" />
+                <ScalarProperty Name="ren" ColumnName="ren" />
+                <ScalarProperty Name="typ" ColumnName="typ" />
+                <ScalarProperty Name="typ_2" ColumnName="typ_2" />
+                <ScalarProperty Name="typ_3" ColumnName="typ_3" />
+                <ScalarProperty Name="typ_4" ColumnName="typ_4" />
+                <ScalarProperty Name="typ_5" ColumnName="typ_5" />
+                <ScalarProperty Name="typ_6" ColumnName="typ_6" />
+                <ScalarProperty Name="typ_7" ColumnName="typ_7" />
+                <ScalarProperty Name="typ_8" ColumnName="typ_8" />
+                <ScalarProperty Name="typ_9" ColumnName="typ_9" />
+                <ScalarProperty Name="tidsadverb" ColumnName="tidsadverb" />
+                <ScalarProperty Name="rumsadverb" ColumnName="rumsadverb" />
+                <ScalarProperty Name="sättsadverb" ColumnName="sättsadverb" />
+                <ScalarProperty Name="gradadverb" ColumnName="gradadverb" />
+                <ScalarProperty Name="orsaksadverb" ColumnName="orsaksadverb" />
+                <ScalarProperty Name="relativa_adverb" ColumnName="relativa_adverb" />
+                <ScalarProperty Name="satsadverb" ColumnName="satsadverb" />
+                <ScalarProperty Name="fkordklass" ColumnName="fkordklass" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="interjektion">
+            <EntityTypeMapping TypeName="gramLaDatModel2.interjektion">
+              <MappingFragment StoreEntitySet="interjektion">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ord" ColumnName="ord" />
+                <ScalarProperty Name="ordklass" ColumnName="ordklass" />
+                <ScalarProperty Name="ren" ColumnName="ren" />
+                <ScalarProperty Name="även" ColumnName="även" />
+                <ScalarProperty Name="fkordklass" ColumnName="fkordklass" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="konjunktion">
+            <EntityTypeMapping TypeName="gramLaDatModel2.konjunktion">
+              <MappingFragment StoreEntitySet="konjunktion">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ord" ColumnName="ord" />
+                <ScalarProperty Name="ordklass" ColumnName="ordklass" />
+                <ScalarProperty Name="ren" ColumnName="ren" />
+                <ScalarProperty Name="även" ColumnName="även" />
+                <ScalarProperty Name="underordnad" ColumnName="underordnad" />
+                <ScalarProperty Name="subjunktion" ColumnName="subjunktion" />
+                <ScalarProperty Name="fkordklass" ColumnName="fkordklass" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ordklasser">
+            <EntityTypeMapping TypeName="gramLaDatModel2.ordklasser">
+              <MappingFragment StoreEntitySet="ordklasser">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ordklass" ColumnName="ordklass" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="preposition">
+            <EntityTypeMapping TypeName="gramLaDatModel2.preposition">
+              <MappingFragment StoreEntitySet="preposition">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ord" ColumnName="ord" />
+                <ScalarProperty Name="ordklass" ColumnName="ordklass" />
+                <ScalarProperty Name="ren" ColumnName="ren" />
+                <ScalarProperty Name="även" ColumnName="även" />
+                <ScalarProperty Name="fkordklass" ColumnName="fkordklass" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pronomen">
+            <EntityTypeMapping TypeName="gramLaDatModel2.pronomen">
+              <MappingFragment StoreEntitySet="pronomen">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ord" ColumnName="ord" />
+                <ScalarProperty Name="ordklass" ColumnName="ordklass" />
+                <ScalarProperty Name="ren" ColumnName="ren" />
+                <ScalarProperty Name="även" ColumnName="även" />
+                <ScalarProperty Name="personliga_subjekt" ColumnName="personliga_subjekt" />
+                <ScalarProperty Name="personliga_objekt" ColumnName="personliga_objekt" />
+                <ScalarProperty Name="possessiva_utrum" ColumnName="possessiva_utrum" />
+                <ScalarProperty Name="possessiva_neutrum" ColumnName="possessiva_neutrum" />
+                <ScalarProperty Name="possessiva_plural" ColumnName="possessiva_plural" />
+                <ScalarProperty Name="reflexiva" ColumnName="reflexiva" />
+                <ScalarProperty Name="reflexiva_possessiva" ColumnName="reflexiva_possessiva" />
+                <ScalarProperty Name="reflexiva_possessiva_utrum" ColumnName="reflexiva_possessiva_utrum" />
+                <ScalarProperty Name="reflexiva_possessiva_neutrum" ColumnName="reflexiva_possessiva_neutrum" />
+                <ScalarProperty Name="reflexiva_possessiva_plural" ColumnName="reflexiva_possessiva_plural" />
+                <ScalarProperty Name="relativa_grundform" ColumnName="relativa_grundform" />
+                <ScalarProperty Name="relativa_genitiv" ColumnName="relativa_genitiv" />
+                <ScalarProperty Name="interrogativa" ColumnName="interrogativa" />
+                <ScalarProperty Name="interrogativa_2" ColumnName="interrogativa_2" />
+                <ScalarProperty Name="demonstrativa" ColumnName="demonstrativa" />
+                <ScalarProperty Name="demonstrativa_nära" ColumnName="demonstrativa_nära" />
+                <ScalarProperty Name="demonstrativa_långt_bort" ColumnName="demonstrativa_långt_bort" />
+                <ScalarProperty Name="demonstrativa_2" ColumnName="demonstrativa_2" />
+                <ScalarProperty Name="demonstrativa_lika" ColumnName="demonstrativa_lika" />
+                <ScalarProperty Name="determinativa" ColumnName="determinativa" />
+                <ScalarProperty Name="determinativa_fria" ColumnName="determinativa_fria" />
+                <ScalarProperty Name="determinativa_tillsammans_med_substantiv" ColumnName="determinativa_tillsammans_med_substantiv" />
+                <ScalarProperty Name="indefinita" ColumnName="indefinita" />
+                <ScalarProperty Name="indefinita_subjekt" ColumnName="indefinita_subjekt" />
+                <ScalarProperty Name="indefinita_objekt" ColumnName="indefinita_objekt" />
+                <ScalarProperty Name="indefinita_utrum" ColumnName="indefinita_utrum" />
+                <ScalarProperty Name="indefinita_neutrum" ColumnName="indefinita_neutrum" />
+                <ScalarProperty Name="indefinita_plural" ColumnName="indefinita_plural" />
+                <ScalarProperty Name="fkordklass" ColumnName="fkordklass" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="räkneord">
+            <EntityTypeMapping TypeName="gramLaDatModel2.räkneord">
+              <MappingFragment StoreEntitySet="räkneord">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ord" ColumnName="ord" />
+                <ScalarProperty Name="ordklass" ColumnName="ordklass" />
+                <ScalarProperty Name="ren" ColumnName="ren" />
+                <ScalarProperty Name="även" ColumnName="även" />
+                <ScalarProperty Name="grundtal" ColumnName="grundtal" />
+                <ScalarProperty Name="grundtal_2" ColumnName="grundtal_2" />
+                <ScalarProperty Name="ordningstal_ej_maskulinum" ColumnName="ordningstal_ej_maskulinum" />
+                <ScalarProperty Name="fkordklass" ColumnName="fkordklass" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="substantiv">
+            <EntityTypeMapping TypeName="gramLaDatModel2.substantiv">
+              <MappingFragment StoreEntitySet="substantiv">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ord" ColumnName="ord" />
+                <ScalarProperty Name="ordklass" ColumnName="ordklass" />
+                <ScalarProperty Name="ren" ColumnName="ren" />
+                <ScalarProperty Name="även" ColumnName="även" />
+                <ScalarProperty Name="betydelse" ColumnName="betydelse" />
+                <ScalarProperty Name="konkret" ColumnName="konkret" />
+                <ScalarProperty Name="abstrakt" ColumnName="abstrakt" />
+                <ScalarProperty Name="genus" ColumnName="genus" />
+                <ScalarProperty Name="nominativ" ColumnName="nominativ" />
+                <ScalarProperty Name="artikel" ColumnName="artikel" />
+                <ScalarProperty Name="obestämd_form_singular" ColumnName="obestämd_form_singular" />
+                <ScalarProperty Name="obestämd_form_singular_genitiv" ColumnName="obestämd_form_singular_genitiv" />
+                <ScalarProperty Name="bestämd_form_singular" ColumnName="bestämd_form_singular" />
+                <ScalarProperty Name="bestämd_form_singular_genitiv" ColumnName="bestämd_form_singular_genitiv" />
+                <ScalarProperty Name="obestämd_form_plural" ColumnName="obestämd_form_plural" />
+                <ScalarProperty Name="obestämd_form_plural_genitiv" ColumnName="obestämd_form_plural_genitiv" />
+                <ScalarProperty Name="bestämd_form_plural" ColumnName="bestämd_form_plural" />
+                <ScalarProperty Name="bestämd_form_plural_genitiv" ColumnName="bestämd_form_plural_genitiv" />
+                <ScalarProperty Name="bestämd_fristående_artikel_singular" ColumnName="bestämd_fristående_artikel_singular" />
+                <ScalarProperty Name="bestämd_fristående_artikel_plural" ColumnName="bestämd_fristående_artikel_plural" />
+                <ScalarProperty Name="fkordklass" ColumnName="fkordklass" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="toppresultat">
+            <EntityTypeMapping TypeName="gramLaDatModel2.toppresultat">
+              <MappingFragment StoreEntitySet="toppresultat">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="resultat" ColumnName="resultat" />
+                <ScalarProperty Name="initialer" ColumnName="initialer" />
+                <ScalarProperty Name="datum" ColumnName="datum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="verb">
+            <EntityTypeMapping TypeName="gramLaDatModel2.verb">
+              <MappingFragment StoreEntitySet="verb">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ord" ColumnName="ord" />
+                <ScalarProperty Name="ordklass" ColumnName="ordklass" />
+                <ScalarProperty Name="ren" ColumnName="ren" />
+                <ScalarProperty Name="även" ColumnName="även" />
+                <ScalarProperty Name="typ" ColumnName="typ" />
+                <ScalarProperty Name="bindeverb" ColumnName="bindeverb" />
+                <ScalarProperty Name="hjälpverb" ColumnName="hjälpverb" />
+                <ScalarProperty Name="huvudverb" ColumnName="huvudverb" />
+                <ScalarProperty Name="attribut_infinitiv" ColumnName="attribut_infinitiv" />
+                <ScalarProperty Name="infinitiv" ColumnName="infinitiv" />
+                <ScalarProperty Name="attribut_preteritum" ColumnName="attribut_preteritum" />
+                <ScalarProperty Name="preteritum" ColumnName="preteritum" />
+                <ScalarProperty Name="attribut_supinum" ColumnName="attribut_supinum" />
+                <ScalarProperty Name="supinum" ColumnName="supinum" />
+                <ScalarProperty Name="presens" ColumnName="presens" />
+                <ScalarProperty Name="perfekt" ColumnName="perfekt" />
+                <ScalarProperty Name="pluskvamperfekt" ColumnName="pluskvamperfekt" />
+                <ScalarProperty Name="futurum" ColumnName="futurum" />
+                <ScalarProperty Name="imperativ" ColumnName="imperativ" />
+                <ScalarProperty Name="particip" ColumnName="particip" />
+                <ScalarProperty Name="presens_particip" ColumnName="presens_particip" />
+                <ScalarProperty Name="presens_particip_2" ColumnName="presens_particip_2" />
+                <ScalarProperty Name="perfekt_particip" ColumnName="perfekt_particip" />
+                <ScalarProperty Name="fkordklass" ColumnName="fkordklass" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
