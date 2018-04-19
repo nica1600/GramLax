@@ -1,0 +1,34 @@
+﻿@model List<GrammatikLaxen.Models.db.interjektion>
+@{
+    ViewBag.Title = "Interjektion";
+}
+
+<h2>Interjektion</h2>
+<table class="table-bordered">
+    <tr>
+        <th>Nummer</th>
+        <th>Ord</th>
+        <th>Primär ordklass</th>
+        <th>Sekundär ordklass</th>
+    </tr>
+
+    @foreach (var interjektion in Model)
+    {
+        <tr>
+            <th>@interjektion.Id</th>
+            <td>@interjektion.ord</td>
+            <td>@interjektion.ordklass</td>
+            <td>
+                @if (interjektion.även == interjektion.ordklass)
+                {
+
+                }
+                else
+                {
+                    @interjektion.även
+                }
+            </td>
+        </tr>
+    }
+
+</table>

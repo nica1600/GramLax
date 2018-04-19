@@ -1,0 +1,45 @@
+﻿@model List<GrammatikLaxen.Models.db.konjunktion>
+@{
+    ViewBag.Title = "Konjunktion";
+}
+
+<h2>Konjunktion</h2>
+<table class="table-bordered">
+    <tr>
+        <th>Nummer</th>
+        <th>Ord</th>
+        <th>Subjunktion</th>
+        <th>Primär ordklass</th>
+        <th>Sekundär ordklass</th>
+    </tr>
+
+    @foreach (var konjunktion in Model)
+    {
+        <tr>
+            <th>@konjunktion.Id</th>
+            <td>@konjunktion.ord</td>
+            <td>
+                @if(konjunktion.underordnad == false)
+                {
+
+                }
+                else
+                {
+                    @konjunktion.underordnad
+                }
+            </td>
+            <td>@konjunktion.ordklass</td>
+            <td>
+                @if (konjunktion.även == konjunktion.ordklass)
+                {
+
+                }
+                else
+                {
+                    @konjunktion.även
+                }
+            </td>
+        </tr>
+    }
+
+</table>

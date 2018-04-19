@@ -1,0 +1,89 @@
+﻿@model List<GrammatikLaxen.Models.db.pronomen>
+@{
+    ViewBag.Title = "Pronomen";
+}
+
+<h2>Pronomen</h2>
+<table class="table-bordered">
+    <tr>
+        <th>Nummer</th>
+        <th>Personliga (subjekt)</th>
+        <th>Personliga (objekt)</th>
+        <th>Possessiva (utrum)</th>
+        <th>Possessiva (neutrum)</th>
+        <th>Possessiva (plural)</th>
+        <th>Reflexiva</th>
+        <th>Reflexiva possessiva (utrum)</th>
+        <th>Reflexiva possessiva (neutrum)</th>
+        <th>Reflexiva possessiva (plural)</th>
+        <th>Relativa (nominativ)</th>
+        <th>Relativa (genitiv)</th>
+        <th>Interrogativa 1</th>
+        <th>Interrogativa 2</th>
+        <th>Demonstrativa (nära)</th>
+        <th>Demonstrativa (långt bort)</th>
+        <th>Demonstrativa (lika)</th>
+        <th>Determinativa (fria)</th>
+        <th>Determinativa (med substantiv)</th>
+        <th>Primär ordklass</th>
+        <th>Sekundär ordklass</th>
+    </tr>
+
+    @foreach (var pronomen in Model)
+    {
+        <tr>
+            <th>@pronomen.Id</th>
+            <td>@pronomen.ord</td>
+            <td>@pronomen.personliga_objekt</td>
+            <td>@pronomen.possessiva_utrum</td>
+            <td>@pronomen.possessiva_neutrum</td>
+            <td>@pronomen.possessiva_plural</td>
+            <td>@pronomen.reflexiva</td>
+            <td>@pronomen.reflexiva_possessiva_utrum</td>
+            <td>@pronomen.reflexiva_possessiva_neutrum</td>
+            <td>@pronomen.reflexiva_possessiva_plural</td>
+            <td>@pronomen.relativa_grundform</td>
+            <td>@pronomen.relativa_genitiv</td>
+            <td>@pronomen.interrogativa</td>
+            <td>@pronomen.interrogativa_2</td>
+            <td>@pronomen.demonstrativa_nära</td>
+            <td>@pronomen.demonstrativa_långt_bort</td>
+            <td>@pronomen.demonstrativa_lika</td>
+            <td>@pronomen.determinativa_fria</td>
+            <td>@pronomen.determinativa_tillsammans_med_substantiv</td>
+            <td>@pronomen.ordklass</td>
+            <td>
+                @if (pronomen.även == pronomen.ordklass)
+                {
+
+                }
+                else
+                {
+                    @pronomen.även
+                }
+            </td>
+        </tr>
+    }
+
+</table>
+
+<h2>Indefinita pronomen</h2>
+<table class="table-bordered">
+    <tr>
+        <th>Exempel subjekt</th>
+        <th>Exempel objekt</th>
+        <th>Exempel utrum</th>
+        <th>Exempel neutrum</th>
+        <th>Exempel plural</th>
+    </tr>
+    @foreach (var pronomen in Model)
+    {
+        <tr>
+            <td>@pronomen.indefinita_subjekt</td>
+            <td>@pronomen.indefinita_objekt</td>
+            <td>@pronomen.indefinita_utrum</td>
+            <td>@pronomen.indefinita_neutrum</td>
+            <td>@pronomen.indefinita_plural</td>
+        </tr>
+    }
+</table>
