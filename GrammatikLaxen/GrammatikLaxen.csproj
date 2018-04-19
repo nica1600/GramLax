@@ -151,6 +151,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProvController.cs" />
     <Compile Include="Data\DbOperations.cs" />
     <Compile Include="Data\IDbOperations.cs" />
     <Compile Include="Global.asax.cs">
@@ -269,6 +270,7 @@
     <Content Include="Views\Home\Konjunktion.cshtml" />
     <Content Include="Views\Home\Rakneord.cshtml" />
     <Content Include="Views\Home\Interjektion.cshtml" />
+    <Content Include="Views\Prov\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
