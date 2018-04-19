@@ -43,5 +43,11 @@ namespace GrammatikLaxen.Controllers
             var adjektivList = db.GetAllAdjektivList();
             return View(adjektivList.ToList());
         }
+
+        public ActionResult Verb()
+        {
+            var verbList = db.GetAllVerbList();
+            return View(verbList.ToList());
+        }
     }
 }

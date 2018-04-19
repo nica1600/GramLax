@@ -12,5 +12,6 @@ namespace GrammatikLaxen.Data
         List<substantiv> GetAllSubstantivList();
         List<pronomen> GetAllPronomenList();
         List<adjektiv> GetAllAdjektivList();
+        List<verb> GetAllVerbList();
     }
 }

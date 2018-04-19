@@ -263,6 +263,7 @@
     <Content Include="Views\Home\Substantiv.cshtml" />
     <Content Include="Views\Home\Pronomen.cshtml" />
     <Content Include="Views\Home\Adjektiv.cshtml" />
+    <Content Include="Views\Home\Verb.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
