@@ -37,5 +37,11 @@ namespace GrammatikLaxen.Controllers
             var pronomenList = db.GetAllPronomenList();
             return View(pronomenList.ToList());
         }
+
+        public ActionResult Adjektiv()
+        {
+            var adjektivList = db.GetAllAdjektivList();
+            return View(adjektivList.ToList());
+        }
     }
 }

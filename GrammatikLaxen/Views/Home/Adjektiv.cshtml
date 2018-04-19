@@ -1,0 +1,48 @@
+﻿@model List<GrammatikLaxen.Models.db.adjektiv>
+@{
+    ViewBag.Title = "Adjektiv";
+}
+
+<h2>Adjektiv</h2>
+<table class="table-bordered">
+    <tr>
+        <th>Nummer</th>
+        <th>Obestämd form (utrum)</th>
+        <th>Obestämd form (neutrum)</th>
+        <th>Bestämd form (ej maskulinum)</th>
+        <th>Plural</th>
+        <th>Positiv</th>
+        <th>Komparativ</th>
+        <th>Superlativ (predikativt)</th>
+        <th>Superlativ (attributivt, ej maskulinum)</th>
+        <th>Primär ordklass</th>
+        <th>Sekundär ordklass</th>
+    </tr>
+
+    @foreach (var adjektiv in Model)
+    {
+        <tr>
+            <th>@adjektiv.Id</th>
+            <td>@adjektiv.ord</td>
+            <td>@adjektiv.obestämd_form_neutrum</td>
+            <td>@adjektiv.bestämd_form_ej_maskulinum</td>
+            <td>@adjektiv.plural</td>
+            <td>@adjektiv.positiv</td>
+            <td>@adjektiv.komparativ</td>
+            <td>@adjektiv.superlativ_predikativt</td>
+            <td>@adjektiv.superlativ_attributivt_ej_maskulinum</td>
+            <td>@adjektiv.ordklass</td>
+            <td>
+                @if (adjektiv.även == adjektiv.ordklass)
+                {
+
+                }
+                else
+                {
+                    @adjektiv.även
+                }
+            </td>
+        </tr>
+    }
+
+</table>
