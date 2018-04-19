@@ -73,5 +73,11 @@ namespace GrammatikLaxen.Controllers
             var räkneordList = db.GetAllRäkneordList();
             return View(räkneordList.ToList());
         }
+
+        public ActionResult Interjektion()
+        {
+            var interjektionList = db.GetAllInterjektionList();
+            return View(interjektionList.ToList());
+        }
     }
 }

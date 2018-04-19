@@ -72,5 +72,12 @@ namespace GrammatikLaxen.Data
             var räkneordList = db.räkneord;
             return räkneordList.ToList();
         }
+
+        // Hämta alla interjektioner från databasen
+        public List<interjektion> GetAllInterjektionList()
+        {
+            var interjektionList = db.interjektion;
+            return interjektionList.ToList();
+        }
     }
 }
