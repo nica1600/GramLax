@@ -266,6 +266,7 @@
     <Content Include="Views\Home\Verb.cshtml" />
     <Content Include="Views\Home\Adverb.cshtml" />
     <Content Include="Views\Home\Preposition.cshtml" />
+    <Content Include="Views\Home\Konjunktion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

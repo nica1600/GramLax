@@ -61,5 +61,11 @@ namespace GrammatikLaxen.Controllers
             var prepositionList = db.GetAllPrepositionList();
             return View(prepositionList.ToList());
         }
+
+        public ActionResult Konjunktion()
+        {
+            var konjunktionList = db.GetAllKonjunktionList();
+            return View(konjunktionList.ToList());
+        }
     }
 }

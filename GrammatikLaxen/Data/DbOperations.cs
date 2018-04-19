@@ -58,5 +58,12 @@ namespace GrammatikLaxen.Data
             var prepositionList = db.preposition;
             return prepositionList.ToList();
         }
+
+        // Hämta alla konjunktioner från databasen
+        public List<konjunktion> GetAllKonjunktionList()
+        {
+            var konjunktionList = db.konjunktion;
+            return konjunktionList.ToList();
+        }
     }
 }

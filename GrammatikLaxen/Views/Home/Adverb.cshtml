@@ -23,13 +23,76 @@
         <tr>
             <th>@adverb.Id</th>
             <td>@adverb.ord</td>
-            <td>@adverb.tidsadverb</td>
-            <td>@adverb.rumsadverb</td>
-            <td>@adverb.sättsadverb</td>
-            <td>@adverb.gradadverb</td>
-            <td>@adverb.orsaksadverb</td>
-            <td>@adverb.relativa_adverb</td>
-            <td>@adverb.satsadverb</td>
+            <td>
+                @if (adverb.tidsadverb == false)
+                {
+
+                }
+                else
+                {
+                    @adverb.tidsadverb
+                }
+            </td>
+            <td>
+                @if (adverb.rumsadverb == false)
+                {
+
+                }
+                else
+                {
+                    @adverb.rumsadverb
+                }
+            </td>
+            <td>
+                @if (adverb.sättsadverb == false)
+                {
+
+                }
+                else
+                {
+                    @adverb.sättsadverb
+                }
+            </td>
+            <td>
+                @if (adverb.gradadverb == false)
+                {
+
+                }
+                else
+                {
+                    @adverb.gradadverb
+                }
+            </td>
+            <td>
+                @if (adverb.orsaksadverb == false)
+                {
+
+                }
+                else
+                {
+                    @adverb.orsaksadverb
+                }
+            </td>
+            <td>
+                @if (adverb.relativa_adverb == false)
+                {
+
+                }
+                else
+                {
+                    @adverb.relativa_adverb
+                }
+            </td>
+            <td>
+                @if (adverb.satsadverb == false)
+                {
+
+                }
+                else
+                {
+                    @adverb.satsadverb
+                }
+            </td>
             <td>@adverb.ordklass</td>
         </tr>
     }
