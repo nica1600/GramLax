@@ -55,5 +55,11 @@ namespace GrammatikLaxen.Controllers
             var adverbList = db.GetAllAdverbList();
             return View(adverbList.ToList());
         }
+
+        public ActionResult Preposition()
+        {
+            var prepositionList = db.GetAllPrepositionList();
+            return View(prepositionList.ToList());
+        }
     }
 }

@@ -51,5 +51,12 @@ namespace GrammatikLaxen.Data
             var adverbList = db.adverb;
             return adverbList.ToList();
         }
+
+        // Hämta alla prepositioner från databasen
+        public List<preposition> GetAllPrepositionList()
+        {
+            var prepositionList = db.preposition;
+            return prepositionList.ToList();
+        }
     }
 }
