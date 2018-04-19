@@ -44,5 +44,12 @@ namespace GrammatikLaxen.Data
             var verbList = db.verb;
             return verbList.ToList();
         }
+
+        // Hämta alla adverb från databasen
+        public List<adverb> GetAllAdverbList()
+        {
+            var adverbList = db.adverb;
+            return adverbList.ToList();
+        }
     }
 }

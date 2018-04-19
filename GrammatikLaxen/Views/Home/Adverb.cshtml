@@ -1,0 +1,37 @@
+﻿@model List<GrammatikLaxen.Models.db.adverb>
+@{
+    ViewBag.Title = "Adverb";
+}
+
+<h2>Adverb</h2>
+<table class="table-bordered">
+    <tr>
+        <th>Nummer</th>
+        <th>Ord</th>
+        <th>Tidsadverb</th>
+        <th>Rumsadverb</th>
+        <th>Sättsadverb</th>
+        <th>Gradadverb</th>
+        <th>Orsaksadverb</th>
+        <th>Relativa adverb</th>
+        <th>Satsadverb</th>
+        <th>Ordklass</th>
+    </tr>
+
+    @foreach (var adverb in Model)
+    {
+        <tr>
+            <th>@adverb.Id</th>
+            <td>@adverb.ord</td>
+            <td>@adverb.tidsadverb</td>
+            <td>@adverb.rumsadverb</td>
+            <td>@adverb.sättsadverb</td>
+            <td>@adverb.gradadverb</td>
+            <td>@adverb.orsaksadverb</td>
+            <td>@adverb.relativa_adverb</td>
+            <td>@adverb.satsadverb</td>
+            <td>@adverb.ordklass</td>
+        </tr>
+    }
+
+</table>

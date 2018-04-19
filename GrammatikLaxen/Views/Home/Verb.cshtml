@@ -29,36 +29,36 @@
 
     @foreach (var verb in Model)
     {
-    <tr>
-        <th>@verb.Id</th>
-        <td>@verb.attribut_infinitiv</td>
-        <td>@verb.infinitiv</td>
-        <td>@verb.attribut_preteritum</td>
-        <td>@verb.preteritum</td>
-        <td>@verb.attribut_supinum</td>
-        <td>@verb.supinum</td>
-        <td>@verb.presens</td>
-        <td>@verb.preteritum</td>
-        <td>@verb.perfekt</td>
-        <td>@verb.pluskvamperfekt</td>
-        <td>@verb.futurum</td>
-        <td>@verb.imperativ</td>
-        <td>@verb.presens_particip</td>
-        <td>@verb.presens_particip_2</td>
-        <td>@verb.perfekt_particip</td>
-        <td>@verb.ordklass</td>
-        <td>@verb.typ</td>
-        <td>
-            @if (verb.även == verb.ordklass)
-        {
+        <tr>
+            <th>@verb.Id</th>
+            <td>@verb.attribut_infinitiv</td>
+            <td>@verb.infinitiv</td>
+            <td>@verb.attribut_preteritum</td>
+            <td>@verb.preteritum</td>
+            <td>@verb.attribut_supinum</td>
+            <td>@verb.supinum</td>
+            <td>@verb.presens</td>
+            <td>@verb.preteritum</td>
+            <td>@verb.perfekt</td>
+            <td>@verb.pluskvamperfekt</td>
+            <td>@verb.futurum</td>
+            <td>@verb.imperativ</td>
+            <td>@verb.presens_particip</td>
+            <td>@verb.presens_particip_2</td>
+            <td>@verb.perfekt_particip</td>
+            <td>@verb.ordklass</td>
+            <td>@verb.typ</td>
+            <td>
+                @if (verb.även == verb.ordklass)
+                {
 
-        }
-        else
-        {
-            @verb.även
-    }
-        </td>
-    </tr>
+                }
+                else
+                {
+                    @verb.även
+                }
+            </td>
+        </tr>
     }
 
 </table>
