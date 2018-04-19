@@ -267,6 +267,7 @@
     <Content Include="Views\Home\Adverb.cshtml" />
     <Content Include="Views\Home\Preposition.cshtml" />
     <Content Include="Views\Home\Konjunktion.cshtml" />
+    <Content Include="Views\Home\Rakneord.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

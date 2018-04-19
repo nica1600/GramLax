@@ -16,5 +16,6 @@ namespace GrammatikLaxen.Data
         List<adverb> GetAllAdverbList();
         List<preposition> GetAllPrepositionList();
         List<konjunktion> GetAllKonjunktionList();
+        List<räkneord> GetAllRäkneordList();
     }
 }
