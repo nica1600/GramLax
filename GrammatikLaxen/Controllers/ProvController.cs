@@ -42,7 +42,7 @@ namespace GrammatikLaxen.Controllers
             {
                 FragaSvar grammatikFraga = new FragaSvar();
                 Random rand = new Random();
-                int randOrdklass = rand.Next(1, 2);
+                int randOrdklass = rand.Next(1, 10);
 
                 // substantiv
                 if (randOrdklass == 1)
