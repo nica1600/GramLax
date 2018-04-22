@@ -17,11 +17,21 @@ namespace GrammatikLaxen.Data
             return ordklasserList.ToList();
         }
 
+        // SUBSTANTIV
+
         // Hämta alla substantiv från databasen
         public List<substantiv> GetAllSubstantivList()
         {
             var substantivList = db.substantiv;
             return substantivList.ToList();
+        }
+
+        public substantiv GetRandomSubstantiv()
+        {
+            Random rand = new Random();
+            int randomId = rand.Next(1, 96);
+            var substantiv = db.substantiv.SingleOrDefault(a => a.Id == randomId);
+            return substantiv;
         }
 
         // Hämta alla pronomen från databasen

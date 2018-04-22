@@ -1,8 +1,103 @@
-﻿@model GrammatikLaxen.Models.db.substantiv
+﻿@model List<GrammatikLaxen.Models.FragaSvar>
 @{
     ViewBag.Title = "Prov";
 }
+<div class="jumbotron">
+    <h1>Prov</h1>
+</div>
 
-<h2>Grammatik-prov</h2>
+<div class="row">
+    <div class="col-md-4 text-center panel panel-default">
+        <h2>Lätt prov</h2>
+        <h4 class="text-left">
+            Provet består av 15 lätta frågor från blandade ordklasser.<br /><br />
+        </h4>
+        <p><a href="@Url.Action("Latt", "Prov")" class="btn btn-success btn-lg">Generera prov &raquo;</a></p>
+    </div>
+    <div class="col-md-4 text-center panel panel-default">
+        <h2>Medelsvårt prov</h2>
+        <h4 class="text-left">
+            Provet består av 8 lätta och 7 medelsvåra frågor från blandade ordklasser.
+        </h4>
+        <p><a href="@Url.Action("Latt", "Prov")" class="btn btn-warning btn-lg">Generera prov &raquo;</a></p>
+    </div>
+    <div class="col-md-4 text-center panel panel-default">
+        <h2>Svårt prov</h2>
+        <h4 class="text-left">
+            Provet består av 6 lätta, 5 medelsvåra och 4 svåra frågor från blandade ordklasser.
+        </h4>
+        <p><a href="@Url.Action("Latt", "Prov")" class="btn btn-danger btn-lg">Generera prov &raquo;</a></p>
+    </div>
+</div>
 
-@Model.ord
+@foreach (var fragasvar in Model)
+{
+    <p>
+        @fragasvar.Fraga<br />
+
+        @fragasvar.Svar1<br />
+
+        @if (fragasvar.Svar2 == fragasvar.Svar1)
+        {
+
+        }
+        else
+        {
+            @fragasvar.Svar2
+        }
+
+        @if (fragasvar.Svar3 == fragasvar.Svar2)
+        {
+
+        }
+        else
+        {
+            @fragasvar.Svar3
+        }
+
+        @if (fragasvar.Svar4 == fragasvar.Svar3)
+        {
+
+        }
+        else
+        {
+            @fragasvar.Svar4
+        }
+
+        @if (fragasvar.Svar5 == fragasvar.Svar4)
+        {
+
+        }
+        else
+        {
+            @fragasvar.Svar5
+        }
+
+        @if (fragasvar.Svar6 == fragasvar.Svar5)
+        {
+
+        }
+        else
+        {
+            @fragasvar.Svar6
+        }
+
+        @if (fragasvar.Svar7 == fragasvar.Svar6)
+        {
+
+        }
+        else
+        {
+            @fragasvar.Svar7
+        }
+
+        @if (fragasvar.Svar8 == fragasvar.Svar7)
+        {
+
+        }
+        else
+        {
+            @fragasvar.Svar8
+        }
+    </p>
+}

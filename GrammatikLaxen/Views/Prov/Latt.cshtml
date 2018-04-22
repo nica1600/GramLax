@@ -1,0 +1,11 @@
+﻿@model List<GrammatikLaxen.Models.FragaSvar>
+@{
+    ViewBag.Title = "Lätt";
+}
+
+<h2>Lätt prov</h2>
+
+@foreach (var fragaSvar in Model)
+{
+    @fragaSvar.Fraga<br /><br />
+}
