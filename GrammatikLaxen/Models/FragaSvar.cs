@@ -7,6 +7,7 @@ namespace GrammatikLaxen.Models
 {
     public class FragaSvar
     {
+        public int Nummer { get; set; }
         public string Fraga { get; set; }
         public string Svar1 { get; set; }
         public string Svar2 { get; set; }

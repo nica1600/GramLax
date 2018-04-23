@@ -36,13 +36,15 @@ namespace GrammatikLaxen.Controllers
         {
             List<FragaSvar> fragaSvarList = new List<FragaSvar>();
             fragaSvarList.Clear();
+            int fragaNummer = 0;
 
             //tar fram 15 slumpvisa lätta frågor
             for (int i = 0; i < 15; i++)
             {
                 FragaSvar grammatikFraga = new FragaSvar();
                 Random rand = new Random();
-                int randOrdklass = rand.Next(1, 10);
+                int randOrdklass = rand.Next(1, 2);
+                fragaNummer++;
 
                 // substantiv
                 if (randOrdklass == 1)
@@ -54,12 +56,14 @@ namespace GrammatikLaxen.Controllers
                     if (randSubFraga == 1)
                     {
                         grammatikFraga = gf.SubstantivVilkenOrdklass();
+                        grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
                     //konkret eller abstrakt
                     else if (randSubFraga == 2)
                     {
                         grammatikFraga = gf.SubstantivKonkretAbstrakt();
+                        grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
                     else

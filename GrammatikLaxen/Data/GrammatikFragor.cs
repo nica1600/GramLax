@@ -39,7 +39,7 @@ namespace GrammatikLaxen.Data
             var randomSubstantiv = db.GetRandomSubstantiv();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Är ordet '" + randomSubstantiv.ord + "' konkret eller abstrakt?";
+            fragaSvar.Fraga = "Är ordet '" + randomSubstantiv.ord + "' ett konkret eller abstrakt substantiv?";
             fragaSvar.Svar1 = randomSubstantiv.betydelse;
             fragaSvar.Svar2 = randomSubstantiv.betydelse;
             fragaSvar.Svar3 = randomSubstantiv.betydelse;

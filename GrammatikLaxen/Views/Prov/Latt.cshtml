@@ -7,5 +7,70 @@
 
 @foreach (var fragaSvar in Model)
 {
-    @fragaSvar.Fraga<br /><br />
+    <p>
+        @fragaSvar.Nummer @fragaSvar.Fraga<br />
+        @fragaSvar.Svar1<br />
+        @if (fragaSvar.Svar2 == fragaSvar.Svar1)
+        {
+
+        }
+        else
+        {
+            @fragaSvar.Svar2<br />
+        }
+
+        @if (fragaSvar.Svar3 == fragaSvar.Svar2)
+        {
+
+        }
+        else
+        {
+            @fragaSvar.Svar3<br />
+        }
+
+        @if (fragaSvar.Svar4 == fragaSvar.Svar3)
+        {
+
+        }
+        else
+        {
+            @fragaSvar.Svar4<br />
+        }
+
+        @if (fragaSvar.Svar5 == fragaSvar.Svar4)
+        {
+
+        }
+        else
+        {
+            @fragaSvar.Svar5<br />
+        }
+
+        @if (fragaSvar.Svar6 == fragaSvar.Svar5)
+        {
+
+        }
+        else
+        {
+            @fragaSvar.Svar6<br />
+        }
+
+        @if (fragaSvar.Svar7 == fragaSvar.Svar6)
+        {
+
+        }
+        else
+        {
+            @fragaSvar.Svar7<br />
+        }
+
+        @if (fragaSvar.Svar8 == fragaSvar.Svar7)
+        {
+
+        }
+        else
+        {
+            @fragaSvar.Svar8<br />
+        }
+    </p>
 }
