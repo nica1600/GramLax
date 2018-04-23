@@ -26,6 +26,7 @@ namespace GrammatikLaxen.Data
             return substantivList.ToList();
         }
 
+        // Hämta slumpmässigt substantiv
         public substantiv GetRandomSubstantiv()
         {
             Random rand = new Random();
@@ -34,11 +35,22 @@ namespace GrammatikLaxen.Data
             return substantiv;
         }
 
+        // PRONOMEN
+
         // Hämta alla pronomen från databasen
         public List<pronomen> GetAllPronomenList()
         {
             var pronomenList = db.pronomen;
             return pronomenList.ToList();
+        }
+
+        // Hämta slumpmässigt pronomen
+        public pronomen GetRandomPronomen()
+        {
+            Random rand = new Random();
+            int randomId = rand.Next(1, 11);
+            var pronomen = db.pronomen.SingleOrDefault(a => a.Id == randomId);
+            return pronomen;
         }
 
         // Hämta alla adjektiv från databasen

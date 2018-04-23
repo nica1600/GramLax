@@ -36,14 +36,16 @@ namespace GrammatikLaxen.Controllers
         {
             List<FragaSvar> fragaSvarList = new List<FragaSvar>();
             fragaSvarList.Clear();
+            
+            FragaSvar grammatikFraga = new FragaSvar();
             int fragaNummer = 0;
+
+            Random rand = new Random();
 
             //tar fram 15 slumpvisa lätta frågor
             for (int i = 0; i < 15; i++)
             {
-                FragaSvar grammatikFraga = new FragaSvar();
-                Random rand = new Random();
-                int randOrdklass = rand.Next(1, 2);
+                int randOrdklass = rand.Next(1, 3); //sätt till 10 när tester är klar!
                 fragaNummer++;
 
                 // substantiv
@@ -75,7 +77,62 @@ namespace GrammatikLaxen.Controllers
                 //pronomen
                 else if (randOrdklass == 2)
                 {
+                    Random rand2 = new Random();
+                    int randProFraga = rand2.Next(1, 8);
 
+                    //vilken ordklass tillhör ordet
+                    if (randProFraga == 1)
+                    {
+                        grammatikFraga = gf.PronomenVilkenOrdklass();
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    // till personliga subjektform
+                    else if (randProFraga == 2)
+                    {
+                        grammatikFraga = gf.PronomenPersonligaSubjekt();
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    // till personliga objektform
+                    else if (randProFraga == 3)
+                    {
+                        grammatikFraga = gf.PronomenPersonligaObjekt();
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    // till possessiva utrum
+                    else if (randProFraga == 4)
+                    {
+                        grammatikFraga = gf.PronomenPossessivaUtrum();
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    // till possessiva neutrum
+                    else if (randProFraga == 5)
+                    {
+                        grammatikFraga = gf.PronomenPossessivaNeutrum();
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    // till possessiva plural
+                    else if (randProFraga == 6)
+                    {
+                        grammatikFraga = gf.PronomenPossessivaPlural();
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    // till reflexiva
+                    else if (randProFraga == 7)
+                    {
+                        grammatikFraga = gf.PronomenReflexiva();
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    else
+                    {
+                        //något felmeddelande
+                    }
                 }
                 //adjektiv
                 else if (randOrdklass == 3)
