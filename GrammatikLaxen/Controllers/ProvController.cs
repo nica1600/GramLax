@@ -45,7 +45,7 @@ namespace GrammatikLaxen.Controllers
             //tar fram 15 slumpvisa lätta frågor
             for (int i = 0; i < 15; i++)
             {
-                int randOrdklass = rand.Next(1, 4); //sätt till 10 när tester är klar!
+                int randOrdklass = rand.Next(1, 5); //sätt till 10 när tester är klar!
                 fragaNummer++;
 
                 // substantiv
@@ -190,7 +190,48 @@ namespace GrammatikLaxen.Controllers
                 //verb
                 else if (randOrdklass == 4)
                 {
+                    Random rand2 = new Random();
+                    int randVerbFraga = rand2.Next(1, 6);
 
+                    //vilken ordklass tillhör ordet
+                    if (randVerbFraga == 1)
+                    {
+                        grammatikFraga = gf.VerbVilkenOrdklass();
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    //vilken typ av verb
+                    else if (randVerbFraga == 2)
+                    {
+                        grammatikFraga = gf.VerbVilkenTyp();
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    //vad blir ordet i infinitv
+                    else if (randVerbFraga == 3)
+                    {
+                        grammatikFraga = gf.VerbInfinitiv();
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    //vad blir ordet i preteritum
+                    else if (randVerbFraga == 4)
+                    {
+                        grammatikFraga = gf.VerbPreteritum();
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    //vad blir ordet i supinum
+                    else if (randVerbFraga == 5)
+                    {
+                        grammatikFraga = gf.VerbSupinum();
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    else
+                    {
+                        //något felmeddelande
+                    }
                 }
                 //adverb
                 else if (randOrdklass == 5)

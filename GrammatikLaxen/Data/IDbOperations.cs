@@ -16,6 +16,7 @@ namespace GrammatikLaxen.Data
         List<adjektiv> GetAllAdjektivList();
         adjektiv GetRandomAdjektiv();
         List<verb> GetAllVerbList();
+        verb GetRandomVerb();
         List<adverb> GetAllAdverbList();
         List<preposition> GetAllPrepositionList();
         List<konjunktion> GetAllKonjunktionList();

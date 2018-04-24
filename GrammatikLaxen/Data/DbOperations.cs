@@ -71,11 +71,22 @@ namespace GrammatikLaxen.Data
             return adjektiv;
         }
 
+        // VERB
+
         // Hämta alla verb från databasen
         public List<verb> GetAllVerbList()
         {
             var verbList = db.verb;
             return verbList.ToList();
+        }
+
+        // Hämta slumpmässigt verb
+        public verb GetRandomVerb()
+        {
+            Random rand = new Random();
+            int randomId = rand.Next(1, 20);
+            var verb = db.verb.SingleOrDefault(a => a.Id == randomId);
+            return verb;
         }
 
         // Hämta alla adverb från databasen
