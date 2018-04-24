@@ -3,9 +3,18 @@
     ViewBag.Title = "Lätt";
 }
 
-<h2>Lätt prov</h2>
-
 <div>
+    <h2>Lätt prov</h2>
+    <p>
+        <i>
+            Notis: provet genereras slumpvis och det finns en liten risk att samma fråga dyker upp två gånger i samma prov.
+            Kontrollera därför frågorna innan du använder provet och om du inte är nöjd: generera ett nytt prov!
+        </i>
+    </p>
+    <p><a href="@Url.Action("Latt", "Prov")" class="btn btn-success btn-lg">Generera prov &raquo;</a></p>
+</div>
+
+<div class="well">
     @foreach (var fragaSvar in Model)
     {
         <p>
