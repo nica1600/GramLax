@@ -23,6 +23,7 @@ namespace GrammatikLaxen.Data
         List<preposition> GetAllPrepositionList();
         preposition GetRandomPreposition();
         List<konjunktion> GetAllKonjunktionList();
+        konjunktion GetRandomKonjunktion();
         List<räkneord> GetAllRäkneordList();
         List<interjektion> GetAllInterjektionList();
     }

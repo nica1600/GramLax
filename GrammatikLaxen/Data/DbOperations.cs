@@ -264,11 +264,40 @@ namespace GrammatikLaxen.Data
             return preposition;
         }
 
+        // KONJUNKTION
+
         // Hämta alla konjunktioner från databasen
         public List<konjunktion> GetAllKonjunktionList()
         {
             var konjunktionList = db.konjunktion;
             return konjunktionList.ToList();
+        }
+
+        // Hämta slumpmässig konjunktion
+        public konjunktion GetRandomKonjunktion()
+        {
+            Random rand = new Random();
+            konjunktion konForNow = new konjunktion();
+            var konjunktion = konForNow;
+            bool isNull = true;
+
+            do
+            {
+                if (isNull == true)
+                {
+                    int randomId = rand.Next(1, 20);
+                    konjunktion = db.konjunktion.SingleOrDefault(a => a.Id == randomId);
+                    if (konjunktion == null)
+                    {
+                        isNull = true;
+                    }
+                    else
+                    {
+                        isNull = false;
+                    }
+                }
+            } while (isNull == true);
+            return konjunktion;
         }
 
         // Hämta alla räkneord från databasen

@@ -460,5 +460,26 @@ namespace GrammatikLaxen.Data
 
             return fragaSvar;
         }
+
+        // KONJUNKTION - LÄTTA FRÅGOR
+
+        // 1 vilken ordklass tillhör ordet, preposition
+        public FragaSvar KonjunktionVilkenOrdklass()
+        {
+            var randomKonjunktion = db.GetRandomKonjunktion();
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + randomKonjunktion.ord + "'?";
+            fragaSvar.Svar1 = randomKonjunktion.ordklass;
+            fragaSvar.Svar2 = randomKonjunktion.även;
+            fragaSvar.Svar3 = randomKonjunktion.även;
+            fragaSvar.Svar4 = randomKonjunktion.även;
+            fragaSvar.Svar5 = randomKonjunktion.även;
+            fragaSvar.Svar6 = randomKonjunktion.även;
+            fragaSvar.Svar7 = randomKonjunktion.även;
+            fragaSvar.Svar8 = randomKonjunktion.även;
+
+            return fragaSvar;
+        }
     }
 }
