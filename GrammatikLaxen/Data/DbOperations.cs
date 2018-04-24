@@ -336,11 +336,40 @@ namespace GrammatikLaxen.Data
             return rakneord;
         }
 
+        // INTERJEKTION
+
         // Hämta alla interjektioner från databasen
         public List<interjektion> GetAllInterjektionList()
         {
             var interjektionList = db.interjektion;
             return interjektionList.ToList();
+        }
+
+        // Hämta slumpmässig interjektion
+        public interjektion GetRandomInterjektion()
+        {
+            Random rand = new Random();
+            interjektion intForNow = new interjektion();
+            var interjektion = intForNow;
+            bool isNull = true;
+
+            do
+            {
+                if (isNull == true)
+                {
+                    int randomId = rand.Next(1, 30);
+                    interjektion = db.interjektion.SingleOrDefault(a => a.Id == randomId);
+                    if (interjektion == null)
+                    {
+                        isNull = true;
+                    }
+                    else
+                    {
+                        isNull = false;
+                    }
+                }
+            } while (isNull == true);
+            return interjektion;
         }
     }
 }

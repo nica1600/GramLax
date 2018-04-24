@@ -540,5 +540,26 @@ namespace GrammatikLaxen.Data
 
             return fragaSvar;
         }
+
+        // INTERJEKTION - LÄTTA FRÅGOR
+
+        // 1 vilken ordklass tillhör ordet, interjektion
+        public FragaSvar InterjektionVilkenOrdklass()
+        {
+            var randomInterjektion = db.GetRandomInterjektion();
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + randomInterjektion.ord + "'?";
+            fragaSvar.Svar1 = randomInterjektion.ordklass;
+            fragaSvar.Svar2 = randomInterjektion.även;
+            fragaSvar.Svar3 = randomInterjektion.även;
+            fragaSvar.Svar4 = randomInterjektion.även;
+            fragaSvar.Svar5 = randomInterjektion.även;
+            fragaSvar.Svar6 = randomInterjektion.även;
+            fragaSvar.Svar7 = randomInterjektion.även;
+            fragaSvar.Svar8 = randomInterjektion.även;
+
+            return fragaSvar;
+        }
     }
 }
