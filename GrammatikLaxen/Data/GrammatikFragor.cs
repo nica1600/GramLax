@@ -463,7 +463,7 @@ namespace GrammatikLaxen.Data
 
         // KONJUNKTION - LÄTTA FRÅGOR
 
-        // 1 vilken ordklass tillhör ordet, preposition
+        // 1 vilken ordklass tillhör ordet, konjunktion
         public FragaSvar KonjunktionVilkenOrdklass()
         {
             var randomKonjunktion = db.GetRandomKonjunktion();
@@ -478,6 +478,65 @@ namespace GrammatikLaxen.Data
             fragaSvar.Svar6 = randomKonjunktion.även;
             fragaSvar.Svar7 = randomKonjunktion.även;
             fragaSvar.Svar8 = randomKonjunktion.även;
+
+            return fragaSvar;
+        }
+
+        // RÄKNEORD - LÄTTA FRÅGOR
+
+        // 1 vilken ordklass tillhör ordet, räkneord
+        public FragaSvar RakneordVilkenOrdklass()
+        {
+            var randomRakneord = db.GetRandomRakneord();
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + randomRakneord.ord + "'?";
+            fragaSvar.Svar1 = randomRakneord.ordklass;
+            fragaSvar.Svar2 = randomRakneord.även;
+            fragaSvar.Svar3 = randomRakneord.även;
+            fragaSvar.Svar4 = randomRakneord.även;
+            fragaSvar.Svar5 = randomRakneord.även;
+            fragaSvar.Svar6 = randomRakneord.även;
+            fragaSvar.Svar7 = randomRakneord.även;
+            fragaSvar.Svar8 = randomRakneord.även;
+
+            return fragaSvar;
+        }
+
+        // 2 vad blir ordet som grundtal, räkneord
+        public FragaSvar RakneordGrundtal()
+        {
+            var randomRakneord = db.GetRandomRakneord();
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir räkneordet '" + randomRakneord.ordningstal_ej_maskulinum + "' som grundtal?";
+            fragaSvar.Svar1 = randomRakneord.grundtal;
+            fragaSvar.Svar2 = randomRakneord.grundtal_2;
+            fragaSvar.Svar3 = randomRakneord.grundtal_2;
+            fragaSvar.Svar4 = randomRakneord.grundtal_2;
+            fragaSvar.Svar5 = randomRakneord.grundtal_2;
+            fragaSvar.Svar6 = randomRakneord.grundtal_2;
+            fragaSvar.Svar7 = randomRakneord.grundtal_2;
+            fragaSvar.Svar8 = randomRakneord.grundtal_2;
+
+            return fragaSvar;
+        }
+
+        // 3 vad blir ordet som ordningstal ej maskulinum, räkneord
+        public FragaSvar RakneordOrdningstal()
+        {
+            var randomRakneord = db.GetRandomRakneord();
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir räkneordet '" + randomRakneord.grundtal + "' som ordningstal (ej maskulinum)?";
+            fragaSvar.Svar1 = randomRakneord.ordningstal_ej_maskulinum;
+            fragaSvar.Svar2 = randomRakneord.ordningstal_ej_maskulinum;
+            fragaSvar.Svar3 = randomRakneord.ordningstal_ej_maskulinum;
+            fragaSvar.Svar4 = randomRakneord.ordningstal_ej_maskulinum;
+            fragaSvar.Svar5 = randomRakneord.ordningstal_ej_maskulinum;
+            fragaSvar.Svar6 = randomRakneord.ordningstal_ej_maskulinum;
+            fragaSvar.Svar7 = randomRakneord.ordningstal_ej_maskulinum;
+            fragaSvar.Svar8 = randomRakneord.ordningstal_ej_maskulinum;
 
             return fragaSvar;
         }

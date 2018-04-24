@@ -25,6 +25,7 @@ namespace GrammatikLaxen.Data
         List<konjunktion> GetAllKonjunktionList();
         konjunktion GetRandomKonjunktion();
         List<räkneord> GetAllRäkneordList();
+        räkneord GetRandomRakneord();
         List<interjektion> GetAllInterjektionList();
     }
 }

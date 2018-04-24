@@ -300,11 +300,40 @@ namespace GrammatikLaxen.Data
             return konjunktion;
         }
 
+        // RÄKNEORD
+
         // Hämta alla räkneord från databasen
         public List<räkneord> GetAllRäkneordList()
         {
             var räkneordList = db.räkneord;
             return räkneordList.ToList();
+        }
+
+        // Hämta slumpmässigt räkneord
+        public räkneord GetRandomRakneord()
+        {
+            Random rand = new Random();
+            räkneord rakForNow = new räkneord();
+            var rakneord = rakForNow;
+            bool isNull = true;
+
+            do
+            {
+                if (isNull == true)
+                {
+                    int randomId = rand.Next(1, 40);
+                    rakneord = db.räkneord.SingleOrDefault(a => a.Id == randomId);
+                    if (rakneord == null)
+                    {
+                        isNull = true;
+                    }
+                    else
+                    {
+                        isNull = false;
+                    }
+                }
+            } while (isNull == true);
+            return rakneord;
         }
 
         // Hämta alla interjektioner från databasen
