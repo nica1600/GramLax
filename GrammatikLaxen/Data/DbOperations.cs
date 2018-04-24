@@ -228,11 +228,40 @@ namespace GrammatikLaxen.Data
             return adverb;
         }
 
+        // PREPOSITIONER
+
         // Hämta alla prepositioner från databasen
         public List<preposition> GetAllPrepositionList()
         {
             var prepositionList = db.preposition;
             return prepositionList.ToList();
+        }
+
+        // Hämta slumpmässig preposition
+        public preposition GetRandomPreposition()
+        {
+            Random rand = new Random();
+            preposition preForNow = new preposition();
+            var preposition = preForNow;
+            bool isNull = true;
+
+            do
+            {
+                if (isNull == true)
+                {
+                    int randomId = rand.Next(1, 25);
+                    preposition = db.preposition.SingleOrDefault(a => a.Id == randomId);
+                    if (preposition == null)
+                    {
+                        isNull = true;
+                    }
+                    else
+                    {
+                        isNull = false;
+                    }
+                }
+            } while (isNull == true);
+            return preposition;
         }
 
         // Hämta alla konjunktioner från databasen

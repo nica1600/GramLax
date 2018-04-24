@@ -21,6 +21,7 @@ namespace GrammatikLaxen.Data
         adverb GetRandomAdverbRen();
         adverb GetRandomAdverbRenLatt();
         List<preposition> GetAllPrepositionList();
+        preposition GetRandomPreposition();
         List<konjunktion> GetAllKonjunktionList();
         List<räkneord> GetAllRäkneordList();
         List<interjektion> GetAllInterjektionList();

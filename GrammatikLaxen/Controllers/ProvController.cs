@@ -45,7 +45,7 @@ namespace GrammatikLaxen.Controllers
             //tar fram 15 slumpvisa lätta frågor
             for (int i = 0; i < 15; i++)
             {
-                int randOrdklass = rand.Next(1, 6); //sätt till 10 när tester är klar!
+                int randOrdklass = rand.Next(1, 7); //sätt till 10 när tester är klar!
                 fragaNummer++;
 
                 // substantiv
@@ -261,7 +261,20 @@ namespace GrammatikLaxen.Controllers
                 //preposition
                 else if (randOrdklass == 6)
                 {
+                    Random rand2 = new Random();
+                    int randPreFraga = rand2.Next(1, 2);
 
+                    //vilken ordklass tillhör ordet
+                    if (randPreFraga == 1)
+                    {
+                        grammatikFraga = gf.PrepositionVilkenOrdklass();
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    else
+                    {
+                        //något felmeddelande
+                    }
                 }
                 //konjunktion
                 else if (randOrdklass == 7)
