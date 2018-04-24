@@ -45,7 +45,7 @@ namespace GrammatikLaxen.Controllers
             //tar fram 15 slumpvisa lätta frågor
             for (int i = 0; i < 15; i++)
             {
-                int randOrdklass = rand.Next(1, 3); //sätt till 10 när tester är klar!
+                int randOrdklass = rand.Next(1, 4); //sätt till 10 när tester är klar!
                 fragaNummer++;
 
                 // substantiv
@@ -137,7 +137,55 @@ namespace GrammatikLaxen.Controllers
                 //adjektiv
                 else if (randOrdklass == 3)
                 {
-
+                    Random rand2 = new Random();
+                    int randAdjFraga = rand2.Next(1, 7);
+                    
+                    //vilken ordklass tillhör ordet
+                    if (randAdjFraga == 1)
+                    {
+                        grammatikFraga = gf.AdjektivVilkenOrdklass();
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    //vad blir ordet i obestämd form utrum
+                    else if (randAdjFraga == 2)
+                    {
+                        grammatikFraga = gf.AdjektivObestämdUtrum();
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    //vad blir ordet i obestämd form neutrum
+                    else if (randAdjFraga == 3)
+                    {
+                        grammatikFraga = gf.AdjektivObestämdNeutrum();
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    //vad blir ordet i bestämd form ej maskulinum
+                    else if (randAdjFraga == 4)
+                    {
+                        grammatikFraga = gf.AdjektivBestämdFormEjMaskulinum();
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    //vad blir ordet i singular
+                    else if (randAdjFraga == 5)
+                    {
+                        grammatikFraga = gf.AdjektivSingular();
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    //vad blir ordet i plural
+                    else if (randAdjFraga == 6)
+                    {
+                        grammatikFraga = gf.AdjektivPlural();
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    else
+                    {
+                        //något felmeddelande
+                    }
                 }
                 //verb
                 else if (randOrdklass == 4)

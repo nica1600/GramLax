@@ -53,11 +53,22 @@ namespace GrammatikLaxen.Data
             return pronomen;
         }
 
+        // ADJEKTIV
+
         // Hämta alla adjektiv från databasen
         public List<adjektiv> GetAllAdjektivList()
         {
             var adjektivList = db.adjektiv;
             return adjektivList.ToList();
+        }
+
+        // Hämta slumpmässigt adjektiv
+        public adjektiv GetRandomAdjektiv()
+        {
+            Random rand = new Random();
+            int randomId = rand.Next(1, 26);
+            var adjektiv = db.adjektiv.SingleOrDefault(a => a.Id == randomId);
+            return adjektiv;
         }
 
         // Hämta alla verb från databasen

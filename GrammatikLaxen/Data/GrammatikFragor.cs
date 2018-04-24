@@ -186,5 +186,121 @@ namespace GrammatikLaxen.Data
 
             return fragaSvar;
         }
+
+        // Adjektiv - LÄTTA FRÅGOR
+
+        // 1 vilken ordklass tillhör ordet, adjektiv
+        public FragaSvar AdjektivVilkenOrdklass()
+        {
+            var randomAdjektiv = db.GetRandomAdjektiv();
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + randomAdjektiv.ord + "'?";
+            fragaSvar.Svar1 = randomAdjektiv.ordklass;
+            fragaSvar.Svar2 = randomAdjektiv.även;
+            fragaSvar.Svar3 = randomAdjektiv.även;
+            fragaSvar.Svar4 = randomAdjektiv.även;
+            fragaSvar.Svar5 = randomAdjektiv.även;
+            fragaSvar.Svar6 = randomAdjektiv.även;
+            fragaSvar.Svar7 = randomAdjektiv.även;
+            fragaSvar.Svar8 = randomAdjektiv.även;
+
+            return fragaSvar;
+        }
+
+        // 2 vad blir ordet i obestämd form utrum, adjektiv
+        public FragaSvar AdjektivObestämdUtrum()
+        {
+            var randomAdjektiv = db.GetRandomAdjektiv();
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir adjektivitet '" + randomAdjektiv.ord + "' i obestämd form tillsammans med ett utrum-substantiv (en ...)?";
+            fragaSvar.Svar1 = randomAdjektiv.obestämd_form_utrum;
+            fragaSvar.Svar2 = randomAdjektiv.obestämd_form_utrum;
+            fragaSvar.Svar3 = randomAdjektiv.obestämd_form_utrum;
+            fragaSvar.Svar4 = randomAdjektiv.obestämd_form_utrum;
+            fragaSvar.Svar5 = randomAdjektiv.obestämd_form_utrum;
+            fragaSvar.Svar6 = randomAdjektiv.obestämd_form_utrum;
+            fragaSvar.Svar7 = randomAdjektiv.obestämd_form_utrum;
+            fragaSvar.Svar8 = randomAdjektiv.obestämd_form_utrum;
+
+            return fragaSvar;
+        }
+
+        // 3 vad blir ordet i obestämd form neutrum, adjektiv
+        public FragaSvar AdjektivObestämdNeutrum()
+        {
+            var randomAdjektiv = db.GetRandomAdjektiv();
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir adjektivitet '" + randomAdjektiv.ord + "' i obestämd form tillsammans med ett neutrum-substantiv (ett ...)?";
+            fragaSvar.Svar1 = randomAdjektiv.obestämd_form_neutrum;
+            fragaSvar.Svar2 = randomAdjektiv.obestämd_form_neutrum;
+            fragaSvar.Svar3 = randomAdjektiv.obestämd_form_neutrum;
+            fragaSvar.Svar4 = randomAdjektiv.obestämd_form_neutrum;
+            fragaSvar.Svar5 = randomAdjektiv.obestämd_form_neutrum;
+            fragaSvar.Svar6 = randomAdjektiv.obestämd_form_neutrum;
+            fragaSvar.Svar7 = randomAdjektiv.obestämd_form_neutrum;
+            fragaSvar.Svar8 = randomAdjektiv.obestämd_form_neutrum;
+
+            return fragaSvar;
+        }
+
+        // 4 vad blir ordet i bestämd form ej maskulinum, adjektiv
+        public FragaSvar AdjektivBestämdFormEjMaskulinum()
+        {
+            var randomAdjektiv = db.GetRandomAdjektiv();
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir adjektivitet '" + randomAdjektiv.ord + "' i bestämd form (ej maskulinum)?";
+            fragaSvar.Svar1 = randomAdjektiv.bestämd_form_ej_maskulinum;
+            fragaSvar.Svar2 = randomAdjektiv.bestämd_form_ej_maskulinum;
+            fragaSvar.Svar3 = randomAdjektiv.bestämd_form_ej_maskulinum;
+            fragaSvar.Svar4 = randomAdjektiv.bestämd_form_ej_maskulinum;
+            fragaSvar.Svar5 = randomAdjektiv.bestämd_form_ej_maskulinum;
+            fragaSvar.Svar6 = randomAdjektiv.bestämd_form_ej_maskulinum;
+            fragaSvar.Svar7 = randomAdjektiv.bestämd_form_ej_maskulinum;
+            fragaSvar.Svar8 = randomAdjektiv.bestämd_form_ej_maskulinum;
+
+            return fragaSvar;
+        }
+
+        // 5 vad blir ordet i singular, adjektiv
+        public FragaSvar AdjektivSingular()
+        {
+            var randomAdjektiv = db.GetRandomAdjektiv();
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir adjektivitet '" + randomAdjektiv.plural + "' i singular?";
+            fragaSvar.Svar1 = randomAdjektiv.singular;
+            fragaSvar.Svar2 = randomAdjektiv.singular;
+            fragaSvar.Svar3 = randomAdjektiv.singular;
+            fragaSvar.Svar4 = randomAdjektiv.singular;
+            fragaSvar.Svar5 = randomAdjektiv.singular;
+            fragaSvar.Svar6 = randomAdjektiv.singular;
+            fragaSvar.Svar7 = randomAdjektiv.singular;
+            fragaSvar.Svar8 = randomAdjektiv.singular;
+
+            return fragaSvar;
+        }
+
+        // 6 vad blir ordet i plural, adjektiv
+        public FragaSvar AdjektivPlural()
+        {
+            var randomAdjektiv = db.GetRandomAdjektiv();
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir adjektivitet '" + randomAdjektiv.singular + "' i plural?";
+            fragaSvar.Svar1 = randomAdjektiv.plural;
+            fragaSvar.Svar2 = randomAdjektiv.plural;
+            fragaSvar.Svar3 = randomAdjektiv.plural;
+            fragaSvar.Svar4 = randomAdjektiv.plural;
+            fragaSvar.Svar5 = randomAdjektiv.plural;
+            fragaSvar.Svar6 = randomAdjektiv.plural;
+            fragaSvar.Svar7 = randomAdjektiv.plural;
+            fragaSvar.Svar8 = randomAdjektiv.plural;
+
+            return fragaSvar;
+        }
     }
 }
