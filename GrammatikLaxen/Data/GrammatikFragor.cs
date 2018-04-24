@@ -399,5 +399,45 @@ namespace GrammatikLaxen.Data
 
             return fragaSvar;
         }
+
+        // ADVERB - LÄTTA FRÅGOR
+
+        // 1 vilken ordklass tillhör ordet, adverb
+        public FragaSvar AdverbVilkenOrdklass()
+        {
+            var randomAdverb = db.GetRandomAdverbRen();
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + randomAdverb.ord + "'?";
+            fragaSvar.Svar1 = randomAdverb.ordklass;
+            fragaSvar.Svar2 = randomAdverb.ordklass_2;
+            fragaSvar.Svar3 = randomAdverb.ordklass_2;
+            fragaSvar.Svar4 = randomAdverb.ordklass_2;
+            fragaSvar.Svar5 = randomAdverb.ordklass_2;
+            fragaSvar.Svar6 = randomAdverb.ordklass_2;
+            fragaSvar.Svar7 = randomAdverb.ordklass_2;
+            fragaSvar.Svar8 = randomAdverb.ordklass_2;
+
+            return fragaSvar;
+        }
+
+        // 2 vilken typ av adverb tillhör ordet, adverb
+        public FragaSvar AdverbVilkenTyp()
+        {
+            var randomAdverb = db.GetRandomAdverbRenLatt();
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vilken typ av adverb är ordet '" + randomAdverb.ord + "'?";
+            fragaSvar.Svar1 = randomAdverb.typ;
+            fragaSvar.Svar2 = randomAdverb.typ_2;
+            fragaSvar.Svar3 = randomAdverb.typ_3;
+            fragaSvar.Svar4 = randomAdverb.typ_4;
+            fragaSvar.Svar5 = randomAdverb.typ_5;
+            fragaSvar.Svar6 = randomAdverb.typ_6;
+            fragaSvar.Svar7 = randomAdverb.typ_7;
+            fragaSvar.Svar8 = randomAdverb.typ_8;
+
+            return fragaSvar;
+        }
     }
 }

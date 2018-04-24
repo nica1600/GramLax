@@ -45,7 +45,7 @@ namespace GrammatikLaxen.Controllers
             //tar fram 15 slumpvisa lätta frågor
             for (int i = 0; i < 15; i++)
             {
-                int randOrdklass = rand.Next(1, 5); //sätt till 10 när tester är klar!
+                int randOrdklass = rand.Next(1, 6); //sätt till 10 när tester är klar!
                 fragaNummer++;
 
                 // substantiv
@@ -236,7 +236,27 @@ namespace GrammatikLaxen.Controllers
                 //adverb
                 else if (randOrdklass == 5)
                 {
+                    Random rand2 = new Random();
+                    int randAdvFraga = rand2.Next(1, 3);
 
+                    //vilken ordklass tillhör ordet
+                    if (randAdvFraga == 1)
+                    {
+                        grammatikFraga = gf.AdverbVilkenOrdklass();
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    //vilken typ av adverb
+                    else if (randAdvFraga == 2)
+                    {
+                        grammatikFraga = gf.AdverbVilkenTyp();
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    else
+                    {
+                        //något felmeddelande
+                    }
                 }
                 //preposition
                 else if (randOrdklass == 6)

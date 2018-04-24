@@ -18,6 +18,8 @@ namespace GrammatikLaxen.Data
         List<verb> GetAllVerbList();
         verb GetRandomVerb();
         List<adverb> GetAllAdverbList();
+        adverb GetRandomAdverbRen();
+        adverb GetRandomAdverbRenLatt();
         List<preposition> GetAllPrepositionList();
         List<konjunktion> GetAllKonjunktionList();
         List<räkneord> GetAllRäkneordList();
