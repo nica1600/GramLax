@@ -151,7 +151,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProvController.cs" />
     <Compile Include="Data\DbOperations.cs" />
+    <Compile Include="Data\GrammatikFragor.cs" />
     <Compile Include="Data\IDbOperations.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -204,7 +206,9 @@
     <Compile Include="Models\db\verb.cs">
       <DependentUpon>DbModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\FragaSvar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\FragaSvarViewModels.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -269,6 +273,10 @@
     <Content Include="Views\Home\Konjunktion.cshtml" />
     <Content Include="Views\Home\Rakneord.cshtml" />
     <Content Include="Views\Home\Interjektion.cshtml" />
+    <Content Include="Views\Prov\Index.cshtml" />
+    <Content Include="Views\Prov\Latt.cshtml" />
+    <Content Include="Views\Prov\_LattProv.cshtml" />
+    <Content Include="Views\Prov\_LattProvFacit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
