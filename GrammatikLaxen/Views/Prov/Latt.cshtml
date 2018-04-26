@@ -2,8 +2,23 @@
 @{
     ViewBag.Title = "Lätt";
 }
+<div class="jumbotron">
+    <h1>Lätt prov</h1>
+    <p class="lead">
+        Det lätta provet genereras slumpvis så om du inte är nöjd välj "Generera nytt" för att skapa ett nytt prov eller "Tillbaka" för att skapa en annan typ av prov.
+    </p>
+    <div class="col-md-12 row">
+        <div class="col-md-6 text-center">
+            <a href="@Url.Action("Index", "Prov")" class="btn btn-default btn-block btn-lg">&laquo; Tillbaka</a>
+        </div>
+        <div class="col-md-6 text-center">
+            <a href="@Url.Action("Latt", "Prov")" class="btn btn-success btn-block btn-lg">Generera nytt &raquo;</a>
+        </div>
+    </div>
+</div>
 
-<div>
+
+@*<div class="col-md-12">
     <h2>Lätt prov</h2>
     <p>
         <i>
@@ -11,77 +26,105 @@
             Kontrollera därför frågorna innan du använder provet och om du inte är nöjd: generera ett nytt prov!
         </i>
     </p>
-    <p><a href="@Url.Action("Latt", "Prov")" class="btn btn-success btn-lg">Generera prov &raquo;</a></p>
+    <div class="row">
+        <div class="col-md-12 text-left">
+            <p><a href="@Url.Action("Index", "Prov")" class="btn btn-default btn-lg">&laquo; Tillbaka</a></p>
+        </div>
+        <div class="col-md-12 text-left">
+            <p><a href="@Url.Action("Latt", "Prov")" class="btn btn-success btn-lg">Generera nytt &raquo;</a></p>
+        </div>
+    </div>
+</div>*@
+
+<div role="tabpanel" class="col-md-12">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs">
+        <li>
+            <a class="navbar-link active" data-toggle="tab" href="#latt-prov">Provet</a>
+        </li>
+        <li>
+            <a class="navbar-link" data-toggle="tab" href="#latt-prov-facit">Facit</a>
+        </li>
+    </ul>
+    <!-- Tab panes -->
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="latt-prov">
+            @Html.Partial("_LattProv")
+        </div>
+        <div class="tab-pane fade" id="latt-prov-facit">
+            @Html.Partial("_LattProvFacit")
+        </div>
+    </div>
 </div>
 
-<div class="well">
-    @foreach (var fragaSvar in Model)
-    {
-        <p>
-            @fragaSvar.Nummer @fragaSvar.Fraga<br />
-            Rätt svar: @fragaSvar.Svar1
-            @if (fragaSvar.Svar2 == fragaSvar.Svar1)
-            {
+@*<div class="well">
+        @foreach (var fragaSvar in Model)
+        {
+            <p>
+                @fragaSvar.Nummer @fragaSvar.Fraga<br />
+                Rätt svar: @fragaSvar.Svar1
+                @if (fragaSvar.Svar2 == fragaSvar.Svar1)
+                {
 
-            }
-            else
-            {
-                <i>, </i>@fragaSvar.Svar2
-            }
+                }
+                else
+                {
+                    <i>, </i>@fragaSvar.Svar2
+                }
 
-            @if (fragaSvar.Svar3 == fragaSvar.Svar2)
-            {
+                @if (fragaSvar.Svar3 == fragaSvar.Svar2)
+                {
 
-            }
-            else
-            {
-                <i>, </i>@fragaSvar.Svar3
-            }
+                }
+                else
+                {
+                    <i>, </i>@fragaSvar.Svar3
+                }
 
-            @if (fragaSvar.Svar4 == fragaSvar.Svar3)
-            {
+                @if (fragaSvar.Svar4 == fragaSvar.Svar3)
+                {
 
-            }
-            else
-            {
-                <i>, </i>@fragaSvar.Svar4
-            }
+                }
+                else
+                {
+                    <i>, </i>@fragaSvar.Svar4
+                }
 
-            @if (fragaSvar.Svar5 == fragaSvar.Svar4)
-            {
+                @if (fragaSvar.Svar5 == fragaSvar.Svar4)
+                {
 
-            }
-            else
-            {
-                <i>, </i>@fragaSvar.Svar5
-            }
+                }
+                else
+                {
+                    <i>, </i>@fragaSvar.Svar5
+                }
 
-            @if (fragaSvar.Svar6 == fragaSvar.Svar5)
-            {
+                @if (fragaSvar.Svar6 == fragaSvar.Svar5)
+                {
 
-            }
-            else
-            {
-                <i>, </i>@fragaSvar.Svar6
-            }
+                }
+                else
+                {
+                    <i>, </i>@fragaSvar.Svar6
+                }
 
-            @if (fragaSvar.Svar7 == fragaSvar.Svar6)
-            {
+                @if (fragaSvar.Svar7 == fragaSvar.Svar6)
+                {
 
-            }
-            else
-            {
-                <i>, </i>@fragaSvar.Svar7
-            }
+                }
+                else
+                {
+                    <i>, </i>@fragaSvar.Svar7
+                }
 
-            @if (fragaSvar.Svar8 == fragaSvar.Svar7)
-            {
+                @if (fragaSvar.Svar8 == fragaSvar.Svar7)
+                {
 
-            }
-            else
-            {
-                <i>, </i>@fragaSvar.Svar8
-            }
-        </p>
-    }
-</div>
+                }
+                else
+                {
+                    <i>, </i>@fragaSvar.Svar8
+                }
+            </p>
+        }
+    </div>*@

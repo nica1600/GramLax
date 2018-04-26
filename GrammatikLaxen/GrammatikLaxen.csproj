@@ -275,6 +275,8 @@
     <Content Include="Views\Home\Interjektion.cshtml" />
     <Content Include="Views\Prov\Index.cshtml" />
     <Content Include="Views\Prov\Latt.cshtml" />
+    <Content Include="Views\Prov\_LattProv.cshtml" />
+    <Content Include="Views\Prov\_LattProvFacit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
