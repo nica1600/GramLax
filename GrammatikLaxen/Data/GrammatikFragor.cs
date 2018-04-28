@@ -55,134 +55,134 @@ namespace GrammatikLaxen.Data
         // PRONOMEN - LÄTTA FRÅGOR
 
         // 1 vilken ordklass tillhör ordet, pronomen
-        public FragaSvar PronomenVilkenOrdklass()
+        public FragaSvar PronomenVilkenOrdklass(pronomen pro)
         {
-            var randomPronomen = db.GetRandomPronomen();
+            //var randomPronomen = db.GetRandomPronomen();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + randomPronomen.ord + "'?";
-            fragaSvar.Svar1 = randomPronomen.ordklass;
-            fragaSvar.Svar2 = randomPronomen.även;
-            fragaSvar.Svar3 = randomPronomen.även;
-            fragaSvar.Svar4 = randomPronomen.även;
-            fragaSvar.Svar5 = randomPronomen.även;
-            fragaSvar.Svar6 = randomPronomen.även;
-            fragaSvar.Svar7 = randomPronomen.även;
-            fragaSvar.Svar8 = randomPronomen.även;
+            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + pro.ord + "'?";
+            fragaSvar.Svar1 = pro.ordklass;
+            fragaSvar.Svar2 = pro.även;
+            fragaSvar.Svar3 = pro.även;
+            fragaSvar.Svar4 = pro.även;
+            fragaSvar.Svar5 = pro.även;
+            fragaSvar.Svar6 = pro.även;
+            fragaSvar.Svar7 = pro.även;
+            fragaSvar.Svar8 = pro.även;
 
             return fragaSvar;
         }
 
         // 2 gör om till personliga pronomen subjektform, pronomen
-        public FragaSvar PronomenPersonligaSubjekt()
+        public FragaSvar PronomenPersonligaSubjekt(pronomen pro)
         {
-            var randomPronomen = db.GetRandomPronomen();
+            //var randomPronomen = db.GetRandomPronomen();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Hur gör du om ordet '" + randomPronomen.personliga_objekt + "' (som är personliga pronomen i objektform) till personliga pronomen i subjektform?";
-            fragaSvar.Svar1 = randomPronomen.personliga_subjekt;
-            fragaSvar.Svar2 = randomPronomen.personliga_subjekt;
-            fragaSvar.Svar3 = randomPronomen.personliga_subjekt;
-            fragaSvar.Svar4 = randomPronomen.personliga_subjekt;
-            fragaSvar.Svar5 = randomPronomen.personliga_subjekt;
-            fragaSvar.Svar6 = randomPronomen.personliga_subjekt;
-            fragaSvar.Svar7 = randomPronomen.personliga_subjekt;
-            fragaSvar.Svar8 = randomPronomen.personliga_subjekt;
+            fragaSvar.Fraga = "Hur gör du om ordet '" + pro.personliga_objekt + "' (som är personliga pronomen i objektform) till personliga pronomen i subjektform?";
+            fragaSvar.Svar1 = pro.personliga_subjekt;
+            fragaSvar.Svar2 = pro.personliga_subjekt;
+            fragaSvar.Svar3 = pro.personliga_subjekt;
+            fragaSvar.Svar4 = pro.personliga_subjekt;
+            fragaSvar.Svar5 = pro.personliga_subjekt;
+            fragaSvar.Svar6 = pro.personliga_subjekt;
+            fragaSvar.Svar7 = pro.personliga_subjekt;
+            fragaSvar.Svar8 = pro.personliga_subjekt;
 
             return fragaSvar;
         }
 
         // 3 gör om till personliga pronomen objektform, pronomen
-        public FragaSvar PronomenPersonligaObjekt()
+        public FragaSvar PronomenPersonligaObjekt(pronomen pro)
         {
-            var randomPronomen = db.GetRandomPronomen();
+            //var randomPronomen = db.GetRandomPronomen();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Hur gör du om ordet '" + randomPronomen.personliga_subjekt + "' (som är personliga pronomen i subjektform) till personliga pronomen i objektform?";
-            fragaSvar.Svar1 = randomPronomen.personliga_objekt;
-            fragaSvar.Svar2 = randomPronomen.personliga_objekt;
-            fragaSvar.Svar3 = randomPronomen.personliga_objekt;
-            fragaSvar.Svar4 = randomPronomen.personliga_objekt;
-            fragaSvar.Svar5 = randomPronomen.personliga_objekt;
-            fragaSvar.Svar6 = randomPronomen.personliga_objekt;
-            fragaSvar.Svar7 = randomPronomen.personliga_objekt;
-            fragaSvar.Svar8 = randomPronomen.personliga_objekt;
+            fragaSvar.Fraga = "Hur gör du om ordet '" + pro.personliga_subjekt + "' (som är personliga pronomen i subjektform) till personliga pronomen i objektform?";
+            fragaSvar.Svar1 = pro.personliga_objekt;
+            fragaSvar.Svar2 = pro.personliga_objekt;
+            fragaSvar.Svar3 = pro.personliga_objekt;
+            fragaSvar.Svar4 = pro.personliga_objekt;
+            fragaSvar.Svar5 = pro.personliga_objekt;
+            fragaSvar.Svar6 = pro.personliga_objekt;
+            fragaSvar.Svar7 = pro.personliga_objekt;
+            fragaSvar.Svar8 = pro.personliga_objekt;
 
             return fragaSvar;
         }
 
         // 4 gör om till possessivt utrum, pronomen
-        public FragaSvar PronomenPossessivaUtrum()
+        public FragaSvar PronomenPossessivaUtrum(pronomen pro)
         {
-            var randomPronomen = db.GetRandomPronomen();
+            //var randomPronomen = db.GetRandomPronomen();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vad blir ordet '" + randomPronomen.ord + "' som possessivt pronomen om det står tillsammans med ett utrum-substantiv (en ...)?";
-            fragaSvar.Svar1 = randomPronomen.possessiva_utrum;
-            fragaSvar.Svar2 = randomPronomen.possessiva_utrum;
-            fragaSvar.Svar3 = randomPronomen.possessiva_utrum;
-            fragaSvar.Svar4 = randomPronomen.possessiva_utrum;
-            fragaSvar.Svar5 = randomPronomen.possessiva_utrum;
-            fragaSvar.Svar6 = randomPronomen.possessiva_utrum;
-            fragaSvar.Svar7 = randomPronomen.possessiva_utrum;
-            fragaSvar.Svar8 = randomPronomen.possessiva_utrum;
+            fragaSvar.Fraga = "Vad blir ordet '" + pro.ord + "' som possessivt pronomen om det står tillsammans med ett utrum-substantiv (en ...)?";
+            fragaSvar.Svar1 = pro.possessiva_utrum;
+            fragaSvar.Svar2 = pro.possessiva_utrum;
+            fragaSvar.Svar3 = pro.possessiva_utrum;
+            fragaSvar.Svar4 = pro.possessiva_utrum;
+            fragaSvar.Svar5 = pro.possessiva_utrum;
+            fragaSvar.Svar6 = pro.possessiva_utrum;
+            fragaSvar.Svar7 = pro.possessiva_utrum;
+            fragaSvar.Svar8 = pro.possessiva_utrum;
 
             return fragaSvar;
         }
 
         // 5 gör om till possessivt neutrum, pronomen
-        public FragaSvar PronomenPossessivaNeutrum()
+        public FragaSvar PronomenPossessivaNeutrum(pronomen pro)
         {
-            var randomPronomen = db.GetRandomPronomen();
+            //var randomPronomen = db.GetRandomPronomen();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vad blir ordet '" + randomPronomen.ord + "' som possessivt pronomen om det står tillsammans med ett neutrum-substantiv (ett ...)?";
-            fragaSvar.Svar1 = randomPronomen.possessiva_neutrum;
-            fragaSvar.Svar2 = randomPronomen.possessiva_neutrum;
-            fragaSvar.Svar3 = randomPronomen.possessiva_neutrum;
-            fragaSvar.Svar4 = randomPronomen.possessiva_neutrum;
-            fragaSvar.Svar5 = randomPronomen.possessiva_neutrum;
-            fragaSvar.Svar6 = randomPronomen.possessiva_neutrum;
-            fragaSvar.Svar7 = randomPronomen.possessiva_neutrum;
-            fragaSvar.Svar8 = randomPronomen.possessiva_neutrum;
+            fragaSvar.Fraga = "Vad blir ordet '" + pro.ord + "' som possessivt pronomen om det står tillsammans med ett neutrum-substantiv (ett ...)?";
+            fragaSvar.Svar1 = pro.possessiva_neutrum;
+            fragaSvar.Svar2 = pro.possessiva_neutrum;
+            fragaSvar.Svar3 = pro.possessiva_neutrum;
+            fragaSvar.Svar4 = pro.possessiva_neutrum;
+            fragaSvar.Svar5 = pro.possessiva_neutrum;
+            fragaSvar.Svar6 = pro.possessiva_neutrum;
+            fragaSvar.Svar7 = pro.possessiva_neutrum;
+            fragaSvar.Svar8 = pro.possessiva_neutrum;
 
             return fragaSvar;
         }
 
         // 6 gör om till possessivt plural, pronomen
-        public FragaSvar PronomenPossessivaPlural()
+        public FragaSvar PronomenPossessivaPlural(pronomen pro)
         {
-            var randomPronomen = db.GetRandomPronomen();
+            //var randomPronomen = db.GetRandomPronomen();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vad blir ordet '" + randomPronomen.ord + "' som possessivt pronomen om det står tillsammans med ett substantiv i plural (flera)?";
-            fragaSvar.Svar1 = randomPronomen.possessiva_plural;
-            fragaSvar.Svar2 = randomPronomen.possessiva_plural;
-            fragaSvar.Svar3 = randomPronomen.possessiva_plural;
-            fragaSvar.Svar4 = randomPronomen.possessiva_plural;
-            fragaSvar.Svar5 = randomPronomen.possessiva_plural;
-            fragaSvar.Svar6 = randomPronomen.possessiva_plural;
-            fragaSvar.Svar7 = randomPronomen.possessiva_plural;
-            fragaSvar.Svar8 = randomPronomen.possessiva_plural;
+            fragaSvar.Fraga = "Vad blir ordet '" + pro.ord + "' som possessivt pronomen om det står tillsammans med ett substantiv i plural (flera)?";
+            fragaSvar.Svar1 = pro.possessiva_plural;
+            fragaSvar.Svar2 = pro.possessiva_plural;
+            fragaSvar.Svar3 = pro.possessiva_plural;
+            fragaSvar.Svar4 = pro.possessiva_plural;
+            fragaSvar.Svar5 = pro.possessiva_plural;
+            fragaSvar.Svar6 = pro.possessiva_plural;
+            fragaSvar.Svar7 = pro.possessiva_plural;
+            fragaSvar.Svar8 = pro.possessiva_plural;
 
             return fragaSvar;
         }
 
         // 7 gör om till reflexivt, pronomen
-        public FragaSvar PronomenReflexiva()
+        public FragaSvar PronomenReflexiva(pronomen pro)
         {
-            var randomPronomen = db.GetRandomPronomen();
+            //var randomPronomen = db.GetRandomPronomen();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vad blir ordet '" + randomPronomen.ord + "' som reflexivt pronomen?";
-            fragaSvar.Svar1 = randomPronomen.reflexiva;
-            fragaSvar.Svar2 = randomPronomen.reflexiva;
-            fragaSvar.Svar3 = randomPronomen.reflexiva;
-            fragaSvar.Svar4 = randomPronomen.reflexiva;
-            fragaSvar.Svar5 = randomPronomen.reflexiva;
-            fragaSvar.Svar6 = randomPronomen.reflexiva;
-            fragaSvar.Svar7 = randomPronomen.reflexiva;
-            fragaSvar.Svar8 = randomPronomen.reflexiva;
+            fragaSvar.Fraga = "Vad blir ordet '" + pro.ord + "' som reflexivt pronomen?";
+            fragaSvar.Svar1 = pro.reflexiva;
+            fragaSvar.Svar2 = pro.reflexiva;
+            fragaSvar.Svar3 = pro.reflexiva;
+            fragaSvar.Svar4 = pro.reflexiva;
+            fragaSvar.Svar5 = pro.reflexiva;
+            fragaSvar.Svar6 = pro.reflexiva;
+            fragaSvar.Svar7 = pro.reflexiva;
+            fragaSvar.Svar8 = pro.reflexiva;
 
             return fragaSvar;
         }
