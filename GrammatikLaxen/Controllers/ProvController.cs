@@ -39,12 +39,10 @@ namespace GrammatikLaxen.Controllers
             FragaSvar grammatikFraga;
             int fragaNummer = 0;
 
-
-            Random rand = new Random();
-
             //tar fram 15 slumpvisa lätta frågor
             for (int i = 0; i < 15; i++)
             {
+                Random rand = new Random();
                 int randOrdklass = rand.Next(4, 5); //sätt alltid till 10 efter tester!
                 fragaNummer++;
 
