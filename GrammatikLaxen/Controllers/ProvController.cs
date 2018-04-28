@@ -40,12 +40,13 @@ namespace GrammatikLaxen.Controllers
             FragaSvar grammatikFraga;
             int fragaNummer = 0;
 
+
             Random rand = new Random();
 
             //tar fram 15 slumpvisa lätta frågor
             for (int i = 0; i < 15; i++)
             {
-                int randOrdklass = rand.Next(1, 2); //sätt alltid till 10 efter tester!
+                int randOrdklass = rand.Next(1, 10); //sätt alltid till 10 efter tester!
                 fragaNummer++;
 
                 // substantiv
