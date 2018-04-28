@@ -306,96 +306,96 @@ namespace GrammatikLaxen.Data
         // VERB - LÄTTA FRÅGOR
 
         // 1 vilken ordklass tillhör ordet, verb
-        public FragaSvar VerbVilkenOrdklass()
+        public FragaSvar VerbVilkenOrdklass(verb ver)
         {
-            var randomVerb = db.GetRandomVerb();
+            //var randomVerb = db.GetRandomVerb();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + randomVerb.ord + "'?";
-            fragaSvar.Svar1 = randomVerb.ordklass;
-            fragaSvar.Svar2 = randomVerb.även;
-            fragaSvar.Svar3 = randomVerb.även;
-            fragaSvar.Svar4 = randomVerb.även;
-            fragaSvar.Svar5 = randomVerb.även;
-            fragaSvar.Svar6 = randomVerb.även;
-            fragaSvar.Svar7 = randomVerb.även;
-            fragaSvar.Svar8 = randomVerb.även;
+            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + ver.ord + "'?";
+            fragaSvar.Svar1 = ver.ordklass;
+            fragaSvar.Svar2 = ver.även;
+            fragaSvar.Svar3 = ver.även;
+            fragaSvar.Svar4 = ver.även;
+            fragaSvar.Svar5 = ver.även;
+            fragaSvar.Svar6 = ver.även;
+            fragaSvar.Svar7 = ver.även;
+            fragaSvar.Svar8 = ver.även;
 
             return fragaSvar;
         }
 
         // 2 vilken typ av verb, verb
-        public FragaSvar VerbVilkenTyp()
+        public FragaSvar VerbVilkenTyp(verb ver)
         {
-            var randomVerb = db.GetRandomVerb();
+            //var randomVerb = db.GetRandomVerb();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vilken typ av verb är ordet '" + randomVerb.ord + "'?";
-            fragaSvar.Svar1 = randomVerb.typ;
-            fragaSvar.Svar2 = randomVerb.typ;
-            fragaSvar.Svar3 = randomVerb.typ;
-            fragaSvar.Svar4 = randomVerb.typ;
-            fragaSvar.Svar5 = randomVerb.typ;
-            fragaSvar.Svar6 = randomVerb.typ;
-            fragaSvar.Svar7 = randomVerb.typ;
-            fragaSvar.Svar8 = randomVerb.typ;
+            fragaSvar.Fraga = "Vilken typ av verb är ordet '" + ver.ord + "'?";
+            fragaSvar.Svar1 = ver.typ;
+            fragaSvar.Svar2 = ver.typ;
+            fragaSvar.Svar3 = ver.typ;
+            fragaSvar.Svar4 = ver.typ;
+            fragaSvar.Svar5 = ver.typ;
+            fragaSvar.Svar6 = ver.typ;
+            fragaSvar.Svar7 = ver.typ;
+            fragaSvar.Svar8 = ver.typ;
 
             return fragaSvar;
         }
 
         // 3 ordets tema i infinitiv, verb
-        public FragaSvar VerbInfinitiv()
+        public FragaSvar VerbInfinitiv(verb ver)
         {
-            var randomVerb = db.GetRandomVerb();
+            //var randomVerb = db.GetRandomVerb();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vad blir verbet '" + randomVerb.preteritum + "' i infinitiv?";
-            fragaSvar.Svar1 = randomVerb.infinitiv;
-            fragaSvar.Svar2 = randomVerb.infinitiv;
-            fragaSvar.Svar3 = randomVerb.infinitiv;
-            fragaSvar.Svar4 = randomVerb.infinitiv;
-            fragaSvar.Svar5 = randomVerb.infinitiv;
-            fragaSvar.Svar6 = randomVerb.infinitiv;
-            fragaSvar.Svar7 = randomVerb.infinitiv;
-            fragaSvar.Svar8 = randomVerb.infinitiv;
+            fragaSvar.Fraga = "Vad blir verbet '" + ver.preteritum + "' i infinitiv?";
+            fragaSvar.Svar1 = ver.infinitiv;
+            fragaSvar.Svar2 = ver.infinitiv;
+            fragaSvar.Svar3 = ver.infinitiv;
+            fragaSvar.Svar4 = ver.infinitiv;
+            fragaSvar.Svar5 = ver.infinitiv;
+            fragaSvar.Svar6 = ver.infinitiv;
+            fragaSvar.Svar7 = ver.infinitiv;
+            fragaSvar.Svar8 = ver.infinitiv;
 
             return fragaSvar;
         }
 
         // 4 ordets tema i preteritum, verb
-        public FragaSvar VerbPreteritum()
+        public FragaSvar VerbPreteritum(verb ver)
         {
-            var randomVerb = db.GetRandomVerb();
+            //var randomVerb = db.GetRandomVerb();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vad blir verbet '" + randomVerb.ord + "' i preteritum?";
-            fragaSvar.Svar1 = randomVerb.preteritum;
-            fragaSvar.Svar2 = randomVerb.preteritum;
-            fragaSvar.Svar3 = randomVerb.preteritum;
-            fragaSvar.Svar4 = randomVerb.preteritum;
-            fragaSvar.Svar5 = randomVerb.preteritum;
-            fragaSvar.Svar6 = randomVerb.preteritum;
-            fragaSvar.Svar7 = randomVerb.preteritum;
-            fragaSvar.Svar8 = randomVerb.preteritum;
+            fragaSvar.Fraga = "Vad blir verbet '" + ver.ord + "' i preteritum?";
+            fragaSvar.Svar1 = ver.preteritum;
+            fragaSvar.Svar2 = ver.preteritum;
+            fragaSvar.Svar3 = ver.preteritum;
+            fragaSvar.Svar4 = ver.preteritum;
+            fragaSvar.Svar5 = ver.preteritum;
+            fragaSvar.Svar6 = ver.preteritum;
+            fragaSvar.Svar7 = ver.preteritum;
+            fragaSvar.Svar8 = ver.preteritum;
 
             return fragaSvar;
         }
 
         // 5 ordets tema i supinum, verb
-        public FragaSvar VerbSupinum()
+        public FragaSvar VerbSupinum(verb ver)
         {
-            var randomVerb = db.GetRandomVerb();
+            //var randomVerb = db.GetRandomVerb();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vad blir verbet '" + randomVerb.ord + "' i supinum?";
-            fragaSvar.Svar1 = randomVerb.supinum;
-            fragaSvar.Svar2 = randomVerb.supinum;
-            fragaSvar.Svar3 = randomVerb.supinum;
-            fragaSvar.Svar4 = randomVerb.supinum;
-            fragaSvar.Svar5 = randomVerb.supinum;
-            fragaSvar.Svar6 = randomVerb.supinum;
-            fragaSvar.Svar7 = randomVerb.supinum;
-            fragaSvar.Svar8 = randomVerb.supinum;
+            fragaSvar.Fraga = "Vad blir verbet '" + ver.ord + "' i supinum?";
+            fragaSvar.Svar1 = ver.supinum;
+            fragaSvar.Svar2 = ver.supinum;
+            fragaSvar.Svar3 = ver.supinum;
+            fragaSvar.Svar4 = ver.supinum;
+            fragaSvar.Svar5 = ver.supinum;
+            fragaSvar.Svar6 = ver.supinum;
+            fragaSvar.Svar7 = ver.supinum;
+            fragaSvar.Svar8 = ver.supinum;
 
             return fragaSvar;
         }

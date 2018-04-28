@@ -45,7 +45,7 @@ namespace GrammatikLaxen.Controllers
             //tar fram 15 slumpvisa lätta frågor
             for (int i = 0; i < 15; i++)
             {
-                int randOrdklass = rand.Next(1, 4); //sätt alltid till 10 efter tester!
+                int randOrdklass = rand.Next(4, 5); //sätt alltid till 10 efter tester!
                 fragaNummer++;
 
                 // substantiv
@@ -541,40 +541,150 @@ namespace GrammatikLaxen.Controllers
                     //vilken ordklass tillhör ordet
                     if (randVerbFraga == 1)
                     {
+                        Random rand3 = new Random();
+                        verb verForNow = new verb();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand3.Next(1, 60);
+                                verForNow = allVerList.SingleOrDefault(a => a.Id == randomId);
+                                if (verForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allVerList.Remove(verForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.VerbVilkenOrdklass();
+                        grammatikFraga = gf.VerbVilkenOrdklass(verForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
                     //vilken typ av verb
                     else if (randVerbFraga == 2)
                     {
+                        Random rand3 = new Random();
+                        verb verForNow = new verb();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand3.Next(1, 60);
+                                verForNow = allVerList.SingleOrDefault(a => a.Id == randomId);
+                                if (verForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allVerList.Remove(verForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.VerbVilkenTyp();
+                        grammatikFraga = gf.VerbVilkenTyp(verForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
                     //vad blir ordet i infinitv
                     else if (randVerbFraga == 3)
                     {
+                        Random rand3 = new Random();
+                        verb verForNow = new verb();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand3.Next(1, 60);
+                                verForNow = allVerList.SingleOrDefault(a => a.Id == randomId);
+                                if (verForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allVerList.Remove(verForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.VerbInfinitiv();
+                        grammatikFraga = gf.VerbInfinitiv(verForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
                     //vad blir ordet i preteritum
                     else if (randVerbFraga == 4)
                     {
+                        Random rand3 = new Random();
+                        verb verForNow = new verb();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand3.Next(1, 60);
+                                verForNow = allVerList.SingleOrDefault(a => a.Id == randomId);
+                                if (verForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allVerList.Remove(verForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.VerbPreteritum();
+                        grammatikFraga = gf.VerbPreteritum(verForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
                     //vad blir ordet i supinum
                     else if (randVerbFraga == 5)
                     {
+                        Random rand3 = new Random();
+                        verb verForNow = new verb();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand3.Next(1, 60);
+                                verForNow = allVerList.SingleOrDefault(a => a.Id == randomId);
+                                if (verForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allVerList.Remove(verForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.VerbSupinum();
+                        grammatikFraga = gf.VerbSupinum(verForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
