@@ -26,11 +26,15 @@ namespace GrammatikLaxen.Controllers
             List<FragaSvar> fragaSvarList = new List<FragaSvar>();
             fragaSvarList.Clear();
 
-            List<substantiv> allSubList = new List<substantiv>();
-            allSubList = db.GetAllSubstantivList();
-
-            List<konjunktion> allKonList = new List<konjunktion>();
-            allKonList = db.GetAllKonjunktionList();
+            List<substantiv> allSubList = db.GetAllSubstantivList();
+            List<pronomen> allProList = db.GetAllPronomenList();
+            List<adjektiv> allAdjList = db.GetAllAdjektivList();
+            List<verb> allVerList = db.GetAllVerbList();
+            List<adverb> allAdvRenLattList = db.GetAllAdverbList();
+            List<preposition> allPreList = db.GetAllPrepositionList();
+            List<konjunktion> allKonList = db.GetAllKonjunktionList();
+            List<räkneord> allRakList = db.GetAllRäkneordList();
+            List<interjektion> allIntList = db.GetAllInterjektionList();
 
             FragaSvar grammatikFraga;
             int fragaNummer = 0;
@@ -41,7 +45,7 @@ namespace GrammatikLaxen.Controllers
             //tar fram 15 slumpvisa lätta frågor
             for (int i = 0; i < 15; i++)
             {
-                int randOrdklass = rand.Next(1, 10); //sätt alltid till 10 efter tester!
+                int randOrdklass = rand.Next(1, 2); //sätt alltid till 10 efter tester!
                 fragaNummer++;
 
                 // substantiv
@@ -83,8 +87,30 @@ namespace GrammatikLaxen.Controllers
                     //konkret eller abstrakt
                     else if (randSubFraga == 2)
                     {
+                        Random rand3 = new Random();
+                        substantiv subForNow = new substantiv();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand3.Next(1, 200);
+                                subForNow = allSubList.SingleOrDefault(a => a.Id == randomId);
+                                if (subForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allSubList.Remove(subForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.SubstantivKonkretAbstrakt();
+                        grammatikFraga = gf.SubstantivKonkretAbstrakt(subForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
