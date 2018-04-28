@@ -55,134 +55,134 @@ namespace GrammatikLaxen.Data
         // PRONOMEN - LÄTTA FRÅGOR
 
         // 1 vilken ordklass tillhör ordet, pronomen
-        public FragaSvar PronomenVilkenOrdklass()
+        public FragaSvar PronomenVilkenOrdklass(pronomen pro)
         {
-            var randomPronomen = db.GetRandomPronomen();
+            //var randomPronomen = db.GetRandomPronomen();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + randomPronomen.ord + "'?";
-            fragaSvar.Svar1 = randomPronomen.ordklass;
-            fragaSvar.Svar2 = randomPronomen.även;
-            fragaSvar.Svar3 = randomPronomen.även;
-            fragaSvar.Svar4 = randomPronomen.även;
-            fragaSvar.Svar5 = randomPronomen.även;
-            fragaSvar.Svar6 = randomPronomen.även;
-            fragaSvar.Svar7 = randomPronomen.även;
-            fragaSvar.Svar8 = randomPronomen.även;
+            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + pro.ord + "'?";
+            fragaSvar.Svar1 = pro.ordklass;
+            fragaSvar.Svar2 = pro.även;
+            fragaSvar.Svar3 = pro.även;
+            fragaSvar.Svar4 = pro.även;
+            fragaSvar.Svar5 = pro.även;
+            fragaSvar.Svar6 = pro.även;
+            fragaSvar.Svar7 = pro.även;
+            fragaSvar.Svar8 = pro.även;
 
             return fragaSvar;
         }
 
         // 2 gör om till personliga pronomen subjektform, pronomen
-        public FragaSvar PronomenPersonligaSubjekt()
+        public FragaSvar PronomenPersonligaSubjekt(pronomen pro)
         {
-            var randomPronomen = db.GetRandomPronomen();
+            //var randomPronomen = db.GetRandomPronomen();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Hur gör du om ordet '" + randomPronomen.personliga_objekt + "' (som är personliga pronomen i objektform) till personliga pronomen i subjektform?";
-            fragaSvar.Svar1 = randomPronomen.personliga_subjekt;
-            fragaSvar.Svar2 = randomPronomen.personliga_subjekt;
-            fragaSvar.Svar3 = randomPronomen.personliga_subjekt;
-            fragaSvar.Svar4 = randomPronomen.personliga_subjekt;
-            fragaSvar.Svar5 = randomPronomen.personliga_subjekt;
-            fragaSvar.Svar6 = randomPronomen.personliga_subjekt;
-            fragaSvar.Svar7 = randomPronomen.personliga_subjekt;
-            fragaSvar.Svar8 = randomPronomen.personliga_subjekt;
+            fragaSvar.Fraga = "Hur gör du om ordet '" + pro.personliga_objekt + "' (som är personliga pronomen i objektform) till personliga pronomen i subjektform?";
+            fragaSvar.Svar1 = pro.personliga_subjekt;
+            fragaSvar.Svar2 = pro.personliga_subjekt;
+            fragaSvar.Svar3 = pro.personliga_subjekt;
+            fragaSvar.Svar4 = pro.personliga_subjekt;
+            fragaSvar.Svar5 = pro.personliga_subjekt;
+            fragaSvar.Svar6 = pro.personliga_subjekt;
+            fragaSvar.Svar7 = pro.personliga_subjekt;
+            fragaSvar.Svar8 = pro.personliga_subjekt;
 
             return fragaSvar;
         }
 
         // 3 gör om till personliga pronomen objektform, pronomen
-        public FragaSvar PronomenPersonligaObjekt()
+        public FragaSvar PronomenPersonligaObjekt(pronomen pro)
         {
-            var randomPronomen = db.GetRandomPronomen();
+            //var randomPronomen = db.GetRandomPronomen();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Hur gör du om ordet '" + randomPronomen.personliga_subjekt + "' (som är personliga pronomen i subjektform) till personliga pronomen i objektform?";
-            fragaSvar.Svar1 = randomPronomen.personliga_objekt;
-            fragaSvar.Svar2 = randomPronomen.personliga_objekt;
-            fragaSvar.Svar3 = randomPronomen.personliga_objekt;
-            fragaSvar.Svar4 = randomPronomen.personliga_objekt;
-            fragaSvar.Svar5 = randomPronomen.personliga_objekt;
-            fragaSvar.Svar6 = randomPronomen.personliga_objekt;
-            fragaSvar.Svar7 = randomPronomen.personliga_objekt;
-            fragaSvar.Svar8 = randomPronomen.personliga_objekt;
+            fragaSvar.Fraga = "Hur gör du om ordet '" + pro.personliga_subjekt + "' (som är personliga pronomen i subjektform) till personliga pronomen i objektform?";
+            fragaSvar.Svar1 = pro.personliga_objekt;
+            fragaSvar.Svar2 = pro.personliga_objekt;
+            fragaSvar.Svar3 = pro.personliga_objekt;
+            fragaSvar.Svar4 = pro.personliga_objekt;
+            fragaSvar.Svar5 = pro.personliga_objekt;
+            fragaSvar.Svar6 = pro.personliga_objekt;
+            fragaSvar.Svar7 = pro.personliga_objekt;
+            fragaSvar.Svar8 = pro.personliga_objekt;
 
             return fragaSvar;
         }
 
         // 4 gör om till possessivt utrum, pronomen
-        public FragaSvar PronomenPossessivaUtrum()
+        public FragaSvar PronomenPossessivaUtrum(pronomen pro)
         {
-            var randomPronomen = db.GetRandomPronomen();
+            //var randomPronomen = db.GetRandomPronomen();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vad blir ordet '" + randomPronomen.ord + "' som possessivt pronomen om det står tillsammans med ett utrum-substantiv (en ...)?";
-            fragaSvar.Svar1 = randomPronomen.possessiva_utrum;
-            fragaSvar.Svar2 = randomPronomen.possessiva_utrum;
-            fragaSvar.Svar3 = randomPronomen.possessiva_utrum;
-            fragaSvar.Svar4 = randomPronomen.possessiva_utrum;
-            fragaSvar.Svar5 = randomPronomen.possessiva_utrum;
-            fragaSvar.Svar6 = randomPronomen.possessiva_utrum;
-            fragaSvar.Svar7 = randomPronomen.possessiva_utrum;
-            fragaSvar.Svar8 = randomPronomen.possessiva_utrum;
+            fragaSvar.Fraga = "Vad blir ordet '" + pro.ord + "' som possessivt pronomen om det står tillsammans med ett utrum-substantiv (en ...)?";
+            fragaSvar.Svar1 = pro.possessiva_utrum;
+            fragaSvar.Svar2 = pro.possessiva_utrum;
+            fragaSvar.Svar3 = pro.possessiva_utrum;
+            fragaSvar.Svar4 = pro.possessiva_utrum;
+            fragaSvar.Svar5 = pro.possessiva_utrum;
+            fragaSvar.Svar6 = pro.possessiva_utrum;
+            fragaSvar.Svar7 = pro.possessiva_utrum;
+            fragaSvar.Svar8 = pro.possessiva_utrum;
 
             return fragaSvar;
         }
 
         // 5 gör om till possessivt neutrum, pronomen
-        public FragaSvar PronomenPossessivaNeutrum()
+        public FragaSvar PronomenPossessivaNeutrum(pronomen pro)
         {
-            var randomPronomen = db.GetRandomPronomen();
+            //var randomPronomen = db.GetRandomPronomen();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vad blir ordet '" + randomPronomen.ord + "' som possessivt pronomen om det står tillsammans med ett neutrum-substantiv (ett ...)?";
-            fragaSvar.Svar1 = randomPronomen.possessiva_neutrum;
-            fragaSvar.Svar2 = randomPronomen.possessiva_neutrum;
-            fragaSvar.Svar3 = randomPronomen.possessiva_neutrum;
-            fragaSvar.Svar4 = randomPronomen.possessiva_neutrum;
-            fragaSvar.Svar5 = randomPronomen.possessiva_neutrum;
-            fragaSvar.Svar6 = randomPronomen.possessiva_neutrum;
-            fragaSvar.Svar7 = randomPronomen.possessiva_neutrum;
-            fragaSvar.Svar8 = randomPronomen.possessiva_neutrum;
+            fragaSvar.Fraga = "Vad blir ordet '" + pro.ord + "' som possessivt pronomen om det står tillsammans med ett neutrum-substantiv (ett ...)?";
+            fragaSvar.Svar1 = pro.possessiva_neutrum;
+            fragaSvar.Svar2 = pro.possessiva_neutrum;
+            fragaSvar.Svar3 = pro.possessiva_neutrum;
+            fragaSvar.Svar4 = pro.possessiva_neutrum;
+            fragaSvar.Svar5 = pro.possessiva_neutrum;
+            fragaSvar.Svar6 = pro.possessiva_neutrum;
+            fragaSvar.Svar7 = pro.possessiva_neutrum;
+            fragaSvar.Svar8 = pro.possessiva_neutrum;
 
             return fragaSvar;
         }
 
         // 6 gör om till possessivt plural, pronomen
-        public FragaSvar PronomenPossessivaPlural()
+        public FragaSvar PronomenPossessivaPlural(pronomen pro)
         {
-            var randomPronomen = db.GetRandomPronomen();
+            //var randomPronomen = db.GetRandomPronomen();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vad blir ordet '" + randomPronomen.ord + "' som possessivt pronomen om det står tillsammans med ett substantiv i plural (flera)?";
-            fragaSvar.Svar1 = randomPronomen.possessiva_plural;
-            fragaSvar.Svar2 = randomPronomen.possessiva_plural;
-            fragaSvar.Svar3 = randomPronomen.possessiva_plural;
-            fragaSvar.Svar4 = randomPronomen.possessiva_plural;
-            fragaSvar.Svar5 = randomPronomen.possessiva_plural;
-            fragaSvar.Svar6 = randomPronomen.possessiva_plural;
-            fragaSvar.Svar7 = randomPronomen.possessiva_plural;
-            fragaSvar.Svar8 = randomPronomen.possessiva_plural;
+            fragaSvar.Fraga = "Vad blir ordet '" + pro.ord + "' som possessivt pronomen om det står tillsammans med ett substantiv i plural (flera)?";
+            fragaSvar.Svar1 = pro.possessiva_plural;
+            fragaSvar.Svar2 = pro.possessiva_plural;
+            fragaSvar.Svar3 = pro.possessiva_plural;
+            fragaSvar.Svar4 = pro.possessiva_plural;
+            fragaSvar.Svar5 = pro.possessiva_plural;
+            fragaSvar.Svar6 = pro.possessiva_plural;
+            fragaSvar.Svar7 = pro.possessiva_plural;
+            fragaSvar.Svar8 = pro.possessiva_plural;
 
             return fragaSvar;
         }
 
         // 7 gör om till reflexivt, pronomen
-        public FragaSvar PronomenReflexiva()
+        public FragaSvar PronomenReflexiva(pronomen pro)
         {
-            var randomPronomen = db.GetRandomPronomen();
+            //var randomPronomen = db.GetRandomPronomen();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vad blir ordet '" + randomPronomen.ord + "' som reflexivt pronomen?";
-            fragaSvar.Svar1 = randomPronomen.reflexiva;
-            fragaSvar.Svar2 = randomPronomen.reflexiva;
-            fragaSvar.Svar3 = randomPronomen.reflexiva;
-            fragaSvar.Svar4 = randomPronomen.reflexiva;
-            fragaSvar.Svar5 = randomPronomen.reflexiva;
-            fragaSvar.Svar6 = randomPronomen.reflexiva;
-            fragaSvar.Svar7 = randomPronomen.reflexiva;
-            fragaSvar.Svar8 = randomPronomen.reflexiva;
+            fragaSvar.Fraga = "Vad blir ordet '" + pro.ord + "' som reflexivt pronomen?";
+            fragaSvar.Svar1 = pro.reflexiva;
+            fragaSvar.Svar2 = pro.reflexiva;
+            fragaSvar.Svar3 = pro.reflexiva;
+            fragaSvar.Svar4 = pro.reflexiva;
+            fragaSvar.Svar5 = pro.reflexiva;
+            fragaSvar.Svar6 = pro.reflexiva;
+            fragaSvar.Svar7 = pro.reflexiva;
+            fragaSvar.Svar8 = pro.reflexiva;
 
             return fragaSvar;
         }
@@ -190,115 +190,115 @@ namespace GrammatikLaxen.Data
         // ADJEKTIV - LÄTTA FRÅGOR
 
         // 1 vilken ordklass tillhör ordet, adjektiv
-        public FragaSvar AdjektivVilkenOrdklass()
+        public FragaSvar AdjektivVilkenOrdklass(adjektiv adj)
         {
-            var randomAdjektiv = db.GetRandomAdjektiv();
+            //var randomAdjektiv = db.GetRandomAdjektiv();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + randomAdjektiv.ord + "'?";
-            fragaSvar.Svar1 = randomAdjektiv.ordklass;
-            fragaSvar.Svar2 = randomAdjektiv.även;
-            fragaSvar.Svar3 = randomAdjektiv.även;
-            fragaSvar.Svar4 = randomAdjektiv.även;
-            fragaSvar.Svar5 = randomAdjektiv.även;
-            fragaSvar.Svar6 = randomAdjektiv.även;
-            fragaSvar.Svar7 = randomAdjektiv.även;
-            fragaSvar.Svar8 = randomAdjektiv.även;
+            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + adj.ord + "'?";
+            fragaSvar.Svar1 = adj.ordklass;
+            fragaSvar.Svar2 = adj.även;
+            fragaSvar.Svar3 = adj.även;
+            fragaSvar.Svar4 = adj.även;
+            fragaSvar.Svar5 = adj.även;
+            fragaSvar.Svar6 = adj.även;
+            fragaSvar.Svar7 = adj.även;
+            fragaSvar.Svar8 = adj.även;
 
             return fragaSvar;
         }
 
         // 2 vad blir ordet i obestämd form utrum, adjektiv
-        public FragaSvar AdjektivObestämdUtrum()
+        public FragaSvar AdjektivObestämdUtrum(adjektiv adj)
         {
-            var randomAdjektiv = db.GetRandomAdjektiv();
+            //var randomAdjektiv = db.GetRandomAdjektiv();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vad blir adjektivet '" + randomAdjektiv.ord + "' i obestämd form tillsammans med ett utrum-substantiv (en ...)?";
-            fragaSvar.Svar1 = randomAdjektiv.obestämd_form_utrum;
-            fragaSvar.Svar2 = randomAdjektiv.obestämd_form_utrum;
-            fragaSvar.Svar3 = randomAdjektiv.obestämd_form_utrum;
-            fragaSvar.Svar4 = randomAdjektiv.obestämd_form_utrum;
-            fragaSvar.Svar5 = randomAdjektiv.obestämd_form_utrum;
-            fragaSvar.Svar6 = randomAdjektiv.obestämd_form_utrum;
-            fragaSvar.Svar7 = randomAdjektiv.obestämd_form_utrum;
-            fragaSvar.Svar8 = randomAdjektiv.obestämd_form_utrum;
+            fragaSvar.Fraga = "Vad blir adjektivet '" + adj.ord + "' i obestämd form tillsammans med ett utrum-substantiv (en ...)?";
+            fragaSvar.Svar1 = adj.obestämd_form_utrum;
+            fragaSvar.Svar2 = adj.obestämd_form_utrum;
+            fragaSvar.Svar3 = adj.obestämd_form_utrum;
+            fragaSvar.Svar4 = adj.obestämd_form_utrum;
+            fragaSvar.Svar5 = adj.obestämd_form_utrum;
+            fragaSvar.Svar6 = adj.obestämd_form_utrum;
+            fragaSvar.Svar7 = adj.obestämd_form_utrum;
+            fragaSvar.Svar8 = adj.obestämd_form_utrum;
 
             return fragaSvar;
         }
 
         // 3 vad blir ordet i obestämd form neutrum, adjektiv
-        public FragaSvar AdjektivObestämdNeutrum()
+        public FragaSvar AdjektivObestämdNeutrum(adjektiv adj)
         {
-            var randomAdjektiv = db.GetRandomAdjektiv();
+            //var randomAdjektiv = db.GetRandomAdjektiv();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vad blir adjektivet '" + randomAdjektiv.ord + "' i obestämd form tillsammans med ett neutrum-substantiv (ett ...)?";
-            fragaSvar.Svar1 = randomAdjektiv.obestämd_form_neutrum;
-            fragaSvar.Svar2 = randomAdjektiv.obestämd_form_neutrum;
-            fragaSvar.Svar3 = randomAdjektiv.obestämd_form_neutrum;
-            fragaSvar.Svar4 = randomAdjektiv.obestämd_form_neutrum;
-            fragaSvar.Svar5 = randomAdjektiv.obestämd_form_neutrum;
-            fragaSvar.Svar6 = randomAdjektiv.obestämd_form_neutrum;
-            fragaSvar.Svar7 = randomAdjektiv.obestämd_form_neutrum;
-            fragaSvar.Svar8 = randomAdjektiv.obestämd_form_neutrum;
+            fragaSvar.Fraga = "Vad blir adjektivet '" + adj.ord + "' i obestämd form tillsammans med ett neutrum-substantiv (ett ...)?";
+            fragaSvar.Svar1 = adj.obestämd_form_neutrum;
+            fragaSvar.Svar2 = adj.obestämd_form_neutrum;
+            fragaSvar.Svar3 = adj.obestämd_form_neutrum;
+            fragaSvar.Svar4 = adj.obestämd_form_neutrum;
+            fragaSvar.Svar5 = adj.obestämd_form_neutrum;
+            fragaSvar.Svar6 = adj.obestämd_form_neutrum;
+            fragaSvar.Svar7 = adj.obestämd_form_neutrum;
+            fragaSvar.Svar8 = adj.obestämd_form_neutrum;
 
             return fragaSvar;
         }
 
         // 4 vad blir ordet i bestämd form ej maskulinum, adjektiv
-        public FragaSvar AdjektivBestämdFormEjMaskulinum()
+        public FragaSvar AdjektivBestämdFormEjMaskulinum(adjektiv adj)
         {
-            var randomAdjektiv = db.GetRandomAdjektiv();
+            //var randomAdjektiv = db.GetRandomAdjektiv();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vad blir adjektivet '" + randomAdjektiv.ord + "' i bestämd form (ej maskulinum)?";
-            fragaSvar.Svar1 = randomAdjektiv.bestämd_form_ej_maskulinum;
-            fragaSvar.Svar2 = randomAdjektiv.bestämd_form_ej_maskulinum;
-            fragaSvar.Svar3 = randomAdjektiv.bestämd_form_ej_maskulinum;
-            fragaSvar.Svar4 = randomAdjektiv.bestämd_form_ej_maskulinum;
-            fragaSvar.Svar5 = randomAdjektiv.bestämd_form_ej_maskulinum;
-            fragaSvar.Svar6 = randomAdjektiv.bestämd_form_ej_maskulinum;
-            fragaSvar.Svar7 = randomAdjektiv.bestämd_form_ej_maskulinum;
-            fragaSvar.Svar8 = randomAdjektiv.bestämd_form_ej_maskulinum;
+            fragaSvar.Fraga = "Vad blir adjektivet '" + adj.ord + "' i bestämd form (ej maskulinum)?";
+            fragaSvar.Svar1 = adj.bestämd_form_ej_maskulinum;
+            fragaSvar.Svar2 = adj.bestämd_form_ej_maskulinum;
+            fragaSvar.Svar3 = adj.bestämd_form_ej_maskulinum;
+            fragaSvar.Svar4 = adj.bestämd_form_ej_maskulinum;
+            fragaSvar.Svar5 = adj.bestämd_form_ej_maskulinum;
+            fragaSvar.Svar6 = adj.bestämd_form_ej_maskulinum;
+            fragaSvar.Svar7 = adj.bestämd_form_ej_maskulinum;
+            fragaSvar.Svar8 = adj.bestämd_form_ej_maskulinum;
 
             return fragaSvar;
         }
 
         // 5 vad blir ordet i singular, adjektiv
-        public FragaSvar AdjektivSingular()
+        public FragaSvar AdjektivSingular(adjektiv adj)
         {
-            var randomAdjektiv = db.GetRandomAdjektiv();
+            //var randomAdjektiv = db.GetRandomAdjektiv();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vad blir adjektivet '" + randomAdjektiv.plural + "' i singular?";
-            fragaSvar.Svar1 = randomAdjektiv.singular;
-            fragaSvar.Svar2 = randomAdjektiv.singular;
-            fragaSvar.Svar3 = randomAdjektiv.singular;
-            fragaSvar.Svar4 = randomAdjektiv.singular;
-            fragaSvar.Svar5 = randomAdjektiv.singular;
-            fragaSvar.Svar6 = randomAdjektiv.singular;
-            fragaSvar.Svar7 = randomAdjektiv.singular;
-            fragaSvar.Svar8 = randomAdjektiv.singular;
+            fragaSvar.Fraga = "Vad blir adjektivet '" + adj.plural + "' i singular?";
+            fragaSvar.Svar1 = adj.singular;
+            fragaSvar.Svar2 = adj.singular;
+            fragaSvar.Svar3 = adj.singular;
+            fragaSvar.Svar4 = adj.singular;
+            fragaSvar.Svar5 = adj.singular;
+            fragaSvar.Svar6 = adj.singular;
+            fragaSvar.Svar7 = adj.singular;
+            fragaSvar.Svar8 = adj.singular;
 
             return fragaSvar;
         }
 
         // 6 vad blir ordet i plural, adjektiv
-        public FragaSvar AdjektivPlural()
+        public FragaSvar AdjektivPlural(adjektiv adj)
         {
-            var randomAdjektiv = db.GetRandomAdjektiv();
+            //var randomAdjektiv = db.GetRandomAdjektiv();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vad blir adjektivet '" + randomAdjektiv.singular + "' i plural?";
-            fragaSvar.Svar1 = randomAdjektiv.plural;
-            fragaSvar.Svar2 = randomAdjektiv.plural;
-            fragaSvar.Svar3 = randomAdjektiv.plural;
-            fragaSvar.Svar4 = randomAdjektiv.plural;
-            fragaSvar.Svar5 = randomAdjektiv.plural;
-            fragaSvar.Svar6 = randomAdjektiv.plural;
-            fragaSvar.Svar7 = randomAdjektiv.plural;
-            fragaSvar.Svar8 = randomAdjektiv.plural;
+            fragaSvar.Fraga = "Vad blir adjektivet '" + adj.singular + "' i plural?";
+            fragaSvar.Svar1 = adj.plural;
+            fragaSvar.Svar2 = adj.plural;
+            fragaSvar.Svar3 = adj.plural;
+            fragaSvar.Svar4 = adj.plural;
+            fragaSvar.Svar5 = adj.plural;
+            fragaSvar.Svar6 = adj.plural;
+            fragaSvar.Svar7 = adj.plural;
+            fragaSvar.Svar8 = adj.plural;
 
             return fragaSvar;
         }
@@ -306,96 +306,96 @@ namespace GrammatikLaxen.Data
         // VERB - LÄTTA FRÅGOR
 
         // 1 vilken ordklass tillhör ordet, verb
-        public FragaSvar VerbVilkenOrdklass()
+        public FragaSvar VerbVilkenOrdklass(verb ver)
         {
-            var randomVerb = db.GetRandomVerb();
+            //var randomVerb = db.GetRandomVerb();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + randomVerb.ord + "'?";
-            fragaSvar.Svar1 = randomVerb.ordklass;
-            fragaSvar.Svar2 = randomVerb.även;
-            fragaSvar.Svar3 = randomVerb.även;
-            fragaSvar.Svar4 = randomVerb.även;
-            fragaSvar.Svar5 = randomVerb.även;
-            fragaSvar.Svar6 = randomVerb.även;
-            fragaSvar.Svar7 = randomVerb.även;
-            fragaSvar.Svar8 = randomVerb.även;
+            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + ver.ord + "'?";
+            fragaSvar.Svar1 = ver.ordklass;
+            fragaSvar.Svar2 = ver.även;
+            fragaSvar.Svar3 = ver.även;
+            fragaSvar.Svar4 = ver.även;
+            fragaSvar.Svar5 = ver.även;
+            fragaSvar.Svar6 = ver.även;
+            fragaSvar.Svar7 = ver.även;
+            fragaSvar.Svar8 = ver.även;
 
             return fragaSvar;
         }
 
         // 2 vilken typ av verb, verb
-        public FragaSvar VerbVilkenTyp()
+        public FragaSvar VerbVilkenTyp(verb ver)
         {
-            var randomVerb = db.GetRandomVerb();
+            //var randomVerb = db.GetRandomVerb();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vilken typ av verb är ordet '" + randomVerb.ord + "'?";
-            fragaSvar.Svar1 = randomVerb.typ;
-            fragaSvar.Svar2 = randomVerb.typ;
-            fragaSvar.Svar3 = randomVerb.typ;
-            fragaSvar.Svar4 = randomVerb.typ;
-            fragaSvar.Svar5 = randomVerb.typ;
-            fragaSvar.Svar6 = randomVerb.typ;
-            fragaSvar.Svar7 = randomVerb.typ;
-            fragaSvar.Svar8 = randomVerb.typ;
+            fragaSvar.Fraga = "Vilken typ av verb är ordet '" + ver.ord + "'?";
+            fragaSvar.Svar1 = ver.typ;
+            fragaSvar.Svar2 = ver.typ;
+            fragaSvar.Svar3 = ver.typ;
+            fragaSvar.Svar4 = ver.typ;
+            fragaSvar.Svar5 = ver.typ;
+            fragaSvar.Svar6 = ver.typ;
+            fragaSvar.Svar7 = ver.typ;
+            fragaSvar.Svar8 = ver.typ;
 
             return fragaSvar;
         }
 
         // 3 ordets tema i infinitiv, verb
-        public FragaSvar VerbInfinitiv()
+        public FragaSvar VerbInfinitiv(verb ver)
         {
-            var randomVerb = db.GetRandomVerb();
+            //var randomVerb = db.GetRandomVerb();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vad blir verbet '" + randomVerb.preteritum + "' i infinitiv?";
-            fragaSvar.Svar1 = randomVerb.infinitiv;
-            fragaSvar.Svar2 = randomVerb.infinitiv;
-            fragaSvar.Svar3 = randomVerb.infinitiv;
-            fragaSvar.Svar4 = randomVerb.infinitiv;
-            fragaSvar.Svar5 = randomVerb.infinitiv;
-            fragaSvar.Svar6 = randomVerb.infinitiv;
-            fragaSvar.Svar7 = randomVerb.infinitiv;
-            fragaSvar.Svar8 = randomVerb.infinitiv;
+            fragaSvar.Fraga = "Vad blir verbet '" + ver.preteritum + "' i infinitiv?";
+            fragaSvar.Svar1 = ver.infinitiv;
+            fragaSvar.Svar2 = ver.infinitiv;
+            fragaSvar.Svar3 = ver.infinitiv;
+            fragaSvar.Svar4 = ver.infinitiv;
+            fragaSvar.Svar5 = ver.infinitiv;
+            fragaSvar.Svar6 = ver.infinitiv;
+            fragaSvar.Svar7 = ver.infinitiv;
+            fragaSvar.Svar8 = ver.infinitiv;
 
             return fragaSvar;
         }
 
         // 4 ordets tema i preteritum, verb
-        public FragaSvar VerbPreteritum()
+        public FragaSvar VerbPreteritum(verb ver)
         {
-            var randomVerb = db.GetRandomVerb();
+            //var randomVerb = db.GetRandomVerb();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vad blir verbet '" + randomVerb.ord + "' i preteritum?";
-            fragaSvar.Svar1 = randomVerb.preteritum;
-            fragaSvar.Svar2 = randomVerb.preteritum;
-            fragaSvar.Svar3 = randomVerb.preteritum;
-            fragaSvar.Svar4 = randomVerb.preteritum;
-            fragaSvar.Svar5 = randomVerb.preteritum;
-            fragaSvar.Svar6 = randomVerb.preteritum;
-            fragaSvar.Svar7 = randomVerb.preteritum;
-            fragaSvar.Svar8 = randomVerb.preteritum;
+            fragaSvar.Fraga = "Vad blir verbet '" + ver.ord + "' i preteritum?";
+            fragaSvar.Svar1 = ver.preteritum;
+            fragaSvar.Svar2 = ver.preteritum;
+            fragaSvar.Svar3 = ver.preteritum;
+            fragaSvar.Svar4 = ver.preteritum;
+            fragaSvar.Svar5 = ver.preteritum;
+            fragaSvar.Svar6 = ver.preteritum;
+            fragaSvar.Svar7 = ver.preteritum;
+            fragaSvar.Svar8 = ver.preteritum;
 
             return fragaSvar;
         }
 
         // 5 ordets tema i supinum, verb
-        public FragaSvar VerbSupinum()
+        public FragaSvar VerbSupinum(verb ver)
         {
-            var randomVerb = db.GetRandomVerb();
+            //var randomVerb = db.GetRandomVerb();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vad blir verbet '" + randomVerb.ord + "' i supinum?";
-            fragaSvar.Svar1 = randomVerb.supinum;
-            fragaSvar.Svar2 = randomVerb.supinum;
-            fragaSvar.Svar3 = randomVerb.supinum;
-            fragaSvar.Svar4 = randomVerb.supinum;
-            fragaSvar.Svar5 = randomVerb.supinum;
-            fragaSvar.Svar6 = randomVerb.supinum;
-            fragaSvar.Svar7 = randomVerb.supinum;
-            fragaSvar.Svar8 = randomVerb.supinum;
+            fragaSvar.Fraga = "Vad blir verbet '" + ver.ord + "' i supinum?";
+            fragaSvar.Svar1 = ver.supinum;
+            fragaSvar.Svar2 = ver.supinum;
+            fragaSvar.Svar3 = ver.supinum;
+            fragaSvar.Svar4 = ver.supinum;
+            fragaSvar.Svar5 = ver.supinum;
+            fragaSvar.Svar6 = ver.supinum;
+            fragaSvar.Svar7 = ver.supinum;
+            fragaSvar.Svar8 = ver.supinum;
 
             return fragaSvar;
         }
@@ -403,39 +403,39 @@ namespace GrammatikLaxen.Data
         // ADVERB - LÄTTA FRÅGOR
 
         // 1 vilken ordklass tillhör ordet, adverb
-        public FragaSvar AdverbVilkenOrdklass()
+        public FragaSvar AdverbVilkenOrdklass(adverb adv)
         {
-            var randomAdverb = db.GetRandomAdverbRen();
+            //var randomAdverb = db.GetRandomAdverbRen();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + randomAdverb.ord + "'?";
-            fragaSvar.Svar1 = randomAdverb.ordklass;
-            fragaSvar.Svar2 = randomAdverb.ordklass_2;
-            fragaSvar.Svar3 = randomAdverb.ordklass_2;
-            fragaSvar.Svar4 = randomAdverb.ordklass_2;
-            fragaSvar.Svar5 = randomAdverb.ordklass_2;
-            fragaSvar.Svar6 = randomAdverb.ordklass_2;
-            fragaSvar.Svar7 = randomAdverb.ordklass_2;
-            fragaSvar.Svar8 = randomAdverb.ordklass_2;
+            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + adv.ord + "'?";
+            fragaSvar.Svar1 = adv.ordklass;
+            fragaSvar.Svar2 = adv.ordklass_2;
+            fragaSvar.Svar3 = adv.ordklass_2;
+            fragaSvar.Svar4 = adv.ordklass_2;
+            fragaSvar.Svar5 = adv.ordklass_2;
+            fragaSvar.Svar6 = adv.ordklass_2;
+            fragaSvar.Svar7 = adv.ordklass_2;
+            fragaSvar.Svar8 = adv.ordklass_2;
 
             return fragaSvar;
         }
 
         // 2 vilken typ av adverb tillhör ordet, adverb
-        public FragaSvar AdverbVilkenTyp()
+        public FragaSvar AdverbVilkenTyp(adverb adv)
         {
-            var randomAdverb = db.GetRandomAdverbRenLatt();
+            //var randomAdverb = db.GetRandomAdverbRenLatt();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vilken typ av adverb är ordet '" + randomAdverb.ord + "'?";
-            fragaSvar.Svar1 = randomAdverb.typ;
-            fragaSvar.Svar2 = randomAdverb.typ_2;
-            fragaSvar.Svar3 = randomAdverb.typ_3;
-            fragaSvar.Svar4 = randomAdverb.typ_4;
-            fragaSvar.Svar5 = randomAdverb.typ_5;
-            fragaSvar.Svar6 = randomAdverb.typ_6;
-            fragaSvar.Svar7 = randomAdverb.typ_7;
-            fragaSvar.Svar8 = randomAdverb.typ_8;
+            fragaSvar.Fraga = "Vilken typ av adverb är ordet '" + adv.ord + "'?";
+            fragaSvar.Svar1 = adv.typ;
+            fragaSvar.Svar2 = adv.typ_2;
+            fragaSvar.Svar3 = adv.typ_3;
+            fragaSvar.Svar4 = adv.typ_4;
+            fragaSvar.Svar5 = adv.typ_5;
+            fragaSvar.Svar6 = adv.typ_6;
+            fragaSvar.Svar7 = adv.typ_7;
+            fragaSvar.Svar8 = adv.typ_8;
 
             return fragaSvar;
         }
@@ -443,20 +443,20 @@ namespace GrammatikLaxen.Data
         // PREPOSITION - LÄTTA FRÅGOR
 
         // 1 vilken ordklass tillhör ordet, preposition
-        public FragaSvar PrepositionVilkenOrdklass()
+        public FragaSvar PrepositionVilkenOrdklass(preposition pre)
         {
-            var randomPreposition = db.GetRandomPreposition();
+            //var randomPreposition = db.GetRandomPreposition();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + randomPreposition.ord + "'?";
-            fragaSvar.Svar1 = randomPreposition.ordklass;
-            fragaSvar.Svar2 = randomPreposition.även;
-            fragaSvar.Svar3 = randomPreposition.även;
-            fragaSvar.Svar4 = randomPreposition.även;
-            fragaSvar.Svar5 = randomPreposition.även;
-            fragaSvar.Svar6 = randomPreposition.även;
-            fragaSvar.Svar7 = randomPreposition.även;
-            fragaSvar.Svar8 = randomPreposition.även;
+            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + pre.ord + "'?";
+            fragaSvar.Svar1 = pre.ordklass;
+            fragaSvar.Svar2 = pre.även;
+            fragaSvar.Svar3 = pre.även;
+            fragaSvar.Svar4 = pre.även;
+            fragaSvar.Svar5 = pre.även;
+            fragaSvar.Svar6 = pre.även;
+            fragaSvar.Svar7 = pre.även;
+            fragaSvar.Svar8 = pre.även;
 
             return fragaSvar;
         }
@@ -485,58 +485,58 @@ namespace GrammatikLaxen.Data
         // RÄKNEORD - LÄTTA FRÅGOR
 
         // 1 vilken ordklass tillhör ordet, räkneord
-        public FragaSvar RakneordVilkenOrdklass()
+        public FragaSvar RakneordVilkenOrdklass(räkneord rak)
         {
-            var randomRakneord = db.GetRandomRakneord();
+            //var randomRakneord = db.GetRandomRakneord();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + randomRakneord.ord + "'?";
-            fragaSvar.Svar1 = randomRakneord.ordklass;
-            fragaSvar.Svar2 = randomRakneord.även;
-            fragaSvar.Svar3 = randomRakneord.även;
-            fragaSvar.Svar4 = randomRakneord.även;
-            fragaSvar.Svar5 = randomRakneord.även;
-            fragaSvar.Svar6 = randomRakneord.även;
-            fragaSvar.Svar7 = randomRakneord.även;
-            fragaSvar.Svar8 = randomRakneord.även;
+            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + rak.ord + "'?";
+            fragaSvar.Svar1 = rak.ordklass;
+            fragaSvar.Svar2 = rak.även;
+            fragaSvar.Svar3 = rak.även;
+            fragaSvar.Svar4 = rak.även;
+            fragaSvar.Svar5 = rak.även;
+            fragaSvar.Svar6 = rak.även;
+            fragaSvar.Svar7 = rak.även;
+            fragaSvar.Svar8 = rak.även;
 
             return fragaSvar;
         }
 
         // 2 vad blir ordet som grundtal, räkneord
-        public FragaSvar RakneordGrundtal()
+        public FragaSvar RakneordGrundtal(räkneord rak)
         {
-            var randomRakneord = db.GetRandomRakneord();
+            //var randomRakneord = db.GetRandomRakneord();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vad blir räkneordet '" + randomRakneord.ordningstal_ej_maskulinum + "' som grundtal?";
-            fragaSvar.Svar1 = randomRakneord.grundtal;
-            fragaSvar.Svar2 = randomRakneord.grundtal_2;
-            fragaSvar.Svar3 = randomRakneord.grundtal_2;
-            fragaSvar.Svar4 = randomRakneord.grundtal_2;
-            fragaSvar.Svar5 = randomRakneord.grundtal_2;
-            fragaSvar.Svar6 = randomRakneord.grundtal_2;
-            fragaSvar.Svar7 = randomRakneord.grundtal_2;
-            fragaSvar.Svar8 = randomRakneord.grundtal_2;
+            fragaSvar.Fraga = "Vad blir räkneordet '" + rak.ordningstal_ej_maskulinum + "' som grundtal?";
+            fragaSvar.Svar1 = rak.grundtal;
+            fragaSvar.Svar2 = rak.grundtal_2;
+            fragaSvar.Svar3 = rak.grundtal_2;
+            fragaSvar.Svar4 = rak.grundtal_2;
+            fragaSvar.Svar5 = rak.grundtal_2;
+            fragaSvar.Svar6 = rak.grundtal_2;
+            fragaSvar.Svar7 = rak.grundtal_2;
+            fragaSvar.Svar8 = rak.grundtal_2;
 
             return fragaSvar;
         }
 
         // 3 vad blir ordet som ordningstal ej maskulinum, räkneord
-        public FragaSvar RakneordOrdningstal()
+        public FragaSvar RakneordOrdningstal(räkneord rak)
         {
-            var randomRakneord = db.GetRandomRakneord();
+            //var randomRakneord = db.GetRandomRakneord();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vad blir räkneordet '" + randomRakneord.grundtal + "' som ordningstal (ej maskulinum)?";
-            fragaSvar.Svar1 = randomRakneord.ordningstal_ej_maskulinum;
-            fragaSvar.Svar2 = randomRakneord.ordningstal_ej_maskulinum;
-            fragaSvar.Svar3 = randomRakneord.ordningstal_ej_maskulinum;
-            fragaSvar.Svar4 = randomRakneord.ordningstal_ej_maskulinum;
-            fragaSvar.Svar5 = randomRakneord.ordningstal_ej_maskulinum;
-            fragaSvar.Svar6 = randomRakneord.ordningstal_ej_maskulinum;
-            fragaSvar.Svar7 = randomRakneord.ordningstal_ej_maskulinum;
-            fragaSvar.Svar8 = randomRakneord.ordningstal_ej_maskulinum;
+            fragaSvar.Fraga = "Vad blir räkneordet '" + rak.grundtal + "' som ordningstal (ej maskulinum)?";
+            fragaSvar.Svar1 = rak.ordningstal_ej_maskulinum;
+            fragaSvar.Svar2 = rak.ordningstal_ej_maskulinum;
+            fragaSvar.Svar3 = rak.ordningstal_ej_maskulinum;
+            fragaSvar.Svar4 = rak.ordningstal_ej_maskulinum;
+            fragaSvar.Svar5 = rak.ordningstal_ej_maskulinum;
+            fragaSvar.Svar6 = rak.ordningstal_ej_maskulinum;
+            fragaSvar.Svar7 = rak.ordningstal_ej_maskulinum;
+            fragaSvar.Svar8 = rak.ordningstal_ej_maskulinum;
 
             return fragaSvar;
         }
@@ -544,20 +544,20 @@ namespace GrammatikLaxen.Data
         // INTERJEKTION - LÄTTA FRÅGOR
 
         // 1 vilken ordklass tillhör ordet, interjektion
-        public FragaSvar InterjektionVilkenOrdklass()
+        public FragaSvar InterjektionVilkenOrdklass(interjektion intj)
         {
-            var randomInterjektion = db.GetRandomInterjektion();
+            //var randomInterjektion = db.GetRandomInterjektion();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + randomInterjektion.ord + "'?";
-            fragaSvar.Svar1 = randomInterjektion.ordklass;
-            fragaSvar.Svar2 = randomInterjektion.även;
-            fragaSvar.Svar3 = randomInterjektion.även;
-            fragaSvar.Svar4 = randomInterjektion.även;
-            fragaSvar.Svar5 = randomInterjektion.även;
-            fragaSvar.Svar6 = randomInterjektion.även;
-            fragaSvar.Svar7 = randomInterjektion.även;
-            fragaSvar.Svar8 = randomInterjektion.även;
+            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + intj.ord + "'?";
+            fragaSvar.Svar1 = intj.ordklass;
+            fragaSvar.Svar2 = intj.även;
+            fragaSvar.Svar3 = intj.även;
+            fragaSvar.Svar4 = intj.även;
+            fragaSvar.Svar5 = intj.även;
+            fragaSvar.Svar6 = intj.även;
+            fragaSvar.Svar7 = intj.även;
+            fragaSvar.Svar8 = intj.även;
 
             return fragaSvar;
         }

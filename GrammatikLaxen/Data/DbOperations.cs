@@ -9,6 +9,7 @@ namespace GrammatikLaxen.Data
     public class DbOperations : IDbOperations
     {
         private gramLaDatEntities2 db = new gramLaDatEntities2();
+        Random randX = new Random();
 
         // Hämta alla ordklasser från databasen
         public List<ordklasser> GetAllOrdklasserList()
@@ -42,7 +43,7 @@ namespace GrammatikLaxen.Data
             {
                 if (isNull == true)
                 {
-                    int randomId = rand.Next(1, 150);
+                    int randomId = randX.Next(1, 150);
                     substantiv = db.substantiv.SingleOrDefault(a => a.Id == randomId);
                     if (substantiv == null)
                     {
@@ -78,7 +79,7 @@ namespace GrammatikLaxen.Data
             {
                 if (isNull == true)
                 {
-                    int randomId = rand.Next(1, 20);
+                    int randomId = randX.Next(1, 20);
                     pronomen = db.pronomen.SingleOrDefault(a => a.Id == randomId);
                     if (pronomen == null)
                     {
@@ -114,7 +115,7 @@ namespace GrammatikLaxen.Data
             {
                 if (isNull == true)
                 {
-                    int randomId = rand.Next(1, 50);
+                    int randomId = randX.Next(1, 50);
                     adjektiv = db.adjektiv.SingleOrDefault(a => a.Id == randomId);
                     if (adjektiv == null)
                     {
@@ -150,7 +151,7 @@ namespace GrammatikLaxen.Data
             {
                 if (isNull == true)
                 {
-                    int randomId = rand.Next(1, 40);
+                    int randomId = randX.Next(1, 40);
                     verb = db.verb.SingleOrDefault(a => a.Id == randomId);
                     if (verb == null)
                     {
@@ -193,7 +194,7 @@ namespace GrammatikLaxen.Data
             {
                 if (isNull == true)
                 {
-                    int randomId = rand.Next(1, 50);
+                    int randomId = randX.Next(1, 50);
                     adverb = db.adverb.Where(b => b.ren == true).SingleOrDefault(a => a.Id == randomId);
                     if (adverb == null)
                     {
@@ -220,7 +221,7 @@ namespace GrammatikLaxen.Data
             {
                 if (isNull == true)
                 {
-                    int randomId = rand.Next(1, 50);
+                    int randomId = randX.Next(1, 50);
                     adverb = db.adverb.Where(b => b.ren == true && b.gradadverb == false && b.orsaksadverb == false && b.satsadverb == false).SingleOrDefault(a => a.Id == randomId);
                     if (adverb == null)
                     {
@@ -256,7 +257,7 @@ namespace GrammatikLaxen.Data
             {
                 if (isNull == true)
                 {
-                    int randomId = rand.Next(1, 25);
+                    int randomId = randX.Next(1, 25);
                     preposition = db.preposition.SingleOrDefault(a => a.Id == randomId);
                     if (preposition == null)
                     {
@@ -292,7 +293,7 @@ namespace GrammatikLaxen.Data
             {
                 if (isNull == true)
                 {
-                    int randomId = rand.Next(1, 20);
+                    int randomId = randX.Next(1, 20);
                     konjunktion = db.konjunktion.SingleOrDefault(a => a.Id == randomId);
                     if (konjunktion == null)
                     {
@@ -328,7 +329,7 @@ namespace GrammatikLaxen.Data
             {
                 if (isNull == true)
                 {
-                    int randomId = rand.Next(1, 40);
+                    int randomId = randX.Next(1, 40);
                     rakneord = db.räkneord.SingleOrDefault(a => a.Id == randomId);
                     if (rakneord == null)
                     {
@@ -364,7 +365,7 @@ namespace GrammatikLaxen.Data
             {
                 if (isNull == true)
                 {
-                    int randomId = rand.Next(1, 30);
+                    int randomId = randX.Next(1, 30);
                     interjektion = db.interjektion.SingleOrDefault(a => a.Id == randomId);
                     if (interjektion == null)
                     {
