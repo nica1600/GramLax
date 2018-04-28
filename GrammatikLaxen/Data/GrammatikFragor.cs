@@ -403,39 +403,39 @@ namespace GrammatikLaxen.Data
         // ADVERB - LÄTTA FRÅGOR
 
         // 1 vilken ordklass tillhör ordet, adverb
-        public FragaSvar AdverbVilkenOrdklass()
+        public FragaSvar AdverbVilkenOrdklass(adverb adv)
         {
-            var randomAdverb = db.GetRandomAdverbRen();
+            //var randomAdverb = db.GetRandomAdverbRen();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + randomAdverb.ord + "'?";
-            fragaSvar.Svar1 = randomAdverb.ordklass;
-            fragaSvar.Svar2 = randomAdverb.ordklass_2;
-            fragaSvar.Svar3 = randomAdverb.ordklass_2;
-            fragaSvar.Svar4 = randomAdverb.ordklass_2;
-            fragaSvar.Svar5 = randomAdverb.ordklass_2;
-            fragaSvar.Svar6 = randomAdverb.ordklass_2;
-            fragaSvar.Svar7 = randomAdverb.ordklass_2;
-            fragaSvar.Svar8 = randomAdverb.ordklass_2;
+            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + adv.ord + "'?";
+            fragaSvar.Svar1 = adv.ordklass;
+            fragaSvar.Svar2 = adv.ordklass_2;
+            fragaSvar.Svar3 = adv.ordklass_2;
+            fragaSvar.Svar4 = adv.ordklass_2;
+            fragaSvar.Svar5 = adv.ordklass_2;
+            fragaSvar.Svar6 = adv.ordklass_2;
+            fragaSvar.Svar7 = adv.ordklass_2;
+            fragaSvar.Svar8 = adv.ordklass_2;
 
             return fragaSvar;
         }
 
         // 2 vilken typ av adverb tillhör ordet, adverb
-        public FragaSvar AdverbVilkenTyp()
+        public FragaSvar AdverbVilkenTyp(adverb adv)
         {
-            var randomAdverb = db.GetRandomAdverbRenLatt();
+            //var randomAdverb = db.GetRandomAdverbRenLatt();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vilken typ av adverb är ordet '" + randomAdverb.ord + "'?";
-            fragaSvar.Svar1 = randomAdverb.typ;
-            fragaSvar.Svar2 = randomAdverb.typ_2;
-            fragaSvar.Svar3 = randomAdverb.typ_3;
-            fragaSvar.Svar4 = randomAdverb.typ_4;
-            fragaSvar.Svar5 = randomAdverb.typ_5;
-            fragaSvar.Svar6 = randomAdverb.typ_6;
-            fragaSvar.Svar7 = randomAdverb.typ_7;
-            fragaSvar.Svar8 = randomAdverb.typ_8;
+            fragaSvar.Fraga = "Vilken typ av adverb är ordet '" + adv.ord + "'?";
+            fragaSvar.Svar1 = adv.typ;
+            fragaSvar.Svar2 = adv.typ_2;
+            fragaSvar.Svar3 = adv.typ_3;
+            fragaSvar.Svar4 = adv.typ_4;
+            fragaSvar.Svar5 = adv.typ_5;
+            fragaSvar.Svar6 = adv.typ_6;
+            fragaSvar.Svar7 = adv.typ_7;
+            fragaSvar.Svar8 = adv.typ_8;
 
             return fragaSvar;
         }

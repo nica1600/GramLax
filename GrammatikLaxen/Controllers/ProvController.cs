@@ -38,19 +38,20 @@ namespace GrammatikLaxen.Controllers
 
             FragaSvar grammatikFraga;
             int fragaNummer = 0;
+            Random rand = new Random();
 
             //tar fram 15 slumpvisa lätta frågor
             for (int i = 0; i < 15; i++)
             {
-                Random rand = new Random();
-                int randOrdklass = rand.Next(4, 5); //sätt alltid till 10 efter tester!
+                
+                int randOrdklass = rand.Next(1, 10); //sätt alltid till 10 efter tester!
                 fragaNummer++;
 
                 // substantiv
                 if (randOrdklass == 1)
                 {
                     Random rand2 = new Random();
-                    int randSubFraga = rand2.Next(1, 3);
+                    int randSubFraga = rand.Next(1, 3);
                     
                     //vilken ordklass tillhör ordet
                     if (randSubFraga == 1)
@@ -63,7 +64,7 @@ namespace GrammatikLaxen.Controllers
                         {
                             if (isNull == true)
                             {
-                                int randomId = rand3.Next(1, 200);
+                                int randomId = rand.Next(1, 200);
                                 subForNow = allSubList.SingleOrDefault(a => a.Id == randomId);
                                 if (subForNow == null)
                                 {
@@ -93,7 +94,7 @@ namespace GrammatikLaxen.Controllers
                         {
                             if (isNull == true)
                             {
-                                int randomId = rand3.Next(1, 200);
+                                int randomId = rand.Next(1, 200);
                                 subForNow = allSubList.SingleOrDefault(a => a.Id == randomId);
                                 if (subForNow == null)
                                 {
@@ -122,7 +123,7 @@ namespace GrammatikLaxen.Controllers
                 else if (randOrdklass == 2)
                 {
                     Random rand2 = new Random();
-                    int randProFraga = rand2.Next(1, 8);
+                    int randProFraga = rand.Next(1, 8);
 
                     //vilken ordklass tillhör ordet
                     if (randProFraga == 1)
@@ -135,7 +136,7 @@ namespace GrammatikLaxen.Controllers
                         {
                             if (isNull == true)
                             {
-                                int randomId = rand3.Next(1, 30);
+                                int randomId = rand.Next(1, 30);
                                 proForNow = allProList.SingleOrDefault(a => a.Id == randomId);
                                 if (proForNow == null)
                                 {
@@ -165,7 +166,7 @@ namespace GrammatikLaxen.Controllers
                         {
                             if (isNull == true)
                             {
-                                int randomId = rand3.Next(1, 30);
+                                int randomId = rand.Next(1, 30);
                                 proForNow = allProList.SingleOrDefault(a => a.Id == randomId);
                                 if (proForNow == null)
                                 {
@@ -195,7 +196,7 @@ namespace GrammatikLaxen.Controllers
                         {
                             if (isNull == true)
                             {
-                                int randomId = rand3.Next(1, 30);
+                                int randomId = rand.Next(1, 30);
                                 proForNow = allProList.SingleOrDefault(a => a.Id == randomId);
                                 if (proForNow == null)
                                 {
@@ -225,7 +226,7 @@ namespace GrammatikLaxen.Controllers
                         {
                             if (isNull == true)
                             {
-                                int randomId = rand3.Next(1, 30);
+                                int randomId = rand.Next(1, 30);
                                 proForNow = allProList.SingleOrDefault(a => a.Id == randomId);
                                 if (proForNow == null)
                                 {
@@ -255,7 +256,7 @@ namespace GrammatikLaxen.Controllers
                         {
                             if (isNull == true)
                             {
-                                int randomId = rand3.Next(1, 30);
+                                int randomId = rand.Next(1, 30);
                                 proForNow = allProList.SingleOrDefault(a => a.Id == randomId);
                                 if (proForNow == null)
                                 {
@@ -285,7 +286,7 @@ namespace GrammatikLaxen.Controllers
                         {
                             if (isNull == true)
                             {
-                                int randomId = rand3.Next(1, 30);
+                                int randomId = rand.Next(1, 30);
                                 proForNow = allProList.SingleOrDefault(a => a.Id == randomId);
                                 if (proForNow == null)
                                 {
@@ -315,7 +316,7 @@ namespace GrammatikLaxen.Controllers
                         {
                             if (isNull == true)
                             {
-                                int randomId = rand3.Next(1, 30);
+                                int randomId = rand.Next(1, 30);
                                 proForNow = allProList.SingleOrDefault(a => a.Id == randomId);
                                 if (proForNow == null)
                                 {
@@ -343,7 +344,7 @@ namespace GrammatikLaxen.Controllers
                 else if (randOrdklass == 3)
                 {
                     Random rand2 = new Random();
-                    int randAdjFraga = rand2.Next(1, 7);
+                    int randAdjFraga = rand.Next(1, 7);
                     
                     //vilken ordklass tillhör ordet
                     if (randAdjFraga == 1)
@@ -356,7 +357,7 @@ namespace GrammatikLaxen.Controllers
                         {
                             if (isNull == true)
                             {
-                                int randomId = rand3.Next(1, 60);
+                                int randomId = rand.Next(1, 60);
                                 adjForNow = allAdjList.SingleOrDefault(a => a.Id == randomId);
                                 if (adjForNow == null)
                                 {
@@ -386,7 +387,7 @@ namespace GrammatikLaxen.Controllers
                         {
                             if (isNull == true)
                             {
-                                int randomId = rand3.Next(1, 60);
+                                int randomId = rand.Next(1, 60);
                                 adjForNow = allAdjList.SingleOrDefault(a => a.Id == randomId);
                                 if (adjForNow == null)
                                 {
@@ -416,7 +417,7 @@ namespace GrammatikLaxen.Controllers
                         {
                             if (isNull == true)
                             {
-                                int randomId = rand3.Next(1, 60);
+                                int randomId = rand.Next(1, 60);
                                 adjForNow = allAdjList.SingleOrDefault(a => a.Id == randomId);
                                 if (adjForNow == null)
                                 {
@@ -446,7 +447,7 @@ namespace GrammatikLaxen.Controllers
                         {
                             if (isNull == true)
                             {
-                                int randomId = rand3.Next(1, 60);
+                                int randomId = rand.Next(1, 60);
                                 adjForNow = allAdjList.SingleOrDefault(a => a.Id == randomId);
                                 if (adjForNow == null)
                                 {
@@ -476,7 +477,7 @@ namespace GrammatikLaxen.Controllers
                         {
                             if (isNull == true)
                             {
-                                int randomId = rand3.Next(1, 60);
+                                int randomId = rand.Next(1, 60);
                                 adjForNow = allAdjList.SingleOrDefault(a => a.Id == randomId);
                                 if (adjForNow == null)
                                 {
@@ -506,7 +507,7 @@ namespace GrammatikLaxen.Controllers
                         {
                             if (isNull == true)
                             {
-                                int randomId = rand3.Next(1, 60);
+                                int randomId = rand.Next(1, 60);
                                 adjForNow = allAdjList.SingleOrDefault(a => a.Id == randomId);
                                 if (adjForNow == null)
                                 {
@@ -534,7 +535,7 @@ namespace GrammatikLaxen.Controllers
                 else if (randOrdklass == 4)
                 {
                     Random rand2 = new Random();
-                    int randVerbFraga = rand2.Next(1, 6);
+                    int randVerbFraga = rand.Next(1, 6);
 
                     //vilken ordklass tillhör ordet
                     if (randVerbFraga == 1)
@@ -547,7 +548,7 @@ namespace GrammatikLaxen.Controllers
                         {
                             if (isNull == true)
                             {
-                                int randomId = rand3.Next(1, 60);
+                                int randomId = rand.Next(1, 60);
                                 verForNow = allVerList.SingleOrDefault(a => a.Id == randomId);
                                 if (verForNow == null)
                                 {
@@ -577,7 +578,7 @@ namespace GrammatikLaxen.Controllers
                         {
                             if (isNull == true)
                             {
-                                int randomId = rand3.Next(1, 60);
+                                int randomId = rand.Next(1, 60);
                                 verForNow = allVerList.SingleOrDefault(a => a.Id == randomId);
                                 if (verForNow == null)
                                 {
@@ -607,7 +608,7 @@ namespace GrammatikLaxen.Controllers
                         {
                             if (isNull == true)
                             {
-                                int randomId = rand3.Next(1, 60);
+                                int randomId = rand.Next(1, 60);
                                 verForNow = allVerList.SingleOrDefault(a => a.Id == randomId);
                                 if (verForNow == null)
                                 {
@@ -637,7 +638,7 @@ namespace GrammatikLaxen.Controllers
                         {
                             if (isNull == true)
                             {
-                                int randomId = rand3.Next(1, 60);
+                                int randomId = rand.Next(1, 60);
                                 verForNow = allVerList.SingleOrDefault(a => a.Id == randomId);
                                 if (verForNow == null)
                                 {
@@ -667,7 +668,7 @@ namespace GrammatikLaxen.Controllers
                         {
                             if (isNull == true)
                             {
-                                int randomId = rand3.Next(1, 60);
+                                int randomId = rand.Next(1, 60);
                                 verForNow = allVerList.SingleOrDefault(a => a.Id == randomId);
                                 if (verForNow == null)
                                 {
@@ -695,21 +696,65 @@ namespace GrammatikLaxen.Controllers
                 else if (randOrdklass == 5)
                 {
                     Random rand2 = new Random();
-                    int randAdvFraga = rand2.Next(1, 3);
+                    int randAdvFraga = rand.Next(1, 3);
 
                     //vilken ordklass tillhör ordet
                     if (randAdvFraga == 1)
                     {
+                        Random rand3 = new Random();
+                        adverb advForNow = new adverb();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand.Next(1, 50);
+                                advForNow = allAdvRenLattList.SingleOrDefault(a => a.Id == randomId);
+                                if (advForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allAdvRenLattList.Remove(advForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.AdverbVilkenOrdklass();
+                        grammatikFraga = gf.AdverbVilkenOrdklass(advForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
                     //vilken typ av adverb
                     else if (randAdvFraga == 2)
                     {
+                        Random rand3 = new Random();
+                        adverb advForNow = new adverb();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand.Next(1, 50);
+                                advForNow = allAdvRenLattList.SingleOrDefault(a => a.Id == randomId);
+                                if (advForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allAdvRenLattList.Remove(advForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.AdverbVilkenTyp();
+                        grammatikFraga = gf.AdverbVilkenTyp(advForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
@@ -722,7 +767,7 @@ namespace GrammatikLaxen.Controllers
                 else if (randOrdklass == 6)
                 {
                     Random rand2 = new Random();
-                    int randPreFraga = rand2.Next(1, 2);
+                    int randPreFraga = rand.Next(1, 2);
 
                     //vilken ordklass tillhör ordet
                     if (randPreFraga == 1)
@@ -741,7 +786,7 @@ namespace GrammatikLaxen.Controllers
                 else if (randOrdklass == 7)
                 {
                     Random rand2 = new Random();
-                    int randKonFraga = rand2.Next(1, 2);
+                    int randKonFraga = rand.Next(1, 2);
 
                     //vilken ordklass tillhör ordet
                     if (randKonFraga == 1)
@@ -754,7 +799,7 @@ namespace GrammatikLaxen.Controllers
                         {
                             if (isNull == true)
                             {
-                                int randomId = rand3.Next(1, 50);
+                                int randomId = rand.Next(1, 50);
                                 konForNow = allKonList.SingleOrDefault(a => a.Id == randomId);
                                 if (konForNow == null)
                                 {
@@ -782,7 +827,7 @@ namespace GrammatikLaxen.Controllers
                 else if (randOrdklass == 8)
                 {
                     Random rand2 = new Random();
-                    int randRakFraga = rand2.Next(1, 4);
+                    int randRakFraga = rand.Next(1, 4);
 
                     //vilken ordklass tillhör ordet
                     if (randRakFraga == 1)
@@ -817,7 +862,7 @@ namespace GrammatikLaxen.Controllers
                 else if (randOrdklass == 9)
                 {
                     Random rand2 = new Random();
-                    int randIntFraga = rand2.Next(1, 2);
+                    int randIntFraga = rand.Next(1, 2);
 
                     //vilken ordklass tillhör ordet
                     if (randIntFraga == 1)
