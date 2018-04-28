@@ -443,20 +443,20 @@ namespace GrammatikLaxen.Data
         // PREPOSITION - LÄTTA FRÅGOR
 
         // 1 vilken ordklass tillhör ordet, preposition
-        public FragaSvar PrepositionVilkenOrdklass()
+        public FragaSvar PrepositionVilkenOrdklass(preposition pre)
         {
-            var randomPreposition = db.GetRandomPreposition();
+            //var randomPreposition = db.GetRandomPreposition();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + randomPreposition.ord + "'?";
-            fragaSvar.Svar1 = randomPreposition.ordklass;
-            fragaSvar.Svar2 = randomPreposition.även;
-            fragaSvar.Svar3 = randomPreposition.även;
-            fragaSvar.Svar4 = randomPreposition.även;
-            fragaSvar.Svar5 = randomPreposition.även;
-            fragaSvar.Svar6 = randomPreposition.även;
-            fragaSvar.Svar7 = randomPreposition.även;
-            fragaSvar.Svar8 = randomPreposition.även;
+            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + pre.ord + "'?";
+            fragaSvar.Svar1 = pre.ordklass;
+            fragaSvar.Svar2 = pre.även;
+            fragaSvar.Svar3 = pre.även;
+            fragaSvar.Svar4 = pre.även;
+            fragaSvar.Svar5 = pre.även;
+            fragaSvar.Svar6 = pre.även;
+            fragaSvar.Svar7 = pre.även;
+            fragaSvar.Svar8 = pre.även;
 
             return fragaSvar;
         }

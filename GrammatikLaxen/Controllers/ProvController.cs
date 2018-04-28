@@ -772,8 +772,30 @@ namespace GrammatikLaxen.Controllers
                     //vilken ordklass tillhör ordet
                     if (randPreFraga == 1)
                     {
+                        Random rand3 = new Random();
+                        preposition preForNow = new preposition();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand.Next(1, 20);
+                                preForNow = allPreList.SingleOrDefault(a => a.Id == randomId);
+                                if (preForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allPreList.Remove(preForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.PrepositionVilkenOrdklass();
+                        grammatikFraga = gf.PrepositionVilkenOrdklass(preForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
