@@ -34,20 +34,20 @@ namespace GrammatikLaxen.Data
         }
 
         // 2 konkret eller bastrakt, substantiv
-        public FragaSvar SubstantivKonkretAbstrakt()
+        public FragaSvar SubstantivKonkretAbstrakt(substantiv sub)
         {
-            var randomSubstantiv = db.GetRandomSubstantiv();
+            //var randomSubstantiv = db.GetRandomSubstantiv();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Är ordet '" + randomSubstantiv.ord + "' ett konkret eller abstrakt substantiv?";
-            fragaSvar.Svar1 = randomSubstantiv.betydelse;
-            fragaSvar.Svar2 = randomSubstantiv.betydelse;
-            fragaSvar.Svar3 = randomSubstantiv.betydelse;
-            fragaSvar.Svar4 = randomSubstantiv.betydelse;
-            fragaSvar.Svar5 = randomSubstantiv.betydelse;
-            fragaSvar.Svar6 = randomSubstantiv.betydelse;
-            fragaSvar.Svar7 = randomSubstantiv.betydelse;
-            fragaSvar.Svar8 = randomSubstantiv.betydelse;
+            fragaSvar.Fraga = "Är ordet '" + sub.ord + "' ett konkret eller abstrakt substantiv?";
+            fragaSvar.Svar1 = sub.betydelse;
+            fragaSvar.Svar2 = sub.betydelse;
+            fragaSvar.Svar3 = sub.betydelse;
+            fragaSvar.Svar4 = sub.betydelse;
+            fragaSvar.Svar5 = sub.betydelse;
+            fragaSvar.Svar6 = sub.betydelse;
+            fragaSvar.Svar7 = sub.betydelse;
+            fragaSvar.Svar8 = sub.betydelse;
 
             return fragaSvar;
         }

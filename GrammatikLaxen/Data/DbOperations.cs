@@ -174,6 +174,13 @@ namespace GrammatikLaxen.Data
             return adverbList.ToList();
         }
 
+        // Hämta alla rena och lätta adverb från databasen
+        public List<adverb> GetAllAdverbRenLattList()
+        {
+            var adverbList = db.adverb.Where(b => b.ren == true && b.gradadverb == false && b.orsaksadverb == false && b.satsadverb == false);
+            return adverbList.ToList();
+        }
+
         // Hämta slumpmässigt adverb (ren)
         public adverb GetRandomAdverbRen()
         {
