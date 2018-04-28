@@ -11,7 +11,7 @@ namespace GrammatikLaxen.Data
     {
         DbOperations db = new DbOperations();
         FragaSvar fragaSvar;
-
+        
         // SUBSTANTIV - LÄTTA FRÅGOR
 
         // 1 vilken ordklass tillhör ordet, substantiv

@@ -17,19 +17,7 @@ namespace GrammatikLaxen.Controllers
         // GET: Prov
         public ActionResult Index()
         {
-            List<FragaSvar> fragaSvarList = new List<FragaSvar>();
-            fragaSvarList.Clear();
-
-            FragaSvar grammatikfraga = new FragaSvar();
-            FragaSvar grammatikfraga2 = new FragaSvar();
-
-            grammatikfraga = gf.SubstantivVilkenOrdklass();
-            fragaSvarList.Add(grammatikfraga);
-
-            grammatikfraga2 = gf.SubstantivVilkenOrdklass();
-            fragaSvarList.Add(grammatikfraga2);
-            
-            return View(fragaSvarList);
+            return View();
         }
 
         public ActionResult Latt()

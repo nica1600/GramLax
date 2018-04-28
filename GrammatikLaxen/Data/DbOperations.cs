@@ -9,7 +9,7 @@ namespace GrammatikLaxen.Data
     public class DbOperations : IDbOperations
     {
         private gramLaDatEntities2 db = new gramLaDatEntities2();
-        
+
         // Hämta alla ordklasser från databasen
         public List<ordklasser> GetAllOrdklasserList()
         {
