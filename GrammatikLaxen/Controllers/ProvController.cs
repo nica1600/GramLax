@@ -45,7 +45,7 @@ namespace GrammatikLaxen.Controllers
             //tar fram 15 slumpvisa lätta frågor
             for (int i = 0; i < 15; i++)
             {
-                int randOrdklass = rand.Next(1, 10); //sätt alltid till 10 efter tester!
+                int randOrdklass = rand.Next(1, 4); //sätt alltid till 10 efter tester!
                 fragaNummer++;
 
                 // substantiv
@@ -350,48 +350,180 @@ namespace GrammatikLaxen.Controllers
                     //vilken ordklass tillhör ordet
                     if (randAdjFraga == 1)
                     {
+                        Random rand3 = new Random();
+                        adjektiv adjForNow = new adjektiv();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand3.Next(1, 60);
+                                adjForNow = allAdjList.SingleOrDefault(a => a.Id == randomId);
+                                if (adjForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allAdjList.Remove(adjForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.AdjektivVilkenOrdklass();
+                        grammatikFraga = gf.AdjektivVilkenOrdklass(adjForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
                     //vad blir ordet i obestämd form utrum
                     else if (randAdjFraga == 2)
                     {
+                        Random rand3 = new Random();
+                        adjektiv adjForNow = new adjektiv();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand3.Next(1, 60);
+                                adjForNow = allAdjList.SingleOrDefault(a => a.Id == randomId);
+                                if (adjForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allAdjList.Remove(adjForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.AdjektivObestämdUtrum();
+                        grammatikFraga = gf.AdjektivObestämdUtrum(adjForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
                     //vad blir ordet i obestämd form neutrum
                     else if (randAdjFraga == 3)
                     {
+                        Random rand3 = new Random();
+                        adjektiv adjForNow = new adjektiv();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand3.Next(1, 60);
+                                adjForNow = allAdjList.SingleOrDefault(a => a.Id == randomId);
+                                if (adjForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allAdjList.Remove(adjForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.AdjektivObestämdNeutrum();
+                        grammatikFraga = gf.AdjektivObestämdNeutrum(adjForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
                     //vad blir ordet i bestämd form ej maskulinum
                     else if (randAdjFraga == 4)
                     {
+                        Random rand3 = new Random();
+                        adjektiv adjForNow = new adjektiv();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand3.Next(1, 60);
+                                adjForNow = allAdjList.SingleOrDefault(a => a.Id == randomId);
+                                if (adjForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allAdjList.Remove(adjForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.AdjektivBestämdFormEjMaskulinum();
+                        grammatikFraga = gf.AdjektivBestämdFormEjMaskulinum(adjForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
                     //vad blir ordet i singular
                     else if (randAdjFraga == 5)
                     {
+                        Random rand3 = new Random();
+                        adjektiv adjForNow = new adjektiv();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand3.Next(1, 60);
+                                adjForNow = allAdjList.SingleOrDefault(a => a.Id == randomId);
+                                if (adjForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allAdjList.Remove(adjForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.AdjektivSingular();
+                        grammatikFraga = gf.AdjektivSingular(adjForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
                     //vad blir ordet i plural
                     else if (randAdjFraga == 6)
                     {
+                        Random rand3 = new Random();
+                        adjektiv adjForNow = new adjektiv();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand3.Next(1, 60);
+                                adjForNow = allAdjList.SingleOrDefault(a => a.Id == randomId);
+                                if (adjForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allAdjList.Remove(adjForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.AdjektivPlural();
+                        grammatikFraga = gf.AdjektivPlural(adjForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }

@@ -190,115 +190,115 @@ namespace GrammatikLaxen.Data
         // ADJEKTIV - LÄTTA FRÅGOR
 
         // 1 vilken ordklass tillhör ordet, adjektiv
-        public FragaSvar AdjektivVilkenOrdklass()
+        public FragaSvar AdjektivVilkenOrdklass(adjektiv adj)
         {
-            var randomAdjektiv = db.GetRandomAdjektiv();
+            //var randomAdjektiv = db.GetRandomAdjektiv();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + randomAdjektiv.ord + "'?";
-            fragaSvar.Svar1 = randomAdjektiv.ordklass;
-            fragaSvar.Svar2 = randomAdjektiv.även;
-            fragaSvar.Svar3 = randomAdjektiv.även;
-            fragaSvar.Svar4 = randomAdjektiv.även;
-            fragaSvar.Svar5 = randomAdjektiv.även;
-            fragaSvar.Svar6 = randomAdjektiv.även;
-            fragaSvar.Svar7 = randomAdjektiv.även;
-            fragaSvar.Svar8 = randomAdjektiv.även;
+            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + adj.ord + "'?";
+            fragaSvar.Svar1 = adj.ordklass;
+            fragaSvar.Svar2 = adj.även;
+            fragaSvar.Svar3 = adj.även;
+            fragaSvar.Svar4 = adj.även;
+            fragaSvar.Svar5 = adj.även;
+            fragaSvar.Svar6 = adj.även;
+            fragaSvar.Svar7 = adj.även;
+            fragaSvar.Svar8 = adj.även;
 
             return fragaSvar;
         }
 
         // 2 vad blir ordet i obestämd form utrum, adjektiv
-        public FragaSvar AdjektivObestämdUtrum()
+        public FragaSvar AdjektivObestämdUtrum(adjektiv adj)
         {
-            var randomAdjektiv = db.GetRandomAdjektiv();
+            //var randomAdjektiv = db.GetRandomAdjektiv();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vad blir adjektivet '" + randomAdjektiv.ord + "' i obestämd form tillsammans med ett utrum-substantiv (en ...)?";
-            fragaSvar.Svar1 = randomAdjektiv.obestämd_form_utrum;
-            fragaSvar.Svar2 = randomAdjektiv.obestämd_form_utrum;
-            fragaSvar.Svar3 = randomAdjektiv.obestämd_form_utrum;
-            fragaSvar.Svar4 = randomAdjektiv.obestämd_form_utrum;
-            fragaSvar.Svar5 = randomAdjektiv.obestämd_form_utrum;
-            fragaSvar.Svar6 = randomAdjektiv.obestämd_form_utrum;
-            fragaSvar.Svar7 = randomAdjektiv.obestämd_form_utrum;
-            fragaSvar.Svar8 = randomAdjektiv.obestämd_form_utrum;
+            fragaSvar.Fraga = "Vad blir adjektivet '" + adj.ord + "' i obestämd form tillsammans med ett utrum-substantiv (en ...)?";
+            fragaSvar.Svar1 = adj.obestämd_form_utrum;
+            fragaSvar.Svar2 = adj.obestämd_form_utrum;
+            fragaSvar.Svar3 = adj.obestämd_form_utrum;
+            fragaSvar.Svar4 = adj.obestämd_form_utrum;
+            fragaSvar.Svar5 = adj.obestämd_form_utrum;
+            fragaSvar.Svar6 = adj.obestämd_form_utrum;
+            fragaSvar.Svar7 = adj.obestämd_form_utrum;
+            fragaSvar.Svar8 = adj.obestämd_form_utrum;
 
             return fragaSvar;
         }
 
         // 3 vad blir ordet i obestämd form neutrum, adjektiv
-        public FragaSvar AdjektivObestämdNeutrum()
+        public FragaSvar AdjektivObestämdNeutrum(adjektiv adj)
         {
-            var randomAdjektiv = db.GetRandomAdjektiv();
+            //var randomAdjektiv = db.GetRandomAdjektiv();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vad blir adjektivet '" + randomAdjektiv.ord + "' i obestämd form tillsammans med ett neutrum-substantiv (ett ...)?";
-            fragaSvar.Svar1 = randomAdjektiv.obestämd_form_neutrum;
-            fragaSvar.Svar2 = randomAdjektiv.obestämd_form_neutrum;
-            fragaSvar.Svar3 = randomAdjektiv.obestämd_form_neutrum;
-            fragaSvar.Svar4 = randomAdjektiv.obestämd_form_neutrum;
-            fragaSvar.Svar5 = randomAdjektiv.obestämd_form_neutrum;
-            fragaSvar.Svar6 = randomAdjektiv.obestämd_form_neutrum;
-            fragaSvar.Svar7 = randomAdjektiv.obestämd_form_neutrum;
-            fragaSvar.Svar8 = randomAdjektiv.obestämd_form_neutrum;
+            fragaSvar.Fraga = "Vad blir adjektivet '" + adj.ord + "' i obestämd form tillsammans med ett neutrum-substantiv (ett ...)?";
+            fragaSvar.Svar1 = adj.obestämd_form_neutrum;
+            fragaSvar.Svar2 = adj.obestämd_form_neutrum;
+            fragaSvar.Svar3 = adj.obestämd_form_neutrum;
+            fragaSvar.Svar4 = adj.obestämd_form_neutrum;
+            fragaSvar.Svar5 = adj.obestämd_form_neutrum;
+            fragaSvar.Svar6 = adj.obestämd_form_neutrum;
+            fragaSvar.Svar7 = adj.obestämd_form_neutrum;
+            fragaSvar.Svar8 = adj.obestämd_form_neutrum;
 
             return fragaSvar;
         }
 
         // 4 vad blir ordet i bestämd form ej maskulinum, adjektiv
-        public FragaSvar AdjektivBestämdFormEjMaskulinum()
+        public FragaSvar AdjektivBestämdFormEjMaskulinum(adjektiv adj)
         {
-            var randomAdjektiv = db.GetRandomAdjektiv();
+            //var randomAdjektiv = db.GetRandomAdjektiv();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vad blir adjektivet '" + randomAdjektiv.ord + "' i bestämd form (ej maskulinum)?";
-            fragaSvar.Svar1 = randomAdjektiv.bestämd_form_ej_maskulinum;
-            fragaSvar.Svar2 = randomAdjektiv.bestämd_form_ej_maskulinum;
-            fragaSvar.Svar3 = randomAdjektiv.bestämd_form_ej_maskulinum;
-            fragaSvar.Svar4 = randomAdjektiv.bestämd_form_ej_maskulinum;
-            fragaSvar.Svar5 = randomAdjektiv.bestämd_form_ej_maskulinum;
-            fragaSvar.Svar6 = randomAdjektiv.bestämd_form_ej_maskulinum;
-            fragaSvar.Svar7 = randomAdjektiv.bestämd_form_ej_maskulinum;
-            fragaSvar.Svar8 = randomAdjektiv.bestämd_form_ej_maskulinum;
+            fragaSvar.Fraga = "Vad blir adjektivet '" + adj.ord + "' i bestämd form (ej maskulinum)?";
+            fragaSvar.Svar1 = adj.bestämd_form_ej_maskulinum;
+            fragaSvar.Svar2 = adj.bestämd_form_ej_maskulinum;
+            fragaSvar.Svar3 = adj.bestämd_form_ej_maskulinum;
+            fragaSvar.Svar4 = adj.bestämd_form_ej_maskulinum;
+            fragaSvar.Svar5 = adj.bestämd_form_ej_maskulinum;
+            fragaSvar.Svar6 = adj.bestämd_form_ej_maskulinum;
+            fragaSvar.Svar7 = adj.bestämd_form_ej_maskulinum;
+            fragaSvar.Svar8 = adj.bestämd_form_ej_maskulinum;
 
             return fragaSvar;
         }
 
         // 5 vad blir ordet i singular, adjektiv
-        public FragaSvar AdjektivSingular()
+        public FragaSvar AdjektivSingular(adjektiv adj)
         {
-            var randomAdjektiv = db.GetRandomAdjektiv();
+            //var randomAdjektiv = db.GetRandomAdjektiv();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vad blir adjektivet '" + randomAdjektiv.plural + "' i singular?";
-            fragaSvar.Svar1 = randomAdjektiv.singular;
-            fragaSvar.Svar2 = randomAdjektiv.singular;
-            fragaSvar.Svar3 = randomAdjektiv.singular;
-            fragaSvar.Svar4 = randomAdjektiv.singular;
-            fragaSvar.Svar5 = randomAdjektiv.singular;
-            fragaSvar.Svar6 = randomAdjektiv.singular;
-            fragaSvar.Svar7 = randomAdjektiv.singular;
-            fragaSvar.Svar8 = randomAdjektiv.singular;
+            fragaSvar.Fraga = "Vad blir adjektivet '" + adj.plural + "' i singular?";
+            fragaSvar.Svar1 = adj.singular;
+            fragaSvar.Svar2 = adj.singular;
+            fragaSvar.Svar3 = adj.singular;
+            fragaSvar.Svar4 = adj.singular;
+            fragaSvar.Svar5 = adj.singular;
+            fragaSvar.Svar6 = adj.singular;
+            fragaSvar.Svar7 = adj.singular;
+            fragaSvar.Svar8 = adj.singular;
 
             return fragaSvar;
         }
 
         // 6 vad blir ordet i plural, adjektiv
-        public FragaSvar AdjektivPlural()
+        public FragaSvar AdjektivPlural(adjektiv adj)
         {
-            var randomAdjektiv = db.GetRandomAdjektiv();
+            //var randomAdjektiv = db.GetRandomAdjektiv();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vad blir adjektivet '" + randomAdjektiv.singular + "' i plural?";
-            fragaSvar.Svar1 = randomAdjektiv.plural;
-            fragaSvar.Svar2 = randomAdjektiv.plural;
-            fragaSvar.Svar3 = randomAdjektiv.plural;
-            fragaSvar.Svar4 = randomAdjektiv.plural;
-            fragaSvar.Svar5 = randomAdjektiv.plural;
-            fragaSvar.Svar6 = randomAdjektiv.plural;
-            fragaSvar.Svar7 = randomAdjektiv.plural;
-            fragaSvar.Svar8 = randomAdjektiv.plural;
+            fragaSvar.Fraga = "Vad blir adjektivet '" + adj.singular + "' i plural?";
+            fragaSvar.Svar1 = adj.plural;
+            fragaSvar.Svar2 = adj.plural;
+            fragaSvar.Svar3 = adj.plural;
+            fragaSvar.Svar4 = adj.plural;
+            fragaSvar.Svar5 = adj.plural;
+            fragaSvar.Svar6 = adj.plural;
+            fragaSvar.Svar7 = adj.plural;
+            fragaSvar.Svar8 = adj.plural;
 
             return fragaSvar;
         }
