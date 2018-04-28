@@ -15,20 +15,20 @@ namespace GrammatikLaxen.Data
         // SUBSTANTIV - LÄTTA FRÅGOR
 
         // 1 vilken ordklass tillhör ordet, substantiv
-        public FragaSvar SubstantivVilkenOrdklass()
+        public FragaSvar SubstantivVilkenOrdklass(substantiv sub)
         {
-            var randomSubstantiv = db.GetRandomSubstantiv();
+            //var randomSubstantiv = db.GetRandomSubstantiv();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + randomSubstantiv.ord + "'?";
-            fragaSvar.Svar1 = randomSubstantiv.ordklass;
-            fragaSvar.Svar2 = randomSubstantiv.även;
-            fragaSvar.Svar3 = randomSubstantiv.även;
-            fragaSvar.Svar4 = randomSubstantiv.även;
-            fragaSvar.Svar5 = randomSubstantiv.även;
-            fragaSvar.Svar6 = randomSubstantiv.även;
-            fragaSvar.Svar7 = randomSubstantiv.även;
-            fragaSvar.Svar8 = randomSubstantiv.även;
+            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + sub.ord + "'?";
+            fragaSvar.Svar1 = sub.ordklass;
+            fragaSvar.Svar2 = sub.även;
+            fragaSvar.Svar3 = sub.även;
+            fragaSvar.Svar4 = sub.även;
+            fragaSvar.Svar5 = sub.även;
+            fragaSvar.Svar6 = sub.även;
+            fragaSvar.Svar7 = sub.även;
+            fragaSvar.Svar8 = sub.även;
 
             return fragaSvar;
         }
@@ -464,20 +464,20 @@ namespace GrammatikLaxen.Data
         // KONJUNKTION - LÄTTA FRÅGOR
 
         // 1 vilken ordklass tillhör ordet, konjunktion
-        public FragaSvar KonjunktionVilkenOrdklass()
+        public FragaSvar KonjunktionVilkenOrdklass(konjunktion kon)
         {
-            var randomKonjunktion = db.GetRandomKonjunktion();
+            //var randomKonjunktion = db.GetRandomKonjunktion();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + randomKonjunktion.ord + "'?";
-            fragaSvar.Svar1 = randomKonjunktion.ordklass;
-            fragaSvar.Svar2 = randomKonjunktion.även;
-            fragaSvar.Svar3 = randomKonjunktion.även;
-            fragaSvar.Svar4 = randomKonjunktion.även;
-            fragaSvar.Svar5 = randomKonjunktion.även;
-            fragaSvar.Svar6 = randomKonjunktion.även;
-            fragaSvar.Svar7 = randomKonjunktion.även;
-            fragaSvar.Svar8 = randomKonjunktion.även;
+            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + kon.ord + "'?";
+            fragaSvar.Svar1 = kon.ordklass;
+            fragaSvar.Svar2 = kon.även;
+            fragaSvar.Svar3 = kon.även;
+            fragaSvar.Svar4 = kon.även;
+            fragaSvar.Svar5 = kon.även;
+            fragaSvar.Svar6 = kon.även;
+            fragaSvar.Svar7 = kon.även;
+            fragaSvar.Svar8 = kon.även;
 
             return fragaSvar;
         }

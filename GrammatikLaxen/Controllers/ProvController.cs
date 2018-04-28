@@ -1,5 +1,6 @@
 ﻿using GrammatikLaxen.Data;
 using GrammatikLaxen.Models;
+using GrammatikLaxen.Models.db;
 using GrammatikLaxen.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -25,6 +26,12 @@ namespace GrammatikLaxen.Controllers
             List<FragaSvar> fragaSvarList = new List<FragaSvar>();
             fragaSvarList.Clear();
 
+            List<substantiv> allSubList = new List<substantiv>();
+            allSubList = db.GetAllSubstantivList();
+
+            List<konjunktion> allKonList = new List<konjunktion>();
+            allKonList = db.GetAllKonjunktionList();
+
             FragaSvar grammatikFraga;
             int fragaNummer = 0;
 
@@ -34,7 +41,7 @@ namespace GrammatikLaxen.Controllers
             //tar fram 15 slumpvisa lätta frågor
             for (int i = 0; i < 15; i++)
             {
-                int randOrdklass = rand.Next(1, 10); //sätt alltid till 10 efter tester!
+                int randOrdklass = rand.Next(7, 9); //sätt alltid till 10 efter tester!
                 fragaNummer++;
 
                 // substantiv
@@ -46,8 +53,30 @@ namespace GrammatikLaxen.Controllers
                     //vilken ordklass tillhör ordet
                     if (randSubFraga == 1)
                     {
+                        Random rand3 = new Random();
+                        substantiv subForNow = new substantiv();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand3.Next(1, 200);
+                                subForNow = allSubList.SingleOrDefault(a => a.Id == randomId);
+                                if (subForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allSubList.Remove(subForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.SubstantivVilkenOrdklass();
+                        grammatikFraga = gf.SubstantivVilkenOrdklass(subForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
@@ -297,8 +326,30 @@ namespace GrammatikLaxen.Controllers
                     //vilken ordklass tillhör ordet
                     if (randKonFraga == 1)
                     {
+                        Random rand3 = new Random();
+                        konjunktion konForNow = new konjunktion();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand3.Next(1, 50);
+                                konForNow = allKonList.SingleOrDefault(a => a.Id == randomId);
+                                if (konForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allKonList.Remove(konForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.KonjunktionVilkenOrdklass();
+                        grammatikFraga = gf.KonjunktionVilkenOrdklass(konForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
