@@ -854,24 +854,90 @@ namespace GrammatikLaxen.Controllers
                     //vilken ordklass tillhör ordet
                     if (randRakFraga == 1)
                     {
+                        Random rand3 = new Random();
+                        räkneord rakForNow = new räkneord();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand.Next(1, 50);
+                                rakForNow = allRakList.SingleOrDefault(a => a.Id == randomId);
+                                if (rakForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allRakList.Remove(rakForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.RakneordVilkenOrdklass();
+                        grammatikFraga = gf.RakneordVilkenOrdklass(rakForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
                     //vad blir ordet som grundtal
                     else if (randRakFraga == 2)
                     {
+                        Random rand3 = new Random();
+                        räkneord rakForNow = new räkneord();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand.Next(1, 50);
+                                rakForNow = allRakList.SingleOrDefault(a => a.Id == randomId);
+                                if (rakForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allRakList.Remove(rakForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.RakneordGrundtal();
+                        grammatikFraga = gf.RakneordGrundtal(rakForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
                     //vad blir ordet som ordningstal
                     else if (randRakFraga == 3)
                     {
+                        Random rand3 = new Random();
+                        räkneord rakForNow = new räkneord();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand.Next(1, 50);
+                                rakForNow = allRakList.SingleOrDefault(a => a.Id == randomId);
+                                if (rakForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allRakList.Remove(rakForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.RakneordOrdningstal();
+                        grammatikFraga = gf.RakneordOrdningstal(rakForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
@@ -889,8 +955,30 @@ namespace GrammatikLaxen.Controllers
                     //vilken ordklass tillhör ordet
                     if (randIntFraga == 1)
                     {
+                        Random rand3 = new Random();
+                        interjektion intjForNow = new interjektion();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand.Next(1, 50);
+                                intjForNow = allIntList.SingleOrDefault(a => a.Id == randomId);
+                                if (intjForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allIntList.Remove(intjForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.InterjektionVilkenOrdklass();
+                        grammatikFraga = gf.InterjektionVilkenOrdklass(intjForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }

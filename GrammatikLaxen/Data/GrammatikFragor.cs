@@ -485,58 +485,58 @@ namespace GrammatikLaxen.Data
         // RÄKNEORD - LÄTTA FRÅGOR
 
         // 1 vilken ordklass tillhör ordet, räkneord
-        public FragaSvar RakneordVilkenOrdklass()
+        public FragaSvar RakneordVilkenOrdklass(räkneord rak)
         {
-            var randomRakneord = db.GetRandomRakneord();
+            //var randomRakneord = db.GetRandomRakneord();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + randomRakneord.ord + "'?";
-            fragaSvar.Svar1 = randomRakneord.ordklass;
-            fragaSvar.Svar2 = randomRakneord.även;
-            fragaSvar.Svar3 = randomRakneord.även;
-            fragaSvar.Svar4 = randomRakneord.även;
-            fragaSvar.Svar5 = randomRakneord.även;
-            fragaSvar.Svar6 = randomRakneord.även;
-            fragaSvar.Svar7 = randomRakneord.även;
-            fragaSvar.Svar8 = randomRakneord.även;
+            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + rak.ord + "'?";
+            fragaSvar.Svar1 = rak.ordklass;
+            fragaSvar.Svar2 = rak.även;
+            fragaSvar.Svar3 = rak.även;
+            fragaSvar.Svar4 = rak.även;
+            fragaSvar.Svar5 = rak.även;
+            fragaSvar.Svar6 = rak.även;
+            fragaSvar.Svar7 = rak.även;
+            fragaSvar.Svar8 = rak.även;
 
             return fragaSvar;
         }
 
         // 2 vad blir ordet som grundtal, räkneord
-        public FragaSvar RakneordGrundtal()
+        public FragaSvar RakneordGrundtal(räkneord rak)
         {
-            var randomRakneord = db.GetRandomRakneord();
+            //var randomRakneord = db.GetRandomRakneord();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vad blir räkneordet '" + randomRakneord.ordningstal_ej_maskulinum + "' som grundtal?";
-            fragaSvar.Svar1 = randomRakneord.grundtal;
-            fragaSvar.Svar2 = randomRakneord.grundtal_2;
-            fragaSvar.Svar3 = randomRakneord.grundtal_2;
-            fragaSvar.Svar4 = randomRakneord.grundtal_2;
-            fragaSvar.Svar5 = randomRakneord.grundtal_2;
-            fragaSvar.Svar6 = randomRakneord.grundtal_2;
-            fragaSvar.Svar7 = randomRakneord.grundtal_2;
-            fragaSvar.Svar8 = randomRakneord.grundtal_2;
+            fragaSvar.Fraga = "Vad blir räkneordet '" + rak.ordningstal_ej_maskulinum + "' som grundtal?";
+            fragaSvar.Svar1 = rak.grundtal;
+            fragaSvar.Svar2 = rak.grundtal_2;
+            fragaSvar.Svar3 = rak.grundtal_2;
+            fragaSvar.Svar4 = rak.grundtal_2;
+            fragaSvar.Svar5 = rak.grundtal_2;
+            fragaSvar.Svar6 = rak.grundtal_2;
+            fragaSvar.Svar7 = rak.grundtal_2;
+            fragaSvar.Svar8 = rak.grundtal_2;
 
             return fragaSvar;
         }
 
         // 3 vad blir ordet som ordningstal ej maskulinum, räkneord
-        public FragaSvar RakneordOrdningstal()
+        public FragaSvar RakneordOrdningstal(räkneord rak)
         {
-            var randomRakneord = db.GetRandomRakneord();
+            //var randomRakneord = db.GetRandomRakneord();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vad blir räkneordet '" + randomRakneord.grundtal + "' som ordningstal (ej maskulinum)?";
-            fragaSvar.Svar1 = randomRakneord.ordningstal_ej_maskulinum;
-            fragaSvar.Svar2 = randomRakneord.ordningstal_ej_maskulinum;
-            fragaSvar.Svar3 = randomRakneord.ordningstal_ej_maskulinum;
-            fragaSvar.Svar4 = randomRakneord.ordningstal_ej_maskulinum;
-            fragaSvar.Svar5 = randomRakneord.ordningstal_ej_maskulinum;
-            fragaSvar.Svar6 = randomRakneord.ordningstal_ej_maskulinum;
-            fragaSvar.Svar7 = randomRakneord.ordningstal_ej_maskulinum;
-            fragaSvar.Svar8 = randomRakneord.ordningstal_ej_maskulinum;
+            fragaSvar.Fraga = "Vad blir räkneordet '" + rak.grundtal + "' som ordningstal (ej maskulinum)?";
+            fragaSvar.Svar1 = rak.ordningstal_ej_maskulinum;
+            fragaSvar.Svar2 = rak.ordningstal_ej_maskulinum;
+            fragaSvar.Svar3 = rak.ordningstal_ej_maskulinum;
+            fragaSvar.Svar4 = rak.ordningstal_ej_maskulinum;
+            fragaSvar.Svar5 = rak.ordningstal_ej_maskulinum;
+            fragaSvar.Svar6 = rak.ordningstal_ej_maskulinum;
+            fragaSvar.Svar7 = rak.ordningstal_ej_maskulinum;
+            fragaSvar.Svar8 = rak.ordningstal_ej_maskulinum;
 
             return fragaSvar;
         }
@@ -544,20 +544,20 @@ namespace GrammatikLaxen.Data
         // INTERJEKTION - LÄTTA FRÅGOR
 
         // 1 vilken ordklass tillhör ordet, interjektion
-        public FragaSvar InterjektionVilkenOrdklass()
+        public FragaSvar InterjektionVilkenOrdklass(interjektion intj)
         {
-            var randomInterjektion = db.GetRandomInterjektion();
+            //var randomInterjektion = db.GetRandomInterjektion();
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + randomInterjektion.ord + "'?";
-            fragaSvar.Svar1 = randomInterjektion.ordklass;
-            fragaSvar.Svar2 = randomInterjektion.även;
-            fragaSvar.Svar3 = randomInterjektion.även;
-            fragaSvar.Svar4 = randomInterjektion.även;
-            fragaSvar.Svar5 = randomInterjektion.även;
-            fragaSvar.Svar6 = randomInterjektion.även;
-            fragaSvar.Svar7 = randomInterjektion.även;
-            fragaSvar.Svar8 = randomInterjektion.även;
+            fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + intj.ord + "'?";
+            fragaSvar.Svar1 = intj.ordklass;
+            fragaSvar.Svar2 = intj.även;
+            fragaSvar.Svar3 = intj.även;
+            fragaSvar.Svar4 = intj.även;
+            fragaSvar.Svar5 = intj.även;
+            fragaSvar.Svar6 = intj.även;
+            fragaSvar.Svar7 = intj.även;
+            fragaSvar.Svar8 = intj.även;
 
             return fragaSvar;
         }
