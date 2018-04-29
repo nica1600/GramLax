@@ -21,7 +21,7 @@ namespace GrammatikLaxen.Controllers
             return View();
         }
 
-        public ActionResult Latt()
+        public ActionResult Niva1()
         {
             List<FragaSvar> fragaSvarList = new List<FragaSvar>();
             fragaSvarList.Clear();

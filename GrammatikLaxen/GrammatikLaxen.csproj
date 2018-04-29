@@ -274,9 +274,9 @@
     <Content Include="Views\Home\Rakneord.cshtml" />
     <Content Include="Views\Home\Interjektion.cshtml" />
     <Content Include="Views\Prov\Index.cshtml" />
-    <Content Include="Views\Prov\Latt.cshtml" />
-    <Content Include="Views\Prov\_LattProv.cshtml" />
-    <Content Include="Views\Prov\_LattProvFacit.cshtml" />
+    <Content Include="Views\Prov\Niva1.cshtml" />
+    <Content Include="Views\Prov\_Niva1Prov.cshtml" />
+    <Content Include="Views\Prov\_Niva1ProvFacit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
