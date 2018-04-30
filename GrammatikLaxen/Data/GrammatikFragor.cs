@@ -658,6 +658,98 @@ namespace GrammatikLaxen.Data
             return fragaSvar;
         }
 
+        // VERB - MEDELSVÅRA FRÅGOR
+
+        // 1 gör om till presens, verb
+        public FragaSvar VerbPresens(verb ver)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir verbet '" + ver.ord + "' i presens?";
+            fragaSvar.Svar1 = ver.presens;
+            fragaSvar.Svar2 = ver.presens;
+            fragaSvar.Svar3 = ver.presens;
+            fragaSvar.Svar4 = ver.presens;
+            fragaSvar.Svar5 = ver.presens;
+            fragaSvar.Svar6 = ver.presens;
+            fragaSvar.Svar7 = ver.presens;
+            fragaSvar.Svar8 = ver.presens;
+
+            return fragaSvar;
+        }
+
+        // 2 gör om till perfekt, verb
+        public FragaSvar VerbPerfekt(verb ver)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir verbet '" + ver.ord + "' i perfekt?";
+            fragaSvar.Svar1 = ver.perfekt;
+            fragaSvar.Svar2 = ver.perfekt;
+            fragaSvar.Svar3 = ver.perfekt;
+            fragaSvar.Svar4 = ver.perfekt;
+            fragaSvar.Svar5 = ver.perfekt;
+            fragaSvar.Svar6 = ver.perfekt;
+            fragaSvar.Svar7 = ver.perfekt;
+            fragaSvar.Svar8 = ver.perfekt;
+
+            return fragaSvar;
+        }
+
+        // 3 gör om till pluskvamperfekt, verb
+        public FragaSvar VerbPluskvamperfekt(verb ver)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir verbet '" + ver.ord + "' i pluskvamperfekt?";
+            fragaSvar.Svar1 = ver.pluskvamperfekt;
+            fragaSvar.Svar2 = ver.pluskvamperfekt;
+            fragaSvar.Svar3 = ver.pluskvamperfekt;
+            fragaSvar.Svar4 = ver.pluskvamperfekt;
+            fragaSvar.Svar5 = ver.pluskvamperfekt;
+            fragaSvar.Svar6 = ver.pluskvamperfekt;
+            fragaSvar.Svar7 = ver.pluskvamperfekt;
+            fragaSvar.Svar8 = ver.pluskvamperfekt;
+
+            return fragaSvar;
+        }
+
+        // 4 gör om till futurum, verb
+        public FragaSvar VerbFuturum(verb ver)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir verbet '" + ver.ord + "' i futurum?";
+            fragaSvar.Svar1 = ver.futurum;
+            fragaSvar.Svar2 = ver.futurum;
+            fragaSvar.Svar3 = ver.futurum;
+            fragaSvar.Svar4 = ver.futurum;
+            fragaSvar.Svar5 = ver.futurum;
+            fragaSvar.Svar6 = ver.futurum;
+            fragaSvar.Svar7 = ver.futurum;
+            fragaSvar.Svar8 = ver.futurum;
+
+            return fragaSvar;
+        }
+
+        // 5 gör om till imperativ, verb
+        public FragaSvar VerbImperativ(verb ver)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir verbet '" + ver.ord + "' i imperativ?";
+            fragaSvar.Svar1 = ver.imperativ;
+            fragaSvar.Svar2 = ver.imperativ;
+            fragaSvar.Svar3 = ver.imperativ;
+            fragaSvar.Svar4 = ver.imperativ;
+            fragaSvar.Svar5 = ver.imperativ;
+            fragaSvar.Svar6 = ver.imperativ;
+            fragaSvar.Svar7 = ver.imperativ;
+            fragaSvar.Svar8 = ver.imperativ;
+
+            return fragaSvar;
+        }
+
         // ADVERB - LÄTTA FRÅGOR
 
         // 1 vilken ordklass tillhör ordet, adverb

@@ -2953,7 +2953,7 @@ namespace GrammatikLaxen.Controllers
             for (int i = 0; i < 7; i++)
             {
 
-                int randOrdklass = rand.Next(1, 4); //sätt alltid till 7 efter tester!
+                int randOrdklass = rand.Next(1, 5); //sätt alltid till 7 efter tester!
                 fragaNummer++;
 
                 // substantiv
@@ -3396,13 +3396,11 @@ namespace GrammatikLaxen.Controllers
                 //verb
                 else if (randOrdklass == 4)
                 {
-                    Random rand2 = new Random();
                     int randVerbFraga = rand.Next(1, 6);
 
-                    //vilken ordklass tillhör ordet
+                    //presens
                     if (randVerbFraga == 1)
                     {
-                        Random rand3 = new Random();
                         verb verForNow = new verb();
                         bool isNull = true;
 
@@ -3425,14 +3423,13 @@ namespace GrammatikLaxen.Controllers
                         } while (isNull == true);
 
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.VerbVilkenOrdklass(verForNow);
+                        grammatikFraga = gf.VerbPresens(verForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
-                    //vilken typ av verb
+                    //perfekt
                     else if (randVerbFraga == 2)
                     {
-                        Random rand3 = new Random();
                         verb verForNow = new verb();
                         bool isNull = true;
 
@@ -3455,14 +3452,13 @@ namespace GrammatikLaxen.Controllers
                         } while (isNull == true);
 
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.VerbVilkenTyp(verForNow);
+                        grammatikFraga = gf.VerbPerfekt(verForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
-                    //vad blir ordet i infinitv
+                    //pluskvamperfekt
                     else if (randVerbFraga == 3)
                     {
-                        Random rand3 = new Random();
                         verb verForNow = new verb();
                         bool isNull = true;
 
@@ -3485,14 +3481,13 @@ namespace GrammatikLaxen.Controllers
                         } while (isNull == true);
 
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.VerbInfinitiv(verForNow);
+                        grammatikFraga = gf.VerbPluskvamperfekt(verForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
-                    //vad blir ordet i preteritum
+                    //futurum
                     else if (randVerbFraga == 4)
                     {
-                        Random rand3 = new Random();
                         verb verForNow = new verb();
                         bool isNull = true;
 
@@ -3515,14 +3510,13 @@ namespace GrammatikLaxen.Controllers
                         } while (isNull == true);
 
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.VerbPreteritum(verForNow);
+                        grammatikFraga = gf.VerbFuturum(verForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
-                    //vad blir ordet i supinum
+                    //imperativ
                     else if (randVerbFraga == 5)
                     {
-                        Random rand3 = new Random();
                         verb verForNow = new verb();
                         bool isNull = true;
 
@@ -3545,7 +3539,7 @@ namespace GrammatikLaxen.Controllers
                         } while (isNull == true);
 
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.VerbSupinum(verForNow);
+                        grammatikFraga = gf.VerbImperativ(verForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
