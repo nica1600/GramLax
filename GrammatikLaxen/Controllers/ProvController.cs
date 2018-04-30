@@ -2954,7 +2954,7 @@ namespace GrammatikLaxen.Controllers
             for (int i = 0; i < 7; i++)
             {
 
-                int randOrdklass = rand.Next(1, 5); //sätt alltid till 7 efter tester!
+                int randOrdklass = rand.Next(1, 7); //sätt alltid till 7 efter tester!
                 fragaNummer++;
 
                 // substantiv
