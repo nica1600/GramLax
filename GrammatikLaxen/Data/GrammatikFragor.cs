@@ -505,6 +505,62 @@ namespace GrammatikLaxen.Data
             return fragaSvar;
         }
 
+        // ADJEKTIV - MEDELSVÅRA FRÅGOR
+
+        // 1 komparera till positiv, adjektiv
+        public FragaSvar AdjektivPositiv(adjektiv adj)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir adjektivet '" + adj.komparativ + "' om du komparerar det till positiv?";
+            fragaSvar.Svar1 = adj.positiv;
+            fragaSvar.Svar2 = adj.positiv;
+            fragaSvar.Svar3 = adj.positiv;
+            fragaSvar.Svar4 = adj.positiv;
+            fragaSvar.Svar5 = adj.positiv;
+            fragaSvar.Svar6 = adj.positiv;
+            fragaSvar.Svar7 = adj.positiv;
+            fragaSvar.Svar8 = adj.positiv;
+
+            return fragaSvar;
+        }
+
+        // 2 komparera till komparativ, adjektiv
+        public FragaSvar AdjektivKomparativ(adjektiv adj)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir adjektivet '" + adj.positiv + "' om du komparerar det till komparativ?";
+            fragaSvar.Svar1 = adj.komparativ;
+            fragaSvar.Svar2 = adj.komparativ;
+            fragaSvar.Svar3 = adj.komparativ;
+            fragaSvar.Svar4 = adj.komparativ;
+            fragaSvar.Svar5 = adj.komparativ;
+            fragaSvar.Svar6 = adj.komparativ;
+            fragaSvar.Svar7 = adj.komparativ;
+            fragaSvar.Svar8 = adj.komparativ;
+
+            return fragaSvar;
+        }
+
+        // 3 komparera till superlativ predikativt, adjektiv
+        public FragaSvar AdjektivSuperlativPredikativ(adjektiv adj)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir adjektivet '" + adj.positiv + "' om du komparerar det till superlativ (predikativ ställning)?";
+            fragaSvar.Svar1 = adj.superlativ_predikativt;
+            fragaSvar.Svar2 = adj.superlativ_predikativt;
+            fragaSvar.Svar3 = adj.superlativ_predikativt;
+            fragaSvar.Svar4 = adj.superlativ_predikativt;
+            fragaSvar.Svar5 = adj.superlativ_predikativt;
+            fragaSvar.Svar6 = adj.superlativ_predikativt;
+            fragaSvar.Svar7 = adj.superlativ_predikativt;
+            fragaSvar.Svar8 = adj.superlativ_predikativt;
+
+            return fragaSvar;
+        }
+
         // VERB - LÄTTA FRÅGOR
 
         // 1 vilken ordklass tillhör ordet, verb
