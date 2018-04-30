@@ -54,7 +54,7 @@ namespace GrammatikLaxen.Data
 
         // SUBSTANTIV - MEDELSVÅRA FRÅGOR
 
-        // 1 vilket genus
+        // 1 vilket genus, substantiv
         public FragaSvar SubstantivGenus(substantiv sub)
         {
             fragaSvar = new FragaSvar();
@@ -72,7 +72,7 @@ namespace GrammatikLaxen.Data
             return fragaSvar;
         }
 
-        // 2 nominativ
+        // 2 nominativ, substantiv
         public FragaSvar SubstantivNominativ(substantiv sub)
         {
             fragaSvar = new FragaSvar();
@@ -90,7 +90,7 @@ namespace GrammatikLaxen.Data
             return fragaSvar;
         }
 
-        // 3 genitiv
+        // 3 genitiv, substantiv
         public FragaSvar SubstantivGenitiv(substantiv sub)
         {
             fragaSvar = new FragaSvar();
@@ -239,6 +239,152 @@ namespace GrammatikLaxen.Data
             fragaSvar.Svar6 = pro.reflexiva;
             fragaSvar.Svar7 = pro.reflexiva;
             fragaSvar.Svar8 = pro.reflexiva;
+
+            return fragaSvar;
+        }
+
+        // PRONOMEN - MEDELSVÅRA FRÅGOR
+
+        // 1 gör om till reflexiva possessiva pronomen utrum, pronomen
+        public FragaSvar PronomenReflexivaPossessivaUtrum(pronomen pro)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir ordet '" + pro.ord + "' som reflexivt possessivt pronomen tillsammans med ett utrum-substantiv?";
+            fragaSvar.Svar1 = pro.reflexiva_possessiva_utrum;
+            fragaSvar.Svar2 = pro.reflexiva_possessiva_utrum;
+            fragaSvar.Svar3 = pro.reflexiva_possessiva_utrum;
+            fragaSvar.Svar4 = pro.reflexiva_possessiva_utrum;
+            fragaSvar.Svar5 = pro.reflexiva_possessiva_utrum;
+            fragaSvar.Svar6 = pro.reflexiva_possessiva_utrum;
+            fragaSvar.Svar7 = pro.reflexiva_possessiva_utrum;
+            fragaSvar.Svar8 = pro.reflexiva_possessiva_utrum;
+
+            return fragaSvar;
+        }
+
+        // 2 gör om till reflexiva possessiva pronomen neutrum, pronomen
+        public FragaSvar PronomenReflexivaPossessivaNeutrum(pronomen pro)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir ordet '" + pro.ord + "' som reflexivt possessivt pronomen tillsammans med ett neutrum-substantiv?";
+            fragaSvar.Svar1 = pro.reflexiva_possessiva_neutrum;
+            fragaSvar.Svar2 = pro.reflexiva_possessiva_neutrum;
+            fragaSvar.Svar3 = pro.reflexiva_possessiva_neutrum;
+            fragaSvar.Svar4 = pro.reflexiva_possessiva_neutrum;
+            fragaSvar.Svar5 = pro.reflexiva_possessiva_neutrum;
+            fragaSvar.Svar6 = pro.reflexiva_possessiva_neutrum;
+            fragaSvar.Svar7 = pro.reflexiva_possessiva_neutrum;
+            fragaSvar.Svar8 = pro.reflexiva_possessiva_neutrum;
+
+            return fragaSvar;
+        }
+
+        // 3 gör om till reflexiva possessiva pronomen plural, pronomen
+        public FragaSvar PronomenReflexivaPossessivaPlural(pronomen pro)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir ordet '" + pro.ord + "' som reflexivt possessivt pronomen tillsammans med flera substantiv (plural)?";
+            fragaSvar.Svar1 = pro.reflexiva_possessiva_plural;
+            fragaSvar.Svar2 = pro.reflexiva_possessiva_plural;
+            fragaSvar.Svar3 = pro.reflexiva_possessiva_plural;
+            fragaSvar.Svar4 = pro.reflexiva_possessiva_plural;
+            fragaSvar.Svar5 = pro.reflexiva_possessiva_plural;
+            fragaSvar.Svar6 = pro.reflexiva_possessiva_plural;
+            fragaSvar.Svar7 = pro.reflexiva_possessiva_plural;
+            fragaSvar.Svar8 = pro.reflexiva_possessiva_plural;
+
+            return fragaSvar;
+        }
+
+        // 4 gör om till relativa pronomen grundform, pronomen
+        public FragaSvar PronomenRelativaGrundform(pronomen pro)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir ordet '" + pro.ord + "' som relativt pronomen i grundform?";
+            fragaSvar.Svar1 = pro.relativa_grundform;
+            fragaSvar.Svar2 = pro.relativa_grundform;
+            fragaSvar.Svar3 = pro.relativa_grundform;
+            fragaSvar.Svar4 = pro.relativa_grundform;
+            fragaSvar.Svar5 = pro.relativa_grundform;
+            fragaSvar.Svar6 = pro.relativa_grundform;
+            fragaSvar.Svar7 = pro.relativa_grundform;
+            fragaSvar.Svar8 = pro.relativa_grundform;
+
+            return fragaSvar;
+        }
+
+        // 5 gör om till relativa pronomen genitiv, pronomen
+        public FragaSvar PronomenRelativaGenitiv(pronomen pro)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir ordet '" + pro.ord + "' som relativt pronomen i genitiv?";
+            fragaSvar.Svar1 = pro.relativa_genitiv;
+            fragaSvar.Svar2 = pro.relativa_genitiv;
+            fragaSvar.Svar3 = pro.relativa_genitiv;
+            fragaSvar.Svar4 = pro.relativa_genitiv;
+            fragaSvar.Svar5 = pro.relativa_genitiv;
+            fragaSvar.Svar6 = pro.relativa_genitiv;
+            fragaSvar.Svar7 = pro.relativa_genitiv;
+            fragaSvar.Svar8 = pro.relativa_genitiv;
+
+            return fragaSvar;
+        }
+
+        // 6 gör om till interrogativa, pronomen
+        public FragaSvar PronomenInterrogativa(pronomen pro)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir ordet '" + pro.ord + "' som interrogativt pronomen?";
+            fragaSvar.Svar1 = pro.interrogativa;
+            fragaSvar.Svar2 = pro.interrogativa_2;
+            fragaSvar.Svar3 = pro.interrogativa_2;
+            fragaSvar.Svar4 = pro.interrogativa_2;
+            fragaSvar.Svar5 = pro.interrogativa_2;
+            fragaSvar.Svar6 = pro.interrogativa_2;
+            fragaSvar.Svar7 = pro.interrogativa_2;
+            fragaSvar.Svar8 = pro.interrogativa_2;
+
+            return fragaSvar;
+        }
+
+        // 7 gör om till demonstrativa nära, pronomen
+        public FragaSvar PronomenDemonstrativaNara(pronomen pro)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir ordet '" + pro.ord + "' som demonstrativt pronomen där något befinner sig nära?";
+            fragaSvar.Svar1 = pro.demonstrativa_nära;
+            fragaSvar.Svar2 = pro.demonstrativa_nära;
+            fragaSvar.Svar3 = pro.demonstrativa_nära;
+            fragaSvar.Svar4 = pro.demonstrativa_nära;
+            fragaSvar.Svar5 = pro.demonstrativa_nära;
+            fragaSvar.Svar6 = pro.demonstrativa_nära;
+            fragaSvar.Svar7 = pro.demonstrativa_nära;
+            fragaSvar.Svar8 = pro.demonstrativa_nära;
+
+            return fragaSvar;
+        }
+
+        // 8 gör om till demonstrativa långt bort, pronomen
+        public FragaSvar PronomenDemonstrativaLangtBort(pronomen pro)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir ordet '" + pro.ord + "' som demonstrativt pronomen där något befinner sig långt bort?";
+            fragaSvar.Svar1 = pro.demonstrativa_långt_bort;
+            fragaSvar.Svar2 = pro.demonstrativa_långt_bort;
+            fragaSvar.Svar3 = pro.demonstrativa_långt_bort;
+            fragaSvar.Svar4 = pro.demonstrativa_långt_bort;
+            fragaSvar.Svar5 = pro.demonstrativa_långt_bort;
+            fragaSvar.Svar6 = pro.demonstrativa_långt_bort;
+            fragaSvar.Svar7 = pro.demonstrativa_långt_bort;
+            fragaSvar.Svar8 = pro.demonstrativa_långt_bort;
 
             return fragaSvar;
         }

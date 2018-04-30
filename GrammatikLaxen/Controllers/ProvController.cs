@@ -1983,6 +1983,7 @@ namespace GrammatikLaxen.Controllers
 
             List<substantiv> allSubList = db.GetAllSubstantivList();
             List<pronomen> allProList = db.GetAllPronomenList();
+            List<pronomen> allProMedelsvaraList = db.GetAllPronomenMedelsvaraList();
             List<adjektiv> allAdjList = db.GetAllAdjektivList();
             List<verb> allVerList = db.GetAllVerbList();
             List<adverb> allAdvRenLattList = db.GetAllAdverbRenLattList();
@@ -2952,7 +2953,7 @@ namespace GrammatikLaxen.Controllers
             for (int i = 0; i < 7; i++)
             {
 
-                int randOrdklass = rand.Next(1, 2); //sätt alltid till 7 efter tester!
+                int randOrdklass = rand.Next(1, 3); //sätt alltid till 7 efter tester!
                 fragaNummer++;
 
                 // substantiv
@@ -3056,13 +3057,11 @@ namespace GrammatikLaxen.Controllers
                 //pronomen
                 else if (randOrdklass == 2)
                 {
-                    Random rand2 = new Random();
-                    int randProFraga = rand.Next(1, 8);
+                    int randProFraga = rand.Next(1, 9);
 
-                    //vilken ordklass tillhör ordet
+                    //reflexiva possessiva utrum
                     if (randProFraga == 1)
                     {
-                        Random rand3 = new Random();
                         pronomen proForNow = new pronomen();
                         bool isNull = true;
 
@@ -3071,28 +3070,27 @@ namespace GrammatikLaxen.Controllers
                             if (isNull == true)
                             {
                                 int randomId = rand.Next(1, 30);
-                                proForNow = allProList.SingleOrDefault(a => a.Id == randomId);
+                                proForNow = allProMedelsvaraList.SingleOrDefault(a => a.Id == randomId);
                                 if (proForNow == null)
                                 {
                                     isNull = true;
                                 }
                                 else
                                 {
-                                    allProList.Remove(proForNow);
+                                    allProMedelsvaraList.Remove(proForNow);
                                     isNull = false;
                                 }
                             }
                         } while (isNull == true);
 
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.PronomenVilkenOrdklass(proForNow);
+                        grammatikFraga = gf.PronomenReflexivaPossessivaUtrum(proForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
-                    // till personliga subjektform
+                    //reflexiva possessiva neutrum
                     else if (randProFraga == 2)
                     {
-                        Random rand3 = new Random();
                         pronomen proForNow = new pronomen();
                         bool isNull = true;
 
@@ -3101,28 +3099,27 @@ namespace GrammatikLaxen.Controllers
                             if (isNull == true)
                             {
                                 int randomId = rand.Next(1, 30);
-                                proForNow = allProList.SingleOrDefault(a => a.Id == randomId);
+                                proForNow = allProMedelsvaraList.SingleOrDefault(a => a.Id == randomId);
                                 if (proForNow == null)
                                 {
                                     isNull = true;
                                 }
                                 else
                                 {
-                                    allProList.Remove(proForNow);
+                                    allProMedelsvaraList.Remove(proForNow);
                                     isNull = false;
                                 }
                             }
                         } while (isNull == true);
 
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.PronomenPersonligaSubjekt(proForNow);
+                        grammatikFraga = gf.PronomenReflexivaPossessivaNeutrum(proForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
-                    // till personliga objektform
+                    //reflexiva possessiva plural
                     else if (randProFraga == 3)
                     {
-                        Random rand3 = new Random();
                         pronomen proForNow = new pronomen();
                         bool isNull = true;
 
@@ -3131,28 +3128,27 @@ namespace GrammatikLaxen.Controllers
                             if (isNull == true)
                             {
                                 int randomId = rand.Next(1, 30);
-                                proForNow = allProList.SingleOrDefault(a => a.Id == randomId);
+                                proForNow = allProMedelsvaraList.SingleOrDefault(a => a.Id == randomId);
                                 if (proForNow == null)
                                 {
                                     isNull = true;
                                 }
                                 else
                                 {
-                                    allProList.Remove(proForNow);
+                                    allProMedelsvaraList.Remove(proForNow);
                                     isNull = false;
                                 }
                             }
                         } while (isNull == true);
 
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.PronomenPersonligaObjekt(proForNow);
+                        grammatikFraga = gf.PronomenReflexivaPossessivaPlural(proForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
-                    // till possessiva utrum
+                    //relativa grundform
                     else if (randProFraga == 4)
                     {
-                        Random rand3 = new Random();
                         pronomen proForNow = new pronomen();
                         bool isNull = true;
 
@@ -3161,28 +3157,27 @@ namespace GrammatikLaxen.Controllers
                             if (isNull == true)
                             {
                                 int randomId = rand.Next(1, 30);
-                                proForNow = allProList.SingleOrDefault(a => a.Id == randomId);
+                                proForNow = allProMedelsvaraList.SingleOrDefault(a => a.Id == randomId);
                                 if (proForNow == null)
                                 {
                                     isNull = true;
                                 }
                                 else
                                 {
-                                    allProList.Remove(proForNow);
+                                    allProMedelsvaraList.Remove(proForNow);
                                     isNull = false;
                                 }
                             }
                         } while (isNull == true);
 
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.PronomenPossessivaUtrum(proForNow);
+                        grammatikFraga = gf.PronomenRelativaGrundform(proForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
-                    // till possessiva neutrum
+                    //relativa genitiv
                     else if (randProFraga == 5)
                     {
-                        Random rand3 = new Random();
                         pronomen proForNow = new pronomen();
                         bool isNull = true;
 
@@ -3191,28 +3186,27 @@ namespace GrammatikLaxen.Controllers
                             if (isNull == true)
                             {
                                 int randomId = rand.Next(1, 30);
-                                proForNow = allProList.SingleOrDefault(a => a.Id == randomId);
+                                proForNow = allProMedelsvaraList.SingleOrDefault(a => a.Id == randomId);
                                 if (proForNow == null)
                                 {
                                     isNull = true;
                                 }
                                 else
                                 {
-                                    allProList.Remove(proForNow);
+                                    allProMedelsvaraList.Remove(proForNow);
                                     isNull = false;
                                 }
                             }
                         } while (isNull == true);
 
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.PronomenPossessivaNeutrum(proForNow);
+                        grammatikFraga = gf.PronomenRelativaGenitiv(proForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
-                    // till possessiva plural
+                    //interrogativa
                     else if (randProFraga == 6)
                     {
-                        Random rand3 = new Random();
                         pronomen proForNow = new pronomen();
                         bool isNull = true;
 
@@ -3221,28 +3215,27 @@ namespace GrammatikLaxen.Controllers
                             if (isNull == true)
                             {
                                 int randomId = rand.Next(1, 30);
-                                proForNow = allProList.SingleOrDefault(a => a.Id == randomId);
+                                proForNow = allProMedelsvaraList.SingleOrDefault(a => a.Id == randomId);
                                 if (proForNow == null)
                                 {
                                     isNull = true;
                                 }
                                 else
                                 {
-                                    allProList.Remove(proForNow);
+                                    allProMedelsvaraList.Remove(proForNow);
                                     isNull = false;
                                 }
                             }
                         } while (isNull == true);
 
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.PronomenPossessivaPlural(proForNow);
+                        grammatikFraga = gf.PronomenInterrogativa(proForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
-                    // till reflexiva
+                    //demonstrativa nära
                     else if (randProFraga == 7)
                     {
-                        Random rand3 = new Random();
                         pronomen proForNow = new pronomen();
                         bool isNull = true;
 
@@ -3251,21 +3244,50 @@ namespace GrammatikLaxen.Controllers
                             if (isNull == true)
                             {
                                 int randomId = rand.Next(1, 30);
-                                proForNow = allProList.SingleOrDefault(a => a.Id == randomId);
+                                proForNow = allProMedelsvaraList.SingleOrDefault(a => a.Id == randomId);
                                 if (proForNow == null)
                                 {
                                     isNull = true;
                                 }
                                 else
                                 {
-                                    allProList.Remove(proForNow);
+                                    allProMedelsvaraList.Remove(proForNow);
                                     isNull = false;
                                 }
                             }
                         } while (isNull == true);
 
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.PronomenReflexiva(proForNow);
+                        grammatikFraga = gf.PronomenDemonstrativaNara(proForNow);
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    //demonstrativa långt bort
+                    else if (randProFraga == 8)
+                    {
+                        pronomen proForNow = new pronomen();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand.Next(1, 30);
+                                proForNow = allProMedelsvaraList.SingleOrDefault(a => a.Id == randomId);
+                                if (proForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allProMedelsvaraList.Remove(proForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
+                        grammatikFraga = new FragaSvar();
+                        grammatikFraga = gf.PronomenDemonstrativaLangtBort(proForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }

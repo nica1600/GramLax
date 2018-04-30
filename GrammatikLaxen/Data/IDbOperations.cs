@@ -12,6 +12,7 @@ namespace GrammatikLaxen.Data
         List<substantiv> GetAllSubstantivList();
         substantiv GetRandomSubstantiv();
         List<pronomen> GetAllPronomenList();
+        List<pronomen> GetAllPronomenMedelsvaraList();
         pronomen GetRandomPronomen();
         List<adjektiv> GetAllAdjektivList();
         adjektiv GetRandomAdjektiv();

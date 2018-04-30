@@ -67,6 +67,13 @@ namespace GrammatikLaxen.Data
             return pronomenList.ToList();
         }
 
+        // Hämta alla medelsvåra pronomen (reflexiva possessiva, demonstrativa1, demonstrativa2) från databasen
+        public List<pronomen> GetAllPronomenMedelsvaraList()
+        {
+            var pronomenList = db.pronomen.Where(p => p.reflexiva_possessiva == true && p.demonstrativa == true && p.demonstrativa_2 == true);
+            return pronomenList.ToList();
+        }
+
         // Hämta slumpmässigt pronomen
         public pronomen GetRandomPronomen()
         {
