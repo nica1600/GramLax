@@ -1,9 +1,9 @@
 ﻿@model List<GrammatikLaxen.Models.FragaSvar>
 @{
-    ViewBag.Title = "Provnivå: 1";
+    ViewBag.Title = "Provnivå: 2";
 }
 <div class="jumbotron">
-    <h1>Provnivå: 1</h1>
+    <h1>Provnivå: 2</h1>
     <p class="lead">
         Provet genereras slumpvis så om du inte är nöjd välj "Generera nytt" för att skapa ett nytt prov eller "Tillbaka" för att skapa en annan typ av prov.
     </p>
@@ -12,7 +12,7 @@
             <a href="@Url.Action("Index", "Prov")" class="btn btn-default btn-block btn-lg">&laquo; Tillbaka</a>
         </div>
         <div class="col-md-6 text-center">
-            <a href="@Url.Action("Niva1", "Prov")" class="btn btn-success btn-block btn-lg">Generera nytt &raquo;</a>
+            <a href="@Url.Action("Niva2", "Prov")" class="btn btn-success btn-block btn-lg">Generera nytt &raquo;</a>
         </div>
     </div>
 </div>
@@ -21,19 +21,19 @@
     <!-- Nav tabs -->
     <ul class="nav nav-tabs">
         <li>
-            <a class="navbar-link active" data-toggle="tab" href="#latt-prov">Provet</a>
+            <a class="navbar-link active" data-toggle="tab" href="#niva2">Provet</a>
         </li>
         <li>
-            <a class="navbar-link" data-toggle="tab" href="#latt-prov-facit">Facit</a>
+            <a class="navbar-link" data-toggle="tab" href="#niva2facit">Facit</a>
         </li>
     </ul>
     <!-- Tab panes -->
     <div id="myTabContent" class="tab-content">
-        <div class="tab-pane fade in active" id="latt-prov">
-            @Html.Partial("_Niva1Prov")
+        <div class="tab-pane fade in active" id="niva2">
+            @Html.Partial("_Niva2Prov")
         </div>
-        <div class="tab-pane fade" id="latt-prov-facit">
-            @Html.Partial("_Niva1ProvFacit")
+        <div class="tab-pane fade" id="niva2facit">
+            @Html.Partial("_Niva2ProvFacit")
         </div>
     </div>
 </div>
