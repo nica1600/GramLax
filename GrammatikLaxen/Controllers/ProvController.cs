@@ -2952,19 +2952,17 @@ namespace GrammatikLaxen.Controllers
             for (int i = 0; i < 7; i++)
             {
 
-                int randOrdklass = rand.Next(1, 7); //sätt alltid till 7 efter tester!
+                int randOrdklass = rand.Next(1, 2); //sätt alltid till 7 efter tester!
                 fragaNummer++;
 
                 // substantiv
                 if (randOrdklass == 1)
                 {
-                    Random rand2 = new Random();
-                    int randSubFraga = rand.Next(1, 3);
+                    int randSubFraga = rand.Next(1, 4);
 
-                    //vilken ordklass tillhör ordet
+                    //vilket genus
                     if (randSubFraga == 1)
                     {
-                        Random rand3 = new Random();
                         substantiv subForNow = new substantiv();
                         bool isNull = true;
 
@@ -2987,14 +2985,13 @@ namespace GrammatikLaxen.Controllers
                         } while (isNull == true);
 
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.SubstantivVilkenOrdklass(subForNow);
+                        grammatikFraga = gf.SubstantivGenus(subForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
-                    //konkret eller abstrakt
+                    //nominativ
                     else if (randSubFraga == 2)
                     {
-                        Random rand3 = new Random();
                         substantiv subForNow = new substantiv();
                         bool isNull = true;
 
@@ -3017,7 +3014,36 @@ namespace GrammatikLaxen.Controllers
                         } while (isNull == true);
 
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.SubstantivKonkretAbstrakt(subForNow);
+                        grammatikFraga = gf.SubstantivNominativ(subForNow);
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    //genitiv
+                    else if (randSubFraga == 3)
+                    {
+                        substantiv subForNow = new substantiv();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand.Next(1, 200);
+                                subForNow = allSubList.SingleOrDefault(a => a.Id == randomId);
+                                if (subForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allSubList.Remove(subForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
+                        grammatikFraga = new FragaSvar();
+                        grammatikFraga = gf.SubstantivGenitiv(subForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }

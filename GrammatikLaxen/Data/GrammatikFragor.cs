@@ -52,6 +52,62 @@ namespace GrammatikLaxen.Data
             return fragaSvar;
         }
 
+        // SUBSTANTIV - MEDELSVÅRA FRÅGOR
+
+        // 1 vilket genus
+        public FragaSvar SubstantivGenus(substantiv sub)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vilket genus har substantivet '" + sub.ord + "'?";
+            fragaSvar.Svar1 = sub.genus;
+            fragaSvar.Svar2 = sub.artikel;
+            fragaSvar.Svar3 = sub.artikel;
+            fragaSvar.Svar4 = sub.artikel;
+            fragaSvar.Svar5 = sub.artikel;
+            fragaSvar.Svar6 = sub.artikel;
+            fragaSvar.Svar7 = sub.artikel;
+            fragaSvar.Svar8 = sub.artikel;
+
+            return fragaSvar;
+        }
+
+        // 2 nominativ
+        public FragaSvar SubstantivNominativ(substantiv sub)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir substantivet '" + sub.obestämd_form_singular_genitiv + "' i nominativ?";
+            fragaSvar.Svar1 = sub.nominativ;
+            fragaSvar.Svar2 = sub.nominativ;
+            fragaSvar.Svar3 = sub.nominativ;
+            fragaSvar.Svar4 = sub.nominativ;
+            fragaSvar.Svar5 = sub.nominativ;
+            fragaSvar.Svar6 = sub.nominativ;
+            fragaSvar.Svar7 = sub.nominativ;
+            fragaSvar.Svar8 = sub.nominativ;
+
+            return fragaSvar;
+        }
+
+        // 3 genitiv
+        public FragaSvar SubstantivGenitiv(substantiv sub)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir substantivet '" + sub.nominativ + "' i genitiv?";
+            fragaSvar.Svar1 = sub.obestämd_form_singular_genitiv;
+            fragaSvar.Svar2 = sub.obestämd_form_singular_genitiv;
+            fragaSvar.Svar3 = sub.obestämd_form_singular_genitiv;
+            fragaSvar.Svar4 = sub.obestämd_form_singular_genitiv;
+            fragaSvar.Svar5 = sub.obestämd_form_singular_genitiv;
+            fragaSvar.Svar6 = sub.obestämd_form_singular_genitiv;
+            fragaSvar.Svar7 = sub.obestämd_form_singular_genitiv;
+            fragaSvar.Svar8 = sub.obestämd_form_singular_genitiv;
+
+            return fragaSvar;
+        }
+
         // PRONOMEN - LÄTTA FRÅGOR
 
         // 1 vilken ordklass tillhör ordet, pronomen
