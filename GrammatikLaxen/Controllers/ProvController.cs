@@ -1987,6 +1987,7 @@ namespace GrammatikLaxen.Controllers
             List<adjektiv> allAdjList = db.GetAllAdjektivList();
             List<verb> allVerList = db.GetAllVerbList();
             List<adverb> allAdvRenLattList = db.GetAllAdverbRenLattList();
+            List<adverb> allAdvMedelsvaraList = db.GetAllAdverbMedelsvaraList();
             List<preposition> allPreList = db.GetAllPrepositionList();
             List<konjunktion> allKonList = db.GetAllKonjunktionList();
             List<räkneord> allRakList = db.GetAllRäkneordList();
@@ -3551,13 +3552,11 @@ namespace GrammatikLaxen.Controllers
                 //adverb
                 else if (randOrdklass == 5)
                 {
-                    Random rand2 = new Random();
-                    int randAdvFraga = rand.Next(1, 3);
+                    int randAdvFraga = rand.Next(1, 2);
 
-                    //vilken ordklass tillhör ordet
+                    //vilken typ av adverb
                     if (randAdvFraga == 1)
                     {
-                        Random rand3 = new Random();
                         adverb advForNow = new adverb();
                         bool isNull = true;
 
@@ -3566,51 +3565,21 @@ namespace GrammatikLaxen.Controllers
                             if (isNull == true)
                             {
                                 int randomId = rand.Next(1, 50);
-                                advForNow = allAdvRenLattList.SingleOrDefault(a => a.Id == randomId);
+                                advForNow = allAdvMedelsvaraList.SingleOrDefault(a => a.Id == randomId);
                                 if (advForNow == null)
                                 {
                                     isNull = true;
                                 }
                                 else
                                 {
-                                    allAdvRenLattList.Remove(advForNow);
+                                    allAdvMedelsvaraList.Remove(advForNow);
                                     isNull = false;
                                 }
                             }
                         } while (isNull == true);
 
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.AdverbVilkenOrdklass(advForNow);
-                        grammatikFraga.Nummer = fragaNummer;
-                        fragaSvarList.Add(grammatikFraga);
-                    }
-                    //vilken typ av adverb
-                    else if (randAdvFraga == 2)
-                    {
-                        Random rand3 = new Random();
-                        adverb advForNow = new adverb();
-                        bool isNull = true;
-
-                        do
-                        {
-                            if (isNull == true)
-                            {
-                                int randomId = rand.Next(1, 50);
-                                advForNow = allAdvRenLattList.SingleOrDefault(a => a.Id == randomId);
-                                if (advForNow == null)
-                                {
-                                    isNull = true;
-                                }
-                                else
-                                {
-                                    allAdvRenLattList.Remove(advForNow);
-                                    isNull = false;
-                                }
-                            }
-                        } while (isNull == true);
-
-                        grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.AdverbVilkenTyp(advForNow);
+                        grammatikFraga = gf.AdverbVilkenTypMedelsvar(advForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }
@@ -3622,13 +3591,11 @@ namespace GrammatikLaxen.Controllers
                 //konjunktion
                 else if (randOrdklass == 6)
                 {
-                    Random rand2 = new Random();
                     int randKonFraga = rand.Next(1, 2);
 
-                    //vilken ordklass tillhör ordet
+                    //subjunktion
                     if (randKonFraga == 1)
                     {
-                        Random rand3 = new Random();
                         konjunktion konForNow = new konjunktion();
                         bool isNull = true;
 
@@ -3651,7 +3618,7 @@ namespace GrammatikLaxen.Controllers
                         } while (isNull == true);
 
                         grammatikFraga = new FragaSvar();
-                        grammatikFraga = gf.KonjunktionVilkenOrdklass(konForNow);
+                        grammatikFraga = gf.KonjunktionSubjunktion(konForNow);
                         grammatikFraga.Nummer = fragaNummer;
                         fragaSvarList.Add(grammatikFraga);
                     }

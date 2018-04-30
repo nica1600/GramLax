@@ -785,7 +785,27 @@ namespace GrammatikLaxen.Data
             fragaSvar.Svar5 = adv.typ_5;
             fragaSvar.Svar6 = adv.typ_6;
             fragaSvar.Svar7 = adv.typ_7;
-            fragaSvar.Svar8 = adv.typ_8;
+            fragaSvar.Svar8 = adv.typ_7;
+
+            return fragaSvar;
+        }
+
+        // ADVERB - MEDELSVÅRA FRÅGOR
+
+        // 1 vilken typ av adverb tillhör ordet, adverb
+        public FragaSvar AdverbVilkenTypMedelsvar(adverb adv)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vilken typ av adverb är ordet '" + adv.ord + "'?";
+            fragaSvar.Svar1 = adv.typ;
+            fragaSvar.Svar2 = adv.typ_2;
+            fragaSvar.Svar3 = adv.typ_3;
+            fragaSvar.Svar4 = adv.typ_4;
+            fragaSvar.Svar5 = adv.typ_5;
+            fragaSvar.Svar6 = adv.typ_6;
+            fragaSvar.Svar7 = adv.typ_7;
+            fragaSvar.Svar8 = adv.typ_7;
 
             return fragaSvar;
         }
@@ -828,6 +848,41 @@ namespace GrammatikLaxen.Data
             fragaSvar.Svar6 = kon.även;
             fragaSvar.Svar7 = kon.även;
             fragaSvar.Svar8 = kon.även;
+
+            return fragaSvar;
+        }
+
+        // KONJUNKTION - MEDELSVÅRA FRÅGOR
+        
+        // 1 subjunktion eller inte, konjunktion
+        public FragaSvar KonjunktionSubjunktion(konjunktion kon)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Ordet '" + kon.ord + "' är en konjunktion men är det även en subjunktion (ja/nej)?";
+
+            if (kon.underordnad == true)
+            {
+                fragaSvar.Svar1 = "ja";
+                fragaSvar.Svar2 = "ja";
+                fragaSvar.Svar3 = "ja";
+                fragaSvar.Svar4 = "ja";
+                fragaSvar.Svar5 = "ja";
+                fragaSvar.Svar6 = "ja";
+                fragaSvar.Svar7 = "ja";
+                fragaSvar.Svar8 = "ja";
+            }
+            else
+            {
+                fragaSvar.Svar1 = "nej";
+                fragaSvar.Svar2 = "nej";
+                fragaSvar.Svar3 = "nej";
+                fragaSvar.Svar4 = "nej";
+                fragaSvar.Svar5 = "nej";
+                fragaSvar.Svar6 = "nej";
+                fragaSvar.Svar7 = "nej";
+                fragaSvar.Svar8 = "nej";
+            }
 
             return fragaSvar;
         }

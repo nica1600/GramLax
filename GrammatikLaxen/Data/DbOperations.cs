@@ -189,6 +189,13 @@ namespace GrammatikLaxen.Data
             return adverbList.ToList();
         }
 
+        // Hämta alla medelsvåra adverb från databasen
+        public List<adverb> GetAllAdverbMedelsvaraList()
+        {
+            var adverbList = db.adverb.Where(a => a.gradadverb == true && a.orsaksadverb == true && a.relativa_adverb == true && a.satsadverb == true);
+            return adverbList.ToList();
+        }
+
         // Hämta slumpmässigt adverb (ren)
         public adverb GetRandomAdverbRen()
         {
@@ -287,7 +294,7 @@ namespace GrammatikLaxen.Data
             var konjunktionList = db.konjunktion;
             return konjunktionList.ToList();
         }
-
+        
         // Hämta slumpmässig konjunktion
         public konjunktion GetRandomKonjunktion()
         {

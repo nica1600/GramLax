@@ -20,6 +20,7 @@ namespace GrammatikLaxen.Data
         verb GetRandomVerb();
         List<adverb> GetAllAdverbList();
         List<adverb> GetAllAdverbRenLattList();
+        List<adverb> GetAllAdverbMedelsvaraList();
         adverb GetRandomAdverbRen();
         adverb GetRandomAdverbRenLatt();
         List<preposition> GetAllPrepositionList();
