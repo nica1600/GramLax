@@ -146,6 +146,13 @@ namespace GrammatikLaxen.Data
             return verbList.ToList();
         }
 
+        // Hämta alla svåra verb från databasen
+        public List<verb> GetAllVerbSvarList()
+        {
+            var verbList = db.verb.Where(a => a.particip == true);
+            return verbList.ToList();
+        }
+
         // Hämta slumpmässigt verb
         public verb GetRandomVerb()
         {

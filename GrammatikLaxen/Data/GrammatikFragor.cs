@@ -108,6 +108,116 @@ namespace GrammatikLaxen.Data
             return fragaSvar;
         }
 
+        // SUBSTANTIV - SVÅRA FRÅGOR
+
+        // 1 obestämd form singular, substantiv
+        public FragaSvar SubstantivObestamdSingular(substantiv sub)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir substantivet '" + sub.bestämd_form_singular + "' i obestämd form singular?";
+            fragaSvar.Svar1 = sub.obestämd_form_singular;
+            fragaSvar.Svar2 = sub.obestämd_form_singular;
+            fragaSvar.Svar3 = sub.obestämd_form_singular;
+            fragaSvar.Svar4 = sub.obestämd_form_singular;
+            fragaSvar.Svar5 = sub.obestämd_form_singular;
+            fragaSvar.Svar6 = sub.obestämd_form_singular;
+            fragaSvar.Svar7 = sub.obestämd_form_singular;
+            fragaSvar.Svar8 = sub.obestämd_form_singular;
+
+            return fragaSvar;
+        }
+
+        // 2 bestämd form singular, substantiv
+        public FragaSvar SubstantivBestamdSingular(substantiv sub)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir substantivet '" + sub.ord + "' i bestämd form singular?";
+            fragaSvar.Svar1 = sub.bestämd_form_singular;
+            fragaSvar.Svar2 = sub.bestämd_form_singular;
+            fragaSvar.Svar3 = sub.bestämd_form_singular;
+            fragaSvar.Svar4 = sub.bestämd_form_singular;
+            fragaSvar.Svar5 = sub.bestämd_form_singular;
+            fragaSvar.Svar6 = sub.bestämd_form_singular;
+            fragaSvar.Svar7 = sub.bestämd_form_singular;
+            fragaSvar.Svar8 = sub.bestämd_form_singular;
+
+            return fragaSvar;
+        }
+
+        // 3 obestämd form plural, substantiv
+        public FragaSvar SubstantivObestamdPlural(substantiv sub)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir substantivet '" + sub.ord + "' i obestämd form plural?";
+            fragaSvar.Svar1 = sub.obestämd_form_plural;
+            fragaSvar.Svar2 = sub.obestämd_form_plural;
+            fragaSvar.Svar3 = sub.obestämd_form_plural;
+            fragaSvar.Svar4 = sub.obestämd_form_plural;
+            fragaSvar.Svar5 = sub.obestämd_form_plural;
+            fragaSvar.Svar6 = sub.obestämd_form_plural;
+            fragaSvar.Svar7 = sub.obestämd_form_plural;
+            fragaSvar.Svar8 = sub.obestämd_form_plural;
+
+            return fragaSvar;
+        }
+
+        // 4 bestämd form plural, substantiv
+        public FragaSvar SubstantivBestamdPlural(substantiv sub)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir substantivet '" + sub.ord + "' i bestämd form plural?";
+            fragaSvar.Svar1 = sub.bestämd_form_plural;
+            fragaSvar.Svar2 = sub.bestämd_form_plural;
+            fragaSvar.Svar3 = sub.bestämd_form_plural;
+            fragaSvar.Svar4 = sub.bestämd_form_plural;
+            fragaSvar.Svar5 = sub.bestämd_form_plural;
+            fragaSvar.Svar6 = sub.bestämd_form_plural;
+            fragaSvar.Svar7 = sub.bestämd_form_plural;
+            fragaSvar.Svar8 = sub.bestämd_form_plural;
+
+            return fragaSvar;
+        }
+
+        // 5 bestämd fristående artikel singular, substantiv
+        public FragaSvar SubstantivBestamdFristaendeArtikelSingular(substantiv sub)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir substantivet '" + sub.ord + "' som bestämd friståede artikel singular?";
+            fragaSvar.Svar1 = sub.bestämd_fristående_artikel_singular;
+            fragaSvar.Svar2 = sub.bestämd_fristående_artikel_singular;
+            fragaSvar.Svar3 = sub.bestämd_fristående_artikel_singular;
+            fragaSvar.Svar4 = sub.bestämd_fristående_artikel_singular;
+            fragaSvar.Svar5 = sub.bestämd_fristående_artikel_singular;
+            fragaSvar.Svar6 = sub.bestämd_fristående_artikel_singular;
+            fragaSvar.Svar7 = sub.bestämd_fristående_artikel_singular;
+            fragaSvar.Svar8 = sub.bestämd_fristående_artikel_singular;
+
+            return fragaSvar;
+        }
+
+        // 6 bestämd fristående artikel plural, substantiv
+        public FragaSvar SubstantivBestamdFristaendeArtikelPlural(substantiv sub)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir substantivet '" + sub.ord + "' som bestämd friståede artikel plural?";
+            fragaSvar.Svar1 = sub.bestämd_fristående_artikel_plural;
+            fragaSvar.Svar2 = sub.bestämd_fristående_artikel_plural;
+            fragaSvar.Svar3 = sub.bestämd_fristående_artikel_plural;
+            fragaSvar.Svar4 = sub.bestämd_fristående_artikel_plural;
+            fragaSvar.Svar5 = sub.bestämd_fristående_artikel_plural;
+            fragaSvar.Svar6 = sub.bestämd_fristående_artikel_plural;
+            fragaSvar.Svar7 = sub.bestämd_fristående_artikel_plural;
+            fragaSvar.Svar8 = sub.bestämd_fristående_artikel_plural;
+
+            return fragaSvar;
+        }
+
         // PRONOMEN - LÄTTA FRÅGOR
 
         // 1 vilken ordklass tillhör ordet, pronomen
@@ -561,6 +671,26 @@ namespace GrammatikLaxen.Data
             return fragaSvar;
         }
 
+        // ADJEKTIV - SVÅRA FRÅGOR
+
+        // 1 komparera till superlativ attributivt ej maskulinum, adjektiv
+        public FragaSvar AdjektivSuperlativAttributivEjMaskulinum(adjektiv adj)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir adjektivet '" + adj.positiv + "' om du komparerar det till superlativ (attributiv ställning, ej maskulinum)?";
+            fragaSvar.Svar1 = adj.superlativ_attributivt_ej_maskulinum;
+            fragaSvar.Svar2 = adj.superlativ_attributivt_ej_maskulinum;
+            fragaSvar.Svar3 = adj.superlativ_attributivt_ej_maskulinum;
+            fragaSvar.Svar4 = adj.superlativ_attributivt_ej_maskulinum;
+            fragaSvar.Svar5 = adj.superlativ_attributivt_ej_maskulinum;
+            fragaSvar.Svar6 = adj.superlativ_attributivt_ej_maskulinum;
+            fragaSvar.Svar7 = adj.superlativ_attributivt_ej_maskulinum;
+            fragaSvar.Svar8 = adj.superlativ_attributivt_ej_maskulinum;
+
+            return fragaSvar;
+        }
+
         // VERB - LÄTTA FRÅGOR
 
         // 1 vilken ordklass tillhör ordet, verb
@@ -746,6 +876,44 @@ namespace GrammatikLaxen.Data
             fragaSvar.Svar6 = ver.imperativ;
             fragaSvar.Svar7 = ver.imperativ;
             fragaSvar.Svar8 = ver.imperativ;
+
+            return fragaSvar;
+        }
+
+        // VERB - MEDELSVÅRA FRÅGOR
+
+        // 1 gör om till presens particip
+        public FragaSvar VerbPresensParticip(verb ver)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir verbet '" + ver.ord + "' i presens particip?";
+            fragaSvar.Svar1 = ver.presens_particip;
+            fragaSvar.Svar2 = ver.presens_particip_2;
+            fragaSvar.Svar3 = ver.presens_particip_2;
+            fragaSvar.Svar4 = ver.presens_particip_2;
+            fragaSvar.Svar5 = ver.presens_particip_2;
+            fragaSvar.Svar6 = ver.presens_particip_2;
+            fragaSvar.Svar7 = ver.presens_particip_2;
+            fragaSvar.Svar8 = ver.presens_particip_2;
+
+            return fragaSvar;
+        }
+
+        // 2 gör om till perfekt particip
+        public FragaSvar VerbPerfektParticip(verb ver)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Vad blir verbet '" + ver.ord + "' i perfekt particip?";
+            fragaSvar.Svar1 = ver.perfekt_particip;
+            fragaSvar.Svar2 = ver.perfekt_particip;
+            fragaSvar.Svar3 = ver.perfekt_particip;
+            fragaSvar.Svar4 = ver.perfekt_particip;
+            fragaSvar.Svar5 = ver.perfekt_particip;
+            fragaSvar.Svar6 = ver.perfekt_particip;
+            fragaSvar.Svar7 = ver.perfekt_particip;
+            fragaSvar.Svar8 = ver.perfekt_particip;
 
             return fragaSvar;
         }
