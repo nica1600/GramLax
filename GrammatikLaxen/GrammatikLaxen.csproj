@@ -288,6 +288,7 @@
     <Content Include="Views\Prov\Niva3.cshtml" />
     <Content Include="Views\Prov\_Niva3Prov.cshtml" />
     <Content Include="Views\Prov\_Niva3ProvFacit.cshtml" />
+    <Content Include="Views\Prov\Niva3Utskrift.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
