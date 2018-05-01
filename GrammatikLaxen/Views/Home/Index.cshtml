@@ -4,10 +4,26 @@
 
 <div class="jumbotron">
     <h1>Grammatik-laxen</h1>
-    <p class="lead">Välkommen till grammatik-laxen! Sidan där du kan lära dig mer om grammatik och få hjälp i undervisningen (både som lärare och elev).</p>
-    <p>
-        <a href="@Url.Action("About", "Home")" class="btn btn-primary btn-lg">Berätta mer &raquo;</a>
-    </p>
+    <p class="lead">Välkommen till grammatik-laxen! Vad vill du göra? =)</p>
+    <div class="col-md-12 row">
+        <div class="col-md-6 text-center">
+            <a id="mer-info-kontakt" class="btn btn-default btn-block btn-lg" data-toggle="collapse" href="#kontakt" role="button" aria-expanded="false" aria-controls="kontakt">Visa kontakt &raquo;</a>
+        </div>
+        <div class="col-md-6 text-center">
+            <a id="mer-info-om" class="btn btn-primary btn-block btn-lg" data-toggle="collapse" href="#om" role="button" aria-expanded="false" aria-controls="om">Mer info &raquo;</a>
+        </div>
+    </div>
+    <div class="collapse" id="kontakt">
+        <div class="card card-body">
+            @Html.Partial("_Kontakt")
+        </div>
+    </div>
+    <div class="collapse" id="om">
+        <div class="card card-body">
+            @Html.Partial("_Om")
+        </div>
+    </div>
+
 </div>
 
 <div class="row">
@@ -23,3 +39,17 @@
         <p><a href="@Url.Action("Index", "Prov")" class="btn btn-primary btn-block btn-lg" title="Vill du ha hjälp att ta fram ett prov?">Till prov &raquo;</a></p>
     </div>
 </div>
+
+<script>
+    $('#mer-info-kontakt').click(function () { 
+        $(this).text(function (i, old) {
+            return old == 'Dölj kontakt »' ? 'Visa kontakt »' : 'Dölj kontakt »';
+        });
+    });
+
+    $('#mer-info-om').click(function () {
+        $(this).text(function (i, old) {
+            return old == 'Dölj info »' ? 'Mer info »' : 'Dölj info »';
+        });
+    });
+</script>

@@ -5,9 +5,19 @@
 <div class="jumbotron">
     <h1>Prov</h1>
     <p class="lead">Välj vilken typ av prov du vill skapa eller gå tillbaka till startsidan.</p>
-    <p>
-        <a href="@Url.Action("Index", "Home")" class="btn btn-default btn-lg">&laquo; Tillbaka</a>
-    </p>
+    <div class="col-md-12 row">
+        <div class="col-md-6 text-center">
+            <a href="@Url.Action("Index", "Home")" class="btn btn-default btn-block btn-lg">&laquo; Tillbaka</a>
+        </div>
+        <div class="col-md-6 text-center">
+            <a id="mer-info-provniva" class="btn btn-primary btn-block btn-lg" data-toggle="collapse" href="#provinfo" role="button" aria-expanded="false" aria-controls="provinfo">Mer info &raquo;</a>
+        </div>
+    </div>
+    <div class="collapse" id="provinfo">
+        <div class="card card-body">
+            @Html.Partial("_ProvInfo")
+        </div>
+    </div>
 </div>
 
 <div class="row">
@@ -36,3 +46,11 @@
         </h4>
     </div>
 </div>
+
+<script>
+    $('#mer-info-provniva').click(function () { 
+        $(this).text(function (i, old) {
+            return old == 'Dölj info »' ? 'Mer info »' : 'Dölj info »';
+        });
+    });
+</script>
