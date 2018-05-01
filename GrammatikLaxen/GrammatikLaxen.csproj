@@ -284,6 +284,7 @@
     <Content Include="Views\Prov\Niva2.cshtml" />
     <Content Include="Views\Prov\_Niva2Prov.cshtml" />
     <Content Include="Views\Prov\_Niva2ProvFacit.cshtml" />
+    <Content Include="Views\Prov\Niva2Utskrift.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
