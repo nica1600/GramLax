@@ -11,13 +11,72 @@ namespace GrammatikLaxen.Data
     {
         DbOperations db = new DbOperations();
         FragaSvar fragaSvar;
-        
+
+        // SUBSTANTIV - BAS FRÅGOR
+
+        // 1 konkret eller abstrakt bas-nivå, substantiv
+        public FragaSvar SubstantivBasKonkretAbstrakt(substantiv sub)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Substantiv kan delas in i konkret (något som kan uppfattas med syn, hörsel, känsel, smak eller lukt) och" +
+                " abstrakt (något som kan uppfattas i tankarna eller fantasin). Vilken typ av substantiv är ordet '" + sub.ord + "' (konkret eller abstrakt)?";
+            fragaSvar.Svar1 = sub.betydelse;
+            fragaSvar.Svar2 = sub.betydelse;
+            fragaSvar.Svar3 = sub.betydelse;
+            fragaSvar.Svar4 = sub.betydelse;
+            fragaSvar.Svar5 = sub.betydelse;
+            fragaSvar.Svar6 = sub.betydelse;
+            fragaSvar.Svar7 = sub.betydelse;
+            fragaSvar.Svar8 = sub.betydelse;
+
+            return fragaSvar;
+        }
+
+        // 2 rätt artikel, substantiv
+        public FragaSvar SubstantivBasArtikel(substantiv sub)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Ett substantiv kan ha ett av två olika av genus (utrum eller neutrum). Substantiv med genuset utrum kan du sätta 'en' framför " +
+                "och substantiv med genuset neutrum kan du sätta 'ett' framför. Det här ordet som du sätter framför substantivet ('en' eller 'ett') kallas för " +
+                "'artikel'. Vilken artikel ska du sätta framför ordet '" + sub.ord + "' ('en' eller 'ett')?";
+            fragaSvar.Svar1 = sub.artikel + " " + sub.ord;
+            fragaSvar.Svar2 = sub.artikel;
+            fragaSvar.Svar3 = sub.artikel;
+            fragaSvar.Svar4 = sub.artikel;
+            fragaSvar.Svar5 = sub.artikel;
+            fragaSvar.Svar6 = sub.artikel;
+            fragaSvar.Svar7 = sub.artikel;
+            fragaSvar.Svar8 = sub.artikel;
+
+            return fragaSvar;
+        }
+
+        // 3 genitiv, substantiv
+        public FragaSvar SubstantivBasGenitiv(substantiv sub)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Ett substantiv finns alltid i grundform (= nominativ), t.ex. '" + sub.nominativ + "', och ägandeform (= genitiv). " +
+                "Ägandeformen visar att något tillhör substantivet och detta görs vanligtvis genom att lägga till ett 's' på slutet av ordet. Vad blir " +
+                sub.nominativ + "' i ägandeform?";
+            fragaSvar.Svar2 = sub.obestämd_form_singular_genitiv;
+            fragaSvar.Svar3 = sub.obestämd_form_singular_genitiv;
+            fragaSvar.Svar4 = sub.obestämd_form_singular_genitiv;
+            fragaSvar.Svar5 = sub.obestämd_form_singular_genitiv;
+            fragaSvar.Svar6 = sub.obestämd_form_singular_genitiv;
+            fragaSvar.Svar7 = sub.obestämd_form_singular_genitiv;
+            fragaSvar.Svar8 = sub.obestämd_form_singular_genitiv;
+
+            return fragaSvar;
+        }
+
         // SUBSTANTIV - LÄTTA FRÅGOR
 
         // 1 vilken ordklass tillhör ordet, substantiv
         public FragaSvar SubstantivVilkenOrdklass(substantiv sub)
         {
-            //var randomSubstantiv = db.GetRandomSubstantiv();
             fragaSvar = new FragaSvar();
 
             fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + sub.ord + "'?";
@@ -214,6 +273,54 @@ namespace GrammatikLaxen.Data
             fragaSvar.Svar6 = sub.bestämd_fristående_artikel_plural;
             fragaSvar.Svar7 = sub.bestämd_fristående_artikel_plural;
             fragaSvar.Svar8 = sub.bestämd_fristående_artikel_plural;
+
+            return fragaSvar;
+        }
+
+        // PRONOMEN - BAS FRÅGOR
+
+        // 1 personliga, pronomen
+        public FragaSvar PronomenBasPersonliga(pronomen pro)
+        {
+            //var randomPronomen = db.GetRandomPronomen();
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Pronomen finns i flera olika former och två av dessa är personliga pronomen och possessiva pronomen. Personliga pronomen " +
+                "är ord som du använder istället för namnet på en person, ett djur, en växt eller en sak. Possessiva pronomen är också ord som " +
+                " ersätter namnet på en person, ett djur, en växt eller en sak men beskriver också ett ägande eller en tillhörighet till något annat. " +
+                "Vilken typ av pronomen är ordet '" + pro.personliga_subjekt + "'(personliga eller possessiva)?";
+
+            fragaSvar.Svar1 = "personliga";
+            fragaSvar.Svar2 = "personliga pronomen";
+            fragaSvar.Svar3 = "personliga pronomen";
+            fragaSvar.Svar4 = "personliga pronomen";
+            fragaSvar.Svar5 = "personliga pronomen";
+            fragaSvar.Svar6 = "personliga pronomen";
+            fragaSvar.Svar7 = "personliga pronomen";
+            fragaSvar.Svar8 = "personliga pronomen";
+
+            return fragaSvar;
+        }
+
+        // 2 possessiva, pronomen
+        public FragaSvar PronomenBasPossessiva(pronomen pro)
+        {
+            //var randomPronomen = db.GetRandomPronomen();
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Pronomen finns i flera olika former och två av dessa är personliga pronomen och possessiva pronomen. Personliga pronomen " +
+                "är ord som du använder istället för namnet på en person, ett djur, en växt eller en sak. Possessiva pronomen är också ord som " +
+                " ersätter namnet på en person, ett djur, en växt eller en sak men beskriver också ett ägande eller en tillhörighet till något annat. " +
+                "Vilken typ av pronomen är ordet '" + pro.possessiva_utrum + "'(personliga eller possessiva)?";
+
+            fragaSvar.Svar1 = "possessiva";
+            fragaSvar.Svar2 = "possessiva pronomen";
+            fragaSvar.Svar3 = "possessiva pronomen";
+            fragaSvar.Svar4 = "possessiva pronomen";
+            fragaSvar.Svar5 = "possessiva pronomen";
+            fragaSvar.Svar6 = "possessiva pronomen";
+            fragaSvar.Svar7 = "possessiva pronomen";
+            fragaSvar.Svar8 = "possessiva pronomen";
 
             return fragaSvar;
         }
@@ -499,6 +606,53 @@ namespace GrammatikLaxen.Data
             return fragaSvar;
         }
 
+        // ADJEKTIV - BAS FRÅGOR
+
+        // 1 utrum till neutrum, adjektiv
+        public FragaSvar AdjektivBasNeutrum(adjektiv adj)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Adjektiv är ett ord som beskriver ett substantiv, t.ex. '" + adj.obestämd_form_utrum + "'. Men adjektivet förändras ibland beroende på " +
+                "om substantivet som det beskriver har genus utrum (vilket betyder att du kan sätta 'en' framför) eller neutrum (vilket betyder att du kan sätta " +
+                "'ett' framför). Adjektivet '" + adj.obestämd_form_utrum + "' är exempel på ett adjektiv som skulle kunna beskriva ett substantiv med genus " +
+                "utrum (som du kan sätta 'en' framför) men vad blir samma adjektiv om det istället ska beskriva ett substantiv med genus neutrum (som du kan " +
+                "sätta 'ett' framför)?";
+
+            fragaSvar.Svar1 = adj.obestämd_form_neutrum;
+            fragaSvar.Svar2 = "ett " + adj.obestämd_form_neutrum;
+            fragaSvar.Svar3 = "ett " + adj.obestämd_form_neutrum;
+            fragaSvar.Svar4 = "ett " + adj.obestämd_form_neutrum;
+            fragaSvar.Svar5 = "ett " + adj.obestämd_form_neutrum;
+            fragaSvar.Svar6 = "ett " + adj.obestämd_form_neutrum;
+            fragaSvar.Svar7 = "ett " + adj.obestämd_form_neutrum;
+            fragaSvar.Svar8 = "ett " + adj.obestämd_form_neutrum;
+
+            return fragaSvar;
+        }
+
+        // 2 singular till plural, adjektiv
+        public FragaSvar AdjektivBasPlural(adjektiv adj)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Adjektiv är ett ord som beskriver ett substantiv, t.ex. '" + adj.singular + "'. Men adjektivet förändras ibland beroende på " +
+                "om substantivet som det beskriver är i singular (alltså bara 1) eller om det är i plural (alltså flera). Adjektivet '" 
+                + adj.singular + "' är exempel på ett adjektiv som skulle kunna beskriva ett substantiv som är i singular (alltså bara 1) men vad blir samma " +
+                "adjektiv om det istället ska beskriva ett substantiv som står i plural (alltså flera)?";
+
+            fragaSvar.Svar1 = adj.plural;
+            fragaSvar.Svar2 = "flera " + adj.plural;
+            fragaSvar.Svar3 = "flera " + adj.plural;
+            fragaSvar.Svar4 = "flera " + adj.plural;
+            fragaSvar.Svar5 = "flera " + adj.plural;
+            fragaSvar.Svar6 = "flera " + adj.plural;
+            fragaSvar.Svar7 = "flera " + adj.plural;
+            fragaSvar.Svar8 = "flera " + adj.plural;
+
+            return fragaSvar;
+        }
+
         // ADJEKTIV - LÄTTA FRÅGOR
 
         // 1 vilken ordklass tillhör ordet, adjektiv
@@ -691,12 +845,57 @@ namespace GrammatikLaxen.Data
             return fragaSvar;
         }
 
+        // VERB - BAS FRÅGOR
+
+        // 1 infinitiv till preteritum, verb
+        public FragaSvar VerbBasPreteritum(verb ver)
+        {
+            fragaSvar = new FragaSvar();
+            
+            fragaSvar.Fraga = "Det brukar sägas att verb är ord som du kan sätta 'att' framför men det stämmer bara om verbet befinner sig i sin grundform (= " +
+                "infintiv). Det finns flera former som ett verb kan göras om till men det brukar sägas att de tre viktigaste är infinitiv (då kan du sätta 'att' " +
+                "framför), preteritum (då kan du sätta 'igår' framför) och supinum (då kan du sätta 'har' framför). Verbet '" + ver.infinitiv + "' står i " +
+                "infinitiv eftersom du kan sätta 'att' framför (" + ver.attribut_infinitiv + " " + ver.infinitiv + "). Men vad blir verbet om du gör om det till " +
+                "preteritum?";
+            fragaSvar.Svar1 = ver.attribut_preteritum + " " + ver.preteritum;
+            fragaSvar.Svar2 = ver.preteritum;
+            fragaSvar.Svar3 = ver.preteritum;
+            fragaSvar.Svar4 = ver.preteritum;
+            fragaSvar.Svar5 = ver.preteritum;
+            fragaSvar.Svar6 = ver.preteritum;
+            fragaSvar.Svar7 = ver.preteritum;
+            fragaSvar.Svar8 = ver.preteritum;
+
+            return fragaSvar;
+        }
+
+        // 2 infinitiv till supinum, verb
+        public FragaSvar VerbBasSupinum(verb ver)
+        {
+            fragaSvar = new FragaSvar();
+
+            fragaSvar.Fraga = "Det brukar sägas att verb är ord som du kan sätta 'att' framför men det stämmer bara om verbet befinner sig i sin grundform (= " +
+                "infintiv). Det finns flera former som ett verb kan göras om till men det brukar sägas att de tre viktigaste är infinitiv (då kan du sätta 'att' " +
+                "framför), preteritum (då kan du sätta 'igår' framför) och supinum (då kan du sätta 'har' framför). Verbet '" + ver.infinitiv + "' står i " +
+                "infinitiv eftersom du kan sätta 'att' framför (" + ver.attribut_infinitiv + " " + ver.infinitiv + "). Men vad blir verbet om du gör om det till " +
+                "supinum?";
+            fragaSvar.Svar1 = ver.attribut_supinum + " " + ver.supinum;
+            fragaSvar.Svar2 = ver.supinum;
+            fragaSvar.Svar3 = ver.supinum;
+            fragaSvar.Svar4 = ver.supinum;
+            fragaSvar.Svar5 = ver.supinum;
+            fragaSvar.Svar6 = ver.supinum;
+            fragaSvar.Svar7 = ver.supinum;
+            fragaSvar.Svar8 = ver.supinum;
+
+            return fragaSvar;
+        }
+
         // VERB - LÄTTA FRÅGOR
 
         // 1 vilken ordklass tillhör ordet, verb
         public FragaSvar VerbVilkenOrdklass(verb ver)
         {
-            //var randomVerb = db.GetRandomVerb();
             fragaSvar = new FragaSvar();
 
             fragaSvar.Fraga = "Vilken ordklass tillhör ordet '" + ver.ord + "'?";
