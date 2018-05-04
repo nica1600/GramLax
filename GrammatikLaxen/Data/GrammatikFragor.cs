@@ -587,7 +587,7 @@ namespace GrammatikLaxen.Data
         {
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Fyll i det adjektiv som saknas i komparationen: ? - " + adj.komparativ + " - " + adj.superlativ_attributivt_ej_maskulinum;
+            fragaSvar.Fraga = "Fyll i det adjektiv som saknas i komparationen: ? - " + adj.komparativ + " - " + adj.superlativ_predikativt;
 
             fragaSvar.Svar1 = adj.positiv;
             fragaSvar.Svar2 = adj.positiv;
@@ -606,7 +606,7 @@ namespace GrammatikLaxen.Data
         {
             fragaSvar = new FragaSvar();
 
-            fragaSvar.Fraga = "Fyll i det adjektiv som saknas i komparationen: " + adj.positiv + " - ? - " + adj.superlativ_attributivt_ej_maskulinum;
+            fragaSvar.Fraga = "Fyll i det adjektiv som saknas i komparationen: " + adj.positiv + " - ? - " + adj.superlativ_predikativt;
 
             fragaSvar.Svar1 = adj.komparativ;
             fragaSvar.Svar2 = adj.komparativ;

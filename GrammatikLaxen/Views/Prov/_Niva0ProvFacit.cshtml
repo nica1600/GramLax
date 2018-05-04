@@ -1,0 +1,74 @@
+﻿@model List<GrammatikLaxen.Models.FragaSvar>
+
+<div class="well">
+    @foreach (var fragaSvar in Model)
+    {
+        <p>
+            @fragaSvar.Nummer @fragaSvar.Fraga<br />
+            Rätt svar: @fragaSvar.Svar1
+            @if (fragaSvar.Svar2 == fragaSvar.Svar1)
+            {
+
+            }
+            else
+            {
+                <i>, </i>@fragaSvar.Svar2
+            }
+
+            @if (fragaSvar.Svar3 == fragaSvar.Svar2)
+            {
+
+            }
+            else
+            {
+                <i>, </i>@fragaSvar.Svar3
+            }
+
+            @if (fragaSvar.Svar4 == fragaSvar.Svar3)
+            {
+
+            }
+            else
+            {
+                <i>, </i>@fragaSvar.Svar4
+            }
+
+            @if (fragaSvar.Svar5 == fragaSvar.Svar4)
+            {
+
+            }
+            else
+            {
+                <i>, </i>@fragaSvar.Svar5
+            }
+
+            @if (fragaSvar.Svar6 == fragaSvar.Svar5)
+            {
+
+            }
+            else
+            {
+                <i>, </i>@fragaSvar.Svar6
+            }
+
+            @if (fragaSvar.Svar7 == fragaSvar.Svar6)
+            {
+
+            }
+            else
+            {
+                <i>, </i>@fragaSvar.Svar7
+            }
+
+            @if (fragaSvar.Svar8 == fragaSvar.Svar7)
+            {
+
+            }
+            else
+            {
+                <i>, </i>@fragaSvar.Svar8
+            }
+        </p>
+    }
+</div>
+

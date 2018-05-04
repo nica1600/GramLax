@@ -292,6 +292,10 @@
     <Content Include="Views\Prov\_ProvInfo.cshtml" />
     <Content Include="Views\Home\_Om.cshtml" />
     <Content Include="Views\Home\_Kontakt.cshtml" />
+    <Content Include="Views\Prov\Niva0.cshtml" />
+    <Content Include="Views\Prov\_Niva0Prov.cshtml" />
+    <Content Include="Views\Prov\_Niva0ProvFacit.cshtml" />
+    <Content Include="Views\Prov\Niva0Utskrift.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

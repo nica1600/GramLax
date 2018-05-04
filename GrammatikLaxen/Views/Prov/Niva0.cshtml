@@ -1,0 +1,39 @@
+﻿@model List<GrammatikLaxen.Models.FragaSvar>
+@{
+    ViewBag.Title = "Provnivå: 0";
+}
+<div class="jumbotron">
+    <h1>Provnivå: 0</h1>
+    <p class="lead">
+        Provet genereras slumpvis så om du inte är nöjd välj "Generera nytt" för att skapa ett nytt prov eller "Tillbaka" för att skapa en annan typ av prov.
+    </p>
+    <div class="col-md-12 row">
+        <div class="col-md-6 text-center">
+            <a href="@Url.Action("Index", "Prov")" class="btn btn-default btn-block btn-lg">&laquo; Tillbaka</a>
+        </div>
+        <div class="col-md-6 text-center">
+            <a href="@Url.Action("Niva0", "Prov")" class="btn btn-primary btn-block btn-lg">Generera nytt &raquo;</a>
+        </div>
+    </div>
+</div>
+
+<div role="tabpanel" class="col-md-12">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs">
+        <li>
+            <a class="navbar-link active" data-toggle="tab" href="#bas-prov">Provet</a>
+        </li>
+        <li>
+            <a class="navbar-link" data-toggle="tab" href="#bas-prov-facit">Facit</a>
+        </li>
+    </ul>
+    <!-- Tab panes -->
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="bas-prov">
+            @Html.Partial("_Niva0Prov")
+        </div>
+        <div class="tab-pane fade" id="bas-prov-facit">
+            @Html.Partial("_Niva0ProvFacit")
+        </div>
+    </div>
+</div>

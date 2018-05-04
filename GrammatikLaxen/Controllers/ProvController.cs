@@ -381,6 +381,371 @@ namespace GrammatikLaxen.Controllers
             return View(fragaSvarList);
         }
 
+        public ActionResult Niva0Utskrift()
+        {
+            List<FragaSvar> fragaSvarList = new List<FragaSvar>();
+            fragaSvarList.Clear();
+
+            List<substantiv> allSubList = db.GetAllSubstantivList();
+            List<pronomen> allProList = db.GetAllPronomenList();
+            List<adjektiv> allAdjList = db.GetAllAdjektivList();
+            List<verb> allVerList = db.GetAllVerbList();
+
+            FragaSvar grammatikFraga;
+            int fragaNummer = 0;
+            Random rand = new Random();
+
+            //tar fram 15 slumpvisa bas-frågor
+            for (int i = 0; i < 15; i++)
+            {
+                int randOrdklass = rand.Next(1, 5); //sätt alltid till 5 efter tester!
+                fragaNummer++;
+
+                // substantiv
+                if (randOrdklass == 1)
+                {
+                    int randSubFraga = rand.Next(1, 3);
+
+                    //en eller ett
+                    if (randSubFraga == 1)
+                    {
+                        substantiv subForNow = new substantiv();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand.Next(1, 200);
+                                subForNow = allSubList.SingleOrDefault(a => a.Id == randomId);
+                                if (subForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allSubList.Remove(subForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
+                        grammatikFraga = new FragaSvar();
+                        grammatikFraga = gf.SubstantivBasEnEllerEtt(subForNow);
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    //en, ett eller flera
+                    else if (randSubFraga == 2)
+                    {
+                        substantiv subForNow = new substantiv();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand.Next(1, 200);
+                                subForNow = allSubList.SingleOrDefault(a => a.Id == randomId);
+                                if (subForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allSubList.Remove(subForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
+                        grammatikFraga = new FragaSvar();
+                        grammatikFraga = gf.SubstantivBasFlera(subForNow);
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    else
+                    {
+                        //något felmeddelande
+                    }
+
+                }
+                //pronomen
+                else if (randOrdklass == 2)
+                {
+                    int randProFraga = rand.Next(1, 3);
+
+                    //personliga
+                    if (randProFraga == 1)
+                    {
+                        pronomen proForNow = new pronomen();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand.Next(1, 30);
+                                proForNow = allProList.SingleOrDefault(a => a.Id == randomId);
+                                if (proForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allProList.Remove(proForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
+                        grammatikFraga = new FragaSvar();
+                        grammatikFraga = gf.PronomenBasPersonliga(proForNow);
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    //possessiva
+                    else if (randProFraga == 2)
+                    {
+                        pronomen proForNow = new pronomen();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand.Next(1, 30);
+                                proForNow = allProList.SingleOrDefault(a => a.Id == randomId);
+                                if (proForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allProList.Remove(proForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
+                        grammatikFraga = new FragaSvar();
+                        grammatikFraga = gf.PronomenBasPossessiva(proForNow);
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    else
+                    {
+                        //något felmeddelande
+                    }
+                }
+                //adjektiv
+                else if (randOrdklass == 3)
+                {
+                    int randAdjFraga = rand.Next(1, 4);
+
+                    //komparera positiv
+                    if (randAdjFraga == 1)
+                    {
+                        adjektiv adjForNow = new adjektiv();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand.Next(1, 60);
+                                adjForNow = allAdjList.SingleOrDefault(a => a.Id == randomId);
+                                if (adjForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allAdjList.Remove(adjForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
+                        grammatikFraga = new FragaSvar();
+                        grammatikFraga = gf.AdjektivBasPositiv(adjForNow);
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    //komparera komparativ
+                    else if (randAdjFraga == 2)
+                    {
+                        adjektiv adjForNow = new adjektiv();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand.Next(1, 60);
+                                adjForNow = allAdjList.SingleOrDefault(a => a.Id == randomId);
+                                if (adjForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allAdjList.Remove(adjForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
+                        grammatikFraga = new FragaSvar();
+                        grammatikFraga = gf.AdjektivBasKomparativ(adjForNow);
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    //komparera superlativ
+                    else if (randAdjFraga == 3)
+                    {
+                        adjektiv adjForNow = new adjektiv();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand.Next(1, 60);
+                                adjForNow = allAdjList.SingleOrDefault(a => a.Id == randomId);
+                                if (adjForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allAdjList.Remove(adjForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
+                        grammatikFraga = new FragaSvar();
+                        grammatikFraga = gf.AdjektivBasSuperlativ(adjForNow);
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    else
+                    {
+                        //något felmeddelande
+                    }
+                }
+                //verb
+                else if (randOrdklass == 4)
+                {
+                    int randVerbFraga = rand.Next(1, 4);
+
+                    //tema infinitiv
+                    if (randVerbFraga == 1)
+                    {
+                        verb verForNow = new verb();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand.Next(1, 60);
+                                verForNow = allVerList.SingleOrDefault(a => a.Id == randomId);
+                                if (verForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allVerList.Remove(verForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
+                        grammatikFraga = new FragaSvar();
+                        grammatikFraga = gf.VerbBasInfinitiv(verForNow);
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    //tema preteritum
+                    else if (randVerbFraga == 2)
+                    {
+                        verb verForNow = new verb();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand.Next(1, 60);
+                                verForNow = allVerList.SingleOrDefault(a => a.Id == randomId);
+                                if (verForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allVerList.Remove(verForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
+                        grammatikFraga = new FragaSvar();
+                        grammatikFraga = gf.VerbBasPreteritum(verForNow);
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    //tema supinum
+                    else if (randVerbFraga == 3)
+                    {
+                        verb verForNow = new verb();
+                        bool isNull = true;
+
+                        do
+                        {
+                            if (isNull == true)
+                            {
+                                int randomId = rand.Next(1, 60);
+                                verForNow = allVerList.SingleOrDefault(a => a.Id == randomId);
+                                if (verForNow == null)
+                                {
+                                    isNull = true;
+                                }
+                                else
+                                {
+                                    allVerList.Remove(verForNow);
+                                    isNull = false;
+                                }
+                            }
+                        } while (isNull == true);
+
+                        grammatikFraga = new FragaSvar();
+                        grammatikFraga = gf.VerbBasSupinum(verForNow);
+                        grammatikFraga.Nummer = fragaNummer;
+                        fragaSvarList.Add(grammatikFraga);
+                    }
+                    else
+                    {
+                        //något felmeddelande
+                    }
+                }
+                else
+                {
+                    //något felmeddelande
+                }
+            }
+
+            return View(fragaSvarList);
+        }
+
+        public ActionResult Niva0Pdf()
+        {
+            return new Rotativa.ActionAsPdf("Niva0Utskrift");
+        }
+
         public ActionResult Niva1()
         {
             List<FragaSvar> fragaSvarList = new List<FragaSvar>();
