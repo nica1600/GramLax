@@ -2,15 +2,19 @@
 @{
     ViewBag.Title = "Prov";
 }
-<div class="jumbotron">
-    <h1>Prov</h1>
-    <p class="lead">Välj vilken typ av prov du vill skapa eller gå tillbaka till startsidan.</p>
+<div class="jumbotron gl-div-opacity">
+    <div class="col-md-12">
+        <h1>Prov</h1>
+        <p class="lead">Välj vilken typ av prov du vill skapa eller gå tillbaka till startsidan.</p>
+    </div>
     <div class="col-md-12 row">
-        <div class="col-md-6 text-center">
-            <a href="@Url.Action("Index", "Home")" class="btn btn-default btn-block btn-lg">&laquo; Tillbaka</a>
+        <div class="col-md-12 text-left">
+            <a href="@Url.Action("Index", "Home")" class="btn btn-default btn-lg">&laquo; Tillbaka</a>
         </div>
-        <div class="col-md-6 text-center">
-            <a id="mer-info-provniva" class="btn btn-primary btn-block btn-lg" data-toggle="collapse" href="#provinfo" role="button" aria-expanded="false" aria-controls="provinfo">Mer info &raquo;</a>
+    </div><br />
+    <div class="col-md-12 row">
+        <div class="col-md-12 text-center">
+            <a id="mer-info-provniva" class="text-muted btn-lg" data-toggle="collapse" href="#provinfo" role="button" aria-expanded="false" aria-controls="provinfo">Mer info +</a>
         </div>
     </div>
     <div class="collapse" id="provinfo">
@@ -20,45 +24,102 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="col-md-3 text-center">
+<div class="row gl-row gl-div-opacity">
+    <div class="col-md-3 text-left gl-div-black-white">
         <h2>Provnivå: 0</h2>
         <p><a href="@Url.Action("Niva0", "Prov")" class="btn btn-primary btn-block btn-lg">Generera prov &raquo;</a></p>
-        <p><a href="@Url.Action("Niva0Pdf", "Prov")" target="_blank" class="btn-lg">Generera prov till PDF &raquo;</a></p>
-        <h4>
-            Provet består av 15 bas-frågor från blandade ordklasser.<br /><br />
-        </h4>
+        <p><a href="@Url.Action("Niva0Pdf", "Prov")" target="_blank" class="text-primary btn-lg">Generera prov till PDF &raquo;</a></p>
+        <br />
+        <div>
+            <a id="mer-info-provniva0" class="text-muted btn-lg" data-toggle="collapse" href="#provinfo0" role="button" aria-expanded="false" aria-controls="provinfo0">Mer info +</a>
+        </div>
+        <div class="collapse" id="provinfo0">
+            <div class="card card-body text-left">
+                <h4>
+                    Provet består av 15 bas-frågor från blandade ordklasser.<br /><br />
+                </h4>
+            </div>
+        </div>
     </div>
-    <div class="col-md-3 text-center">
+
+    <div class="col-md-3 text-left gl-div-black-white">
         <h2>Provnivå: 1</h2>
         <p><a href="@Url.Action("Niva1", "Prov")" class="btn btn-success btn-block btn-lg">Generera prov &raquo;</a></p>
-        <p><a href="@Url.Action("Niva1Pdf", "Prov")" target="_blank" class="btn-lg">Generera prov till PDF &raquo;</a></p>
-        <h4>
-            Provet består av 15 lätta frågor från blandade ordklasser.<br /><br />
-        </h4>
+        <p><a href="@Url.Action("Niva1Pdf", "Prov")" target="_blank" class="text-primary btn-lg">Generera prov till PDF &raquo;</a></p>
+        <br />
+        <div>
+            <a id="mer-info-provniva1" class="text-muted btn-lg" data-toggle="collapse" href="#provinfo1" role="button" aria-expanded="false" aria-controls="provinfo1">Mer info +</a>
+        </div>
+        <div class="collapse" id="provinfo1">
+            <div class="card card-body">
+                <h4>
+                    Provet består av 15 lätta frågor från blandade ordklasser.<br /><br />
+                </h4>
+            </div>
+        </div>
     </div>
-    <div class="col-md-3 text-center">
+    <div class="col-md-3 text-left gl-div-black-white">
         <h2>Provnivå: 2</h2>
         <p><a href="@Url.Action("Niva2", "Prov")" class="btn btn-warning btn-block btn-lg">Generera prov &raquo;</a></p>
-        <p><a href="@Url.Action("Niva2Pdf", "Prov")" target="_blank" class="btn-lg">Generera prov till PDF &raquo;</a></p>
-        <h4>
-            Provet består av 8 lätta och 7 medelsvåra frågor från blandade ordklasser.
-        </h4>
+        <p><a href="@Url.Action("Niva2Pdf", "Prov")" target="_blank" class="text-primary btn-lg">Generera prov till PDF &raquo;</a></p>
+        <br />
+        <div>
+            <a id="mer-info-provniva2" class="text-muted btn-lg" data-toggle="collapse" href="#provinfo2" role="button" aria-expanded="false" aria-controls="provinfo2">Mer info +</a>
+        </div>
+        <div class="collapse" id="provinfo2">
+            <div class="card card-body">
+                <h4>
+                    Provet består av 8 lätta och 7 medelsvåra frågor från blandade ordklasser.
+                </h4>
+            </div>
+        </div>
     </div>
-    <div class="col-md-3 text-center">
+    <div class="col-md-3 text-left gl-div-black-white">
         <h2>Provnivå: 3</h2>
         <p><a href="@Url.Action("Niva3", "Prov")" class="btn btn-danger btn-block btn-lg">Generera prov &raquo;</a></p>
-        <p><a href="@Url.Action("Niva3Pdf", "Prov")" target="_blank" class="btn-lg">Generera prov till PDF &raquo;</a></p>
-        <h4>
-            Provet består av 6 lätta, 5 medelsvåra och 4 svåra frågor från blandade ordklasser.
-        </h4>
+        <p><a href="@Url.Action("Niva3Pdf", "Prov")" target="_blank" class="text-primary btn-lg">Generera prov till PDF &raquo;</a></p>
+        <br />
+        <div>
+            <a id="mer-info-provniva3" class="text-muted btn-lg" data-toggle="collapse" href="#provinfo3" role="button" aria-expanded="false" aria-controls="provinfo3">Mer info +</a>
+        </div>
+        <div class="collapse" id="provinfo3">
+            <div class="card card-body">
+                <h4>
+                    Provet består av 6 lätta, 5 medelsvåra och 4 svåra frågor från blandade ordklasser.
+                </h4>
+            </div>
+        </div>
     </div>
 </div>
 
 <script>
-    $('#mer-info-provniva').click(function () { 
+    $('#mer-info-provniva').click(function () {
         $(this).text(function (i, old) {
-            return old == 'Dölj info »' ? 'Mer info »' : 'Dölj info »';
+            return old == 'Dölj info -' ? 'Mer info +' : 'Dölj info -';
+        });
+    });
+
+    $('#mer-info-provniva0').click(function () {
+        $(this).text(function (i, old) {
+            return old == 'Dölj info -' ? 'Mer info +' : 'Dölj info -';
+        });
+    });
+
+    $('#mer-info-provniva1').click(function () {
+        $(this).text(function (i, old) {
+            return old == 'Dölj info -' ? 'Mer info +' : 'Dölj info -';
+        });
+    });
+
+    $('#mer-info-provniva2').click(function () {
+        $(this).text(function (i, old) {
+            return old == 'Dölj info -' ? 'Mer info +' : 'Dölj info -';
+        });
+    });
+
+    $('#mer-info-provniva3').click(function () {
+        $(this).text(function (i, old) {
+            return old == 'Dölj info -' ? 'Mer info +' : 'Dölj info -';
         });
     });
 </script>

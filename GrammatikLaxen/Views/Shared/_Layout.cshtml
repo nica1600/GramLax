@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/Site.css">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -32,7 +33,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Niklas Carlsson</p>
+            <h4 class="gl-text-black">&copy; @DateTime.Now.Year - Niklas Carlsson</h4>
         </footer>
     </div>
 

@@ -2,22 +2,26 @@
 @{
     ViewBag.Title = "Provnivå: 2";
 }
-<div class="jumbotron">
-    <h1>Provnivå: 2</h1>
-    <p class="lead">
-        Provet genereras slumpvis så om du inte är nöjd välj "Generera nytt" för att skapa ett nytt prov eller "Tillbaka" för att skapa en annan typ av prov.
-    </p>
+<div class="jumbotron gl-div-opacity">
+    <div class="col-md-12">
+        <h1>Provnivå: 2</h1>
+        <p class="lead">
+            Provet genereras slumpvis så om du inte är nöjd välj "Generera nytt" för att skapa ett nytt prov eller "Tillbaka" för att skapa en annan typ av prov.
+        </p>
+    </div>
     <div class="col-md-12 row">
-        <div class="col-md-6 text-center">
-            <a href="@Url.Action("Index", "Prov")" class="btn btn-default btn-block btn-lg">&laquo; Tillbaka</a>
+        <div class="col-md-6 text-left">
+            <a href="@Url.Action("Index", "Prov")" class="btn btn-default btn-lg">&laquo; Tillbaka</a>
         </div>
-        <div class="col-md-6 text-center">
-            <a href="@Url.Action("Niva2", "Prov")" class="btn btn-warning btn-block btn-lg">Generera nytt &raquo;</a>
+    </div><br />
+    <div class="col-md-12 row">
+        <div class="col-md-12 text-center">
+            <a href="@Url.Action("Niva2", "Prov")" class="text-primary btn-lg">Generera nytt &raquo;</a>
         </div>
     </div>
 </div>
 
-<div role="tabpanel" class="col-md-12">
+<div role="tabpanel" class="col-md-12 gl-div-black-white gl-div-opacity">
     <!-- Nav tabs -->
     <ul class="nav nav-tabs">
         <li>

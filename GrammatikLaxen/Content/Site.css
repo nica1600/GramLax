@@ -1,4 +1,7 @@
 ﻿body {
+    background-image: url(img/coffee-2306471_1920.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -21,4 +24,25 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+.gl-row {
+    padding-right: 14px;
+    padding-left: 14px;
+}
+
+.gl-div-black-white {
+    border: 10px solid black;
+    border-radius: 0px;
+    padding-bottom: 20px;
+    background-color: black;
+    color: #777777;
+}
+
+.gl-div-opacity {
+    opacity: 0.9;
+}
+
+.gl-text-black {
+    color: white;
 }
