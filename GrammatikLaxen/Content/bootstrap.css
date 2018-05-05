@@ -4501,10 +4501,11 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse {
-  /*background-color: #222222;
+    /*background-color: #222222;
   border-color: #080808;*/
-  background-color: black;
-  border-color: black;
+    /*background-color: black;*/
+    /*border-color: black;*/
+    background: linear-gradient(#070707, #302f2f);
 }
 
 .navbar-inverse .navbar-brand {

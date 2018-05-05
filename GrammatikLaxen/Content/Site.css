@@ -26,6 +26,28 @@ textarea {
     max-width: 280px;
 }
 
+/* stroke */
+div.gl-navbar ul li a {
+    position: relative;
+}
+
+    div.gl-navbar ul li a:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0%;
+        content: '.';
+        color: transparent;
+        background: #aaa;
+        height: 1px;
+    }
+
+    div.gl-navbar ul li a:hover:after {
+        width: 100%;
+    }
+
 .gl-row {
     padding-right: 14px;
     padding-left: 14px;
@@ -41,8 +63,20 @@ textarea {
 
 .gl-div-opacity {
     opacity: 0.9;
+    /*background: rgba(0,0,0,0.9);*/
 }
+
+/*.gl-div-no-opacity {
+    background: rgba(0,0,0,1.0);
+}*/
 
 .gl-text-black {
     color: white;
 }
+
+.gl-button {
+    border-radius: 0px;
+}
+    .gl-button:hover {
+        transform: scale(1.02);
+    }
