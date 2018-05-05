@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Om";
+}
+
+<div class="jumbotron gl-div-opacity">
+    <div class="col-md-12">
+        <h1>Om</h1>
+        @*<p class="lead">Välj vilken typ av prov du vill skapa eller gå tillbaka till startsidan.</p>*@
+    </div>
+    <div class="col-md-12 row">
+        <div class="col-md-12 text-left">
+            <a href="@Url.Action("Index", "Home")" class="btn btn-default btn-lg gl-button">&laquo; Tillbaka</a>
+        </div>
+    </div><br />
+    <div class="col-md-12 row">
+        <div class="col-md-12 text-center">
+            <a id="mer-info-provniva" class="text-muted btn-lg" data-toggle="collapse" href="#provinfo" role="button" aria-expanded="false" aria-controls="provinfo">Mer info +</a>
+        </div>
+    </div>
+    <div class="collapse" id="provinfo">
+        <div class="card card-body">
+            @Html.Partial("_Om")
+        </div>
+    </div>
+</div>

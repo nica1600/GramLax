@@ -1,18 +1,52 @@
 ﻿@{
     ViewBag.Title = "Om";
 }
-<h2>@ViewBag.Title</h2>
+<div class="jumbotron gl-div-opacity">
+    <div class="col-md-12">
+        <h1>Om</h1>
+        <p class="lead">Skapad av Niklas Carlsson, legitimerad lärare och systemutvecklare.</p>
+    </div>
+    <div class="col-md-12 row">
+        <div class="col-md-12 text-left">
+            <a href="@Url.Action("Index", "Home")" class="btn btn-default btn-lg gl-button">&laquo; Tillbaka</a>
+        </div>
+    </div><br />
+    <div class="col-md-12 row">
+        <div class="col-md-12 text-center">
+            <a id="mer-info-om" class="text-muted btn-lg" data-toggle="collapse" href="#ominfo" role="button" aria-expanded="false" aria-controls="ominfo">Mer info +</a>
+        </div>
+    </div>
+    <div class="collapse" id="ominfo">
+        <div class="card card-body">
+            <p class="lead">
+                Den här webbplatsen kommer ur ett stort intresse för grammatik, systemutveckling och effektivisering!
+            </p>
+            <p class="lead">
+                Idén har funnits länge men först under VT2018 kom arbetet igång då jag fick klartecken att använda idén till mitt examensarbete i
+                informatik med inriktning systemutveckling vid Mittuniversitetet.
+            </p>
+            <p class="lead">
+                Förhoppningen är att den här webbplatsen ska vara ett stöd för alla som vill eller har behov av att utvecklas i svensk grammatik och den riktar sig därför
+                i huvudsak till elever, studenter och lärare i svenska, svenska som andraspråk (SVA) och svenska för invandrare (SFI).
+            </p>
 
-<p>
-    Grammatik-laxen är en webbplats skapad av Niklas Carlsson för att hjälpa elever, 
-    lärare och alla som är intresserade med grammatik-undervisningen i svenska, 
-    svenska som andraspråk (SVA) och svenska för invandrare (SFI).
-</p>
-<p>
-    På den här sidan kan du lära dig mer om grammatik men även få hjälp med att ta fram prov
-    (om du är lärare eller elev som behöver något att träna på) eller göra roliga övningar
-    för att testa dina kunskaper i grammatik.
-</p>
-<p>
-    Lycka till!
-</p>
+            <p class="lead">
+                Men oavsett vem du är så hoppas jag att du ska upptäcka det lustfyllda i grammatik och ha en trevlig vistelse här!
+            </p>
+            <p class="lead">
+                Välkommen!
+            </p>
+            <p class="lead">
+                PS: Om du hittar några buggar eller felaktigheter på webbplatsen så får du gärna kontakta mig! Kontaktuppgifter finner du under "Kontakt".
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('#mer-info-om').click(function () {
+        $(this).text(function (i, old) {
+            return old == 'Dölj info -' ? 'Mer info +' : 'Dölj info -';
+        });
+    });
+</script>
