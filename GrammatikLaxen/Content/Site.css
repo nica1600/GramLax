@@ -107,3 +107,26 @@ div.gl-navbar ul li a {
 .gl-a-prov:hover {
     color: black;
 }
+
+/*kör över bootstrap*/
+.navbar-inverse {
+    background: linear-gradient(#070707, #302f2f);
+}
+
+/*kör över bootstrap*/
+.jumbotron {
+    padding: 30px;
+    margin-bottom: 30px;
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 2.1428571435;
+    /*color: inherit;*/
+    /*background-color: #eeeeee;*/
+    background-color: black;
+    color: #777777;
+}
+
+/*kör över bootstrap*/
+.nav-tabs {
+    /*border-bottom: 1px solid #dddddd;*/
+}
