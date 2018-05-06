@@ -743,7 +743,6 @@ namespace GrammatikLaxen.Controllers
 
         public ActionResult Niva0Pdf()
         {
-            var model = new FragaSvar();
             return new Rotativa.ActionAsPdf("Niva0") { FileName = "GrammatikProvNiva0.pdf" };
         }
 
