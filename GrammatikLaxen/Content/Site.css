@@ -92,8 +92,8 @@ div.gl-navbar ul li a {
     color: white;
 }
 
-.gl-a-generera, 
-.gl-a-generera:link, 
+.gl-a-generera,
+.gl-a-generera:link,
 .gl-a-generera:hover,
 .gl-a-generera:active,
 .gl-a-generera:visited {
@@ -104,9 +104,9 @@ div.gl-navbar ul li a {
     color: white;
 }
 
-.gl-a-prov:hover {
-    color: black;
-}
+    .gl-a-prov:hover {
+        color: black;
+    }
 
 /*kör över bootstrap*/
 .navbar-inverse {
@@ -124,6 +124,7 @@ div.gl-navbar ul li a {
     /*background-color: #eeeeee;*/
     background-color: black;
     color: #777777;
+    border-radius: 0px;
 }
 
 /*kör över bootstrap*/
@@ -133,5 +134,44 @@ div.gl-navbar ul li a {
 
 /*kör över bootstrap*/
 .nav-tabs {
-    border-bottom: 0px;
+    /*border-bottom: 1px solid #dddddd;*/
 }
+
+    .nav-tabs > li {
+        float: left;
+        margin-bottom: -1px;
+    }
+
+        .nav-tabs > li > a {
+            margin-right: 2px;
+            line-height: 1.428571429;
+            border: 1px solid transparent;
+            border-radius: 0;
+        }
+
+            .nav-tabs > li > a:hover {
+                border-color: #eeeeee #eeeeee #dddddd;
+            }
+
+        .nav-tabs > li.active > a,
+        .nav-tabs > li.active > a:hover,
+        .nav-tabs > li.active > a:focus {
+            color: #555555;
+            cursor: default;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            border-bottom-color: transparent;
+        }
+
+    .nav-tabs.nav-justified {
+        width: 100%;
+        border-bottom: 0;
+    }
+
+        .nav-tabs.nav-justified > li {
+            float: none;
+        }
+
+            .nav-tabs.nav-justified > li > a {
+                text-align: center;
+            }
