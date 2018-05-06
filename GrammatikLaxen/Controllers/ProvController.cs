@@ -738,7 +738,8 @@ namespace GrammatikLaxen.Controllers
                 }
             }
 
-            return View(fragaSvarList);
+            //return View(fragaSvarList);
+            return new Rotativa.ViewAsPdf(fragaSvarList);
         }
 
         public ActionResult Niva0Pdf()
