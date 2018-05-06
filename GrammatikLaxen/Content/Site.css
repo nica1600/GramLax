@@ -127,6 +127,11 @@ div.gl-navbar ul li a {
 }
 
 /*kör över bootstrap*/
+.container .jumbotron {
+    border-radius: 0px;
+}
+
+/*kör över bootstrap*/
 .nav-tabs {
-    /*border-bottom: 1px solid #dddddd;*/
+    border-bottom: 0px;
 }
