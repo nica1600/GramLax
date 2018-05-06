@@ -1,25 +1,101 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Grammatik-laxen";
 }
 
-<div class="jumbotron">
-    <h1>Grammatik-laxen</h1>
-    <p class="lead">Välkommen till grammatik-laxen! Sidan där du kan lära dig mer om grammatik och få hjälp i undervisningen (både som lärare och elev).</p>
-    <p>
-        <a href="@Url.Action("About", "Home")" class="btn btn-primary btn-lg">Berätta mer &raquo;</a>
-    </p>
+<div class="jumbotron gl-div-opacity">
+    <div class="col-md-12">
+        <h1>Grammatik-laxen</h1>
+        <p class="lead">Din virtuella grammatik-assistent!</p>
+    </div>
+    <div class="col-md-12 row">
+        <div class="col-md-12 text-center">
+            <a id="mer-info-om" class="text-muted btn-lg gl-a-color" data-toggle="collapse" href="#om" role="button" aria-expanded="false" aria-controls="om">Mer info +</a>
+        </div>
+    </div>
+    <div class="collapse" id="kontakt">
+        <div class="card card-body">
+            @Html.Partial("_Kontakt")
+        </div>
+    </div>
+    <div class="collapse" id="om">
+        <div class="card card-body">
+            @Html.Partial("_Om")
+        </div>
+    </div>
 </div>
 
-<div class="row">
-    <div class="col-md-4 text-center">
-        <p><a href="@Url.Action("Index", "Prov")" class="btn btn-primary btn-block btn-lg" title="Vill du lära dig mer om grammatik?">Till grammatik &raquo;</a></p>
+<div class="row gl-row gl-div-opacity">
+    <div class="col-md-4 text-left gl-div-black-white">
+        <h2>Plugga</h2>
+        <p><a href="@Url.Action("Index", "Grammatik")" class="btn btn-success btn-block btn-lg gl-button" title="Vill du lära dig mer om grammatik?">Ordklasser &raquo;</a></p>
+        <br />
+        <div>
+            <a id="mer-info-plugga" class="text-muted btn-lg gl-a-color" data-toggle="collapse" href="#plugga" role="button" aria-expanded="false" aria-controls="plugga">Mer info +</a>
+        </div>
+        <div class="collapse" id="plugga">
+            <div class="card card-body">
+                <h4>
+                    Här hittar du information om de olika ordklasserna.
+                </h4>
+            </div>
+        </div>
     </div>
 
-    <div class="col-md-4 text-center">
-        <p><a href="@Url.Action("Index", "Prov")" class="btn btn-primary btn-block btn-lg" title="Vill du utmana dina kunskaper i grammatik?">Till spel &raquo;</a></p>
+    <div class="col-md-4 text-left gl-div-black-white">
+        <h2>Träna</h2>
+        <p><a href="@Url.Action("Index", "Spel")" class="btn btn-warning btn-block btn-lg gl-button" title="Vill du utmana dina kunskaper i grammatik?">Spelet &raquo;</a></p>
+        <br />
+        <div>
+            <a id="mer-info-trana" class="text-muted btn-lg gl-a-color" data-toggle="collapse" href="#trana" role="button" aria-expanded="false" aria-controls="trana">Mer info +</a>
+        </div>
+        <div class="collapse" id="trana">
+            <div class="card card-body">
+                <h4>
+                    Här kan du träna dina kunskaper med ett grammatik-spel.
+                </h4>
+            </div>
+        </div>
     </div>
 
-    <div class="col-md-4 text-center">
-        <p><a href="@Url.Action("Index", "Prov")" class="btn btn-primary btn-block btn-lg" title="Vill du ha hjälp att ta fram ett prov?">Till prov &raquo;</a></p>
+    <div class="col-md-4 text-left gl-div-black-white">
+        <h2>Testa</h2>
+        <p><a href="@Url.Action("Index", "Prov")" class="btn btn-danger btn-block btn-lg gl-button" title="Vill du ha hjälp att ta fram ett prov?">Proven &raquo;</a></p>
+        <br />
+        <div>
+            <a id="mer-info-testa" class="text-muted btn-lg gl-a-color" data-toggle="collapse" href="#testa" role="button" aria-expanded="false" aria-controls="testa">Mer info +</a>
+        </div>
+        <div class="collapse" id="testa">
+            <div class="card card-body">
+                <h4>
+                    Här kan du ta fram slumpmässigt genererade prov med facit på olika svårighetsnivåer.
+                </h4>
+                <h4>
+                    Den här delen riktar sig lite mer mot lärare.
+                </h4>
+            </div>
+        </div>
     </div>
 </div>
+
+<script>
+    $('#mer-info-om').click(function () {
+        $(this).text(function (i, old) {
+            return old == 'Dölj info -' ? 'Mer info +' : 'Dölj info -';
+        });
+    });
+    $('#mer-info-plugga').click(function () {
+        $(this).text(function (i, old) {
+            return old == 'Dölj info -' ? 'Mer info +' : 'Dölj info -';
+        });
+    });
+    $('#mer-info-trana').click(function () {
+        $(this).text(function (i, old) {
+            return old == 'Dölj info -' ? 'Mer info +' : 'Dölj info -';
+        });
+    });
+    $('#mer-info-testa').click(function () {
+        $(this).text(function (i, old) {
+            return old == 'Dölj info -' ? 'Mer info +' : 'Dölj info -';
+        });
+    });
+</script>

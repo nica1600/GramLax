@@ -67,6 +67,13 @@ namespace GrammatikLaxen.Data
             return pronomenList.ToList();
         }
 
+        // Hämta alla medelsvåra pronomen (reflexiva possessiva, demonstrativa1, demonstrativa2) från databasen
+        public List<pronomen> GetAllPronomenMedelsvaraList()
+        {
+            var pronomenList = db.pronomen.Where(p => p.reflexiva_possessiva == true && p.demonstrativa == true && p.demonstrativa_2 == true);
+            return pronomenList.ToList();
+        }
+
         // Hämta slumpmässigt pronomen
         public pronomen GetRandomPronomen()
         {
@@ -139,6 +146,13 @@ namespace GrammatikLaxen.Data
             return verbList.ToList();
         }
 
+        // Hämta alla svåra verb från databasen
+        public List<verb> GetAllVerbSvarList()
+        {
+            var verbList = db.verb.Where(a => a.particip == true);
+            return verbList.ToList();
+        }
+
         // Hämta slumpmässigt verb
         public verb GetRandomVerb()
         {
@@ -179,6 +193,13 @@ namespace GrammatikLaxen.Data
         public List<adverb> GetAllAdverbRenLattList()
         {
             var adverbList = db.adverb.Where(b => b.ren == true && b.gradadverb == false && b.orsaksadverb == false && b.satsadverb == false);
+            return adverbList.ToList();
+        }
+
+        // Hämta alla medelsvåra adverb från databasen
+        public List<adverb> GetAllAdverbMedelsvaraList()
+        {
+            var adverbList = db.adverb.Where(a => a.gradadverb == true || a.orsaksadverb == true || a.relativa_adverb == true || a.satsadverb == true);
             return adverbList.ToList();
         }
 
@@ -280,7 +301,7 @@ namespace GrammatikLaxen.Data
             var konjunktionList = db.konjunktion;
             return konjunktionList.ToList();
         }
-
+        
         // Hämta slumpmässig konjunktion
         public konjunktion GetRandomKonjunktion()
         {

@@ -1,0 +1,11 @@
+﻿@model List<GrammatikLaxen.Models.FragaSvar>
+
+<div class="well">
+    @foreach (var fragaSvar in Model)
+    {
+        <p>
+            @fragaSvar.Nummer @fragaSvar.Fraga<br />
+            <strong>Ditt svar: </strong>
+        </p>
+    }
+</div>
