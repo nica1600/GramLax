@@ -2623,7 +2623,10 @@ namespace GrammatikLaxen.Controllers
 
         public ActionResult Niva1Pdf()
         {
-            return new ActionAsPdf("Niva1Utskrift");
+            return new ActionAsPdf("Niva1Utskrift")
+            {
+                FileName = Server.MapPath("~Content/Grammatikprov.pdf")
+            };
         }
 
         public ActionResult Niva2()
