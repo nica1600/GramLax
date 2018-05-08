@@ -1,9 +1,16 @@
 ﻿body {
+    background-color: black;
     background-image: url(img/coffee-2306471_1920.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     padding-top: 50px;
     padding-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        background-repeat: repeat;
+    }
 }
 
 /* Set padding to keep content from hitting the edges */
