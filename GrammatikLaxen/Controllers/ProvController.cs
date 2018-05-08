@@ -2623,7 +2623,7 @@ namespace GrammatikLaxen.Controllers
 
         public ActionResult Niva1Pdf()
         {
-            return new Rotativa.ActionAsPdf("Niva1Utskrift");
+            return new ActionAsPdf("Niva1Utskrift");
         }
 
         public ActionResult Niva2()
