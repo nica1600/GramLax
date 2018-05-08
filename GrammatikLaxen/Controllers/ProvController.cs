@@ -382,6 +382,7 @@ namespace GrammatikLaxen.Controllers
             return View(fragaSvarList);
         }
 
+        // Behöver utöka Azure-plan för att dessa ska fungera (bortkommenterad på Prov/index sålänge)
         public ActionResult Niva0Utskrift()
         {
             List<FragaSvar> fragaSvarList = new List<FragaSvar>();
@@ -741,7 +742,7 @@ namespace GrammatikLaxen.Controllers
 
             return View(fragaSvarList);
         }
-
+        // Behöver utöka Azure-plan för att dessa ska fungera (bortkommenterad på Prov/index sålänge)
         public ActionResult Niva0Pdf()
         {
             return new Rotativa.ActionAsPdf("Niva0Utskrift");
@@ -1683,7 +1684,8 @@ namespace GrammatikLaxen.Controllers
             
             return View(fragaSvarList);
         }
-        
+
+        // Behöver utöka Azure-plan för att dessa ska fungera (bortkommenterad på Prov/index sålänge)
         public ActionResult Niva1Utskrift()
         {
             List<FragaSvar> fragaSvarList = new List<FragaSvar>();
@@ -2620,7 +2622,7 @@ namespace GrammatikLaxen.Controllers
 
             return View(fragaSvarList);
         }
-
+        // Behöver utöka Azure-plan för att dessa ska fungera (bortkommenterad på Prov/index sålänge)
         public ActionResult Niva1Pdf()
         {
             return new Rotativa.ActionAsPdf("Niva1Utskrift");
@@ -4286,6 +4288,7 @@ namespace GrammatikLaxen.Controllers
             return View(fragaSvarList);
         }
 
+        // Behöver utöka Azure-plan för att dessa ska fungera (bortkommenterad på Prov/index sålänge)
         public ActionResult Niva2Utskrift()
         {
             List<FragaSvar> fragaSvarList = new List<FragaSvar>();
@@ -5945,7 +5948,7 @@ namespace GrammatikLaxen.Controllers
 
             return View(fragaSvarList);
         }
-
+        // Behöver utöka Azure-plan för att dessa ska fungera (bortkommenterad på Prov/index sålänge)
         public ActionResult Niva2Pdf()
         {
             return new Rotativa.ActionAsPdf("Niva2Utskrift");
@@ -7915,6 +7918,7 @@ namespace GrammatikLaxen.Controllers
             return View(fragaSvarList);
         }
 
+        // Behöver utöka Azure-plan för att dessa ska fungera (bortkommenterad på Prov/index sålänge)
         public ActionResult Niva3Utskrift()
         {
             List<FragaSvar> fragaSvarList = new List<FragaSvar>();
@@ -9878,7 +9882,7 @@ namespace GrammatikLaxen.Controllers
 
             return View(fragaSvarList);
         }
-
+        // Behöver utöka Azure-plan för att dessa ska fungera (bortkommenterad på Prov/index sålänge)
         public ActionResult Niva3Pdf()
         {
             return new Rotativa.ActionAsPdf("Niva3Utskrift");
