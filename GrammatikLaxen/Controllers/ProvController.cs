@@ -8,7 +8,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Rotativa;
-using RotativaHQ;
 
 namespace GrammatikLaxen.Controllers
 {
@@ -745,7 +744,7 @@ namespace GrammatikLaxen.Controllers
 
         public ActionResult Niva0Pdf()
         {
-            return new Rotativa.ActionAsPdf("Niva0") { FileName = "GrammatikProvNiva0.pdf" };
+            return new Rotativa.ActionAsPdf("Niva0Utskrift");
         }
 
         public ActionResult Niva1()
@@ -2624,10 +2623,7 @@ namespace GrammatikLaxen.Controllers
 
         public ActionResult Niva1Pdf()
         {
-            return new ActionAsPdf("Niva1Utskrift")
-            {
-                FileName = Server.MapPath("~Content/Grammatikprov.pdf")
-            };
+            return new Rotativa.ActionAsPdf("Niva1Utskrift");
         }
 
         public ActionResult Niva2()
