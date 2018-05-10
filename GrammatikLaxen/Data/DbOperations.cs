@@ -11,6 +11,13 @@ namespace GrammatikLaxen.Data
         private gramLaDatEntities2 db = new gramLaDatEntities2();
         Random randX = new Random();
 
+        // Hämta top10 resultat, spel
+        public List<toppresultat> GetTop10List()
+        {
+            var resultatList = db.toppresultat.OrderByDescending(a => a.resultat).Take(10);
+            return resultatList.ToList();
+        }
+
         // Hämta alla ordklasser från databasen
         public List<ordklasser> GetAllOrdklasserList()
         {

@@ -8,6 +8,7 @@ namespace GrammatikLaxen.Data
 {
     interface IDbOperations
     {
+        List<toppresultat> GetTop10List();
         List<ordklasser> GetAllOrdklasserList();
         List<substantiv> GetAllSubstantivList();
         substantiv GetRandomSubstantiv();

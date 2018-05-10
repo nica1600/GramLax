@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GrammatikLaxen.Data;
+using GrammatikLaxen.Models.db;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +10,14 @@ namespace GrammatikLaxen.Controllers
 {
     public class SpelController : Controller
     {
+        DbOperations db = new DbOperations();
+
         // GET: Spel
         public ActionResult Index()
         {
-            return View();
+            List<toppresultat> allTopList = db.GetTop10List();
+
+            return View(allTopList);
         }
     }
 }

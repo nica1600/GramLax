@@ -1,0 +1,16 @@
+﻿@model List<GrammatikLaxen.Models.db.toppresultat>
+<table class="table-bordered">
+    <tr>
+        <th>Resultat</th>
+        <th>Spelare</th>
+        <th>Datum</th>
+    </tr>
+    @foreach (var topp in Model)
+    {
+        <tr>
+            <td>@topp.resultat</td>
+            <td>@topp.initialer</td>
+            <td>@topp.datum</td>
+        </tr>
+    }
+</table>
