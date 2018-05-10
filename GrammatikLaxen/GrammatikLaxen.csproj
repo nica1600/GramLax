@@ -309,6 +309,8 @@
     <Content Include="Views\Grammatik\Index.cshtml" />
     <Content Include="Views\Prov\Niva0Utskrift.cshtml" />
     <Content Include="Views\Spel\_ToppLista.cshtml" />
+    <Content Include="Views\Spel\_Spelet.cshtml" />
+    <Content Include="Views\Spel\Spelet.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

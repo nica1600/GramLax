@@ -1,0 +1,16 @@
+﻿@model GrammatikLaxen.Models.FragaSvar
+@{
+    ViewBag.Title = "Spelet";
+}
+<div class="jumbotron gl-div-opacity">
+    <div class="col-md-12 row">
+        <div class="col-md-12 text-left">
+            <a href="@Url.Action("Index", "Spel")" class="btn btn-danger btn-lg gl-button">&laquo; Avbryt</a>
+        </div>
+    </div><br />
+    <div class="col-md-12 text-center">
+        @Html.Partial("_Spelet")<br />
+        @Html.TextBox("svar")<br />
+        <a href="@Url.Action("Spelet", "Spel")" class="btn btn-primary btn-lg gl-button">Svara  &raquo;</a>
+    </div>
+</div>

@@ -1,15 +1,15 @@
-﻿
+﻿@model List<GrammatikLaxen.Models.db.toppresultat>
 @{
-    ViewBag.Title = "Spel";
+    ViewBag.Title = "Topplista";
 }
 <div class="jumbotron gl-div-opacity">
     <div class="col-md-12 row">
         <div class="col-md-12 text-left">
-            <a href="@Url.Action("Index", "Home")" class="btn btn-default btn-lg gl-button">&laquo; Tillbaka</a>
+            <a href="@Url.Action("Index", "Home")" class="btn btn-danger btn-lg gl-button">&laquo; Avbryt</a>
         </div>
     </div><br />
-    <div class="col-md-12">
-        @Html.Partial("_ToppLista")
+    <div class="col-md-12 text-center">
+        @Html.Partial("_ToppLista")<br />
+        <a href="@Url.Action("Spelet", "Spel")" class="btn btn-primary btn-lg gl-button">Starta spelet  &raquo;</a>
     </div>
 </div>
-
