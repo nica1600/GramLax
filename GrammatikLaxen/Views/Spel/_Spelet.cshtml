@@ -1,8 +1,57 @@
 ﻿@model GrammatikLaxen.Models.FragaSvar
 
-@*@foreach (var fraga in Model)
-{
-    @fraga.Fraga
-}*@
 
 @Model.Fraga
+
+<div class="hidden">
+    <p id="svar1">@Model.Svar1</p>
+    <p id="svar2">@Model.Svar2</p>
+    <p id="svar3">@Model.Svar3</p>
+    <p id="svar4">@Model.Svar4</p>
+    <p id="svar5">@Model.Svar5</p>
+    <p id="svar6">@Model.Svar6</p>
+    <p id="svar7">@Model.Svar7</p>
+    <p id="svar8">@Model.Svar8</p>
+</div>
+
+@*<p id="dittSvar" class="text-primary">Ditt svar:</p>
+
+<p id="rattSvarTom" class="text-success">Rätt svar:</p>
+<p id="rattSvar" class="text-success hidden">
+    Rätt svar: @Model.Svar1
+    @if (Model.Svar2 != Model.Svar1)
+    {
+        <i>, </i> @Model.Svar2
+    }
+    @if (Model.Svar3 != Model.Svar2)
+    {
+        <i>, </i> @Model.Svar3
+    }
+    @if (Model.Svar4 != Model.Svar3)
+    {
+        <i>, </i> @Model.Svar4
+    }
+    @if (Model.Svar5 != Model.Svar4)
+    {
+        <i>, </i> @Model.Svar5
+    }
+    @if (Model.Svar6 != Model.Svar5)
+    {
+        <i>, </i> @Model.Svar6
+    }
+    @if (Model.Svar7 != Model.Svar6)
+    {
+        <i>, </i> @Model.Svar7
+    }
+    @if (Model.Svar8 != Model.Svar7)
+    {
+        <i>, </i> @Model.Svar8
+    }
+</p>
+
+<input type="text" name="svar" id="svar" /><br />
+
+<div class="col-md-12 row">
+    <div class="col-md-6"><a id="svara" href="#" class="btn btn-primary btn-lg gl-button">Svara</a></div>
+    <div class="col-md-6"><a id="nasta" href="#" class="btn btn-default btn-lg gl-button">Nästa fråga &raquo;</a></div>
+</div>*@
