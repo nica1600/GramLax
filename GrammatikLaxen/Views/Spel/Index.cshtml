@@ -1,15 +1,87 @@
 ﻿@model List<GrammatikLaxen.Models.db.toppresultat>
 @{
-    ViewBag.Title = "Topplista";
+    ViewBag.Title = "Spelet";
 }
-<div class="jumbotron gl-div-opacity">
-    <div class="col-md-12 row">
-        <div class="col-md-12 text-left">
-            <a href="@Url.Action("Index", "Home")" class="btn btn-danger btn-lg gl-button">&laquo; Avbryt</a>
+@*<div class="jumbotron gl-div-opacity">
+        <div class="col-md-12 row">
+            <div class="col-md-12 text-left">
+                <a href="@Url.Action("Index", "Home")" class="btn btn-danger btn-lg gl-button">&laquo; Avbryt</a>
+            </div>
+        </div><br />
+        <div class="col-md-12 text-center">
+            @Html.Partial("_ToppLista")<br />
+            <a href="@Url.Action("Spelet", "Spel")" class="btn btn-primary btn-lg gl-button">Starta spelet  &raquo;</a>
         </div>
-    </div><br />
-    <div class="col-md-12 text-center">
-        @Html.Partial("_ToppLista")<br />
-        <a href="@Url.Action("Spelet", "Spel")" class="btn btn-primary btn-lg gl-button">Starta spelet  &raquo;</a>
+    </div>*@
+
+<div class="gl-div-opacity">
+    <div class="gl-div-black-white">
+        <div class="col-md-12">
+            <a href="@Url.Action("Index", "Home")" class="btn btn-danger btn-lg gl-button">&laquo; Avbryt</a>
+        </div><br />
+        <div class="col-md-12 text-center">
+            <h3 id="rakna" class="gl-text-white">Antal besvarade frågor:</h3>
+        </div>
+        <div id="fragan" class="col-md-12 text-center">
+            <div class="row col-md-12 text-center">
+                <!--Partial laddas här-->
+                <!--Nedan tas bort i och med att partial laddas-->
+                <h4><i class="gl-text-black">Hemligt meddelande</i></h4>
+                <h4 class="gl-text-black">Vad är svaret på den stora frågan om livet, universum och allting?</h4>
+                <h4 class="gl-text-black">42</h4>
+                <input type="text" name="svar" class="input-lg" /><br /><br />
+                <div class="col-md-4"></div>
+                <div class="col-md-4"><a href="#" class="btn btn-block btn-lg gl-button andra-id"><i class="gl-text-black">Svara</i></a></div>
+                <div class="col-md-4"></div>
+            </div>
+        </div><br />
+        <div class="col-md-12 text-center">
+            <div class="row col-md-12 text-center">
+                <div class="col-md-4"></div>
+                <div class="col-md-4"><a id="nastaFraga" href="#" class="btn btn-block btn-primary btn-lg gl-button">Starta &raquo;</a></div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
     </div>
 </div>
+
+<script>
+    var raknare = -1;
+    
+    $('#nastaFraga').click(function () {
+        raknare++;
+
+        $(this).text(function () {
+            return "Nästa fråga »";
+        });
+
+        $('#nastaFraga').removeClass(["btn-primary"]);
+        $('#nastaFraga').addClass("btn-default");
+
+        $('#dittSvar').text(function () {
+            return "Ditt svar:";
+        });
+        $('#rattSvar').addClass("hidden");
+        $('#rattSvarTom').removeClass(["hidden"]);
+
+        $.get('@Url.Action("LaddaSpelet", "Spel")', {}, function (response) {
+            $("#fragan").html(response);
+        });
+
+        $('#rakna').text(function () {
+            return "Antal besvarade frågor: " + raknare;
+        });
+    });
+
+
+    //$('#svara').click(function () {
+    //    var svaret = document.getElementById("svar").value;
+
+    //    $('#dittSvar').text(function () {
+    //        return "Ditt svar: " + svaret;
+    //    });
+
+    //    $('#rattSvarTom').addClass("hidden");
+    //    $('#rattSvar').removeClass(["hidden"]);
+    //});
+</script>

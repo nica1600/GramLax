@@ -79,7 +79,7 @@ div.gl-navbar ul li a {
 }*/
 
 .gl-text-black {
-    color: white;
+    color: black;
 }
 
 .gl-button {
@@ -106,6 +106,10 @@ div.gl-navbar ul li a {
 .gl-a-generera:active,
 .gl-a-generera:visited {
     text-decoration: none;
+}
+
+.gl-text-white {
+    color: white;
 }
 
 .gl-a-prov {
