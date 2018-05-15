@@ -55,14 +55,14 @@
             return "Nästa fråga »";
         });
 
-        $('#nastaFraga').removeClass(["btn-primary"]);
+        $('#nastaFraga').removeClass("btn-primary");
         $('#nastaFraga').addClass("btn-default");
 
         $('#dittSvar').text(function () {
             return "Ditt svar:";
         });
         $('#rattSvar').addClass("hidden");
-        $('#rattSvarTom').removeClass(["hidden"]);
+        $('#rattSvarTom').removeClass("hidden");
 
         $.get('@Url.Action("LaddaSpelet", "Spel")', {}, function (response) {
             $("#fragan").html(response);
