@@ -1,64 +1,297 @@
-﻿@model List<GrammatikLaxen.Models.db.toppresultat>
-@{
-    ViewBag.Title = "Spelet";
+﻿@{
+    ViewBag.Title = "Grammatik-spelet";
 }
-
-<div class="gl-div-opacity">
-    <div class="gl-div-black-white">
-        <div class="col-md-12">
-            <a href="@Url.Action("Index", "Home")" class="btn btn-danger btn-lg gl-button">&laquo; Avbryt</a>
-        </div><br />
-        <div class="col-md-12 text-center">
-            <h3 id="rakna" class="gl-text-white">Antal besvarade frågor: 0</h3>
+<div class="jumbotron gl-div-opacity">
+    <div class="col-md-12">
+        <h1>Grammatik-spelet</h1>
+        <p class="lead">Självrättande övningar med ett klick!</p>
+    </div>
+    <div class="col-md-12 row">
+        <div class="col-md-12 text-left">
+            <a href="@Url.Action("Index", "Home")" class="btn btn-default btn-lg gl-button">&laquo; Tillbaka</a>
         </div>
-        <div id="fragan" class="col-md-12 text-center">
-            <div class="row col-md-12 text-center">
-                <!--Partial laddas här-->
-                <!--Nedan tas bort i och med att partial laddas-->
-                <h4><i class="gl-text-black">Hemligt meddelande</i></h4>
-                <h4 class="gl-text-black">Vad är svaret på den stora frågan om livet, universum och allting?</h4>
-                <h4 class="gl-text-black">42</h4>
-                <input type="text" name="svar" class="input-lg" /><br /><br />
-                <div class="col-md-4"></div>
-                <div class="col-md-4"><a href="#" class="btn btn-block btn-lg gl-button andra-id"><i class="gl-text-black">Svara</i></a></div>
-                <div class="col-md-4"></div>
-            </div>
-        </div><br />
+    </div><br />
+    <div class="col-md-12 row">
         <div class="col-md-12 text-center">
-            <div class="row col-md-12 text-center">
-                <div class="col-md-4"></div>
-                <div class="col-md-4"><a id="nastaFraga" href="#" class="btn btn-block btn-primary btn-lg gl-button">Starta &raquo;</a></div>
-                <div class="col-md-4"></div>
-            </div>
-            <div id="skriv-ut">
+            <a id="mer-info-ovningsniva" class="text-muted btn-lg gl-a-color" data-toggle="collapse" href="#provinfo" role="button" aria-expanded="false" aria-controls="provinfo">Mer info +</a>
+        </div>
+    </div>
+    <div class="collapse" id="provinfo">
+        <div class="card card-body">
+            <p class="lead">
+                Övningarna ställer 1 slumpvis genererad fråga åt gången från blandade ordklasser och beroende på vilken spelnivå du väljer så plockas 
+                frågan från olika svårighetsgrader.
+            </p>
+            <p class="lead">
+                <i class="text-primary">"Spelnivå: 0" hämtar frågor på bas-nivå.</i><br />
+                <i class="text-success">"Spelnivå: 1" hämtar frågor på lätt nivå.</i><br />
+                <i class="text-warning">"Spelnivå: 2" hämtar frågor på lätt och medel-nivå.</i><br />
+                <i class="text-danger">"Spelnivå: 3" hämtar frågor på lätt, medel-, och svår nivå.</i><br />
+            </p>
+        </div>
+    </div>
+</div>
 
+<div class="row gl-row gl-div-opacity">
+    <div class="col-md-3 text-left gl-div-black-white">
+        <h2>Spelnivå: 0</h2>
+        <p><a href="@Url.Action("Niva0Spel", "Spel")" class="btn btn-primary btn-block btn-lg gl-button">Till övning &raquo;</a></p>
+        <br />
+        <div>
+            <a id="mer-info-niva0" class="text-muted btn-lg gl-a-color" data-toggle="collapse" href="#provinfo0" role="button" aria-expanded="false" aria-controls="provinfo0">Mer info +</a>
+        </div>
+        <div class="collapse" id="provinfo0">
+            <div class="card card-body text-left">
+                <h4 class="text-primary">Substantiv</h4>
+                <p class="text-primary">Bas: en, ett eller flera</p>
+                <p>Lätta: ordklass, konkreta, abstrakta</p>
+                <p>Medel: nominativ, genus, genitiv</p>
+                <p>Svåra: singular, plural, obestämd, bestämd</p>
+                <h4 class="text-primary">Pronomen</h4>
+                <p class="text-primary">Bas: personliga eller possessiva</p>
+                <p>Lätta: ordklass, personliga, possessiva, reflexiva</p>
+                <p>Medel: reflexiva possessiva, relativa, interrogativa, demonstrativa</p>
+                <p>Svåra: -</p>
+                <h4 class="text-primary">Adjektiv</h4>
+                <p class="text-primary">Bas: komparera</p>
+                <p>Lätta: ordklass, obestämd, bestämd, singular, plural</p>
+                <p>Medel: komparation</p>
+                <p>Svåra: superlativ (attributiv ställning)</p>
+                <h4 class="text-primary">Verb</h4>
+                <p class="text-primary">Bas: tema</p>
+                <p>Lätta: ordklass, tema, huvudverb, hjälpverb, bindeverb</p>
+                <p>Medel: tempus</p>
+                <p>Svåra: particip</p>
+                <h4>Adverb</h4>
+                <p>Bas: -</p>
+                <p>Lätta: ordklass, tidsadverb, rumsadverb, sättsadverb</p>
+                <p>Medel: gradadverb, orsaksadverb, relativa adverb, satsadverb</p>
+                <p>Svåra: -</p>
+                <h4>Preposition</h4>
+                <p>Bas: -</p>
+                <p>Lätta: ordklass</p>
+                <p>Medel: -</p>
+                <p>Svåra: -</p>
+                <h4>Konjunktion</h4>
+                <p>Bas: -</p>
+                <p>Lätta: ordklass</p>
+                <p>Medel: subjunktion</p>
+                <p>Svåra: -</p>
+                <h4>Räkneord</h4>
+                <p>Bas: -</p>
+                <p>Lätta: ordklass, grundtal, ordningstal</p>
+                <p>Medel: -</p>
+                <p>Svåra: -</p>
+                <h4>Interjektion</h4>
+                <p>Bas: -</p>
+                <p>Lätta: ordklass</p>
+                <p>Medel: -</p>
+                <p>Svåra: -</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 text-left gl-div-black-white">
+        <h2>Spelnivå: 1</h2>
+        <p><a href="@Url.Action("Niva1Spel", "Spel")" class="btn btn-success btn-block btn-lg gl-button">Till övning &raquo;</a></p>
+        <br />
+        <div>
+            <a id="mer-info-niva1" class="text-muted btn-lg gl-a-color" data-toggle="collapse" href="#provinfo1" role="button" aria-expanded="false" aria-controls="provinfo1">Mer info +</a>
+        </div>
+        <div class="collapse" id="provinfo1">
+            <div class="card card-body">
+                <h4 class="text-success">Substantiv</h4>
+                <p>Bas: en, ett eller flera</p>
+                <p class="text-success">Lätta: ordklass, konkreta, abstrakta</p>
+                <p>Medel: nominativ, genus, genitiv</p>
+                <p>Svåra: singular, plural, obestämd, bestämd</p>
+                <h4 class="text-success">Pronomen</h4>
+                <p>Bas: personliga eller possessiva</p>
+                <p class="text-success">Lätta: ordklass, personliga, possessiva, reflexiva</p>
+                <p>Medel: reflexiva possessiva, relativa, interrogativa, demonstrativa</p>
+                <p>Svåra: -</p>
+                <h4 class="text-success">Adjektiv</h4>
+                <p>Bas: komparera</p>
+                <p class="text-success">Lätta: ordklass, obestämd, bestämd, singular, plural</p>
+                <p>Medel: komparation</p>
+                <p>Svåra: superlativ (attributiv ställning)</p>
+                <h4 class="text-success">Verb</h4>
+                <p>Bas: tema</p>
+                <p class="text-success">Lätta: ordklass, tema, huvudverb, hjälpverb, bindeverb</p>
+                <p>Medel: tempus</p>
+                <p>Svåra: particip</p>
+                <h4 class="text-success">Adverb</h4>
+                <p>Bas: -</p>
+                <p class="text-success">Lätta: ordklass, tidsadverb, rumsadverb, sättsadverb</p>
+                <p>Medel: gradadverb, orsaksadverb, relativa adverb, satsadverb</p>
+                <p>Svåra: -</p>
+                <h4 class="text-success">Preposition</h4>
+                <p>Bas: -</p>
+                <p class="text-success">Lätta: ordklass</p>
+                <p>Medel: -</p>
+                <p>Svåra: -</p>
+                <h4 class="text-success">Konjunktion</h4>
+                <p>Bas: -</p>
+                <p class="text-success">Lätta: ordklass</p>
+                <p>Medel: subjunktion</p>
+                <p>Svåra: -</p>
+                <h4 class="text-success">Räkneord</h4>
+                <p>Bas: -</p>
+                <p class="text-success">Lätta: ordklass, grundtal, ordningstal</p>
+                <p>Medel: -</p>
+                <p>Svåra: -</p>
+                <h4 class="text-success">Interjektion</h4>
+                <p>Bas: -</p>
+                <p class="text-success">Lätta: ordklass</p>
+                <p>Medel: -</p>
+                <p>Svåra: -</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 text-left gl-div-black-white">
+        <h2>Spelnivå: 2</h2>
+        <p><a href="@Url.Action("Niva2Spel", "Spel")" class="btn btn-warning btn-block btn-lg gl-button">Till övning &raquo;</a></p>
+        <br />
+        <div>
+            <a id="mer-info-niva2" class="text-muted btn-lg gl-a-color" data-toggle="collapse" href="#provinfo2" role="button" aria-expanded="false" aria-controls="provinfo2">Mer info +</a>
+        </div>
+        <div class="collapse" id="provinfo2">
+            <div class="card card-body">
+                <h4 class="text-warning">Substantiv</h4>
+                <p>Bas: en, ett eller flera</p>
+                <p class="text-success">Lätta: ordklass, konkreta, abstrakta</p>
+                <p class="text-warning">Medel: nominativ, genus, genitiv</p>
+                <p>Svåra: singular, plural, obestämd, bestämd</p>
+                <h4 class="text-warning">Pronomen</h4>
+                <p>Bas: personliga eller possessiva</p>
+                <p class="text-success">Lätta: ordklass, personliga, possessiva, reflexiva</p>
+                <p class="text-warning">Medel: reflexiva possessiva, relativa, interrogativa, demonstrativa</p>
+                <p>Svåra: -</p>
+                <h4 class="text-warning">Adjektiv</h4>
+                <p>Bas: komparera</p>
+                <p class="text-success">Lätta: ordklass, obestämd, bestämd, singular, plural</p>
+                <p class="text-warning">Medel: komparation</p>
+                <p>Svåra: superlativ (attributiv ställning)</p>
+                <h4 class="text-warning">Verb</h4>
+                <p>Bas: tema</p>
+                <p class="text-success">Lätta: ordklass, tema, huvudverb, hjälpverb, bindeverb</p>
+                <p class="text-warning">Medel: tempus</p>
+                <p>Svåra: particip</p>
+                <h4 class="text-warning">Adverb</h4>
+                <p>Bas: -</p>
+                <p class="text-success">Lätta: ordklass, tidsadverb, rumsadverb, sättsadverb</p>
+                <p class="text-warning">Medel: gradadverb, orsaksadverb, relativa adverb, satsadverb</p>
+                <p>Svåra: -</p>
+                <h4 class="text-warning">Preposition</h4>
+                <p>Bas: -</p>
+                <p class="text-success">Lätta: ordklass</p>
+                <p>Medel: -</p>
+                <p>Svåra: -</p>
+                <h4 class="text-warning">Konjunktion</h4>
+                <p>Bas: -</p>
+                <p class="text-success">Lätta: ordklass</p>
+                <p class="text-warning">Medel: subjunktion</p>
+                <p>Svåra: -</p>
+                <h4 class="text-warning">Räkneord</h4>
+                <p>Bas: -</p>
+                <p class="text-success">Lätta: ordklass, grundtal, ordningstal</p>
+                <p>Medel: -</p>
+                <p>Svåra: -</p>
+                <h4 class="text-warning">Interjektion</h4>
+                <p>Bas: -</p>
+                <p class="text-success">Lätta: ordklass</p>
+                <p>Medel: -</p>
+                <p>Svåra: -</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 text-left gl-div-black-white">
+        <h2>Spelnivå: 3</h2>
+        <p><a href="@Url.Action("Niva3Spel", "Spel")" class="btn btn-danger btn-block btn-lg gl-button">Till övning &raquo;</a></p>
+        <br />
+        <div>
+            <a id="mer-info-niva3" class="text-muted btn-lg gl-a-color" data-toggle="collapse" href="#provinfo3" role="button" aria-expanded="false" aria-controls="provinfo3">Mer info +</a>
+        </div>
+        <div class="collapse" id="provinfo3">
+            <div class="card card-body">
+                <h4 class="text-danger">Substantiv</h4>
+                <p>Bas: en, ett eller flera</p>
+                <p class="text-success">Lätta: ordklass, konkreta, abstrakta</p>
+                <p class="text-warning">Medel: nominativ, genus, genitiv</p>
+                <p class="text-danger">Svåra: singular, plural, obestämd, bestämd</p>
+                <h4 class="text-danger">Pronomen</h4>
+                <p>Bas: personliga eller possessiva</p>
+                <p class="text-success">Lätta: ordklass, personliga, possessiva, reflexiva</p>
+                <p class="text-warning">Medel: reflexiva possessiva, relativa, interrogativa, demonstrativa</p>
+                <p>Svåra: -</p>
+                <h4 class="text-danger">Adjektiv</h4>
+                <p>Bas: komparera</p>
+                <p class="text-success">Lätta: ordklass, obestämd, bestämd, singular, plural</p>
+                <p class="text-warning">Medel: komparation</p>
+                <p class="text-danger">Svåra: superlativ (attributiv ställning)</p>
+                <h4 class="text-danger">Verb</h4>
+                <p>Bas: tema</p>
+                <p class="text-success">Lätta: ordklass, tema, huvudverb, hjälpverb, bindeverb</p>
+                <p class="text-warning">Medel: tempus</p>
+                <p class="text-danger">Svåra: particip</p>
+                <h4 class="text-danger">Adverb</h4>
+                <p>Bas: -</p>
+                <p class="text-success">Lätta: ordklass, tidsadverb, rumsadverb, sättsadverb</p>
+                <p class="text-warning">Medel: gradadverb, orsaksadverb, relativa adverb, satsadverb</p>
+                <p>Svåra: -</p>
+                <h4 class="text-danger">Preposition</h4>
+                <p>Bas: -</p>
+                <p class="text-success">Lätta: ordklass</p>
+                <p>Medel: -</p>
+                <p>Svåra: -</p>
+                <h4 class="text-danger">Konjunktion</h4>
+                <p>Bas: -</p>
+                <p class="text-success">Lätta: ordklass</p>
+                <p class="text-warning">Medel: subjunktion</p>
+                <p>Svåra: -</p>
+                <h4 class="text-danger">Räkneord</h4>
+                <p>Bas: -</p>
+                <p class="text-success">Lätta: ordklass, grundtal, ordningstal</p>
+                <p>Medel: -</p>
+                <p>Svåra: -</p>
+                <h4 class="text-danger">Interjektion</h4>
+                <p>Bas: -</p>
+                <p class="text-success">Lätta: ordklass</p>
+                <p>Medel: -</p>
+                <p>Svåra: -</p>
             </div>
         </div>
     </div>
 </div>
 
 <script>
-    var raknare = -1;
-    
-    $('#nastaFraga').click(function () {
-        raknare++;
+    $('#mer-info-ovningsniva').click(function () {
+        $(this).text(function (i, old) {
+            return old == 'Dölj info -' ? 'Mer info +' : 'Dölj info -';
+        });
+    });
 
-        $(this).text(function () {
-            return "Nästa fråga »";
+    $('#mer-info-niva0').click(function () {
+        $(this).text(function (i, old) {
+            return old == 'Dölj info -' ? 'Mer info +' : 'Dölj info -';
         });
+    });
 
-        $('#dittSvar').text(function () {
-            return "Ditt svar:";
+    $('#mer-info-niva1').click(function () {
+        $(this).text(function (i, old) {
+            return old == 'Dölj info -' ? 'Mer info +' : 'Dölj info -';
         });
-        $('#rattSvar').addClass("hidden");
-        $('#rattSvarTom').removeClass("hidden");
-        
-        $('#rakna').text(function () {
-            return "Antal besvarade frågor: " + raknare;
+    });
+
+    $('#mer-info-niva2').click(function () {
+        $(this).text(function (i, old) {
+            return old == 'Dölj info -' ? 'Mer info +' : 'Dölj info -';
         });
-        
-        $.get('@Url.Action("LaddaSpelet", "Spel")', {}, function (response) {
-            $("#fragan").html(response);
+    });
+
+    $('#mer-info-niva3').click(function () {
+        $(this).text(function (i, old) {
+            return old == 'Dölj info -' ? 'Mer info +' : 'Dölj info -';
         });
     });
 </script>
