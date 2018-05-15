@@ -1,7 +1,7 @@
 ﻿@model GrammatikLaxen.Models.FragaSvar
 
 <div class="row col-md-12 text-center">
-    <h4>@Model.Fraga</h4>
+    <h4 id="model-fraga">@Model.Fraga</h4>
     <h4 id="dittSvar" class="text-primary">Ditt svar:</h4>
     <h4 id="rattSvarTom" class="text-success">Rätt svar:</h4> <!--Dölj när svara klickas-->
     <h4 id="rattSvar" class="text-success hidden">
@@ -53,19 +53,6 @@
 </div>
 
 <script>
-    @*$('#nastaFraga').click(function () {
-        $.get('@Url.Action("LaddaSpelet", "Spel")', {}, function (response) {
-            $("#fragan").html(response);
-        });
-
-        $('#dittSvar').text(function () {
-            return "Ditt svar:";
-        });
-        $('#rattSvar').addClass("hidden");
-        $('#rattSvarTom').removeClass(["hidden"]);
-    });*@
-
-
     $('#svara').click(function () {
         var svaret = document.getElementById("svar").value;
 

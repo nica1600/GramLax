@@ -2,17 +2,6 @@
 @{
     ViewBag.Title = "Spelet";
 }
-@*<div class="jumbotron gl-div-opacity">
-        <div class="col-md-12 row">
-            <div class="col-md-12 text-left">
-                <a href="@Url.Action("Index", "Home")" class="btn btn-danger btn-lg gl-button">&laquo; Avbryt</a>
-            </div>
-        </div><br />
-        <div class="col-md-12 text-center">
-            @Html.Partial("_ToppLista")<br />
-            <a href="@Url.Action("Spelet", "Spel")" class="btn btn-primary btn-lg gl-button">Starta spelet  &raquo;</a>
-        </div>
-    </div>*@
 
 <div class="gl-div-opacity">
     <div class="gl-div-black-white">
@@ -20,7 +9,7 @@
             <a href="@Url.Action("Index", "Home")" class="btn btn-danger btn-lg gl-button">&laquo; Avbryt</a>
         </div><br />
         <div class="col-md-12 text-center">
-            <h3 id="rakna" class="gl-text-white">Antal besvarade frågor:</h3>
+            <h3 id="rakna" class="gl-text-white">Antal besvarade frågor: 0</h3>
         </div>
         <div id="fragan" class="col-md-12 text-center">
             <div class="row col-md-12 text-center">
@@ -41,6 +30,9 @@
                 <div class="col-md-4"><a id="nastaFraga" href="#" class="btn btn-block btn-primary btn-lg gl-button">Starta &raquo;</a></div>
                 <div class="col-md-4"></div>
             </div>
+            <div id="skriv-ut">
+
+            </div>
         </div>
     </div>
 </div>
@@ -55,33 +47,18 @@
             return "Nästa fråga »";
         });
 
-        //$('#nastaFraga').removeClass("btn-primary");
-        //$('#nastaFraga').addClass("btn-default");
-
         $('#dittSvar').text(function () {
             return "Ditt svar:";
         });
         $('#rattSvar').addClass("hidden");
         $('#rattSvarTom').removeClass("hidden");
-
-        $.get('@Url.Action("LaddaSpelet", "Spel")', {}, function (response) {
-            $("#fragan").html(response);
-        });
-
+        
         $('#rakna').text(function () {
             return "Antal besvarade frågor: " + raknare;
         });
+        
+        $.get('@Url.Action("LaddaSpelet", "Spel")', {}, function (response) {
+            $("#fragan").html(response);
+        });
     });
-
-
-    //$('#svara').click(function () {
-    //    var svaret = document.getElementById("svar").value;
-
-    //    $('#dittSvar').text(function () {
-    //        return "Ditt svar: " + svaret;
-    //    });
-
-    //    $('#rattSvarTom').addClass("hidden");
-    //    $('#rattSvar').removeClass(["hidden"]);
-    //});
 </script>
