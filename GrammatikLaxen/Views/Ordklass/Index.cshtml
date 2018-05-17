@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Ordklasser";
+}
+<div class="jumbotron gl-div-opacity">
+    <div class="col-md-12">
+        <h1>Ordklasser</h1>
+        <p class="lead">Allt du behöver veta om de svenska ordklasserna!</p>
+    </div>
+    <div class="col-md-12 row">
+        <div class="col-md-12 text-left">
+            <a href="@Url.Action("Index", "Home")" class="btn btn-default btn-lg gl-button">&laquo; Tillbaka</a>
+        </div>
+    </div><br />
+    <div class="col-md-12 row">
+        <div class="col-md-12 text-center">
+            <a id="mer-info-ordklass" class="text-muted btn-lg gl-a-color" data-toggle="collapse" href="#provinfo" role="button" aria-expanded="false" aria-controls="provinfo">Mer info +</a>
+        </div>
+    </div>
+    <div class="collapse" id="provinfo">
+        <div class="card card-body">
+            <p class="lead">
+                Nedan hittar du alla ordklasser i svenska språket. För att underlätta så är de sorterade i olika svårighetsnivåer (samma som gäller
+                för spelet och proven på den här sidan). Du kan välja om du vill läsa allt eller bara några specifika delar om varje ordklass.
+            </p>
+            <p class="lead">
+                <i class="text-success">"Nivå: 1" markeras med grön färg under varje ordklass.</i><br />
+                <i class="text-warning">"Nivå: 2" markeras med gul färg under varje ordklass.</i><br />
+                <i class="text-danger">"Nivå: 3" markeras med röd färg under varje ordklass.</i><br />
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="row gl-row gl-div-opacity">
+    <div class="col-md-12 text-left gl-div-black-white">
+        @Html.Partial("_Substantiv")
+    </div>
+</div>
+
+<script>
+    $('#mer-info-ordklass').click(function () {
+        $(this).text(function (i, old) {
+            return old == 'Dölj info -' ? 'Mer info +' : 'Dölj info -';
+        });
+    });
+</script>

@@ -161,6 +161,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\GrammatikController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrdklassController.cs" />
     <Compile Include="Controllers\ProvController.cs" />
     <Compile Include="Controllers\SpelController.cs" />
     <Compile Include="Data\DbOperations.cs" />
@@ -313,6 +314,8 @@
     <Content Include="Views\Spel\_Spel.cshtml" />
     <Content Include="Views\Spel\Niva1Spel.cshtml" />
     <Content Include="Views\Spel\Niva2Spel.cshtml" />
+    <Content Include="Views\Ordklass\Index.cshtml" />
+    <Content Include="Views\Ordklass\_Substantiv.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
