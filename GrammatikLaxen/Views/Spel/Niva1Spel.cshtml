@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Nivå 3";
+    ViewBag.Title = "Nivå 1";
 }
 
 <div class="gl-div-opacity">
@@ -55,7 +55,7 @@
             return "Antal besvarade frågor: " + raknare;
         });
 
-        $.get('@Url.Action("Niva3LaddaSpelet", "Spel")', {}, function (response) {
+        $.get('@Url.Action("Niva1LaddaSpelet", "Spel")', {}, function (response) {
             $("#fragan").html(response);
         });
     });
