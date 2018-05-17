@@ -312,6 +312,7 @@
     <Content Include="Views\Spel\Niva0Spel.cshtml" />
     <Content Include="Views\Spel\_Spel.cshtml" />
     <Content Include="Views\Spel\Niva1Spel.cshtml" />
+    <Content Include="Views\Spel\Niva2Spel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
