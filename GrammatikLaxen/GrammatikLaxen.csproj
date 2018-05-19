@@ -316,6 +316,7 @@
     <Content Include="Views\Spel\Niva2Spel.cshtml" />
     <Content Include="Views\Ordklass\Index.cshtml" />
     <Content Include="Views\Ordklass\_Substantiv.cshtml" />
+    <Content Include="Views\Ordklass\_Pronomen.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
