@@ -17,7 +17,7 @@
         <!--Nivå 1: Konkret eller abstrakt-->
         <div class="col-md-12 row">
             <div class="col-md-12 text-center">
-                @*<p class="text-success">*@<a id="mer-info-kon-abs" class="btn btn-success btn-block btn-lg gl-button" data-toggle="collapse" href="#konabsinfo" role="button" aria-expanded="false" aria-controls="konabsinfo">Nivå 1: Konkret/abstrakt +</a>@*</p>*@
+                <a id="mer-info-kon-abs" class="btn btn-success btn-block btn-lg gl-button" data-toggle="collapse" href="#konabsinfo" role="button" aria-expanded="false" aria-controls="konabsinfo">Nivå 1: Konkret/abstrakt +</a>
             </div>
         </div>
         <div class="collapse" id="konabsinfo">
@@ -33,7 +33,7 @@
         <!--Nivå 2: Kasus (nominativ och genitiv)-->
         <div class="col-md-12 row">
             <div class="col-md-12 text-center">
-                @*<p class="text-warning">*@<a id="mer-info-kasus" class="btn btn-warning btn-block btn-lg gl-button" data-toggle="collapse" href="#kasusinfo" role="button" aria-expanded="false" aria-controls="kasusinfo">Nivå 2: Kasus +</a>@*</p>*@
+                <a id="mer-info-kasus" class="btn btn-warning btn-block btn-lg gl-button" data-toggle="collapse" href="#kasusinfo" role="button" aria-expanded="false" aria-controls="kasusinfo">Nivå 2: Kasus +</a>
             </div>
         </div>
         <div class="collapse" id="kasusinfo">
@@ -53,7 +53,7 @@
         <!--Nivå 2: Genus (utrum eller neutrum)-->
         <div class="col-md-12 row">
             <div class="col-md-12 text-center">
-                @*<p class="text-warning">*@<a id="mer-info-genus" class="btn btn-warning btn-block btn-lg gl-button" data-toggle="collapse" href="#genusinfo" role="button" aria-expanded="false" aria-controls="genusinfo">Nivå 2: Genus +</a>@*</p>*@
+                <a id="mer-info-genus" class="btn btn-warning btn-block btn-lg gl-button" data-toggle="collapse" href="#genusinfo" role="button" aria-expanded="false" aria-controls="genusinfo">Nivå 2: Genus +</a>
             </div>
         </div>
         <div class="collapse" id="genusinfo">
@@ -70,7 +70,7 @@
         <!--Nivå 3: Numerus (singular och plural) -->
         <div class="col-md-12 row">
             <div class="col-md-12 text-center">
-                <p class="text-danger"><a id="mer-info-numerus" class="btn btn-danger btn-block btn-lg gl-button" data-toggle="collapse" href="#numerusinfo" role="button" aria-expanded="false" aria-controls="numerusinfo">Nivå 3: Numerus +</a></p>
+                <a id="mer-info-numerus" class="btn btn-danger btn-block btn-lg gl-button" data-toggle="collapse" href="#numerusinfo" role="button" aria-expanded="false" aria-controls="numerusinfo">Nivå 3: Numerus +</a>
             </div>
         </div>
         <div class="collapse" id="numerusinfo">
@@ -97,7 +97,7 @@
         <!--Nivå 3: Obestämd och bestämd -->
         <div class="col-md-12 row">
             <div class="col-md-12 text-center">
-                <p class="text-danger"><a id="mer-info-obe-bes" class="btn btn-danger btn-block btn-lg gl-button" data-toggle="collapse" href="#obebesinfo" role="button" aria-expanded="false" aria-controls="obebesinfo">Nivå 3: Bestämdhet +</a></p>
+                <a id="mer-info-obe-bes" class="btn btn-danger btn-block btn-lg gl-button" data-toggle="collapse" href="#obebesinfo" role="button" aria-expanded="false" aria-controls="obebesinfo">Nivå 3: Bestämdhet +</a>
             </div>
         </div>
         <div class="collapse" id="obebesinfo">
@@ -117,7 +117,7 @@
         <!--Nivå 3: Bestämd fristående artikel-->
         <div class="col-md-12 row">
             <div class="col-md-12 text-center">
-                <p class="text-danger"><a id="mer-info-fri" class="btn btn-danger btn-block btn-lg gl-button" data-toggle="collapse" href="#friinfo" role="button" aria-expanded="false" aria-controls="friinfo">Nivå 3: Bestämd artikel +</a></p>
+                <a id="mer-info-fri" class="btn btn-danger btn-block btn-lg gl-button" data-toggle="collapse" href="#friinfo" role="button" aria-expanded="false" aria-controls="friinfo">Nivå 3: Bestämd artikel +</a>
             </div>
         </div>
         <div class="collapse" id="friinfo">
@@ -144,37 +144,37 @@
 
     $('#mer-info-kon-abs').click(function () {
         $(this).text(function (i, old) {
-            return old == 'Nivå 1: Konkret eller abstrakt -' ? 'Nivå 1: Konkret eller abstrakt +' : 'Nivå 1: Konkret eller abstrakt -';
+            return old == 'Nivå 1: Konkret/abstrakt -' ? 'Nivå 1: Konkret/abstrakt +' : 'Nivå 1: Konkret/abstrakt -';
         });
     });
 
     $('#mer-info-kasus').click(function () {
         $(this).text(function (i, old) {
-            return old == 'Nivå 2: Kasus (nominativ och genitiv) -' ? 'Nivå 2: Kasus (nominativ och genitiv) +' : 'Nivå 2: Kasus (nominativ och genitiv) -';
+            return old == 'Nivå 2: Kasus -' ? 'Nivå 2: Kasus +' : 'Nivå 2: Kasus -';
         });
     });
 
     $('#mer-info-genus').click(function () {
         $(this).text(function (i, old) {
-            return old == 'Nivå 2: Genus (utrum eller neutrum) -' ? 'Nivå 2: Genus (utrum eller neutrum) +' : 'Nivå 2: Genus (utrum eller neutrum) -';
+            return old == 'Nivå 2: Genus -' ? 'Nivå 2: Genus +' : 'Nivå 2: Genus -';
         });
     });
 
     $('#mer-info-numerus').click(function () {
         $(this).text(function (i, old) {
-            return old == 'Nivå 3: Numerus (singular och plural) -' ? 'Nivå 3: Numerus (singular och plural) +' : 'Nivå 3: Numerus (singular och plural) -';
+            return old == 'Nivå 3: Numerus -' ? 'Nivå 3: Numerus +' : 'Nivå 3: Numerus -';
         });
     });
 
     $('#mer-info-obe-bes').click(function () {
         $(this).text(function (i, old) {
-            return old == 'Nivå 3: Obestämd och bestämd -' ? 'Nivå 3: Obestämd och bestämd +' : 'Nivå 3: Obestämd och bestämd -';
+            return old == 'Nivå 3: Bestämdhet -' ? 'Nivå 3: Bestämdhet +' : 'Nivå 3: Bestämdhet -';
         });
     });
 
     $('#mer-info-fri').click(function () {
         $(this).text(function (i, old) {
-            return old == 'Nivå 3: Bestämd fristående artikel -' ? 'Nivå 3: Bestämd fristående artikel +' : 'Nivå 3: Bestämd fristående artikel -';
+            return old == 'Nivå 3: Bestämd artikel -' ? 'Nivå 3: Bestämd artikel +' : 'Nivå 3: Bestämd artikel -';
         });
     });
 </script>

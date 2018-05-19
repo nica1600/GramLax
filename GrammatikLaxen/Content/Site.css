@@ -120,3 +120,7 @@ div.gl-navbar ul li a {
         color: black;
     }
 
+.gl-table-center {
+    width: 50%;
+    margin: auto;
+}
