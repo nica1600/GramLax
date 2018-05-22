@@ -1,0 +1,52 @@
+﻿@model List<GrammatikLaxen.Models.db.räkneord>
+@{
+    ViewBag.Title = "Tabell: Räkneord";
+}
+
+<div class="gl-div-opacity gl-div-black-white">
+    <a href="@Url.Action("Index", "Ordklass")" class="btn btn-default btn-lg gl-button">&laquo; Tillbaka</a><br /><br />
+    <h2>Räkneord</h2>
+    <table class="table-responsive">
+        <tr class="text-primary">
+            <th class="table-bordered">Grundtal</th>
+            <th class="table-bordered">Grundtal 2</th>
+            <th class="table-bordered">Ordningstal (ej maskulinum)</th>
+            <th class="table-bordered">Primär ordklass</th>
+            <th class="table-bordered">Sekundär ordklass</th>
+        </tr>
+
+        @foreach (var räkneord in Model)
+        {
+            <tr>
+                <td>@räkneord.grundtal</td>
+                <td>
+                    @if (räkneord.grundtal_2 == räkneord.grundtal)
+                    {
+
+                    }
+                    else
+                    {
+                        @räkneord.grundtal_2
+                    }
+                </td>
+                <td>@räkneord.ordningstal_ej_maskulinum</td>
+                <td>@räkneord.ordklass</td>
+                <td>
+                    @if (räkneord.även == räkneord.ordklass)
+                    {
+
+                    }
+                    else
+                    {
+                        @räkneord.även
+                    }
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+
+<script>
+    document.body.style.backgroundImage = "none";
+</script>

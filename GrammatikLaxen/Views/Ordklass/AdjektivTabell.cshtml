@@ -1,0 +1,53 @@
+﻿@model List<GrammatikLaxen.Models.db.adjektiv>
+@{
+    ViewBag.Title = "Tabell: Adjektiv";
+}
+
+<div class="gl-div-opacity gl-div-black-white">
+    <a href="@Url.Action("Index", "Ordklass")" class="btn btn-default btn-lg gl-button">&laquo; Tillbaka</a><br /><br />
+    <h2>Adjektiv</h2>
+    <table class="table-responsive">
+        <tr class="text-primary">
+            <th class="table-bordered">Obestämd form (utrum)</th>
+            <th class="table-bordered">Obestämd form (neutrum)</th>
+            <th class="table-bordered">Bestämd form (ej maskulinum)</th>
+            <th class="table-bordered">Plural</th>
+            <th class="table-bordered">Komparation: Positiv</th>
+            <th class="table-bordered">Komparation: Komparativ</th>
+            <th class="table-bordered">Komparation: Superlativ (predikativt)</th>
+            <th class="table-bordered">Komparation: Superlativ (attributivt, ej maskulinum)</th>
+            <th class="table-bordered">Primär ordklass</th>
+            <th class="table-bordered">Sekundär ordklass</th>
+        </tr>
+
+        @foreach (var adjektiv in Model)
+        {
+            <tr>
+                <td>@adjektiv.ord</td>
+                <td>@adjektiv.obestämd_form_neutrum</td>
+                <td>@adjektiv.bestämd_form_ej_maskulinum</td>
+                <td>@adjektiv.plural</td>
+                <td>@adjektiv.positiv</td>
+                <td>@adjektiv.komparativ</td>
+                <td>@adjektiv.superlativ_predikativt</td>
+                <td>@adjektiv.superlativ_attributivt_ej_maskulinum</td>
+                <td>@adjektiv.ordklass</td>
+                <td>
+                    @if (adjektiv.även == adjektiv.ordklass)
+                    {
+
+                    }
+                    else
+                    {
+                        @adjektiv.även
+                    }
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+
+<script>
+    document.body.style.backgroundImage = "none";
+</script>

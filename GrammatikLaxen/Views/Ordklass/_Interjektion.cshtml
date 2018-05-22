@@ -1,0 +1,27 @@
+﻿<div class="col-md-12 row">
+    <div class="col-md-12 text-center">
+        <br /><p class="text-primary"><a id="mer-info-int" class="text-muted btn-lg gl-a-color" data-toggle="collapse" href="#intinfo" role="button" aria-expanded="false" aria-controls="intinfo">Interjektion +</a></p>
+    </div>
+</div>
+<div class="collapse" id="intinfo">
+    <div class="card card-body">
+        <!--Inledande info-->
+        <div class="col-md-12 text-center">
+            <h4>
+                <i>
+                    kommer snart
+                </i>
+            </h4><br />
+        </div>
+        <!--Nivå 1: -->
+
+    </div>
+</div>
+
+<script>
+    $('#mer-info-int').click(function () {
+        $(this).text(function (i, old) {
+            return old == 'Interjektion -' ? 'Interjektion +' : 'Interjektion -';
+        });
+    });
+</script>

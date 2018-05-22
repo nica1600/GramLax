@@ -1,0 +1,140 @@
+﻿@model List<GrammatikLaxen.Models.db.adverb>
+@{
+    ViewBag.Title = "Tabell: Adverb";
+}
+
+<div class="gl-div-opacity gl-div-black-white">
+    <a href="@Url.Action("Index", "Ordklass")" class="btn btn-default btn-lg gl-button">&laquo; Tillbaka</a><br /><br />
+    <h2>Adverb</h2>
+    <table class="table-responsive">
+        <tr class="text-primary">
+            <th class="table-bordered">Ord</th>
+            <th class="table-bordered">Ordklass</th>
+            <th class="table-bordered">Typ</th>
+            <th class="table-bordered">Tidsadverb</th>
+            <th class="table-bordered">Rumsadverb</th>
+            <th class="table-bordered">Sättsadverb</th>
+            <th class="table-bordered">Gradadverb</th>
+            <th class="table-bordered">Orsaksadverb</th>
+            <th class="table-bordered">Relativa adverb</th>
+            <th class="table-bordered">Satsadverb</th>
+        </tr>
+
+        @foreach (var adverb in Model)
+        {
+            <tr>
+                <td>@adverb.ord</td>
+                <td>@adverb.ordklass</td>
+                <td>
+                    @if (adverb.tidsadverb == true)
+                    {
+                        <prep>tidsadverb</prep>
+                    }
+                    else if (adverb.rumsadverb == true)
+                    {
+                        <prep>rumsadverb</prep>
+                    }
+                    else if (adverb.sättsadverb == true)
+                    {
+                        <prep>sättsadverb</prep>
+                    }
+                    else if (adverb.gradadverb == true)
+                    {
+                        <prep>gradadverb</prep>
+                    }
+                    else if (adverb.orsaksadverb == true)
+                    {
+                        <prep>orsaksadverb</prep>
+                    }
+                    else if (adverb.relativa_adverb == true)
+                    {
+                        <prep>relativa adverb</prep>
+                    }
+                    else if (adverb.satsadverb == true)
+                    {
+                        <prep>satsadverb</prep>
+                    }
+                    else
+                    {
+
+                    }
+                </td>
+                <td>
+                    @if (adverb.tidsadverb == false)
+                    {
+
+                    }
+                    else
+                    {
+                        <prep>X</prep>
+                    }
+                </td>
+                <td>
+                    @if (adverb.rumsadverb == false)
+                    {
+
+                    }
+                    else
+                    {
+                        <prep>X</prep>
+                    }
+                </td>
+                <td>
+                    @if (adverb.sättsadverb == false)
+                    {
+
+                    }
+                    else
+                    {
+                        <prep>X</prep>
+                    }
+                </td>
+                <td>
+                    @if (adverb.gradadverb == false)
+                    {
+
+                    }
+                    else
+                    {
+                        <prep>X</prep>
+                    }
+                </td>
+                <td>
+                    @if (adverb.orsaksadverb == false)
+                    {
+
+                    }
+                    else
+                    {
+                        <prep>X</prep>
+                    }
+                </td>
+                <td>
+                    @if (adverb.relativa_adverb == false)
+                    {
+
+                    }
+                    else
+                    {
+                        <prep>X</prep>
+                    }
+                </td>
+                <td>
+                    @if (adverb.satsadverb == false)
+                    {
+
+                    }
+                    else
+                    {
+                        <prep>X</prep>
+                    }
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+
+<script>
+    document.body.style.backgroundImage = "none";
+</script>

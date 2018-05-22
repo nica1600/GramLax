@@ -1,0 +1,59 @@
+﻿@model List<GrammatikLaxen.Models.db.substantiv>
+@{
+    ViewBag.Title = "Tabell: Substantiv";
+}
+
+<div class="gl-div-opacity gl-div-black-white">
+    <a href="@Url.Action("Index", "Ordklass")" class="btn btn-default btn-lg gl-button">&laquo; Tillbaka</a><br /><br />
+    <h2>Substantiv</h2>
+    <table class="table-responsive">
+        <tr class="text-primary">
+            <th class="table-bordered">Nominativ</th>
+            <th class="table-bordered">Genitiv</th>
+            <th class="table-bordered">Konkret eller abstrakt</th>
+            <th class="table-bordered">Genus</th>
+            <th class="table-bordered">Artikel (Genus)</th>
+            <th class="table-bordered">Obestämd form singular</th>
+            <th class="table-bordered">Bestämd form singular</th>
+            <th class="table-bordered">Obestämd form plural</th>
+            <th class="table-bordered">Bestämd form plural</th>
+            <th class="table-bordered">Bestämd fristående artikel singular</th>
+            <th class="table-bordered">Bestämd fristående artikel plural</th>
+            <th class="table-bordered">Primär ordklass</th>
+            <th class="table-bordered">Sekundär ordklass</th>
+        </tr>
+
+        @foreach (var substantiv in Model)
+        {
+            <tr>
+                <td>@substantiv.ord</td>
+                <td>...s</td>
+                <td>@substantiv.betydelse</td>
+                <td>@substantiv.genus</td>
+                <td>@substantiv.artikel</td>
+                <td>@substantiv.obestämd_form_singular</td>
+                <td>@substantiv.bestämd_form_singular</td>
+                <td>@substantiv.obestämd_form_plural</td>
+                <td>@substantiv.bestämd_form_plural</td>
+                <td>@substantiv.bestämd_fristående_artikel_singular</td>
+                <td>@substantiv.bestämd_fristående_artikel_plural</td>
+                <td>@substantiv.ordklass</td>
+                <td>
+                    @if (substantiv.även == substantiv.ordklass)
+                    {
+
+                    }
+                    else
+                    {
+                        @substantiv.även
+                    }
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+
+<script>
+    document.body.style.backgroundImage = "none";
+</script>

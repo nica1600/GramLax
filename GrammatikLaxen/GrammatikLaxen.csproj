@@ -318,6 +318,21 @@
     <Content Include="Views\Ordklass\_Substantiv.cshtml" />
     <Content Include="Views\Ordklass\_Pronomen.cshtml" />
     <Content Include="Views\Ordklass\_Adjektiv.cshtml" />
+    <Content Include="Views\Ordklass\SubstantivTabell.cshtml" />
+    <Content Include="Views\Ordklass\PronomenTabell.cshtml" />
+    <Content Include="Views\Ordklass\AdjektivTabell.cshtml" />
+    <Content Include="Views\Ordklass\VerbTabell.cshtml" />
+    <Content Include="Views\Ordklass\AdverbTabell.cshtml" />
+    <Content Include="Views\Ordklass\PrepositionTabell.cshtml" />
+    <Content Include="Views\Ordklass\KonjunktionTabell.cshtml" />
+    <Content Include="Views\Ordklass\RakneordTabell.cshtml" />
+    <Content Include="Views\Ordklass\InterjektionTabell.cshtml" />
+    <Content Include="Views\Ordklass\_Verb.cshtml" />
+    <Content Include="Views\Ordklass\_Adverb.cshtml" />
+    <Content Include="Views\Ordklass\_Preposition.cshtml" />
+    <Content Include="Views\Ordklass\_Konjunktion.cshtml" />
+    <Content Include="Views\Ordklass\_Rakneord.cshtml" />
+    <Content Include="Views\Ordklass\_Interjektion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,69 @@
+﻿@model List<GrammatikLaxen.Models.db.verb>
+@{
+    ViewBag.Title = "Tabell: Verb";
+}
+
+<div class="gl-div-opacity gl-div-black-white">
+    <a href="@Url.Action("Index", "Ordklass")" class="btn btn-default btn-lg gl-button">&laquo; Tillbaka</a><br /><br />
+    <h2>Verb</h2>
+    <table class="table-responsive">
+        <tr class="text-primary">
+            <th class="table-bordered">Attribut (infinitiv)</th>
+            <th class="table-bordered">Tema: Infinitiv</th>
+            <th class="table-bordered">Attribut (preteritum)</th>
+            <th class="table-bordered">Tema: Preteritum</th>
+            <th class="table-bordered">Attribut (supinum)</th>
+            <th class="table-bordered">Tema: Supinum</th>
+            <th class="table-bordered">Tempus: Presens</th>
+            <th class="table-bordered">Tempus: Preteritum</th>
+            <th class="table-bordered">Tempus: Perfekt</th>
+            <th class="table-bordered">Tempus: Pluskvamperfekt</th>
+            <th class="table-bordered">Tempus: Futurum</th>
+            <th class="table-bordered">Tempus: Imperativ</th>
+            <th class="table-bordered">Particip: Presens</th>
+            <th class="table-bordered">Particip: Presens 2</th>
+            <th class="table-bordered">Particip: Perfekt</th>
+            <th class="table-bordered">Primär ordklass</th>
+            <th class="table-bordered">Typ</th>
+            <th class="table-bordered">Sekundär ordklass</th>
+        </tr>
+
+        @foreach (var verb in Model)
+        {
+            <tr>
+                <td>@verb.attribut_infinitiv</td>
+                <td>@verb.infinitiv</td>
+                <td>@verb.attribut_preteritum</td>
+                <td>@verb.preteritum</td>
+                <td>@verb.attribut_supinum</td>
+                <td>@verb.supinum</td>
+                <td>@verb.presens</td>
+                <td>@verb.preteritum</td>
+                <td>@verb.perfekt</td>
+                <td>@verb.pluskvamperfekt</td>
+                <td>@verb.futurum</td>
+                <td>@verb.imperativ</td>
+                <td>@verb.presens_particip</td>
+                <td>@verb.presens_particip_2</td>
+                <td>@verb.perfekt_particip</td>
+                <td>@verb.ordklass</td>
+                <td>@verb.typ</td>
+                <td>
+                    @if (verb.även == verb.ordklass)
+                    {
+
+                    }
+                    else
+                    {
+                        @verb.även
+                    }
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+
+<script>
+    document.body.style.backgroundImage = "none";
+</script>

@@ -1,0 +1,39 @@
+﻿@model List<GrammatikLaxen.Models.db.preposition>
+@{
+    ViewBag.Title = "Tabell: Preposition";
+}
+
+<div class="gl-div-opacity gl-div-black-white">
+    <a href="@Url.Action("Index", "Ordklass")" class="btn btn-default btn-lg gl-button">&laquo; Tillbaka</a><br /><br />
+    <h2>Preposition</h2>
+    <table class="table-responsive">
+        <tr class="text-primary">
+            <th class="table-bordered">Ord</th>
+            <th class="table-bordered">Primär ordklass</th>
+            <th class="table-bordered">Sekundär ordklass</th>
+        </tr>
+
+        @foreach (var preposition in Model)
+        {
+            <tr>
+                <td>@preposition.ord</td>
+                <td>@preposition.ordklass</td>
+                <td>
+                    @if (preposition.även == preposition.ordklass)
+                    {
+
+                    }
+                    else
+                    {
+                        @preposition.även
+                    }
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+
+<script>
+    document.body.style.backgroundImage = "none";
+</script>

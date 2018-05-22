@@ -1,0 +1,50 @@
+﻿@model List<GrammatikLaxen.Models.db.konjunktion>
+@{
+    ViewBag.Title = "Tabell: Konjunktion";
+}
+
+<div class="gl-div-opacity gl-div-black-white">
+    <a href="@Url.Action("Index", "Ordklass")" class="btn btn-default btn-lg gl-button">&laquo; Tillbaka</a><br /><br />
+    <h2>Konjunktion</h2>
+    <table class="table-responsive">
+        <tr class="text-primary">
+            <th class="table-bordered">Ord</th>
+            <th class="table-bordered">Primär ordklass</th>
+            <th class="table-bordered">Subjunktion</th>
+            <th class="table-bordered">Sekundär ordklass</th>
+        </tr>
+
+        @foreach (var konjunktion in Model)
+        {
+            <tr>
+                <td>@konjunktion.ord</td>
+                <td>@konjunktion.ordklass</td>
+                <td>
+                    @if (konjunktion.underordnad == false)
+                    {
+
+                    }
+                    else
+                    {
+                        <prep>X</prep>
+                    }
+                </td>
+                <td>
+                    @if (konjunktion.även == konjunktion.ordklass)
+                    {
+
+                    }
+                    else
+                    {
+                        @konjunktion.även
+                    }
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+
+<script>
+    document.body.style.backgroundImage = "none";
+</script>

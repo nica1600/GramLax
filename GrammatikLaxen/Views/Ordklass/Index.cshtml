@@ -19,13 +19,25 @@
     <div class="collapse" id="provinfo">
         <div class="card card-body">
             <p class="lead">
-                Nedan hittar du alla ordklasser i svenska språket. För att underlätta så är de sorterade i olika svårighetsnivåer (samma som gäller
-                för spelet och proven på den här sidan). Du kan välja om du vill läsa allt eller bara några specifika delar om varje ordklass.
+                Klicka på ordklassen med + efter för att visa information om just den ordklassen. För att underlätta så är de sorterade i olika svårighetsnivåer
+                (samma som används för spelen och proven). Du kan välja om du vill läsa allt eller bara några specifika delar om varje ordklass.
             </p>
             <p class="lead">
                 <i class="text-success">"Nivå: 1" markeras med grön färg under varje ordklass.</i><br />
                 <i class="text-warning">"Nivå: 2" markeras med gul färg under varje ordklass.</i><br />
                 <i class="text-danger">"Nivå: 3" markeras med röd färg under varje ordklass.</i><br />
+            </p>
+            <p class="lead">
+                Om du vill veta vilka ord som finns i databasen så kan du klicka på länkarna här för att se orden i tabellform (OBS: datoranpassad vy):<br />
+                <i class="text-primary"><a href="@Url.Action("SubstantivTabell", "Ordklass")" class="btn-lg gl-a-color">Substantiv (databas) &raquo;</a></i><br />
+                <i class="text-primary"><a href="@Url.Action("PronomenTabell", "Ordklass")" class="btn-lg gl-a-color">Pronomen (databas) &raquo;</a></i><br />
+                <i class="text-primary"><a href="@Url.Action("AdjektivTabell", "Ordklass")" class="btn-lg gl-a-color">Adjektiv (databas) &raquo;</a></i><br />
+                <i class="text-primary"><a href="@Url.Action("VerbTabell", "Ordklass")" class="btn-lg gl-a-color">Verb (databas) &raquo;</a></i><br />
+                <i class="text-primary"><a href="@Url.Action("AdverbTabell", "Ordklass")" class="btn-lg gl-a-color">Adverb (databas) &raquo;</a></i><br />
+                <i class="text-primary"><a href="@Url.Action("PrepositionTabell", "Ordklass")" class="btn-lg gl-a-color">Preposition (databas) &raquo;</a></i><br />
+                <i class="text-primary"><a href="@Url.Action("KonjunktionTabell", "Ordklass")" class="btn-lg gl-a-color">Konjunktion (databas) &raquo;</a></i><br />
+                <i class="text-primary"><a href="@Url.Action("RakneordTabell", "Ordklass")" class="btn-lg gl-a-color">Räkneord (databas) &raquo;</a></i><br />
+                <i class="text-primary"><a href="@Url.Action("InterjektionTabell", "Ordklass")" class="btn-lg gl-a-color">Interjektion (databas) &raquo;</a></i><br />
             </p>
         </div>
     </div>
@@ -46,6 +58,48 @@
 <div class="row gl-row gl-div-opacity">
     <div class="col-md-12 text-left gl-div-black-white">
         @Html.Partial("_Adjektiv")
+    </div>
+</div><br />
+
+<!--inte klar-->
+<div class="row gl-row gl-div-opacity">
+    <div class="col-md-12 text-left gl-div-black-white">
+        @Html.Partial("_Verb")
+    </div>
+</div><br />
+
+<!--inte klar-->
+<div class="row gl-row gl-div-opacity">
+    <div class="col-md-12 text-left gl-div-black-white">
+        @Html.Partial("_Adverb")
+    </div>
+</div><br />
+
+<!--inte klar-->
+<div class="row gl-row gl-div-opacity">
+    <div class="col-md-12 text-left gl-div-black-white">
+        @Html.Partial("_Preposition")
+    </div>
+</div><br />
+
+<!--inte klar-->
+<div class="row gl-row gl-div-opacity">
+    <div class="col-md-12 text-left gl-div-black-white">
+        @Html.Partial("_Konjunktion")
+    </div>
+</div><br />
+
+<!--inte klar-->
+<div class="row gl-row gl-div-opacity">
+    <div class="col-md-12 text-left gl-div-black-white">
+        @Html.Partial("_Rakneord")
+    </div>
+</div><br />
+
+<!--inte klar-->
+<div class="row gl-row gl-div-opacity">
+    <div class="col-md-12 text-left gl-div-black-white">
+        @Html.Partial("_Interjektion")
     </div>
 </div><br />
 

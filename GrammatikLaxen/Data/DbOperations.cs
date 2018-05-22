@@ -30,7 +30,7 @@ namespace GrammatikLaxen.Data
         // Hämta alla substantiv från databasen
         public List<substantiv> GetAllSubstantivList()
         {
-            var substantivList = db.substantiv;
+            var substantivList = db.substantiv.OrderBy(a => a.ord);
             return substantivList.ToList();
         }
 
@@ -70,14 +70,14 @@ namespace GrammatikLaxen.Data
         // Hämta alla pronomen från databasen
         public List<pronomen> GetAllPronomenList()
         {
-            var pronomenList = db.pronomen;
+            var pronomenList = db.pronomen.OrderBy(a => a.ord);
             return pronomenList.ToList();
         }
 
         // Hämta alla medelsvåra pronomen (reflexiva possessiva, demonstrativa1, demonstrativa2) från databasen
         public List<pronomen> GetAllPronomenMedelsvaraList()
         {
-            var pronomenList = db.pronomen.Where(p => p.reflexiva_possessiva == true && p.demonstrativa == true && p.demonstrativa_2 == true);
+            var pronomenList = db.pronomen.Where(p => p.reflexiva_possessiva == true && p.demonstrativa == true && p.demonstrativa_2 == true).OrderBy(a => a.ord);
             return pronomenList.ToList();
         }
 
@@ -113,7 +113,7 @@ namespace GrammatikLaxen.Data
         // Hämta alla adjektiv från databasen
         public List<adjektiv> GetAllAdjektivList()
         {
-            var adjektivList = db.adjektiv;
+            var adjektivList = db.adjektiv.OrderBy(a => a.ord);
             return adjektivList.ToList();
         }
 
@@ -149,14 +149,14 @@ namespace GrammatikLaxen.Data
         // Hämta alla verb från databasen
         public List<verb> GetAllVerbList()
         {
-            var verbList = db.verb;
+            var verbList = db.verb.OrderBy(a => a.ord);
             return verbList.ToList();
         }
 
         // Hämta alla svåra verb från databasen
         public List<verb> GetAllVerbSvarList()
         {
-            var verbList = db.verb.Where(a => a.particip == true);
+            var verbList = db.verb.Where(a => a.particip == true).OrderBy(a => a.ord);
             return verbList.ToList();
         }
 
@@ -192,21 +192,21 @@ namespace GrammatikLaxen.Data
         // Hämta alla adverb från databasen
         public List<adverb> GetAllAdverbList()
         {
-            var adverbList = db.adverb;
+            var adverbList = db.adverb.OrderBy(a => a.ord);
             return adverbList.ToList();
         }
 
         // Hämta alla rena och lätta adverb från databasen
         public List<adverb> GetAllAdverbRenLattList()
         {
-            var adverbList = db.adverb.Where(b => b.ren == true && b.gradadverb == false && b.orsaksadverb == false && b.satsadverb == false);
+            var adverbList = db.adverb.Where(b => b.ren == true && b.gradadverb == false && b.orsaksadverb == false && b.satsadverb == false).OrderBy(a => a.ord);
             return adverbList.ToList();
         }
 
         // Hämta alla medelsvåra adverb från databasen
         public List<adverb> GetAllAdverbMedelsvaraList()
         {
-            var adverbList = db.adverb.Where(a => a.gradadverb == true || a.orsaksadverb == true || a.relativa_adverb == true || a.satsadverb == true);
+            var adverbList = db.adverb.Where(a => a.gradadverb == true || a.orsaksadverb == true || a.relativa_adverb == true || a.satsadverb == true).OrderBy(a => a.ord);
             return adverbList.ToList();
         }
 
@@ -269,7 +269,7 @@ namespace GrammatikLaxen.Data
         // Hämta alla prepositioner från databasen
         public List<preposition> GetAllPrepositionList()
         {
-            var prepositionList = db.preposition;
+            var prepositionList = db.preposition.OrderBy(a => a.ord);
             return prepositionList.ToList();
         }
 
@@ -305,7 +305,7 @@ namespace GrammatikLaxen.Data
         // Hämta alla konjunktioner från databasen
         public List<konjunktion> GetAllKonjunktionList()
         {
-            var konjunktionList = db.konjunktion;
+            var konjunktionList = db.konjunktion.OrderBy(a => a.ord);
             return konjunktionList.ToList();
         }
         
@@ -377,7 +377,7 @@ namespace GrammatikLaxen.Data
         // Hämta alla interjektioner från databasen
         public List<interjektion> GetAllInterjektionList()
         {
-            var interjektionList = db.interjektion;
+            var interjektionList = db.interjektion.OrderBy(a => a.ord);
             return interjektionList.ToList();
         }
 
