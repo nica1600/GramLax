@@ -1,10 +1,19 @@
 ﻿body {
     background-color: black;
-    background-image: url(img/coffee-2306471_1920.jpg);
-    background-repeat: no-repeat;
+    background-image: url(img/love-3102033_1280.png);
+    background-repeat: repeat;
     background-attachment: fixed;
     padding-top: 50px;
     padding-bottom: 20px;
+}
+
+h1, h2, h3, h4, p, ul, a {
+    font-family: Georgia, serif;
+    /*font-family: Verdana, Geneva, sans-serif;*/
+}
+
+.gl-text-cool-color1 {
+    color: #7bd8c8;
 }
 
 @media screen and (max-width: 1025px) {
@@ -69,6 +78,13 @@ div.gl-navbar ul li a {
     color: #777777;
 }
 
+.gl-div-footer {
+    border: 10px solid black;
+    border-radius: 0px;
+    background-color: black;
+    color: #777777;
+}
+
 .gl-div-opacity {
     opacity: 0.9;
     /*background: rgba(0,0,0,0.9);*/
@@ -123,4 +139,11 @@ div.gl-navbar ul li a {
 .gl-table-center {
     width: 50%;
     margin: auto;
+}
+
+#GLLogo {
+    width: 60px;
+    height: 60px;
+    /*border: 1px solid #777777;*/
+    border-radius: 50px;
 }
