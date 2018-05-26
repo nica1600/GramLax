@@ -13,9 +13,46 @@
                     för rum, tid och sätt
                 </i>
             </h4><br />
+            <h4>Tips: Tänk på adverb på samma sätt som du gör med adjektiv. Adjektiv beskriver substantiv. Adverb beskriver verb.</h4><br />
         </div>
-        <!--Nivå 1: -->
-
+        <!--Nivå 1: RTS -->
+        <div class="col-md-12 row">
+            <div class="col-md-12 text-center">
+                <a id="mer-info-rts-adverb" class="btn btn-success btn-block btn-lg gl-button" data-toggle="collapse" href="#rtsadverbinfo" role="button" aria-expanded="false" aria-controls="rtsadverbinfo">Nivå 1: RTS +</a>
+            </div>
+        </div>
+        <div class="collapse" id="rtsadverbinfo">
+            <div class="card card-body">
+                <div class="col-md-12 text-left">
+                    <h4><b class="text-success">Rumsadverb</b> är en typ av adverb som beskriver rummet/platsen för där en handling/ett tillstånd äger rum (t.ex. Jag gick 'dit').</h4>
+                    <h4>Till exempel: dit, där, hemma, hit, här, neråt, uppåt, ute, </h4><br />
+                    <h4><b class="text-success">Tidsadverb</b> är en typ av adverb som beskriver när en handling/ett tillstånd äger rum (t.ex. Jag går 'nu').</h4>
+                    <h4>Till exempel: dagligen, då, hittills, ibland, igen, nu, nyligen, nyss, ofta</h4><br />
+                    <h4><b class="text-success">Sättsadverb</b> är en typ av adverb som beskriver hur (sättet) en handling/ett tillstånd äger rum (t.ex. Jag går 'snabbt').</h4>
+                    <h4>Till exempel: bra, fort, långsamt, noga, snabbt</h4><br />
+                </div>
+            </div>
+        </div><br />
+        <!--Nivå 2: GORS -->
+        <div class="col-md-12 row">
+            <div class="col-md-12 text-center">
+                <a id="mer-info-gors-adverb" class="btn btn-warning btn-block btn-lg gl-button" data-toggle="collapse" href="#gorsadverbinfo" role="button" aria-expanded="false" aria-controls="gorsadverbinfo">Nivå 2: GORS +</a>
+            </div>
+        </div>
+        <div class="collapse" id="gorsadverbinfo">
+            <div class="card card-body">
+                <div class="col-md-12 text-left">
+                    <h4><b class="text-warning">Gradadverb</b> är en typ av adverb som beskriver hur mycket (i vilken grad) en handling/ett tillstånd äger rum (t.ex. Jag betalade 'mycket').</h4>
+                    <h4>Till exempel: ganska, lagom, litet, mycket, ungefär, väldigt</h4><br />
+                    <h4><b class="text-warning">Orsaksadverb</b> är en typ av adverb som beskriver varför (av vilken orsak) en handling/ett tillstånd äger rum (t.ex.'Därför' springer jag så fort).</h4>
+                    <h4>Till exempel: därför</h4><br />
+                    <h4><b class="text-warning">Relativa adverb</b> är en typ av adverb som inleder bisatser (t.ex. Huset, 'där' jag bor, ligger vid en skog) och på det sättet fungerar de på samma sätt som en subjunktion (underkategori till konjunktion).</h4>
+                    <h4>Till exempel: dit, då, där, varför</h4><br />
+                    <h4><b class="text-warning">Satsadverb</b> är en typ av adverb som påverkar/ändrar en hel mening/sats (t.ex. Jag springer 'inte').</h4>
+                    <h4>Till exempel: ej, inte, kanske, tyvärr</h4><br />
+                </div>
+            </div>
+        </div><br />
     </div>
 </div>
 
@@ -23,6 +60,18 @@
     $('#mer-info-adv').click(function () {
         $(this).text(function (i, old) {
             return old == 'Adverb -' ? 'Adverb +' : 'Adverb -';
+        });
+    });
+
+    $('#mer-info-rts-adverb').click(function () {
+        $(this).text(function (i, old) {
+            return old == 'Nivå 1: RTS -' ? 'Nivå 1: RTS +' : 'Nivå 1: RTS -';
+        });
+    });
+
+    $('#mer-info-gors-adverb').click(function () {
+        $(this).text(function (i, old) {
+            return old == 'Nivå 2: GORS -' ? 'Nivå 2: GORS +' : 'Nivå 2: GORS -';
         });
     });
 </script>

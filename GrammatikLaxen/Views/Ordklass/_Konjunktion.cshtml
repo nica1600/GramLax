@@ -14,7 +14,20 @@
                 </i>
             </h4><br />
         </div>
-        <!--Nivå 1: -->
+        <!--Nivå 2: Subjunktion -->
+        <div class="col-md-12 row">
+            <div class="col-md-12 text-center">
+                <a id="mer-info-subjunktion-konjunktion" class="btn btn-warning btn-block btn-lg gl-button" data-toggle="collapse" href="#subkoninfo" role="button" aria-expanded="false" aria-controls="subkoninfo">Nivå 2: Subjunktion +</a>
+            </div>
+        </div>
+        <div class="collapse" id="subkoninfo">
+            <div class="card card-body">
+                <div class="col-md-12 text-left">
+                    <h4><b class="text-warning">Subjunktion</b> är en underkategori till konjunktion. Konjunktioner binder samman både huvudsatser (t.ex. Jag är glad 'och' du är trött) och bisatser (t.ex. Jag badade inte, 'eftersom' det var kallt) men subjunktioner binder bara samman bisatser.</h4>
+                    <h4>Till exempel: då, eftersom, fastän, ifall, medan, </h4><br />
+                </div>
+            </div>
+        </div><br />
 
     </div>
 </div>
@@ -23,6 +36,12 @@
     $('#mer-info-kon').click(function () {
         $(this).text(function (i, old) {
             return old == 'Konjunktion -' ? 'Konjunktion +' : 'Konjunktion -';
+        });
+    });
+
+    $('#mer-info-subjunktion-konjunktion').click(function () {
+        $(this).text(function (i, old) {
+            return old == 'Nivå 2: Subjunktion -' ? 'Nivå 2: Subjunktion +' : 'Nivå 2: Subjunktion -';
         });
     });
 </script>

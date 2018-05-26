@@ -14,8 +14,22 @@
                 </i>
             </h4><br />
         </div>
-        <!--Nivå 1: -->
-
+        <!--Nivå 1: Former -->
+        <div class="col-md-12 row">
+            <div class="col-md-12 text-center">
+                <a id="mer-info-former-rak" class="btn btn-success btn-block btn-lg gl-button" data-toggle="collapse" href="#formrakinfo" role="button" aria-expanded="false" aria-controls="formrakinfo">Nivå 1: Former +</a>
+            </div>
+        </div>
+        <div class="collapse" id="formrakinfo">
+            <div class="card card-body">
+                <div class="col-md-12 text-left">
+                    <h4><b class="text-success">Grundtal</b> är formen av ett räkneord som används när ett antal av något ska anges (t.ex. Jag har 'två' hundar).</h4>
+                    <h4>Till exempel: en/ett, två, tre, fyra, fem</h4><br />
+                    <h4><b class="text-success">Ordningstal</b> är formen av ett räkneord som används när ordningen av något ska anges (t.ex. Hen var min 'första' vän).</h4>
+                    <h4>Till exempel: första, andra, tredje, fjärde, femte</h4><br />
+                </div>
+            </div>
+        </div><br />
     </div>
 </div>
 
@@ -23,6 +37,12 @@
     $('#mer-info-rak').click(function () {
         $(this).text(function (i, old) {
             return old == 'Räkneord -' ? 'Räkneord +' : 'Räkneord -';
+        });
+    });
+
+    $('#mer-info-former-rak').click(function () {
+        $(this).text(function (i, old) {
+            return old == 'Nivå 1: Former -' ? 'Nivå 1: Former +' : 'Nivå 1: Former -';
         });
     });
 </script>
