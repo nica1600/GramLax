@@ -163,6 +163,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrdklassController.cs" />
     <Compile Include="Controllers\ProvController.cs" />
+    <Compile Include="Controllers\SidanController.cs" />
     <Compile Include="Controllers\SpelController.cs" />
     <Compile Include="Data\DbOperations.cs" />
     <Compile Include="Data\GrammatikFragor.cs" />
@@ -336,6 +337,8 @@
     <Content Include="Views\Ordklass\_Konjunktion.cshtml" />
     <Content Include="Views\Ordklass\_Rakneord.cshtml" />
     <Content Include="Views\Ordklass\_Interjektion.cshtml" />
+    <Content Include="Views\Sidan\Om.cshtml" />
+    <Content Include="Views\Sidan\Kontakt.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
