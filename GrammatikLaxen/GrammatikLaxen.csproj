@@ -159,7 +159,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\GrammatikController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrdklassController.cs" />
     <Compile Include="Controllers\ProvController.cs" />
@@ -298,7 +297,6 @@
     <Content Include="Views\Prov\_Niva0Prov.cshtml" />
     <Content Include="Views\Prov\_Niva0ProvFacit.cshtml" />
     <Content Include="Views\Spel\Index.cshtml" />
-    <Content Include="Views\Grammatik\Index.cshtml" />
     <Content Include="Views\Prov\Niva0Utskrift.cshtml" />
     <Content Include="Views\Spel\Niva3Spel.cshtml" />
     <Content Include="Views\Spel\Niva0Spel.cshtml" />
