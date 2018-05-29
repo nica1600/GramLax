@@ -280,15 +280,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\Substantiv.cshtml" />
-    <Content Include="Views\Home\Pronomen.cshtml" />
-    <Content Include="Views\Home\Adjektiv.cshtml" />
-    <Content Include="Views\Home\Verb.cshtml" />
-    <Content Include="Views\Home\Adverb.cshtml" />
-    <Content Include="Views\Home\Preposition.cshtml" />
-    <Content Include="Views\Home\Konjunktion.cshtml" />
-    <Content Include="Views\Home\Rakneord.cshtml" />
-    <Content Include="Views\Home\Interjektion.cshtml" />
     <Content Include="Views\Prov\Index.cshtml" />
     <Content Include="Views\Prov\Niva1.cshtml" />
     <Content Include="Views\Prov\_Niva1Prov.cshtml" />
