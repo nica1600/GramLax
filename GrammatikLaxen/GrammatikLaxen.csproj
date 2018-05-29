@@ -279,8 +279,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Substantiv.cshtml" />
     <Content Include="Views\Home\Pronomen.cshtml" />
@@ -305,8 +303,6 @@
     <Content Include="Views\Prov\_Niva3ProvFacit.cshtml" />
     <Content Include="Views\Prov\Niva3Utskrift.cshtml" />
     <Content Include="Views\Prov\_ProvInfo.cshtml" />
-    <Content Include="Views\Home\_Om.cshtml" />
-    <Content Include="Views\Home\_Kontakt.cshtml" />
     <Content Include="Views\Prov\Niva0.cshtml" />
     <Content Include="Views\Prov\_Niva0Prov.cshtml" />
     <Content Include="Views\Prov\_Niva0ProvFacit.cshtml" />

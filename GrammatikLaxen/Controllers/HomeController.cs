@@ -16,16 +16,6 @@ namespace GrammatikLaxen.Controllers
             return View();
         }
 
-        public ActionResult About()
-        {
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            return View();
-        }
-
         public ActionResult Substantiv()
         {
             var substantivList = db.GetAllSubstantivList();
