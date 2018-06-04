@@ -12,6 +12,18 @@ h1, h2, h3, h4, p, ul, a {
     /*font-family: Verdana, Geneva, sans-serif;*/
 }
 
+iframe {
+    width: 560px;
+    height: 315px;
+}
+
+@media screen and (max-width: 767px) {
+    iframe {
+        width: 186px;
+        height: 105px;
+    }
+}
+
 .gl-text-cool-color1 {
     color: #7bd8c8;
 }
